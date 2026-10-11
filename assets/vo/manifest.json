@@ -3788,5 +3788,15 @@
   "engine": "gemini",
   "voice": "Enceladus",
   "dev": -2.95
+ },
+ "ep_raices_agua_m1": {
+  "hash": "3459edadbdc9",
+  "dur": 4.08,
+  "text": "Plantita, te dejo un vaso de agua. ¡Sal a beber!",
+  "asr": 0.84,
+  "heard": "Plantita, te dejo un vaso de agua. Sala beber.",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": -0.15
  }
 }

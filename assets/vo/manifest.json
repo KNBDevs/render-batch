@@ -3618,5 +3618,95 @@
   "engine": "gemini",
   "voice": "Iapetus",
   "dev": 0.5
+ },
+ "ep_hw26_08_murcielago_g1": {
+  "hash": "803b77bba1ac",
+  "dur": 1.6,
+  "text": "¡Mi capa no vuela!",
+  "asr": 1.0,
+  "heard": "¡Mi capa no vuela!",
+  "engine": "gemini",
+  "voice": "Algenib",
+  "dev": 6.0
+ },
+ "ep_puente_cooperacion_g2": {
+  "hash": "6eeeecb4e502",
+  "dur": 2.05,
+  "text": "¡Vaya! ¡No llega!",
+  "asr": 1.0,
+  "heard": "¡Vaya! ¡No llega!",
+  "engine": "gemini",
+  "voice": "Algenib",
+  "dev": 7.17
+ },
+ "ep_hw26_08_murcielago_l1": {
+  "hash": "3ca2530959d5",
+  "dur": 1.14,
+  "text": "¿Eres un pájaro?",
+  "asr": 1.0,
+  "heard": "¿Eres un pájaro?",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": 2.1
+ },
+ "ep_rima_gato_l1": {
+  "hash": "a830edb71930",
+  "dur": 3.38,
+  "text": "Escucha los finales: gato, mesa.",
+  "asr": 1.0,
+  "heard": "Escucha los finales. Gato. Mesa.",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": -6.45
+ },
+ "ep_rima_gato_l2": {
+  "hash": "dafe23094fc4",
+  "dur": 1.48,
+  "text": "Gato, zapato.",
+  "asr": 1.0,
+  "heard": "Gato zapato",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": -4.9
+ },
+ "ep_rima_gato_l3": {
+  "hash": "f79d890888b0",
+  "dur": 1.35,
+  "text": "Gato, pato.",
+  "asr": 1.0,
+  "heard": "Gato Pato",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": -1.2
+ },
+ "ep_rima_gato_l4": {
+  "hash": "7dfe1cdd0ffa",
+  "dur": 3.0,
+  "text": "Sus finales suenan parecidos: riman.",
+  "asr": 1.0,
+  "heard": "Sus finales suenan parecidos. Riman.",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": -7.6
+ },
+ "ep_viento_hoja_l3": {
+  "hash": "f740a6a7a9a1",
+  "dur": 2.02,
+  "text": "El aire se está moviendo.",
+  "asr": 1.0,
+  "heard": "El aire se está moviendo.",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": -5.8
+ },
+ "ep_viento_hoja_l4": {
+  "hash": "5520c2b15c49",
+  "dur": 3.27,
+  "text": "El aire en movimiento puede mover esta hoja.",
+  "asr": 1.0,
+  "heard": "El aire en movimiento puede mover esta hoja.",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": -5.9
  }
 }

@@ -3728,5 +3728,65 @@
   "engine": "gemini",
   "voice": "Enceladus",
   "dev": -2.3
+ },
+ "ep_patio_vecinos_m1": {
+  "hash": "75a3d9d0208a",
+  "dur": 3.34,
+  "text": "¡Espera, Tuki! La maceta cuida una planta.",
+  "asr": 1.0,
+  "heard": "¡Espera, Tuki! La maceta cuida una planta.",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": 0.35
+ },
+ "ep_raices_agua_m3": {
+  "hash": "330f3ae85296",
+  "dur": 2.62,
+  "text": "Y también ayudan a sujetar la planta.",
+  "asr": 1.0,
+  "heard": "y también ayudan a sujetar la planta.",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": -2.45
+ },
+ "ep_raices_agua_m4": {
+  "hash": "861468168e99",
+  "dur": 2.73,
+  "text": "Pues la pajita... ¡me la quedo yo!",
+  "asr": 1.0,
+  "heard": "Pues la pajita me la quedo yo.",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": -0.65
+ },
+ "ep_rima_gato_m1": {
+  "hash": "54b38de86550",
+  "dur": 3.12,
+  "text": "¡Gato y mesa! ¡Una pareja de rima!",
+  "asr": 1.0,
+  "heard": "gato y mesa una pareja de rima",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": -0.25
+ },
+ "ep_rima_gato_m2": {
+  "hash": "d772f30b0e7f",
+  "dur": 2.01,
+  "text": "Hum... no suenan igual.",
+  "asr": 0.8,
+  "heard": "No suenan igual.",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": 0.85
+ },
+ "ep_viento_hoja_m4": {
+  "hash": "7350252be076",
+  "dur": 2.99,
+  "text": "Abanico, ¿bailas con el molinillo?",
+  "asr": 1.0,
+  "heard": "Abanico. ¿Bailas con el molinillo?",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": -2.95
  }
 }

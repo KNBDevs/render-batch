@@ -3565,5 +3565,163 @@
    }
   ],
   "order": 43
+ },
+ "hw26_10_santos_difuntos": {
+  "env": "casa",
+  "family": "pastel",
+  "decor": [
+   {
+    "prop": "led_lantern",
+    "style": 2,
+    "seed": 825379,
+    "loc": [
+     -3.36,
+     0.21,
+     0.0
+    ],
+    "scale": 1.04,
+    "rot": -2.2
+   },
+   {
+    "prop": "soft_token",
+    "style": 2,
+    "seed": 22699,
+    "loc": [
+     3.62,
+     0.83,
+     0.0
+    ],
+    "scale": 0.85,
+    "rot": 14.7
+   },
+   {
+    "prop": "pebbles",
+    "style": 0,
+    "seed": 458096,
+    "loc": [
+     -2.26,
+     3.5,
+     0.0
+    ],
+    "scale": 0.91,
+    "rot": 32.2
+   },
+   {
+    "prop": "bunting",
+    "style": 1,
+    "seed": 231517,
+    "loc": [
+     1.03,
+     3.95,
+     0.0
+    ],
+    "scale": 0.85,
+    "rot": 3.3
+   },
+   {
+    "prop": "floor_lamp",
+    "style": 1,
+    "seed": 999868,
+    "loc": [
+     2.15,
+     2.74,
+     0.0
+    ],
+    "scale": 1.17,
+    "rot": 11.7
+   },
+   {
+    "prop": "ball_basket",
+    "style": 0,
+    "seed": 632676,
+    "loc": [
+     -0.97,
+     3.74,
+     0.0
+    ],
+    "scale": 1.08,
+    "rot": 32.6
+   }
+  ],
+  "order": 44
+ },
+ "hw26_11_mexico": {
+  "env": "casa",
+  "family": "pastel",
+  "decor": [
+   {
+    "prop": "play_mat",
+    "style": 0,
+    "seed": 231703,
+    "loc": [
+     2.32,
+     2.9,
+     0.0
+    ],
+    "scale": 0.96,
+    "rot": -22.1
+   },
+   {
+    "prop": "toy_blocks",
+    "style": 0,
+    "seed": 466794,
+    "loc": [
+     4.72,
+     1.6,
+     0.0
+    ],
+    "scale": 1.2,
+    "rot": 27.3
+   },
+   {
+    "prop": "floor_lamp",
+    "style": 2,
+    "seed": 320180,
+    "loc": [
+     -4.75,
+     2.37,
+     0.0
+    ],
+    "scale": 0.86,
+    "rot": -32.2
+   },
+   {
+    "prop": "soft_token",
+    "style": 1,
+    "seed": 21207,
+    "loc": [
+     1.12,
+     4.0,
+     0.0
+    ],
+    "scale": 1.2,
+    "rot": -3.8
+   },
+   {
+    "prop": "ball_basket",
+    "style": 2,
+    "seed": 125697,
+    "loc": [
+     -1.34,
+     2.01,
+     0.0
+    ],
+    "scale": 0.9,
+    "rot": -24.5
+   },
+   {
+    "prop": "bunting",
+    "style": 0,
+    "seed": 603091,
+    "loc": [
+     -3.62,
+     0.43,
+     0.0
+    ],
+    "scale": 1.14,
+    "rot": -21.8
+   }
+  ],
+  "order": 45
  }
 }

@@ -4,7 +4,7 @@ MOOD = 'happy'
 ENV = 'patio'
 LINES = [
     ('g1', 'gruno', '¡Todas las piezas son mías!', 10, 2.0),
-    ('g2', 'gruno', '¡Grr! ¡No llega!', 100, 1.4),
+    ('g2', 'gruno', '¡Vaya! ¡No llega!', 100, 1.6),
     ('r1', 'ruki', 'Si ponemos las bases en orden...', 170, 2.2),
     ('p1', 'pimo', '¡Y una pieza larga encima!', 250, 1.8),
     ('r2', 'ruki', 'Falta la última. ¿Quién la pone?', 330, 2.4),

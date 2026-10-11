@@ -3708,5 +3708,25 @@
   "engine": "gemini",
   "voice": "Leda",
   "dev": -5.9
+ },
+ "ep_patio_vecinos_s2": {
+  "hash": "a657acac63d4",
+  "dur": 2.01,
+  "text": "y las plantas voy a cuidar,",
+  "asr": 1.0,
+  "heard": "y las plantas voy a cuidar.",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": -2.05
+ },
+ "ep_patio_vecinos_m2": {
+  "hash": "73051f643626",
+  "dur": 2.09,
+  "text": "Mira, la planta nos saluda.",
+  "asr": 1.0,
+  "heard": "¡Mira, la planta nos saluda!",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": -2.3
  }
 }

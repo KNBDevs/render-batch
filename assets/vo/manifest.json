@@ -1790,13 +1790,14 @@
   "dev": -7.9
  },
  "ep_pelota_cae_t4": {
-  "hash": "rejected",
+  "hash": "fbfdb56ff902",
   "dur": 1.65,
   "text": "¿Y si se lo pido por favor?",
   "asr": 1.0,
-  "heard": "Y si se lo pido, por favor.",
+  "heard": "¿Y si se lo pido por favor?",
   "engine": "gemini",
-  "voice": "Fenrir"
+  "voice": "Fenrir",
+  "dev": -7.3
  },
  "ep_carrera_mas_lenta_t3": {
   "hash": "062119be1249",
@@ -3197,5 +3198,425 @@
   "engine": "gemini",
   "voice": "Algenib",
   "dev": 1.95
+ },
+ "ep_puente_cooperacion_r1": {
+  "hash": "4362847179b6",
+  "dur": 2.47,
+  "text": "Si ponemos las bases en orden...",
+  "asr": 1.0,
+  "heard": "Si ponemos las bases en orden...",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 2.96
+ },
+ "ep_pelota_cae_r1": {
+  "hash": "a56c333eeb05",
+  "dur": 2.19,
+  "text": "Al soltarla, cae.",
+  "asr": 1.0,
+  "heard": "Al soltarla, cae.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 0.71
+ },
+ "ep_pelota_cae_r2": {
+  "hash": "ce79f662d22b",
+  "dur": 3.2,
+  "text": "La Tierra tira de ella hacia el suelo.",
+  "asr": 1.0,
+  "heard": "La tierra tira de ella hacia el suelo.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 3.86
+ },
+ "ep_pelota_cae_r3": {
+  "hash": "e08a603910cb",
+  "dur": 2.66,
+  "text": "Pedírselo no cambia lo que pasa.",
+  "asr": 1.0,
+  "heard": "Pedírselo no cambia lo que pasa.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 2.36
+ },
+ "ep_pelota_cae_r4": {
+  "hash": "80684bb2ba2c",
+  "dur": 2.9,
+  "text": "Ahora la estás levantando tú.",
+  "asr": 1.0,
+  "heard": "Ahora la estás levantando tú.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": -0.09
+ },
+ "ep_puente_cooperacion_r3": {
+  "hash": "af1112d078b7",
+  "dur": 2.73,
+  "text": "Cada uno ha puesto una parte.",
+  "asr": 1.0,
+  "heard": "Cada uno ha puesto una parte.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 2.76
+ },
+ "ep_sal_disuelta_r1": {
+  "hash": "8df8a65aa479",
+  "dur": 1.78,
+  "text": "Mira este dibujo de cerca.",
+  "asr": 1.0,
+  "heard": "Mira este dibujo de cerca.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 4.36
+ },
+ "ep_sal_disuelta_r2": {
+  "hash": "093abda8e67d",
+  "dur": 2.34,
+  "text": "La sal se ha disuelto.",
+  "asr": 1.0,
+  "heard": "La sal se ha disuelto.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": -0.14
+ },
+ "ep_sal_disuelta_r3": {
+  "hash": "2677dafaa136",
+  "dur": 3.58,
+  "text": "Sigue en el agua, aunque ya no veamos los granitos.",
+  "asr": 1.0,
+  "heard": "Sigue en el agua, aunque ya no veamos los granitos.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 2.66
+ },
+ "ep_patio_vecinos_t3": {
+  "hash": "c5020ab7c7f5",
+  "dur": 3.05,
+  "text": "¡Ya está! Dos zapatos: ¡nuestra portería!",
+  "asr": 1.0,
+  "heard": "¡Ya está! ¡Dos zapatos, nuestra portería!",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": -5.7
+ },
+ "ep_patron_ab_t1": {
+  "hash": "0fb1667a425a",
+  "dur": 1.71,
+  "text": "¡Y ahora... mi zapato!",
+  "asr": 1.0,
+  "heard": "Y ahora, mi zapato.",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": -8.45
+ },
+ "ep_patron_ab_t3": {
+  "hash": "3c39135ed7a4",
+  "dur": 1.38,
+  "text": "¡Después toca hoja!",
+  "asr": 1.0,
+  "heard": "Después toca hoja.",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": 0.0
+ },
+ "ep_patio_vecinos_t2": {
+  "hash": "b98901ff7fc1",
+  "dur": 2.37,
+  "text": "Uy... Esto no es nuestra portería.",
+  "asr": 1.0,
+  "heard": "¡Uy, esto no es nuestra portería!",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": -8.7
+ },
+ "ep_patio_vecinos_s1": {
+  "hash": "a560aadee66f",
+  "dur": 1.51,
+  "text": "En el patio puedo jugar,",
+  "asr": 1.0,
+  "heard": "En el patio puedo jugar.",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": -4.3
+ },
+ "ep_patio_vecinos_s4": {
+  "hash": "5c83c53f9a03",
+  "dur": 2.13,
+  "text": "lo que es de otros voy a respetar.",
+  "asr": 1.0,
+  "heard": "Lo que es de otros voy a respetar.",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": -8.7
+ },
+ "ep_patron_ab_t2": {
+  "hash": "37e99885c254",
+  "dur": 1.77,
+  "text": "El zapato no sigue la regla...",
+  "asr": 1.0,
+  "heard": "El zapato no sigue la regla.",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": -7.0
+ },
+ "ep_patron_ab_t4": {
+  "hash": "e00d4e1a50fe",
+  "dur": 2.18,
+  "text": "Y tú, zapato... ¡tú vas conmigo!",
+  "asr": 1.0,
+  "heard": "Y tu zapato, tú vas conmigo.",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": -8.5
+ },
+ "ep_silabas_mesa_t1": {
+  "hash": "759a3561c1d2",
+  "dur": 2.39,
+  "text": "¡Voy a guardar la palabra mesa en mis manos!",
+  "asr": 1.0,
+  "heard": "Voy a guardar la palabra Mesa en mis manos.",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": -8.2
+ },
+ "ep_coche_preparado_b1": {
+  "hash": "b34269e42af0",
+  "dur": 3.04,
+  "text": "Bip. Todavía no estamos preparados.",
+  "asr": 1.0,
+  "heard": "VIP, todavía no estamos preparados.",
+  "engine": "gemini",
+  "voice": "Iapetus",
+  "dev": 1.1
+ },
+ "ep_roce_suelo_b1": {
+  "hash": "d88a2c4d0b6b",
+  "dur": 3.59,
+  "text": "Bip. Probemos igual en las dos pistas.",
+  "asr": 1.0,
+  "heard": "Bip, probemos igual en las dos pistas.",
+  "engine": "gemini",
+  "voice": "Iapetus",
+  "dev": 2.35
+ },
+ "ep_roce_suelo_b2": {
+  "hash": "b73a8be35341",
+  "dur": 3.27,
+  "text": "Mismo empujón, mismo punto de salida.",
+  "asr": 1.0,
+  "heard": "Mismo empujón, mismo punto de salida.",
+  "engine": "gemini",
+  "voice": "Iapetus",
+  "dev": 1.9
+ },
+ "ep_roce_suelo_b3": {
+  "hash": "153f4d37612e",
+  "dur": 2.6,
+  "text": "En la pista lisa llega lejos.",
+  "asr": 1.0,
+  "heard": "En la pista lisa llega lejos.",
+  "engine": "gemini",
+  "voice": "Iapetus",
+  "dev": 1.65
+ },
+ "ep_roce_suelo_b4": {
+  "hash": "237a77d87c5a",
+  "dur": 3.91,
+  "text": "Aquí, en la alfombrilla, el bloque se frena antes.",
+  "asr": 1.0,
+  "heard": "Aquí, en la alfombrilla, el bloque se frena antes.",
+  "engine": "gemini",
+  "voice": "Iapetus",
+  "dev": -0.6
+ },
+ "ep_roce_suelo_b5": {
+  "hash": "ba2c2f1caa4e",
+  "dur": 2.17,
+  "text": "Las superficies rozan.",
+  "asr": 1.0,
+  "heard": "Las superficies rozan.",
+  "engine": "gemini",
+  "voice": "Iapetus",
+  "dev": -0.2
+ },
+ "ep_roce_suelo_b6": {
+  "hash": "d717df2ed5b5",
+  "dur": 2.03,
+  "text": "Bip. Sigue frenando.",
+  "asr": 1.0,
+  "heard": "Bip, sigue frenando.",
+  "engine": "gemini",
+  "voice": "Iapetus",
+  "dev": 1.7
+ },
+ "ep_sal_disuelta_b5": {
+  "hash": "f81867703140",
+  "dur": 2.15,
+  "text": "«Sal aquí». ¡Bip!",
+  "asr": 1.0,
+  "heard": "Sal aquí.  ¡Bip!",
+  "engine": "gemini",
+  "voice": "Iapetus",
+  "dev": 1.6
+ },
+ "ep_corcho_flota_r1": {
+  "hash": "db17b0aa9d47",
+  "dur": 2.12,
+  "text": "Probemos con el corcho.",
+  "asr": 1.0,
+  "heard": "Provemos con el corcho.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 4.26
+ },
+ "ep_corcho_flota_r2": {
+  "hash": "84fad92338e3",
+  "dur": 1.93,
+  "text": "Este corcho flota.",
+  "asr": 1.0,
+  "heard": "Este corcho flota.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 4.01
+ },
+ "ep_corcho_flota_r3": {
+  "hash": "ed249797a527",
+  "dur": 1.95,
+  "text": "Esta piedra se hunde.",
+  "asr": 1.0,
+  "heard": "Esta piedra se hunde.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 0.26
+ },
+ "ep_corcho_flota_r4": {
+  "hash": "a8ef63e5b9c8",
+  "dur": 2.41,
+  "text": "La pegatina no cambia el material.",
+  "asr": 0.83,
+  "heard": "La pegatina no cambia en material.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": -0.79
+ },
+ "ep_semilla_brota_r1": {
+  "hash": "ab101c604dbd",
+  "dur": 2.56,
+  "text": "Una semilla puede empezar a crecer.",
+  "asr": 1.0,
+  "heard": "Una semilla puede empezar a crecer.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 5.66
+ },
+ "ep_semilla_brota_r2": {
+  "hash": "7af170b91dbf",
+  "dur": 6.52,
+  "text": "Necesita condiciones adecuadas: algo húmedo, aire y no pasar frío.",
+  "asr": 1.0,
+  "heard": "Necesita condiciones adecuadas, algo húmedo, aire y no pasar frío.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": -0.04
+ },
+ "ep_semilla_brota_r3": {
+  "hash": "70e04c4cdaeb",
+  "dur": 1.6,
+  "text": "Esto tarda varios días.",
+  "asr": 1.0,
+  "heard": "Esto tarda varios días.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 1.21
+ },
+ "ep_semilla_brota_r4": {
+  "hash": "dcbcf7e0964f",
+  "dur": 3.16,
+  "text": "Es una planta creciendo. No es el papel.",
+  "asr": 1.0,
+  "heard": "Es una planta creciendo. No es el papel.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": -0.34
+ },
+ "ep_barco_revision_b1": {
+  "hash": "7eb258dc6b43",
+  "dur": 3.87,
+  "text": "Bip. Revisemos antes de empezar.",
+  "asr": 1.0,
+  "heard": "VIP. Revisemos antes de empezar.",
+  "engine": "gemini",
+  "voice": "Iapetus",
+  "dev": 0.05
+ },
+ "ep_barco_revision_b2": {
+  "hash": "d50a2469d715",
+  "dur": 3.08,
+  "text": "Esta pieza todavía está suelta.",
+  "asr": 1.0,
+  "heard": "Esta pieza todavía está suelta.",
+  "engine": "gemini",
+  "voice": "Iapetus",
+  "dev": 2.15
+ },
+ "ep_barco_revision_s1": {
+  "hash": "1860b36165a1",
+  "dur": 2.59,
+  "text": "Antes del viaje voy a mirar",
+  "asr": 1.0,
+  "heard": "Antes del viaje voy a mirar.",
+  "engine": "gemini",
+  "voice": "Iapetus",
+  "dev": 2.7
+ },
+ "ep_barco_revision_s3": {
+  "hash": "c98ca36f1a73",
+  "dur": 2.64,
+  "text": "pruebo tranquilo para comenzar,",
+  "asr": 1.0,
+  "heard": "Pruebo tranquilo para comenzar.",
+  "engine": "gemini",
+  "voice": "Iapetus",
+  "dev": 0.4
+ },
+ "ep_coche_preparado_b2": {
+  "hash": "f5f29e8b9aa0",
+  "dur": 4.05,
+  "text": "Primero, bien sentados y sujetos.",
+  "asr": 1.0,
+  "heard": "Primero, bien sentados y sujetos.",
+  "engine": "gemini",
+  "voice": "Iapetus",
+  "dev": 0.4
+ },
+ "ep_coche_preparado_s2": {
+  "hash": "45c1db030b6d",
+  "dur": 3.0,
+  "text": "en mi asiento me voy a colocar,",
+  "asr": 1.0,
+  "heard": "En mi asiento me voy a colocar.",
+  "engine": "gemini",
+  "voice": "Iapetus",
+  "dev": 0.1
+ },
+ "ep_coche_preparado_b3": {
+  "hash": "90d35be888d3",
+  "dur": 4.03,
+  "text": "Todos sujetos. Ahora podemos salir.",
+  "asr": 1.0,
+  "heard": "Todos sujetos. Ahora podemos salir.",
+  "engine": "gemini",
+  "voice": "Iapetus",
+  "dev": 0.6
+ },
+ "ep_coche_preparado_b4": {
+  "hash": "c52765f0c33b",
+  "dur": 3.23,
+  "text": "Bip. El volante está aquí.",
+  "asr": 1.0,
+  "heard": "VIP. El volante está aquí.",
+  "engine": "gemini",
+  "voice": "Iapetus",
+  "dev": 0.5
  }
 }

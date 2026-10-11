@@ -7,27 +7,39 @@ Z0 = 0.08
 auto_dress(EID, ENV)
 BEAT = 60 / 124 * FPS
 
-W0 = ((0.0, -6.5, 1.95), (0.0, -1.4, 0.8), 31)
-WN = ((-0.35, -5.1, 1.55), (-0.35, -1.8, 0.7), 34)
+W0 = ((0.0, -6.6, 1.95), (0.0, -1.3, 0.8), 27)
+WN = ((-0.45, -5.2, 1.85), (-0.65, -1.4, 0.75), 31)
+MG = ((-0.95, -5.1, 1.65), (-0.85, -1.3, 0.85), 31)
+MP = ((0.7, -4.6, 1.55), (0.7, -1.3, 0.8), 31)
+NC = ((-0.6, -4.3, 1.6), (-0.75, -1.4, 0.7), 31)
 camkey(0, W0)
 camkey(70, W0)
 camkey(84, WN)
 camkey(240, WN)
 camkey(256, W0)
+for a, b, pose in ((446, 515, MG), (522, 586, MP)):
+    camkey(a - 1, W0 if a == 446 else MG)
+    camkey(a, pose)
+    camkey(b, pose)
+    camkey(b + 1, W0)
+camkey(786, W0)
+camkey(787, NC)
+camkey(850, NC)
+camkey(851, W0)
 camkey(TOTAL - 1, W0)
 
-swing = spawn('net_swing', 0, 31, 'candy', (-0.78, -1.9, Z0), 1.0, 0)
+swing = spawn('net_swing', 0, 31, 'candy', (-0.38, -1.9, Z0), 1.0, 0)
 hang = next(o for o in swing.children if o.name.startswith('net_hang'))
 step = spawn('play_step', 2, 52, 'pastel', (0.45, -1.75, Z0), 1.15, 0)
 STOP = Z0 + 0.23 * 1.15
 ele = spawn('toy_elephant', 0, 17, 'pastel', (0, 0, 0), 1.0, 0)
-E0 = Vector((-0.2, -2.2, Z0))
+E0 = Vector((0.0, -2.25, Z0))
 ER = 70
 K(ele, 'location', 0, tuple(E0))
 K(ele, 'rotation_euler', 0, (0, 0, math.radians(ER)))
 
 K(hang, 'scale', 0, (1, 1, 1))
-EN = Vector((-0.58, -1.95, Z0 + 0.42))
+EN = Vector((-0.18, -1.95, Z0 + 0.42))
 for f in range(78, 132, 2):
     u = (f - 78) / 54
     u2 = u * u * (3 - 2 * u)
@@ -210,7 +222,7 @@ C.rounded_box('rb', (0, 0, 0), (0.08, 0.04, 0.18), 0.02, M((0.3, 0.3, 0.38), rou
 for j, (x, z, c) in enumerate(((-0.018, 0.05, (1, 0.3, 0.3)), (0.018, 0.05, (0.3, 0.9, 0.4)), (0.0, 0.0, (1.0, 0.8, 0.2)))):
     C.sphere('btn', (x, -0.022, z), (0.013, 0.008, 0.013), M(c, coat=0.7), remote, 10)
 RH = G0 + Vector((0.45, -0.4, 0.75))
-RN = Vector((-0.78, -1.9, Z0 + 0.55 - 0.12 - 0.11))
+RN = Vector((-0.38, -1.9, Z0 + 0.55 - 0.12 - 0.11))
 K(remote, 'scale', 0, (0, 0, 0))
 K(remote, 'scale', 698, (0, 0, 0))
 K(remote, 'scale', 704, (1, 1, 1))
@@ -247,7 +259,10 @@ T.arm(pimo, 'R', 826, fwd=-85, out=45)
 T.arm(pimo, 'R', 860, fwd=-85, out=45)
 T.rest_arm(pimo, 'R', 868)
 gruno['hold'].location = G0
+gesture(gruno, 'bounce', 470)
 gesture(gruno, 'bounce', 850)
+pimo['hold'].location = P1
+gesture(pimo, 'hops', 545)
 pimo['hold'].location = P1
 gesture(pimo, 'hops', 870)
 

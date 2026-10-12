@@ -9,7 +9,7 @@ LINES = [
     ('b1', 'bopi', '¡Mi canción de robot!', 500, 1.8),
     ('n2', 'narrador', 'Cada lugar puede tener sus propias costumbres.', 720, 3.4),
 ]
-SFX = []
+SFX = [(36, 'tock', 0.3), (46, 'tock', 0.3), (550, 'bip', 0.18), (560, 'bip', 0.18), (570, 'bip', 0.18), (585, 'bip', 0.2), (668, 'sparkle', 0.2)]
 META = {
     'title': 'Una canción por la puerta 🎶 Especial 5/14 #shorts',
     'description': 'Tuki ensaya un saludo cantado ante una puerta. En Escocia existe una tradición llamada guising: ir disfrazados y ofrecer una canción, un chiste o una pequeña actuación. Una semana de Halloween con Pimoruki, episodio 5 de 14.\n\n#pimoruki #dibujosanimados #videosinfantiles #aprenderjugando #shorts',

@@ -2146,6 +2146,49 @@ def dress_mirror(r, s, fam, root):
     return root
 
 
+def _note(name, parent, loc, s, m, double=False):
+    g = C.empty(name, parent, loc)
+    C.sphere(name + "h", (0, 0, 0), (0.09 * s, 0.05 * s, 0.065 * s), m, g, 20, rot=(0, math.radians(-20), 0))
+    C.tube(name + "st", [(0.075 * s, 0, 0.0), (0.075 * s, 0, 0.32 * s)], 0.018 * s, m, g)
+    if double:
+        C.sphere(name + "h2", (0.26 * s, 0, 0.06 * s), (0.09 * s, 0.05 * s, 0.065 * s), m, g, 20, rot=(0, math.radians(-20), 0))
+        C.tube(name + "st2", [(0.335 * s, 0, 0.06 * s), (0.335 * s, 0, 0.38 * s)], 0.018 * s, m, g)
+        C.tube(name + "bm", [(0.075 * s, 0, 0.31 * s), (0.335 * s, 0, 0.37 * s)], 0.035 * s, m, g)
+    else:
+        C.tube(name + "fl", [(0.075 * s, 0, 0.32 * s), (0.16 * s, 0, 0.24 * s), (0.17 * s, 0, 0.16 * s)], 0.02 * s, m, g)
+    return g
+
+
+def perform_mat(r, s, fam, root):
+    a, b, c = [_rich(x, 1.3, 0.9) for x in _cols(r, fam, 3)]
+    am, bm_, cm = M(a, rough=0.7, coat=0.1), M(b, rough=0.7, coat=0.1), M(c, rough=0.4, coat=0.6)
+    nm = M(_rich(c, 1.8, 0.55), rough=0.35, coat=0.7)
+    if s == 0:
+        C.lathe("rug", [(0.0, 0.0), (0.0, 0.42), (0.012, 0.43), (0.025, 0.42), (0.025, 0.0)], am, root, segs=64, sy=0.75)
+        C.lathe("ring", [(0.026, 0.0), (0.026, 0.3), (0.03, 0.3), (0.03, 0.0)], bm_, root, segs=64, sy=0.75)
+        for k in range(10):
+            t = k * 6.2832 / 10
+            C.sphere(f"stud{k}", (0.36 * math.cos(t), 0.27 * math.sin(t), 0.03), (0.025, 0.025, 0.012), cm, root, 12)
+    elif s == 1:
+        C.rounded_box("rug", (0, 0, 0.012), (0.9, 0.55, 0.024), 0.012, am, root)
+        for k in range(4):
+            C.rounded_box(f"stripe{k}", (0, -0.2 + k * 0.133, 0.026), (0.82, 0.04, 0.006), 0.003, bm_ if k % 2 else cm, root)
+        for sx in (-1, 1):
+            for k in range(6):
+                C.tube(f"fr{sx}{k}", [(sx * 0.45, -0.22 + k * 0.088, 0.01), (sx * 0.5, -0.22 + k * 0.088, 0.006)], 0.007, bm_, root)
+    else:
+        pts = []
+        for k in range(10):
+            t = math.pi / 2 + k * math.pi / 5
+            rr = 0.45 if k % 2 == 0 else 0.24
+            pts.append((rr * math.cos(t), rr * 0.8 * math.sin(t)))
+        _slab("rug", pts[::-1], 0.024, am, root, 0.0, 0.02)
+        C.sphere("ctr", (0, 0, 0.03), (0.1, 0.08, 0.012), cm, root, 24)
+    _note("note_a", root, (-0.3, 0.12, 0.25), 0.8, nm)
+    _note("note_b", root, (0.18, 0.15, 0.32), 0.8, nm, double=True)
+    return root
+
+
 GEN = {k: v for k, v in globals().items() if k in REGISTRY}
 
 

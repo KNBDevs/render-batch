@@ -3798,5 +3798,225 @@
   "engine": "gemini",
   "voice": "Enceladus",
   "dev": -0.15
+ },
+ "ep_hw26_04_disfraces_m1": {
+  "hash": "c3db8092c968",
+  "dur": 1.94,
+  "text": "¡Y yo, una brujita de cuento!",
+  "asr": 1.0,
+  "heard": "y yo una brujita de cuento.",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": -1.25
+ },
+ "ep_hw26_09_telarana_m1": {
+  "hash": "ca19e47c88d5",
+  "dur": 1.22,
+  "text": "¿Esta es tu tela?",
+  "asr": 1.0,
+  "heard": "¿Esta es tu tela?",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": -3.71
+ },
+ "ep_hw26_09_telarana_m2": {
+  "hash": "37ff6572f662",
+  "dur": 2.22,
+  "text": "¡Son hilos, no una sábana!",
+  "asr": 1.0,
+  "heard": "Son hilos, no una sábana.",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": -0.85
+ },
+ "ep_hw26_09_telarana_m3": {
+  "hash": "63daafdc67f4",
+  "dur": 2.03,
+  "text": "Entonces esto va en la mesa.",
+  "asr": 1.0,
+  "heard": "Entonces esto va en la mesa.",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": -2.4
+ },
+ "ep_rima_gato_m3": {
+  "hash": "6786ddfa7a62",
+  "dur": 3.67,
+  "text": "¡Gato, zapato! ¡Y gato, pato!",
+  "asr": 1.0,
+  "heard": "gato zapato y gato pato",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": -3.45
+ },
+ "ep_rima_gato_m4": {
+  "hash": "a2c5433469a1",
+  "dur": 2.58,
+  "text": "Pato, te presento a tu compañero.",
+  "asr": 1.0,
+  "heard": "Pato, te presento a tu compañero.",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": -4.5
+ },
+ "ep_hw26_01_nombre_p1": {
+  "hash": "423f4846601d",
+  "dur": 1.29,
+  "text": "¿Halloween va aquí?",
+  "asr": 1.0,
+  "heard": "¿Halloween va aquí?",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": -2.9
+ },
+ "ep_hw26_02_samhain_p1": {
+  "hash": "144d71d7d667",
+  "dur": 1.36,
+  "text": "¡Una página de otoño!",
+  "asr": 1.0,
+  "heard": "Una página de otoño.",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": -3.2
+ },
+ "ep_hw26_04_disfraces_p1": {
+  "hash": "4d058a8c5c1a",
+  "dur": 2.91,
+  "text": "Con disfraz o sin él, seguimos siendo nosotros.",
+  "asr": 0.8,
+  "heard": "Con disfrazo sin él, seguimos siendo nosotros.",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": -6.3
+ },
+ "ep_hw26_06_truco_trato_p2": {
+  "hash": "1fe016d65d38",
+  "dur": 2.74,
+  "text": "Uno para ti y otro para mí. ¡Gracias!",
+  "asr": 1.0,
+  "heard": "Uno para ti y otro para mí. Gracias.",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": -7.5
+ },
+ "ep_muneca_reparar_p3": {
+  "hash": "85782db2882f",
+  "dur": 1.41,
+  "text": "¡Ya está bien sujeta!",
+  "asr": 1.0,
+  "heard": "Ya está bien sujeta.",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": 0.0
+ },
+ "ep_raices_agua_p3": {
+  "hash": "10fa6f9bc6fa",
+  "dur": 3.96,
+  "text": "Mira este dibujo por dentro: el agua llega a las raíces.",
+  "asr": 1.0,
+  "heard": "Mira este dibujo por dentro. El agua llega a las raíces.",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": -7.35
+ },
+ "ep_patio_vecinos_r1": {
+  "hash": "d0b1a9c292c8",
+  "dur": 3.53,
+  "text": "Aquí podemos jugar sin estropearla.",
+  "asr": 1.0,
+  "heard": "Aquí podemos jugar sin estropearla.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 3.31
+ },
+ "ep_patio_vecinos_s3": {
+  "hash": "9db323b16052",
+  "dur": 2.51,
+  "text": "miro el sitio antes de empezar,",
+  "asr": 1.0,
+  "heard": "Miro el sitio antes de empezar.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 7.66
+ },
+ "ep_barco_revision_b3": {
+  "hash": "8f5316d854f7",
+  "dur": 2.3,
+  "text": "Ahora sí está preparado.",
+  "asr": 1.0,
+  "heard": "Ahora sí está preparado.",
+  "engine": "gemini",
+  "voice": "Iapetus",
+  "dev": 4.0
+ },
+ "ep_hw26_07_arana_b1": {
+  "hash": "4bb1615131ba",
+  "dur": 1.47,
+  "text": "¿Y tu otra pata?",
+  "asr": 1.0,
+  "heard": "¿Y tu otra pata?",
+  "engine": "gemini",
+  "voice": "Iapetus",
+  "dev": 1.9
+ },
+ "ep_patron_ab_b3": {
+  "hash": "8d6579e38444",
+  "dur": 2.37,
+  "text": "Se repite la misma pareja.",
+  "asr": 1.0,
+  "heard": "Se repite la misma pareja.",
+  "engine": "gemini",
+  "voice": "Iapetus",
+  "dev": 2.4
+ },
+ "ep_patron_ab_b4": {
+  "hash": "1544f20599b9",
+  "dur": 1.17,
+  "text": "¿Qué toca después?",
+  "asr": 1.0,
+  "heard": "¿Qué toca después?",
+  "engine": "gemini",
+  "voice": "Iapetus",
+  "dev": -0.3
+ },
+ "ep_patron_ab_b1": {
+  "hash": "a35a11acf3bd",
+  "dur": 2.75,
+  "text": "Bip. Miremos el tren.",
+  "asr": 1.0,
+  "heard": "VIP, miremos el tren.",
+  "engine": "gemini",
+  "voice": "Iapetus",
+  "dev": 0.65
+ },
+ "ep_hw26_07_arana_b2": {
+  "hash": "79fcc619daa6",
+  "dur": 2.19,
+  "text": "¡A mí me basta una mano!",
+  "asr": 1.0,
+  "heard": "A mí me basta una mano.",
+  "engine": "gemini",
+  "voice": "Iapetus",
+  "dev": 4.6
+ },
+ "ep_hw26_05_escocia_b1": {
+  "hash": "7fee34db71dd",
+  "dur": 3.67,
+  "text": "¡Mi canción de robot!",
+  "asr": 0.8,
+  "heard": "2 segundos. Mi canción de robot.",
+  "engine": "gemini",
+  "voice": "Iapetus",
+  "dev": -1.4
+ },
+ "ep_patron_ab_b2": {
+  "hash": "3bbcb9421e72",
+  "dur": 3.29,
+  "text": "Hoja, flor; hoja, flor.",
+  "asr": 1.0,
+  "heard": "hoja flor  hoja flor",
+  "engine": "gemini",
+  "voice": "Iapetus",
+  "dev": 0.85
  }
 }

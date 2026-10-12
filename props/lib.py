@@ -2189,6 +2189,29 @@ def perform_mat(r, s, fam, root):
     return root
 
 
+def treat_tray(r, s, fam, root):
+    a, b = [_rich(c, 1.3, 0.9) for c in _cols(r, fam, 2)]
+    am = M(a, rough=0.35, coat=0.7)
+    bm_ = M(b, rough=0.4, coat=0.6)
+    if s == 0:
+        C.lathe("tray", [(0.0, 0.0), (0.0, 0.2), (0.015, 0.205), (0.04, 0.215), (0.045, 0.2), (0.03, 0.19), (0.025, 0.0)], am, root, segs=48)
+        for sx in (-1, 1):
+            C.tube(f"handle{sx}", [(sx * 0.2, 0, 0.035), (sx * 0.26, 0, 0.06), (sx * 0.2, 0, 0.085)], 0.014, bm_, root)
+    elif s == 1:
+        C.lathe("bowl", [(0.0, 0.0), (0.0, 0.07), (0.02, 0.12), (0.07, 0.18), (0.11, 0.19), (0.12, 0.17), (0.04, 0.1), (0.03, 0.0)], M((0.95, 0.55, 0.2), rough=0.4, coat=0.6), root, segs=48)
+        for k in range(8):
+            t = k * 6.2832 / 8
+            C.tube(f"rib{k}", [(0.07 * math.cos(t), 0.07 * math.sin(t), 0.005), (0.18 * math.cos(t), 0.18 * math.sin(t), 0.07), (0.19 * math.cos(t), 0.19 * math.sin(t), 0.112)], 0.006, M((0.88, 0.45, 0.14), rough=0.4, coat=0.5), root)
+        C.tube("stem", [(0.0, 0.19, 0.11), (0.0, 0.23, 0.14), (0.02, 0.25, 0.15)], 0.018, M((0.35, 0.42, 0.2), rough=0.6), root)
+    else:
+        C.lathe("foot", [(0.0, 0.0), (0.0, 0.08), (0.01, 0.085), (0.02, 0.05), (0.12, 0.018), (0.14, 0.0)], bm_, root, segs=40)
+        C.lathe("plate", [(0.13, 0.0), (0.13, 0.2), (0.14, 0.205), (0.15, 0.2), (0.155, 0.0)], am, root, segs=48)
+        C.lathe("top", [(0.155, 0.0), (0.155, 0.018), (0.25, 0.012), (0.26, 0.0)], bm_, root, segs=24)
+        C.lathe("plate2", [(0.25, 0.0), (0.25, 0.12), (0.26, 0.125), (0.27, 0.12), (0.275, 0.0)], am, root, segs=40)
+        C.sphere("knob", (0, 0, 0.29), (0.025,) * 3, bm_, root, 14)
+    return root
+
+
 GEN = {k: v for k, v in globals().items() if k in REGISTRY}
 
 

@@ -10,7 +10,7 @@ FAM = os.environ.get("FAM", "pastel")
 names = [n for n in REGISTRY if not os.environ.get("ONLY") or n in os.environ["ONLY"].split(",")]
 for i, n in enumerate(names):
     col, row = i % 3, i // 3
-    spawn(n, STYLE, 7 + i, FAM, ((col - 1) * 1.25, -1.2 + row * 0.9, 0), 1.0, 15)
+    spawn(n, STYLE, 7 + i, FAM, ((col - 1) * 1.25, -1.2 + row * 0.9, 0.08), 1.0, 15)
 camkey(0, ((0, -7.5, 3.2), (0, 0.2, 0.6), 40))
 if __name__ == "__main__":
     run()

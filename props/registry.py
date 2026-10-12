@@ -66,5 +66,6 @@ REGISTRY = {
     "watering_can": {"styles": 3, "envs": ["patio", "casa", "granja"], "tags": ["jardin", "agua"], "decor": False},
     "cutaway_pot": {"styles": 3, "envs": ["patio", "casa", "aula", "lab"], "tags": ["planta", "ilustracion"], "decor": False},
     "season_dial": {"styles": 3, "envs": ["halloween", "otono", "casa", "aula"], "tags": ["estaciones", "tiempo", "otoño"], "decor": False},
+    "region_sign": {"styles": 3, "envs": ["halloween", "casa", "aula", "plaza"], "tags": ["lugar", "cartel", "culturas"], "decor": False},
     "care_sign": {"styles": 3, "envs": ["patio", "plaza", "casa", "aula"], "tags": ["cartel", "cuidado"], "decor": False},
 }

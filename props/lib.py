@@ -2062,6 +2062,54 @@ def season_dial(r, s, fam, root):
     return root
 
 
+def _fit_glyph(txt, size, depth, m, parent, loc, max_w):
+    o = glyph(txt, size, depth, m, parent, loc)
+    bpy.context.view_layer.update()
+    if o.dimensions.x > max_w:
+        k = max_w / o.dimensions.x
+        o.scale = (k, k, k)
+    return o
+
+
+def region_sign(r, s, fam, root, label="Irlanda"):
+    a, b = [_rich(c, 1.3, 0.9) for c in _cols(r, fam, 2)]
+    am = M(a, rough=0.4, coat=0.6)
+    bm_ = M(b, rough=0.45, coat=0.5)
+    paper = M((0.97, 0.94, 0.88), rough=0.55, coat=0.3)
+    ink = M((0.15, 0.2, 0.26), rough=0.35, coat=0.5)
+    wood = M((0.72, 0.52, 0.34), rough=0.6, coat=0.2)
+    if s == 0:
+        C.lathe("foot", [(0, 0), (0.12, 0), (0.13, 0.025), (0.1, 0.04), (0, 0.045)], bm_, root, segs=40)
+        C.tube("pole", [(0, 0.045, 0.03), (0, 0.045, 0.62)], 0.022, wood, root)
+        C.sphere("cap", (0, 0.045, 0.63), (0.035,) * 3, am, root, 16)
+        W, H, Z = 0.5, 0.15, 0.48
+        pts = [(-W / 2, -H / 2), (W / 2 - 0.07, -H / 2), (W / 2, 0), (W / 2 - 0.07, H / 2), (-W / 2, H / 2)]
+        _vplate("arrow", pts, 0.03, M(_rich(a, 2.0, 0.62), rough=0.4, coat=0.6), root, (0.04, 0.015, Z), bev=0.012)
+        _fit_glyph(label, 0.085, 0.006, paper, root, (0.02, -0.02, Z), W * 0.78)
+    elif s == 1:
+        for sx in (-1, 1):
+            C.tube(f"leg{sx}", [(sx * 0.2, 0.06, 0), (sx * 0.17, 0.0, 0.42)], 0.016, wood, root)
+        C.tube("legb", [(0, 0.2, 0), (0, 0.03, 0.4)], 0.014, wood, root)
+        C.rounded_box("ledge", (0, -0.03, 0.18), (0.46, 0.06, 0.025), 0.01, wood, root)
+        bd = C.empty("board", root, (0, -0.01, 0.31), (math.radians(-8), 0, 0))
+        C.rounded_box("pane", (0, 0, 0), (0.44, 0.02, 0.24), 0.03, paper, bd)
+        C.tube("frame", [(0.2 * math.cos(t * 6.2832 / 40) + 0.0, -0.012, 0.1 * math.sin(t * 6.2832 / 40)) for t in range(41)], 0.008, am, bd)
+        _fit_glyph(label, 0.075, 0.006, ink, bd, (0, -0.016, -0.01), 0.34)
+        C.sphere("pin", (0, -0.014, 0.09), (0.018, 0.01, 0.018), bm_, bd, 12)
+    else:
+        for sx in (-1, 1):
+            C.tube(f"post{sx}", [(sx * 0.27, 0, 0), (sx * 0.27, 0, 0.6)], 0.018, wood, root)
+            C.sphere(f"knob{sx}", (sx * 0.27, 0, 0.61), (0.03,) * 3, am, root, 14)
+        C.tube("bar", [(-0.27, 0, 0.56), (0.27, 0, 0.56)], 0.012, wood, root)
+        ban = C.empty("banner", root, (0, 0, 0.55))
+        for sx in (-0.17, 0.17):
+            C.tube(f"str{sx}", [(sx, 0, 0), (sx, -0.005, -0.06)], 0.006, ink, ban)
+        pts = [(-0.22, 0.0), (-0.22, -0.2), (0.0, -0.25), (0.22, -0.2), (0.22, 0.0)]
+        _vplate("flag", [(x, z - 0.06) for x, z in pts][::-1], 0.016, bm_, ban, (0, 0.008, 0), bev=0.008)
+        _fit_glyph(label, 0.07, 0.006, paper, ban, (0, -0.016, -0.15), 0.36)
+    return root
+
+
 GEN = {k: v for k, v in globals().items() if k in REGISTRY}
 
 

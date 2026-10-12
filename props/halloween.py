@@ -225,8 +225,8 @@ def turnip_lantern(name, loc=(0, 0, 0), h=0.24, parent=None):
     C.tube(name + '.root', [(0, 0, 0.02 * h), (0.02 * h, 0, -0.08 * h)], 0.02 * h, cream, g)
     for k, a in enumerate((-25, 5, 30)):
         C.tube(f'{name}.leaf{k}', [(0, 0, 0.93 * h), (math.sin(math.radians(a)) * 0.15 * h, 0, 1.2 * h)], 0.025 * h, leaf, g)
-    glow = _m('glow', (1.0, 0.62, 0.2), rough=0.4, emit=3.0, coat=0.0)
-    f = C.empty(name + '.face', g, (0, -0.44 * h, 0.42 * h))
+    glow = _m('turnip_glow', (0.95, 0.42, 0.08), rough=0.4, emit=0.9, coat=0.0)
+    f = C.empty(name + '.face', g, (0, -0.505 * h, 0.42 * h))
     for sx in (-1, 1):
         _flat(f'{name}.eye{sx}', _circle(0.055 * h, 14, sx * 0.13 * h, 0.07 * h), 0.03 * h, glow, f)
     sm = [(-0.14 * h + 0.28 * h * k / 10, -0.06 * h - 0.06 * h * math.sin(math.pi * k / 10)) for k in range(11)]

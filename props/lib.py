@@ -1970,6 +1970,98 @@ def care_sign(r, s, fam, root):
     return z
 
 
+def _vplate(name, pts, depth, m, parent, loc=(0, 0, 0), bev=0.012):
+    holder = C.empty(name + "_h", parent, loc, (math.radians(90), 0, 0))
+    return _slab(name, pts, depth, m, holder, 0.0, bev)
+
+
+def _arc_pts(r, a0, a1, n=24, cx=0.0, cz=0.0, inner=0.0):
+    out = [(cx + r * math.cos(a0 + (a1 - a0) * k / n), cz + r * math.sin(a0 + (a1 - a0) * k / n)) for k in range(n + 1)]
+    if inner > 0:
+        out += [(cx + inner * math.cos(a1 - (a1 - a0) * k / n), cz + inner * math.sin(a1 - (a1 - a0) * k / n)) for k in range(n + 1)]
+    else:
+        out.append((cx, cz))
+    return out
+
+
+def _sun_mark(name, parent, loc, s, m):
+    g = C.empty(name, parent, loc)
+    C.sphere(name + "c", (0, 0, 0), (0.45 * s, 0.25 * s, 0.45 * s), m, g, 20)
+    for k in range(8):
+        a = k * math.pi / 4
+        C.sphere(f"{name}r{k}", (0.75 * s * math.cos(a), 0, 0.75 * s * math.sin(a)), (0.13 * s, 0.12 * s, 0.13 * s), m, g, 10)
+    return g
+
+
+def _snow_mark(name, parent, loc, s, m):
+    g = C.empty(name, parent, loc)
+    for k in range(3):
+        a = math.pi * k / 3
+        C.tube(f"{name}a{k}", [(-s * math.cos(a), 0, -s * math.sin(a)), (s * math.cos(a), 0, s * math.sin(a))], 0.09 * s, m, g)
+        for sg in (-1, 1):
+            C.sphere(f"{name}t{k}{sg}", (sg * s * math.cos(a), 0, sg * s * math.sin(a)), (0.13 * s,) * 3, m, g, 10)
+    return g
+
+
+def _apple_mark(name, parent, loc, s, m, stem):
+    g = C.empty(name, parent, loc)
+    C.sphere(name + "a", (0, 0, 0), (0.55 * s, 0.35 * s, 0.5 * s), m, g, 20)
+    C.tube(name + "s", [(0, 0, 0.4 * s), (0.08 * s, 0, 0.7 * s)], 0.07 * s, stem, g)
+    return g
+
+
+def season_dial(r, s, fam, root):
+    frame, accent = [_rich(c, 1.3, 0.9) for c in _cols(r, fam, 2)]
+    fm = M(frame, rough=0.4, coat=0.6)
+    am = M(accent, rough=0.4, coat=0.6)
+    warm = M((0.95, 0.52, 0.16), rough=0.45, coat=0.5)
+    cool = M((0.3, 0.52, 0.9), rough=0.45, coat=0.5)
+    sunm = M((1.0, 0.78, 0.22), rough=0.35, coat=0.5, emit=0.25)
+    snowm = M((0.97, 0.98, 1.0), rough=0.35, coat=0.5, emit=0.15)
+    red = M((0.82, 0.16, 0.1), rough=0.35, coat=0.6)
+    stem = M((0.35, 0.3, 0.16), rough=0.6)
+    ink = M((0.16, 0.18, 0.26), rough=0.35, coat=0.5)
+    if s == 0:
+        R, Z = 0.24, 0.42
+        C.lathe("foot", [(0, 0), (0.15, 0), (0.16, 0.03), (0.12, 0.05), (0.03, 0.06), (0.025, Z - R), (0, Z - R)], fm, root, segs=40, sy=0.7)
+        C.tube("rim", [(R * 1.02 * math.cos(math.pi * k / 32), -0.012, Z + R * 1.02 * math.sin(math.pi * k / 32)) for k in range(65)], 0.022, fm, root)
+        _vplate("warm", _arc_pts(R, math.pi / 2, 3 * math.pi / 2, 28), 0.02, warm, root, (0, -0.012, Z))
+        _vplate("cool", _arc_pts(R, -math.pi / 2, math.pi / 2, 28), 0.02, cool, root, (0, -0.012, Z))
+        _sun_mark("sunm", root, (-0.12, -0.04, Z + 0.07), 0.06, sunm)
+        _apple_mark("apm", root, (-0.11, -0.04, Z - 0.1), 0.07, red, stem)
+        _snow_mark("snm", root, (0.12, -0.04, Z + 0.02), 0.07, snowm)
+        piv = C.empty("dial_needle", root, (0, -0.06, Z))
+        C.tube("ndl", [(0, 0, -0.02), (0, 0, 0.19)], 0.016, ink, piv, radii=[1.0, 0.5])
+        C.sphere("ntip", (0, 0, 0.19), (0.022, 0.016, 0.022), am, piv, 12)
+        C.sphere("hub", (0, 0, 0), (0.035, 0.025, 0.035), am, piv, 16)
+    elif s == 1:
+        R, Z = 0.3, 0.06
+        C.rounded_box("base", (0, 0, 0.03), (0.72, 0.16, 0.06), 0.025, fm, root)
+        _vplate("warm", _arc_pts(R, math.pi / 2, math.pi, 20, inner=0.1), 0.03, warm, root, (0, -0.015, Z))
+        _vplate("cool", _arc_pts(R, 0, math.pi / 2, 20, inner=0.1), 0.03, cool, root, (0, -0.015, Z))
+        C.tube("arcrim", [(R * 1.04 * math.cos(math.pi * k / 32), -0.03, Z + R * 1.04 * math.sin(math.pi * k / 32)) for k in range(33)], 0.016, am, root)
+        _apple_mark("apm", root, (-0.19, -0.05, Z + 0.1), 0.06, red, stem)
+        _sun_mark("sunm", root, (-0.1, -0.05, Z + 0.21), 0.045, sunm)
+        _snow_mark("snm", root, (0.16, -0.05, Z + 0.15), 0.06, snowm)
+        piv = C.empty("dial_needle", root, (0, -0.07, Z + 0.02))
+        C.tube("ndl", [(0, 0, 0), (0, 0, 0.26)], 0.018, ink, piv, radii=[1.0, 0.45])
+        C.sphere("hub", (0, 0, 0), (0.05, 0.03, 0.05), am, piv, 16)
+    else:
+        W, H, Z = 0.36, 0.3, 0.3
+        for sx in (-1, 1):
+            C.tube(f"post{sx}", [(sx * (W / 2 + 0.03), 0, 0), (sx * (W / 2 + 0.03), 0, Z + 0.02)], 0.022, fm, root)
+            C.sphere(f"knob{sx}", (sx * (W / 2 + 0.03), 0, Z + 0.03), (0.035,) * 3, am, root, 16)
+        C.rounded_box("sill", (0, 0, 0.025), (W + 0.14, 0.14, 0.05), 0.02, fm, root)
+        piv = C.empty("dial_needle", root, (0, 0, Z))
+        C.tube("axle", [(-W / 2 - 0.02, 0, 0), (W / 2 + 0.02, 0, 0)], 0.01, am, piv)
+        C.rounded_box("pfront", (0, -0.008, -H / 2 + 0.01), (W, 0.014, H - 0.02), 0.02, warm, piv)
+        C.rounded_box("pback", (0, 0.008, -H / 2 + 0.01), (W, 0.014, H - 0.02), 0.02, cool, piv)
+        _sun_mark("sunm", piv, (-0.07, -0.03, -0.08), 0.045, sunm)
+        _apple_mark("apm", piv, (0.07, -0.03, -0.15), 0.06, red, stem)
+        sn = _snow_mark("snm", piv, (0, 0.03, -0.14), 0.07, snowm)
+    return root
+
+
 GEN = {k: v for k, v in globals().items() if k in REGISTRY}
 
 

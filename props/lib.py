@@ -2110,6 +2110,42 @@ def region_sign(r, s, fam, root, label="Irlanda"):
     return root
 
 
+def dress_mirror(r, s, fam, root):
+    a, b = [_rich(c, 1.3, 0.9) for c in _cols(r, fam, 2)]
+    fm = M(a, rough=0.35, coat=0.7)
+    bm_ = M(b, rough=0.4, coat=0.6)
+    glass = C.mat("mirror_glass", (0.9, 0.93, 0.97), rough=0.04, metal=1.0)
+    if s == 0:
+        Z, RX, RZ = 0.78, 0.3, 0.46
+        for sx in (-1, 1):
+            C.tube(f"leg{sx}", [(sx * 0.36, 0.0, 0.0), (sx * 0.36, 0.0, Z + 0.1)], 0.022, fm, root)
+            C.lathe(f"foot{sx}", [(0, 0), (0, 0.07), (0.02, 0.075), (0.04, 0.05), (0.045, 0)], bm_, root, segs=24).location = (sx * 0.36, 0, 0)
+            C.sphere(f"finial{sx}", (sx * 0.36, 0, Z + 0.12), (0.035,) * 3, bm_, root, 14)
+            C.tube(f"pin{sx}", [(sx * 0.36, 0, Z), (sx * RX, 0, Z)], 0.012, fm, root)
+        C.tube("brace", [(-0.36, 0.0, 0.12), (0.36, 0.0, 0.12)], 0.016, fm, root)
+        C.sphere("glass", (0, 0.0, Z), (RX * 0.94, 0.012, RZ * 0.94), glass, root, 48)
+        C.tube("rim", [(RX * math.cos(t * 6.2832 / 64), -0.004, Z + RZ * math.sin(t * 6.2832 / 64)) for t in range(65)], 0.03, fm, root)
+    elif s == 1:
+        W, H, Z = 0.56, 0.9, 0.12
+        C.rounded_box("base", (0, 0.06, 0.05), (W + 0.12, 0.26, 0.1), 0.04, bm_, root)
+        C.rounded_box("back", (0, 0.03, Z + H / 2), (W + 0.1, 0.05, H + 0.1), 0.05, fm, root)
+        C.rounded_box("glass", (0, -0.0, Z + H / 2), (W, 0.012, H), 0.04, glass, root)
+        lite = M((1.0, 0.86, 0.55), rough=0.3, coat=0.3, emit=1.4)
+        for k in range(5):
+            z = Z + 0.1 + k * (H - 0.2) / 4
+            for sx in (-1, 1):
+                C.sphere(f"bulb{k}{sx}", (sx * (W / 2 + 0.03), -0.035, z), (0.025,) * 3, lite, root, 12)
+    else:
+        Z, R = 0.92, 0.28
+        C.lathe("stand", [(0, 0), (0, 0.17), (0.03, 0.17), (0.06, 0.12), (0.1, 0.05), (Z - R - 0.02, 0.03), (Z - R + 0.02, 0.0)], bm_, root, segs=40)
+        C.sphere("glass", (0, 0.0, Z), (R * 0.92, 0.012, R * 0.92), glass, root, 48)
+        C.tube("rim", [(R * math.cos(t * 6.2832 / 64), -0.004, Z + R * math.sin(t * 6.2832 / 64)) for t in range(65)], 0.035, fm, root)
+        for k in range(8):
+            t = k * 6.2832 / 8
+            C.sphere(f"bead{k}", (R * 1.12 * math.cos(t), -0.01, Z + R * 1.12 * math.sin(t)), (0.03, 0.02, 0.03), bm_, root, 12)
+    return root
+
+
 GEN = {k: v for k, v in globals().items() if k in REGISTRY}
 
 

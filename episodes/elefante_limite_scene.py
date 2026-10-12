@@ -259,7 +259,8 @@ T.arm(pimo, 'R', 826, fwd=-85, out=45)
 T.arm(pimo, 'R', 860, fwd=-85, out=45)
 T.rest_arm(pimo, 'R', 868)
 gruno['hold'].location = G0
-gesture(gruno, 'bounce', 470)
+gesture(gruno, 'sway', 466)
+gesture(gruno, 'sway', 508)
 gesture(gruno, 'bounce', 850)
 pimo['hold'].location = P1
 gesture(pimo, 'hops', 545)

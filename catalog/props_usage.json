@@ -3723,5 +3723,242 @@
    }
   ],
   "order": 45
+ },
+ "hw26_12_recuerdos": {
+  "env": "casa",
+  "family": "pastel",
+  "decor": [
+   {
+    "prop": "pouf",
+    "style": 2,
+    "seed": 916045,
+    "loc": [
+     -1.19,
+     1.67,
+     0.0
+    ],
+    "scale": 0.95,
+    "rot": -11.2
+   },
+   {
+    "prop": "play_mat",
+    "style": 1,
+    "seed": 375683,
+    "loc": [
+     -3.28,
+     0.24,
+     0.0
+    ],
+    "scale": 1.16,
+    "rot": 3.6
+   },
+   {
+    "prop": "pebbles",
+    "style": 1,
+    "seed": 232425,
+    "loc": [
+     1.04,
+     2.92,
+     0.0
+    ],
+    "scale": 0.85,
+    "rot": 15.1
+   },
+   {
+    "prop": "planter_box",
+    "style": 2,
+    "seed": 197771,
+    "loc": [
+     4.69,
+     2.85,
+     0.0
+    ],
+    "scale": 1.05,
+    "rot": -23.6
+   },
+   {
+    "prop": "flower_pot",
+    "style": 0,
+    "seed": 798849,
+    "loc": [
+     -4.88,
+     0.67,
+     0.0
+    ],
+    "scale": 1.07,
+    "rot": 34.6
+   },
+   {
+    "prop": "toy_blocks",
+    "style": 1,
+    "seed": 847440,
+    "loc": [
+     -2.01,
+     2.32,
+     0.0
+    ],
+    "scale": 1.01,
+    "rot": -33.4
+   }
+  ],
+  "order": 46
+ },
+ "hw26_13_fantasia_sombra": {
+  "env": "halloween",
+  "family": "autumn",
+  "decor": [
+   {
+    "prop": "leaf_pile",
+    "style": 2,
+    "seed": 269681,
+    "loc": [
+     -4.63,
+     0.24,
+     0.0
+    ],
+    "scale": 0.9,
+    "rot": -9.6
+   },
+   {
+    "prop": "gourd_trio",
+    "style": 1,
+    "seed": 553711,
+    "loc": [
+     -3.21,
+     2.65,
+     0.0
+    ],
+    "scale": 0.98,
+    "rot": 14.5
+   },
+   {
+    "prop": "mushroom_stool",
+    "style": 1,
+    "seed": 984408,
+    "loc": [
+     2.48,
+     3.74,
+     0.0
+    ],
+    "scale": 1.14,
+    "rot": -19.7
+   },
+   {
+    "prop": "hay_seat",
+    "style": 2,
+    "seed": 296837,
+    "loc": [
+     3.55,
+     1.89,
+     0.0
+    ],
+    "scale": 0.88,
+    "rot": 21.1
+   },
+   {
+    "prop": "bush",
+    "style": 1,
+    "seed": 671219,
+    "loc": [
+     -1.03,
+     2.19,
+     0.0
+    ],
+    "scale": 1.2,
+    "rot": 21.0
+   },
+   {
+    "prop": "fence",
+    "style": 1,
+    "seed": 38837,
+    "loc": [
+     -2.43,
+     3.87,
+     0.0
+    ],
+    "scale": 1.12,
+    "rot": 20.0
+   }
+  ],
+  "order": 47
+ },
+ "hw26_14_final": {
+  "env": "halloween",
+  "family": "autumn",
+  "decor": [
+   {
+    "prop": "led_lantern",
+    "style": 1,
+    "seed": 46232,
+    "loc": [
+     1.01,
+     1.76,
+     0.0
+    ],
+    "scale": 1.07,
+    "rot": -20.9
+   },
+   {
+    "prop": "mushroom_stool",
+    "style": 0,
+    "seed": 530378,
+    "loc": [
+     2.45,
+     3.61,
+     0.0
+    ],
+    "scale": 0.95,
+    "rot": 3.1
+   },
+   {
+    "prop": "leaf_pile",
+    "style": 1,
+    "seed": 218507,
+    "loc": [
+     -2.34,
+     1.96,
+     0.0
+    ],
+    "scale": 1.08,
+    "rot": -24.5
+   },
+   {
+    "prop": "bush",
+    "style": 0,
+    "seed": 645859,
+    "loc": [
+     -4.61,
+     0.99,
+     0.0
+    ],
+    "scale": 0.94,
+    "rot": 12.6
+   },
+   {
+    "prop": "fence",
+    "style": 0,
+    "seed": 316128,
+    "loc": [
+     3.59,
+     1.42,
+     0.0
+    ],
+    "scale": 1.14,
+    "rot": 11.1
+   },
+   {
+    "prop": "gourd_trio",
+    "style": 2,
+    "seed": 229980,
+    "loc": [
+     -3.17,
+     3.17,
+     0.0
+    ],
+    "scale": 1.14,
+    "rot": -7.2
+   }
+  ],
+  "order": 48
  }
 }

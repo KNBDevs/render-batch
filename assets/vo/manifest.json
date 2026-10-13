@@ -4018,5 +4018,165 @@
   "engine": "gemini",
   "voice": "Iapetus",
   "dev": 0.85
+ },
+ "ep_hw26_04_disfraces_t1": {
+  "hash": "b25e93d307d6",
+  "dur": 1.62,
+  "text": "¡Soy un superhéroe!",
+  "asr": 1.0,
+  "heard": "Soy un superhéroe.",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": -3.3
+ },
+ "ep_hw26_04_disfraces_t2": {
+  "hash": "e593429cfb90",
+  "dur": 1.59,
+  "text": "¡Y seguimos ayudándonos!",
+  "asr": 1.0,
+  "heard": "Y seguimos ayudándonos.",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": 0.2
+ },
+ "ep_hw26_05_escocia_t1": {
+  "hash": "d6241f63b03a",
+  "dur": 1.97,
+  "text": "¡Toc, toc... y una canción!",
+  "asr": 1.0,
+  "heard": "¡Toc toc! ¡Y una canción!",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": -1.4
+ },
+ "ep_silabas_mesa_t4": {
+  "hash": "f6997bf427da",
+  "dur": 4.03,
+  "text": "Mis manos no guardaban la palabra... ¡solo daban palmadas!",
+  "asr": 1.0,
+  "heard": "Mis manos no guardaban la palabra, solo daban palmadas.",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": -3.95
+ },
+ "ep_hw26_01_nombre_n1": {
+  "hash": "be4517957635",
+  "dur": 3.83,
+  "text": "Halloween se celebra el treinta y uno de octubre.",
+  "asr": 0.82,
+  "heard": "Halloween se celebra el 31 de octubre.",
+  "engine": "gemini",
+  "voice": "Sulafat",
+  "dev": 0.0
+ },
+ "ep_hw26_01_nombre_n2": {
+  "hash": "a54a32486a3e",
+  "dur": 7.07,
+  "text": "Su nombre viene de una expresión que significa la víspera de Todos los Santos: la noche de antes.",
+  "asr": 1.0,
+  "heard": "Su nombre viene de una expresión que significa la víspera de todos los santos, la noche de antes.",
+  "engine": "gemini",
+  "voice": "Sulafat",
+  "dev": 0.0
+ },
+ "ep_hw26_01_nombre_n3": {
+  "hash": "360475f198f9",
+  "dur": 2.88,
+  "text": "Y sus costumbres tienen una larga historia.",
+  "asr": 1.0,
+  "heard": "Y sus costumbres tienen una larga historia.",
+  "engine": "gemini",
+  "voice": "Sulafat",
+  "dev": 0.0
+ },
+ "ep_hw26_02_samhain_n1": {
+  "hash": "0bbce5d18714",
+  "dur": 7.57,
+  "text": "Hace mucho tiempo, en lugares como Irlanda, una fiesta llamada Samhain marcaba el paso hacia el invierno.",
+  "asr": 0.94,
+  "heard": "Hace mucho tiempo, en lugares como Irlanda, una fiesta llamada Samheim marcaba el paso hacia el invierno.",
+  "engine": "gemini",
+  "voice": "Sulafat",
+  "dev": 0.0
+ },
+ "ep_hw26_02_samhain_n2": {
+  "hash": "2cf2168b4245",
+  "dur": 3.93,
+  "text": "Con los siglos, distintas costumbres ayudaron a formar Halloween.",
+  "asr": 1.0,
+  "heard": "Con los siglos, distintas costumbres ayudaron a formar Halloween.",
+  "engine": "gemini",
+  "voice": "Sulafat",
+  "dev": 0.0
+ },
+ "ep_hw26_03_faroles_n1": {
+  "hash": "6c6b5a795d39",
+  "dur": 2.85,
+  "text": "En Irlanda se hacían faroles con nabos.",
+  "asr": 1.0,
+  "heard": "En Irlanda se hacían faroles con nabos.",
+  "engine": "gemini",
+  "voice": "Sulafat",
+  "dev": 0.0
+ },
+ "ep_hw26_03_faroles_n2": {
+  "hash": "5dfca6389bf4",
+  "dur": 4.15,
+  "text": "Después, las calabazas se hicieron muy populares en Norteamérica.",
+  "asr": 1.0,
+  "heard": "Después, las calabazas se hicieron muy populares en Norteamérica.",
+  "engine": "gemini",
+  "voice": "Sulafat",
+  "dev": 0.0
+ },
+ "ep_hw26_05_escocia_n1": {
+  "hash": "30f3101d33fa",
+  "dur": 9.53,
+  "text": "En Escocia existe una tradición llamada guising: ir disfrazados y ofrecer una canción, un chiste o una pequeña actuación.",
+  "asr": 0.95,
+  "heard": "En Escocia existe una tradición llamada gaising, ir disfrazados y ofrecer una canción, un  chiste o una pequeña actuación.",
+  "engine": "gemini",
+  "voice": "Sulafat",
+  "dev": 0.0
+ },
+ "ep_hw26_06_truco_trato_p1": {
+  "hash": "c1f4e0b652c4",
+  "dur": 1.17,
+  "text": "¡Truco o trato!",
+  "asr": 1.0,
+  "heard": "truco o trato",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": -7.8
+ },
+ "ep_hw26_13_fantasia_sombra_p2": {
+  "hash": "e46577a8231d",
+  "dur": 1.3,
+  "text": "¡Ahora una mano!",
+  "asr": 1.0,
+  "heard": "¡Ahora una mano!",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": -4.2
+ },
+ "ep_hw26_10_santos_difuntos_p1": {
+  "hash": "5f2818f307c5",
+  "dur": 1.42,
+  "text": "¿Son la misma fecha?",
+  "asr": 1.0,
+  "heard": "¿Son la misma fecha?",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": 0.0
+ },
+ "ep_hw26_13_fantasia_sombra_p1": {
+  "hash": "9ec1d3c9713a",
+  "dur": 1.03,
+  "text": "¿Un fantasma?",
+  "asr": 1.0,
+  "heard": "¿Un fantasma?",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": 0.0
  }
 }

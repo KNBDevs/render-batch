@@ -4178,5 +4178,75 @@
   "engine": "gemini",
   "voice": "Puck",
   "dev": 0.0
+ },
+ "ep_hw26_02_samhain_r1": {
+  "hash": "18cd7eb68deb",
+  "dur": 2.6,
+  "text": "¡Nos falta recoger esta!",
+  "asr": 1.0,
+  "heard": "Nos falta recoger ésta.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 4.91
+ },
+ "ep_hw26_03_faroles_r1": {
+  "hash": "3a82d9d0afa9",
+  "dur": 2.58,
+  "text": "¡Los dos pueden iluminar!",
+  "asr": 1.0,
+  "heard": "Los dos pueden iluminar.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 4.66
+ },
+ "ep_hw26_07_arana_c2": {
+  "hash": "ca9f083abbb9",
+  "dur": 0.66,
+  "text": "Dos.",
+  "asr": 1.0,
+  "heard": "Dos.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 0.0
+ },
+ "ep_hw26_07_arana_c3": {
+  "hash": "6fb246f4eff1",
+  "dur": 0.51,
+  "text": "Tres.",
+  "asr": 1.0,
+  "heard": "3",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 0.0
+ },
+ "ep_hw26_07_arana_c4": {
+  "hash": "a743766b12e2",
+  "dur": 0.63,
+  "text": "Cuatro.",
+  "asr": 1.0,
+  "heard": "4",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 0.0
+ },
+ "ep_hw26_07_arana_c5": {
+  "hash": "6773a34a1eab",
+  "dur": 0.89,
+  "text": "Cinco.",
+  "asr": 1.0,
+  "heard": "Cinco",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": -0.24
+ },
+ "ep_hw26_07_arana_c6": {
+  "hash": "e611eecd555a",
+  "dur": 0.97,
+  "text": "Seis.",
+  "asr": 1.0,
+  "heard": "Seis",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 0.0
  }
 }

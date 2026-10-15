@@ -4248,5 +4248,25 @@
   "engine": "gemini",
   "voice": "Umbriel",
   "dev": 0.0
+ },
+ "ep_hw26_11_mexico_p1": {
+  "hash": "5529fc4cabb8",
+  "dur": 1.79,
+  "text": "¡Una flor de cempasúchil!",
+  "asr": 1.0,
+  "heard": "Una flor de cempasúchil.",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": -6.1
+ },
+ "ep_hw26_06_truco_trato_o1": {
+  "hash": "89931d1a5137",
+  "dur": 2.35,
+  "text": "¡Truco o trato!",
+  "asr": 0.86,
+  "heard": "truco o trato  dos",
+  "engine": "gemini",
+  "voice": "Zephyr",
+  "dev": 0.7
  }
 }

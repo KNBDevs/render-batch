@@ -4268,5 +4268,45 @@
   "engine": "gemini",
   "voice": "Zephyr",
   "dev": 0.7
+ },
+ "ep_hw26_05_escocia_n2": {
+  "hash": "e16c16c77ac3",
+  "dur": 3.35,
+  "text": "Cada lugar puede tener sus propias costumbres.",
+  "asr": 1.0,
+  "heard": "Cada lugar puede tener sus propias costumbres.",
+  "engine": "gemini",
+  "voice": "Sulafat",
+  "dev": 0.0
+ },
+ "ep_hw26_06_truco_trato_n1": {
+  "hash": "9b108e5704f0",
+  "dur": 7.74,
+  "text": "En algunos lugares, familias disfrazadas visitan casas para pedir pequeños dulces.",
+  "asr": 1.0,
+  "heard": "En algunos lugares, familias disfrazadas visitan casas para pedir pequeños dulces.",
+  "engine": "gemini",
+  "voice": "Sulafat",
+  "dev": 0.0
+ },
+ "ep_hw26_06_truco_trato_n2": {
+  "hash": "d0b7d1c54361",
+  "dur": 4.91,
+  "text": "Con personas adultas de confianza, y siempre con amabilidad.",
+  "asr": 1.0,
+  "heard": "con personas adultas de confianza y siempre con amabilidad.",
+  "engine": "gemini",
+  "voice": "Sulafat",
+  "dev": 0.0
+ },
+ "ep_hw26_07_arana_n1": {
+  "hash": "df4bc7cbfaa1",
+  "dur": 4.44,
+  "text": "Las arañas tienen ocho patas. No son insectos.",
+  "asr": 1.0,
+  "heard": "Las arañas tienen ocho patas, no son insectos.",
+  "engine": "gemini",
+  "voice": "Sulafat",
+  "dev": 0.0
  }
 }

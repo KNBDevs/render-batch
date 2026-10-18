@@ -10,8 +10,8 @@ Z0 = 0.08
 autumn(dusk=True)
 auto_dress(EID, ENV)
 
-W0 = ((0.05, -6.0, 1.5), (0.05, -1.0, 0.85), 30)
-WC = ((0.45, -3.3, 0.95), (0.45, -1.0, 0.8), 32)
+W0 = ((-0.15, -6.1, 1.5), (-0.15, -1.0, 0.85), 29)
+WC = ((0.55, -3.3, 0.95), (0.55, -1.0, 0.8), 32)
 camkey(0, W0)
 camkey(168, W0)
 camkey(188, WC)
@@ -75,8 +75,8 @@ for f, d in ((756, 0), (762, 40), (770, 25), (778, 40), (786, 25), (794, 0)):
 
 moki = make('moki', 1.25)
 dress(moki, 'moki', COSTUME, 1)
-MP = Vector((-0.75, -0.8, Z0))
-MP2 = Vector((-0.5, -0.85, Z0))
+MP = Vector((-1.0, -1.0, Z0))
+MP2 = Vector((-0.6, -0.85, Z0))
 T.place(moki, 0, MP)
 T.turn(moki, 0, 30)
 hop_to(moki, 482, MP, MP2, 12, apex=0.2)

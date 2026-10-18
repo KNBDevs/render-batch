@@ -4308,5 +4308,85 @@
   "engine": "gemini",
   "voice": "Sulafat",
   "dev": 0.0
+ },
+ "ep_hw26_08_murcielago_n1": {
+  "hash": "871500d43567",
+  "dur": 9.45,
+  "text": "Es un murciélago. Los murciélagos son mamíferos y sus alas no tienen plumas.",
+  "asr": 1.0,
+  "heard": "Es un murciélago.  Los murciélagos son mamíferos y sus alas no tienen plumas.",
+  "engine": "gemini",
+  "voice": "Sulafat",
+  "dev": 0.0
+ },
+ "ep_hw26_08_murcielago_n2": {
+  "hash": "f4b07fd2a1b3",
+  "dur": 4.13,
+  "text": "Aunque salen en decoraciones, son animales reales.",
+  "asr": 1.0,
+  "heard": "Aunque salen en decoraciones, son animales reales.",
+  "engine": "gemini",
+  "voice": "Sulafat",
+  "dev": 0.0
+ },
+ "ep_hw26_09_telarana_n1": {
+  "hash": "589413ad923e",
+  "dur": 3.92,
+  "text": "Algunas arañas hacen telas con la seda que producen.",
+  "asr": 1.0,
+  "heard": "Algunas arañas hacen telas con la seda que producen.",
+  "engine": "gemini",
+  "voice": "Sulafat",
+  "dev": 0.0
+ },
+ "ep_hw26_10_santos_difuntos_n1": {
+  "hash": "45f6493d6d62",
+  "dur": 7.04,
+  "text": "En el calendario católico, el 1 de noviembre es Todos los Santos: se honra a los santos.",
+  "asr": 1.0,
+  "heard": "En el calendario católico, el 1 de noviembre es todos los santos. Se honra a los santos.",
+  "engine": "gemini",
+  "voice": "Sulafat",
+  "dev": 0.0
+ },
+ "ep_hw26_10_santos_difuntos_n2": {
+  "hash": "376f279e549b",
+  "dur": 5.88,
+  "text": "El 2 es el día de los Fieles Difuntos: se recuerda a las personas que han muerto.",
+  "asr": 0.94,
+  "heard": "El dos es el día de los fieles difuntos. Se recuerda a las personas que ha muerto.",
+  "engine": "gemini",
+  "voice": "Sulafat",
+  "dev": 0.0
+ },
+ "ep_hw26_10_santos_difuntos_n3": {
+  "hash": "4230f086f83a",
+  "dur": 3.41,
+  "text": "Son días cercanos, con significados distintos.",
+  "asr": 1.0,
+  "heard": "Son días cercanos con significados distintos.",
+  "engine": "gemini",
+  "voice": "Sulafat",
+  "dev": 0.0
+ },
+ "ep_hw26_11_mexico_n1": {
+  "hash": "487e3b7277cc",
+  "dur": 6.72,
+  "text": "En México, muchas familias celebran el Día de Muertos, especialmente el 1 y el 2 de noviembre.",
+  "asr": 1.0,
+  "heard": "En México, muchas familias celebran el Día de Muertos, especialmente el 1 y el 2 de  noviembre.",
+  "engine": "gemini",
+  "voice": "Sulafat",
+  "dev": 0.0
+ },
+ "ep_hw26_11_mexico_n2": {
+  "hash": "60e738126657",
+  "dur": 8.51,
+  "text": "Preparan ofrendas para honrar y recordar a sus seres queridos. Las costumbres cambian entre familias y regiones.",
+  "asr": 1.0,
+  "heard": "Preparan ofrendas para honrar y recordar a sus seres queridos.  Las costumbres cambian entre familias y regiones.",
+  "engine": "gemini",
+  "voice": "Sulafat",
+  "dev": 0.0
  }
 }

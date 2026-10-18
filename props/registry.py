@@ -77,5 +77,6 @@ REGISTRY = {
     "book_stand": {"styles": 3, "envs": ["casa", "aula"], "tags": ["atril", "libro", "lectura"], "decor": False},
     "memory_box": {"styles": 3, "envs": ["casa", "aula"], "tags": ["caja", "recuerdos", "guardar"], "decor": False},
     "shadow_lamp": {"styles": 3, "envs": ["halloween", "casa", "aula"], "tags": ["lampara", "luz", "sombras"], "decor": False},
+    "label_board": {"styles": 3, "envs": ["halloween", "aula", "plaza", "casa"], "tags": ["tablero", "etiquetas", "clasificar"], "decor": False},
     "care_sign": {"styles": 3, "envs": ["patio", "plaza", "casa", "aula"], "tags": ["cartel", "cuidado"], "decor": False},
 }

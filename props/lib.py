@@ -2394,6 +2394,38 @@ def shadow_lamp(r, s, fam, root):
     return root
 
 
+def label_board(r, s, fam, root):
+    a, b = [_rich(c, 1.2, 0.85) for c in _cols(r, fam, 2)]
+    am = M(a, rough=0.4, coat=0.6)
+    bm_ = M(b, rough=0.45, coat=0.5)
+    wood = M((0.6, 0.42, 0.27), rough=0.5, coat=0.4)
+    face = M((0.96, 0.93, 0.86), rough=0.7, coat=0.1)
+    W, H, Z = 1.0, 1.0, 0.5
+    if s == 0:
+        for sx in (-1, 1):
+            C.tube(f"leg{sx}", [(sx * 0.42, -0.12, 0.0), (sx * 0.3, 0.0, Z + H + 0.1)], 0.025, wood, root)
+        C.tube("legb", [(0, 0.35, 0.0), (0, 0.04, Z + H)], 0.022, wood, root)
+        C.rounded_box("board", (0, 0.0, Z + H / 2), (W + 0.06, 0.04, H + 0.06), 0.03, am, root)
+        C.rounded_box("face", (0, -0.022, Z + H / 2), (W - 0.04, 0.01, H - 0.04), 0.01, face, root)
+        C.rounded_box("ledge", (0, -0.06, Z - 0.02), (W + 0.04, 0.1, 0.04), 0.015, bm_, root)
+    elif s == 1:
+        for sx in (-1, 1):
+            C.tube(f"post{sx}", [(sx * (W / 2 + 0.05), 0, 0.03), (sx * (W / 2 + 0.05), 0, Z + H + 0.04)], 0.03, wood, root)
+            C.rounded_box(f"foot{sx}", (sx * (W / 2 + 0.05), 0, 0.03), (0.12, 0.36, 0.06), 0.025, bm_, root)
+            C.sphere(f"cap{sx}", (sx * (W / 2 + 0.05), 0, Z + H + 0.06), (0.05,) * 3, am, root, 16)
+        C.rounded_box("board", (0, 0.0, Z + H / 2), (W, 0.04, H), 0.03, am, root)
+        C.rounded_box("face", (0, -0.022, Z + H / 2), (W - 0.08, 0.01, H - 0.08), 0.01, face, root)
+    else:
+        for sx in (-1, 1):
+            C.tube(f"a{sx}", [(sx * 0.6, -0.2, 0.0), (sx * 0.5, 0, Z + H + 0.2), (sx * 0.6, 0.2, 0.0)], 0.025, wood, root)
+        C.tube("top", [(-0.52, 0, Z + H + 0.18), (0.52, 0, Z + H + 0.18)], 0.025, wood, root)
+        for sx in (-1, 1):
+            C.tube(f"cord{sx}", [(sx * 0.3, -0.01, Z + H + 0.17), (sx * 0.38, -0.01, Z + H - 0.02)], 0.006, bm_, root)
+        C.rounded_box("board", (0, 0.0, Z + H / 2), (W, 0.04, H), 0.04, am, root)
+        C.rounded_box("face", (0, -0.022, Z + H / 2), (W - 0.08, 0.01, H - 0.08), 0.012, face, root)
+    return root
+
+
 GEN = {k: v for k, v in globals().items() if k in REGISTRY}
 
 

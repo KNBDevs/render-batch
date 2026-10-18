@@ -2320,6 +2320,55 @@ def bread_basket(r, s, fam, root):
     return root
 
 
+def book_stand(r, s, fam, root, tilt=55):
+    a, b = [_rich(c, 1.2, 0.85) for c in _cols(r, fam, 2)]
+    am = M(a, rough=0.4, coat=0.6)
+    bm_ = M(b, rough=0.45, coat=0.5)
+    wood = M((0.62, 0.43, 0.27), rough=0.5, coat=0.4)
+    t = math.radians(tilt)
+    plate = C.empty("plate", root, (0, 0.05, 0.06), (t, 0, 0))
+    if s == 0:
+        C.rounded_box("base", (0, 0.05, 0.02), (0.5, 0.3, 0.04), 0.015, wood, root)
+        C.rounded_box("board", (0, 0.12, 0.0), (0.52, 0.26, 0.025), 0.012, wood, plate)
+        C.rounded_box("ledge", (0, -0.005, 0.03), (0.54, 0.035, 0.05), 0.012, am, plate)
+        C.tube("prop", [(0, 0.2, 0.03), (0, 0.24, 0.24 * math.sin(t))], 0.014, bm_, root)
+    elif s == 1:
+        C.lathe("base", [(0.0, 0.0), (0.0, 0.16), (0.02, 0.17), (0.04, 0.15), (0.04, 0.0)], am, root, segs=40, sx=1.6)
+        C.rounded_box("board", (0, 0.12, 0.0), (0.5, 0.25, 0.02), 0.01, bm_, plate)
+        C.tube("ledge", [(-0.25, -0.005, 0.02), (0.25, -0.005, 0.02)], 0.016, wood, plate)
+        for sx in (-1, 1):
+            C.sphere(f"knob{sx}", (sx * 0.26, -0.005, 0.02), (0.025,) * 3, am, plate, 14)
+    else:
+        for sx in (-1, 1):
+            C.tube(f"legf{sx}", [(sx * 0.2, -0.02, 0.0), (sx * 0.18, 0.1, 0.26)], 0.016, wood, root)
+            C.tube(f"legb{sx}", [(sx * 0.2, 0.22, 0.0), (sx * 0.18, 0.1, 0.26)], 0.016, wood, root)
+        C.rounded_box("board", (0, 0.12, 0.0), (0.5, 0.26, 0.02), 0.01, am, plate)
+        C.rounded_box("ledge", (0, -0.005, 0.025), (0.52, 0.03, 0.04), 0.01, bm_, plate)
+    return root
+
+
+def memory_box(r, s, fam, root):
+    a, b = [_rich(c, 1.2, 0.85) for c in _cols(r, fam, 2)]
+    am = M(a, rough=0.4, coat=0.6)
+    bm_ = M(b, rough=0.45, coat=0.5)
+    W, D, H = 0.3, 0.22, 0.13
+    hinge = C.empty("mlid_hinge", root, (0, D / 2, H))
+    if s == 0:
+        C.rounded_box("body", (0, 0, H / 2), (W, D, H), 0.025, am, root)
+        C.rounded_box("mlid", (0, -D / 2, 0.02), (W + 0.02, D + 0.02, 0.04), 0.018, bm_, hinge)
+        C.sphere("heart", (0, -D - 0.005, 0.02), (0.025, 0.01, 0.022), am, hinge, 16)
+    elif s == 1:
+        C.lathe("body", [(0.0, 0.0), (0.0, 0.14), (0.01, 0.15), (H - 0.01, 0.15), (H, 0.14), (H, 0.0)], am, root, segs=48, sx=1.1)
+        C.lathe("mlid", [(0.0, 0.0), (0.0, 0.155), (0.012, 0.16), (0.03, 0.15), (0.045, 0.08), (0.05, 0.0)], bm_, C.empty("mlid_off", hinge, (0, -0.15, 0)), segs=48, sx=1.1)
+    else:
+        C.rounded_box("body", (0, 0, H / 2), (W, D, H), 0.012, am, root)
+        for k, x in enumerate((-W / 4, W / 4)):
+            C.rounded_box(f"strap{k}", (x, 0, H / 2), (0.03, D + 0.008, H + 0.004), 0.006, bm_, root)
+        C.rounded_box("mlid", (0, -D / 2, 0.025), (W + 0.015, D + 0.015, 0.05), 0.02, am, hinge)
+        C.sphere("clasp", (0, -D - 0.008, 0.01), (0.02, 0.01, 0.02), bm_, hinge, 12)
+    return root
+
+
 GEN = {k: v for k, v in globals().items() if k in REGISTRY}
 
 

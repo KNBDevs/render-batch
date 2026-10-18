@@ -74,5 +74,7 @@ REGISTRY = {
     "web_frame": {"styles": 3, "envs": ["halloween", "patio", "plaza"], "tags": ["telarana", "marco", "naturaleza"], "decor": False},
     "calendar_rail": {"styles": 3, "envs": ["casa", "aula"], "tags": ["calendario", "fechas", "tarjetas"], "decor": False},
     "bread_basket": {"styles": 3, "envs": ["casa", "plaza"], "tags": ["cesta", "pan", "mesa"], "decor": False},
+    "book_stand": {"styles": 3, "envs": ["casa", "aula"], "tags": ["atril", "libro", "lectura"], "decor": False},
+    "memory_box": {"styles": 3, "envs": ["casa", "aula"], "tags": ["caja", "recuerdos", "guardar"], "decor": False},
     "care_sign": {"styles": 3, "envs": ["patio", "plaza", "casa", "aula"], "tags": ["cartel", "cuidado"], "decor": False},
 }

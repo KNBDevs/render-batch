@@ -2296,6 +2296,30 @@ def calendar_rail(r, s, fam, root):
     return root
 
 
+def bread_basket(r, s, fam, root):
+    a, b = [_rich(c, 1.2, 0.85) for c in _cols(r, fam, 2)]
+    am = M(a, rough=0.45, coat=0.5)
+    weave = M((0.78, 0.58, 0.34), rough=0.6, coat=0.2)
+    weave2 = M((0.66, 0.46, 0.26), rough=0.6, coat=0.2)
+    if s == 0:
+        C.lathe("bowl", [(0.0, 0.0), (0.0, 0.1), (0.02, 0.13), (0.07, 0.16), (0.085, 0.165), (0.08, 0.15), (0.03, 0.115), (0.02, 0.0)], weave, root, segs=48)
+        for k in range(3):
+            z = 0.03 + 0.022 * k
+            C.tube(f"band{k}", [((0.105 + 0.015 * k) * math.cos(2 * math.pi * j / 32), (0.105 + 0.015 * k) * math.sin(2 * math.pi * j / 32), z) for j in range(33)], 0.006, weave2, root)
+        C.tube("rim", [(0.163 * math.cos(2 * math.pi * j / 40), 0.163 * math.sin(2 * math.pi * j / 40), 0.085) for j in range(41)], 0.01, am, root)
+    elif s == 1:
+        C.lathe("bowl", [(0.0, 0.0), (0.0, 0.1), (0.02, 0.13), (0.06, 0.15), (0.075, 0.155), (0.07, 0.14), (0.025, 0.11), (0.02, 0.0)], weave, root, segs=48, sx=1.5)
+        C.tube("rim", [(1.5 * 0.153 * math.cos(2 * math.pi * j / 40), 0.153 * math.sin(2 * math.pi * j / 40), 0.075) for j in range(41)], 0.01, am, root)
+        for sx in (-1, 1):
+            C.tube(f"handle{sx}", [(sx * 0.2, 0, 0.07), (sx * 0.25, 0, 0.1), (sx * 0.2, 0, 0.12)], 0.012, weave2, root)
+    else:
+        C.rounded_box("crate", (0, 0, 0.045), (0.3, 0.22, 0.09), 0.02, weave, root)
+        for k, y in enumerate((-0.112, 0.112)):
+            C.rounded_box(f"slat{k}", (0, y, 0.06), (0.31, 0.015, 0.025), 0.006, weave2, root)
+        C.rounded_box("liner", (0, 0, 0.092), (0.26, 0.18, 0.008), 0.003, am, root)
+    return root
+
+
 GEN = {k: v for k, v in globals().items() if k in REGISTRY}
 
 

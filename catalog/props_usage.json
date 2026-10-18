@@ -3607,7 +3607,7 @@
     "rot": 32.2
    },
    {
-    "prop": "bunting",
+    "prop": "planter_box",
     "style": 1,
     "seed": 231517,
     "loc": [
@@ -3710,8 +3710,8 @@
     "rot": -24.5
    },
    {
-    "prop": "bunting",
-    "style": 0,
+    "prop": "flower_pot",
+    "style": 2,
     "seed": 603091,
     "loc": [
      -3.62,

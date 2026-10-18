@@ -2369,6 +2369,31 @@ def memory_box(r, s, fam, root):
     return root
 
 
+def shadow_lamp(r, s, fam, root):
+    a, b = [_rich(c, 1.2, 0.85) for c in _cols(r, fam, 2)]
+    am = M(a, rough=0.4, coat=0.6)
+    bm_ = M(b, rough=0.45, coat=0.5)
+    glow = M((1.0, 0.86, 0.6), rough=0.3, coat=0.0, emit=1.2)
+    if s == 0:
+        C.lathe("base", [(0.0, 0.0), (0.0, 0.14), (0.02, 0.15), (0.04, 0.12), (0.045, 0.0)], am, root, segs=40)
+        C.tube("neck", [(0, 0, 0.04), (0, 0.02, 0.35), (0, -0.05, 0.5)], 0.018, bm_, root)
+        head = C.empty("head", root, (0, -0.08, 0.52), (math.radians(80), 0, 0))
+        C.lathe("shade", [(0.0, 0.0), (0.0, 0.05), (0.08, 0.09), (0.16, 0.13), (0.17, 0.12), (0.06, 0.04), (0.0, 0.035)], am, head, segs=40)
+        C.sphere("bulb", (0, 0, 0.13), (0.1, 0.1, 0.012), glow, head, 32)
+    elif s == 1:
+        C.rounded_box("box", (0, 0, 0.16), (0.26, 0.22, 0.26), 0.04, am, root)
+        C.rounded_box("face", (0, -0.112, 0.16), (0.18, 0.01, 0.18), 0.02, glow, root)
+        C.tube("handle", [(-0.08, 0, 0.29), (0, 0, 0.36), (0.08, 0, 0.29)], 0.014, bm_, root)
+    else:
+        for k in range(3):
+            t = 2 * math.pi * k / 3 + 0.4
+            C.tube(f"leg{k}", [(0.2 * math.cos(t), 0.2 * math.sin(t), 0.0), (0, 0, 0.42)], 0.014, bm_, root)
+        head = C.empty("head", root, (0, 0, 0.48), (math.radians(90), 0, 0))
+        C.lathe("can", [(0.0, 0.0), (-0.12, 0.09), (-0.1, 0.1), (0.04, 0.1), (0.05, 0.09), (0.05, 0.0)], am, head, segs=40)
+        C.sphere("lens", (0, 0, 0.045), (0.085, 0.085, 0.01), glow, head, 32)
+    return root
+
+
 GEN = {k: v for k, v in globals().items() if k in REGISTRY}
 
 

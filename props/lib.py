@@ -2275,6 +2275,27 @@ def web_frame(r, s, fam, root):
     return root
 
 
+def calendar_rail(r, s, fam, root):
+    a, b = [_rich(c, 1.2, 0.85) for c in _cols(r, fam, 2)]
+    am = M(a, rough=0.4, coat=0.6)
+    bm_ = M(b, rough=0.45, coat=0.5)
+    L = 0.5
+    if s == 0:
+        C.rounded_box("rail", (0, 0, 0.03), (2 * L, 0.16, 0.06), 0.025, am, root)
+        C.rounded_box("lip", (0, -0.07, 0.07), (2 * L - 0.04, 0.03, 0.04), 0.012, bm_, root)
+        for sx in (-1, 1):
+            C.sphere(f"end{sx}", (sx * L, 0, 0.05), (0.045,) * 3, bm_, root, 20)
+    elif s == 1:
+        for k, sx in enumerate((-1, 0, 1)):
+            C.rounded_box(f"step{k}", (sx * L * 0.66, 0, 0.025 + 0.012 * (1 - abs(sx))), (L * 0.62, 0.15, 0.05 + 0.024 * (1 - abs(sx))), 0.02, am if k % 2 == 0 else bm_, root)
+        C.tube("groove", [(-L, -0.05, 0.065), (L, -0.05, 0.065)], 0.01, bm_, root)
+    else:
+        C.lathe("rail", [(0.0, 0.0), (0.0, 0.07), (0.02, 0.08), (0.05, 0.075), (0.065, 0.06), (0.07, 0.0)], am, root, segs=48, sx=L / 0.07, sy=1.1)
+        for sx in (-1, 1):
+            C.sphere(f"knob{sx}", (sx * L * 0.92, 0, 0.09), (0.03, 0.03, 0.03), bm_, root, 16)
+    return root
+
+
 GEN = {k: v for k, v in globals().items() if k in REGISTRY}
 
 

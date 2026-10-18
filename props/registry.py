@@ -71,5 +71,6 @@ REGISTRY = {
     "perform_mat": {"styles": 3, "envs": ["halloween", "plaza", "casa", "aula"], "tags": ["musica", "escenario", "alfombra"], "decor": False},
     "treat_tray": {"styles": 3, "envs": ["halloween", "casa", "plaza"], "tags": ["compartir", "merienda", "bandeja"], "decor": False},
     "perch_stand": {"styles": 3, "envs": ["halloween", "patio", "plaza"], "tags": ["percha", "pajaro", "murcielago"], "decor": False},
+    "web_frame": {"styles": 3, "envs": ["halloween", "patio", "plaza"], "tags": ["telarana", "marco", "naturaleza"], "decor": False},
     "care_sign": {"styles": 3, "envs": ["patio", "plaza", "casa", "aula"], "tags": ["cartel", "cuidado"], "decor": False},
 }

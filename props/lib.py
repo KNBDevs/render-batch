@@ -2241,6 +2241,40 @@ def perch_stand(r, s, fam, root):
     return root
 
 
+def web_frame(r, s, fam, root):
+    a, b = [_rich(c, 1.2, 0.85) for c in _cols(r, fam, 2)]
+    am = M(a, rough=0.4, coat=0.6)
+    bm_ = M(b, rough=0.45, coat=0.5)
+    wood = M((0.55, 0.36, 0.22), rough=0.5, coat=0.4)
+    W, H = 0.62, 1.32
+    if s == 0:
+        for sx in (-1, 1):
+            C.tube(f"post{sx}", [(sx * W, 0, 0.04), (sx * W, 0, H)], 0.035, wood, root)
+            C.rounded_box(f"foot{sx}", (sx * W, 0, 0.03), (0.2, 0.26, 0.06), 0.025, am, root)
+            C.sphere(f"cap{sx}", (sx * W, 0, H + 0.02), (0.055,) * 3, bm_, root, 20)
+        C.tube("bar", [(-W, 0, H - 0.02), (W, 0, H - 0.02)], 0.032, wood, root)
+        C.tube("low", [(-W, 0, 0.16), (W, 0, 0.16)], 0.026, wood, root)
+    elif s == 1:
+        pts = [(W * math.cos(math.pi * k / 20), 0, 0.04 + (H - 0.04) * math.sin(math.pi * k / 20) ** 0.55) for k in range(21)]
+        C.tube("arch", pts, 0.034, wood, root)
+        for sx in (-1, 1):
+            f = C.empty(f"footp{sx}", root, (sx * W, 0, 0))
+            C.lathe(f"foot{sx}", [(0.0, 0.0), (0.0, 0.1), (0.03, 0.105), (0.06, 0.08), (0.07, 0.0)], am, f, segs=32)
+        for k, (x, z) in enumerate(((-0.45, 1.08), (0.48, 1.05), (0.1, H + 0.03))):
+            C.sphere(f"leaf{k}", (x, 0, z), (0.07, 0.014, 0.035), bm_, root, 16, rot=(0, math.radians(25 - 30 * k), 0))
+    else:
+        pts = []
+        for k in range(41):
+            t = 2 * math.pi * k / 40
+            pts.append((W * max(-1, min(1, 1.25 * math.cos(t))), 0, 0.75 + 0.57 * max(-1, min(1, 1.25 * math.sin(t)))))
+        C.tube("ring", pts, 0.03, wood, root)
+        for sx in (-1, 1):
+            C.tube(f"leg{sx}", [(sx * W * 0.7, 0, 0.18), (sx * W * 0.85, -0.12, 0.0)], 0.028, wood, root)
+            C.tube(f"legb{sx}", [(sx * W * 0.7, 0, 0.18), (sx * W * 0.85, 0.12, 0.0)], 0.028, wood, root)
+        C.sphere("knot", (0, 0, 1.36), (0.06, 0.03, 0.06), am, root, 16)
+    return root
+
+
 GEN = {k: v for k, v in globals().items() if k in REGISTRY}
 
 

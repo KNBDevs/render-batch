@@ -2212,6 +2212,35 @@ def treat_tray(r, s, fam, root):
     return root
 
 
+def perch_stand(r, s, fam, root):
+    a, b = [_rich(c, 1.2, 0.85) for c in _cols(r, fam, 2)]
+    am = M(a, rough=0.4, coat=0.6)
+    bm_ = M(b, rough=0.45, coat=0.5)
+    wood = M((0.55, 0.36, 0.22), rough=0.5, coat=0.4)
+    H = 0.8
+    if s == 0:
+        C.lathe("base", [(0.0, 0.0), (0.0, 0.2), (0.03, 0.21), (0.06, 0.17), (0.07, 0.05), (0.08, 0.0)], am, root, segs=48)
+        C.tube("post", [(0, 0, 0.06), (0, 0, H)], 0.03, wood, root)
+        C.tube("bar", [(-0.26, 0, H), (0.26, 0, H)], 0.028, wood, root)
+        for sx in (-1, 1):
+            C.sphere(f"cap{sx}", (sx * 0.27, 0, H), (0.045,) * 3, bm_, root, 20)
+    elif s == 1:
+        C.lathe("base", [(0.0, 0.0), (0.0, 0.18), (0.04, 0.19), (0.08, 0.12), (0.09, 0.0)], am, root, segs=48)
+        C.tube("post", [(0, 0, 0.08), (0.03, 0, 0.4), (-0.02, 0, 0.62), (0.0, 0, H)], 0.032, wood, root, radii=[1.2, 1, 0.95, 0.9])
+        C.tube("bar", [(-0.28, 0, H + 0.04), (-0.12, 0, H - 0.005), (0.12, 0, H), (0.28, 0, H + 0.05)], 0.026, wood, root)
+        for k, (x, z, t) in enumerate(((-0.3, H + 0.07, 30), (0.3, H + 0.08, -30), (0.05, 0.45, 60))):
+            C.sphere(f"leaf{k}", (x, 0, z), (0.06, 0.012, 0.03), bm_, root, 16, rot=(0, math.radians(t), 0))
+    else:
+        C.lathe("base", [(0.0, 0.0), (0.0, 0.22), (0.025, 0.23), (0.05, 0.2), (0.05, 0.0)], am, root, segs=48)
+        pts = [(0.3 * math.cos(math.pi * k / 16), 0, 0.05 + (H - 0.05) * math.sin(math.pi * k / 16) ** 0.6) for k in range(17)]
+        C.tube("hoop", pts, 0.022, bm_, root)
+        C.tube("bar", [(-0.29, 0, H * 0.82), (0.29, 0, H * 0.82)], 0.026, wood, root)
+        C.tube("bar2", [(-0.12, 0, H), (0.12, 0, H)], 0.024, wood, root)
+        C.tube("post", [(0, 0, H * 0.82), (0, 0, H)], 0.02, wood, root)
+        C.sphere("star", (0, 0, H + 0.1), (0.05, 0.02, 0.05), am, root, 16)
+    return root
+
+
 GEN = {k: v for k, v in globals().items() if k in REGISTRY}
 
 

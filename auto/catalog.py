@@ -21,7 +21,7 @@ MECH = {
               "verb_yes": "flota", "verb_no": "se hunde", "q": "¿Cuál flotará?", "emoji": "💧",
               "rule": "Lo que tiene aire dentro o es de madera o corcho flota; el metal, el cristal y las piedras se hunden.", "env": ["patio", "lab", "casa"]},
     "rueda": {"yes": ["pelota", "canica", "naranja", "rueda", "manzana"], "no": ["madera", "libro", "caja"],
-              "verb_yes": "rueda", "verb_no": "se queda quieto", "q": "¿Cuál rodará por la rampa?", "emoji": "🛝",
+              "verb_yes": "rueda", "verb_no": "no rueda", "q": "¿Cuál rodará por la rampa?", "emoji": "🛝",
               "rule": "Lo redondo rueda; lo que tiene lados planos se queda quieto.", "env": ["patio", "plaza", "aula"]},
     "iman": {"yes": ["clavo", "clip", "tornillo"], "no": ["hoja", "pelota", "madera", "corcho", "manzana", "pluma"],
              "verb_yes": "se pega al imán", "verb_no": "no se mueve", "q": "¿Cuál se pegará al imán?", "emoji": "🧲",

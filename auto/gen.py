@@ -11,7 +11,7 @@ SCHED = os.path.join(ROOT, "state", "schedule.json")
 PUB = os.path.join(ROOT, "state", "published.json")
 STATS = os.path.join(ROOT, "state", "stats.json")
 KEY = os.environ.get("GEMINI_API_KEY", "")
-MODEL = os.environ.get("TEXT_MODEL", "gemini-2.5-flash")
+MODEL = os.environ.get("TEXT_MODEL", "")
 TOTAL = 720
 LOG = []
 LOGF = os.path.join(ROOT, "catalog", "auto_log.json")
@@ -21,7 +21,7 @@ MAXS = [2.2, 2.6, 2.0, 2.8, 3.2, 2.4]
 LIMS = [int(m * 15) for m in MAXS]
 TRAIT = {"pimo": "curioso y preguntón", "luma": "alegre y risueña", "ruki": "tranquilo y sereno", "moki": "soñador y dulce",
          "tuki": "juguetón y enérgico", "bolita": "valiente e impulsiva", "bopi": "robot ordenado que dice bip bop", "gruno": "inventor presumido"}
-SHORT_RULE = {"flota": "Lo que tiene aire o es de madera flota.", "rueda": "Lo redondo rueda; lo plano se queda quieto.",
+SHORT_RULE = {"flota": "Lo que tiene aire o es de madera flota.", "rueda": "Lo redondo rueda; lo plano, no.",
               "iman": "El imán atrae las cosas de hierro.", "pesa": "La balanza baja del lado que pesa más."}
 QSHORT = {"flota": "¿Flota o se hunde?", "rueda": "¿Rueda o no rueda?", "iman": "¿Se pega al imán?", "pesa": "¿Cuál pesa más?"}
 
@@ -115,10 +115,25 @@ def pick(used, rnd, avoid=()):
     return None
 
 
+def model():
+    global MODEL
+    if MODEL:
+        return MODEL
+    r = urllib.request.Request("https://generativelanguage.googleapis.com/v1beta/models?pageSize=200", headers={"x-goog-api-key": KEY})
+    ms = json.load(urllib.request.urlopen(r, timeout=60)).get("models", [])
+    bad = ("tts", "image", "live", "embed", "audio", "vision", "exp", "preview", "thinking", "lite", "learnlm", "gemma", "aqa", "robotics", "computer")
+    ok = [m["name"].split("/")[-1] for m in ms if "generateContent" in m.get("supportedGenerationMethods", [])]
+    pref = [n for n in ok if "flash" in n and not any(b in n for b in bad)] or [n for n in ok if "flash" in n and "tts" not in n and "image" not in n] or ok
+    pref.sort(key=lambda n: [int(x) if x.isdigit() else 0 for x in re.findall(r"\d+", n)], reverse=True)
+    MODEL = pref[0]
+    LOG.append({"model": MODEL})
+    return MODEL
+
+
 def gemini(prompt):
     body = {"contents": [{"parts": [{"text": prompt}]}],
             "generationConfig": {"responseMimeType": "application/json", "temperature": 1.0}}
-    r = urllib.request.Request(f"https://generativelanguage.googleapis.com/v1beta/models/{MODEL}:generateContent",
+    r = urllib.request.Request(f"https://generativelanguage.googleapis.com/v1beta/models/{model()}:generateContent",
                                data=json.dumps(body).encode(), headers={"x-goog-api-key": KEY, "Content-Type": "application/json"})
     d = json.load(urllib.request.urlopen(r, timeout=120))
     return json.loads(d["candidates"][0]["content"]["parts"][0]["text"])

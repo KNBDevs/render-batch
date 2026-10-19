@@ -5,6 +5,7 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
+  issues: write
 concurrency:
   group: stats
 jobs:
@@ -22,3 +23,12 @@ jobs:
           git config user.name Claude; git config user.email noreply@anthropic.com
           git add state/stats.json
           git diff --cached --quiet || { git commit -qm "update state"; git pull -q --rebase origin main; git push -q origin HEAD:main; }
+      - env:
+          GH_TOKEN: ${{ github.token }}
+          R: ${{ github.repository }}
+        run: |
+          D=$(python tools/buffer.py)
+          N=$(gh issue list -R "$R" --state open --search "Queue low in:title" --json number -q '.[0].number')
+          if [ "$D" -lt 3 ]; then
+            if [ -z "$N" ]; then gh issue create -R "$R" -t "Queue low" -b "days: $D"; else gh issue comment "$N" -R "$R" -b "days: $D"; fi
+          elif [ -n "$N" ]; then gh issue close "$N" -R "$R"; fi

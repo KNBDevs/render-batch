@@ -599,5 +599,16 @@
     ],
     "status": "approved",
     "auto": true
+  },
+  {
+    "id": "exp_iman_clavo_madera",
+    "template": "episode",
+    "title": "¿Se pegará al imán el clavo o el bloque de madera? 🧲",
+    "cast": [
+      "bopi",
+      "luma"
+    ],
+    "status": "approved",
+    "auto": true
   }
 ]

@@ -4,5 +4,7 @@
  "iman|tornillo|manzana": "exp_iman_tornillo_manzana",
  "iman|tornillo|manzana|pimo-bolita": "exp_iman_tornillo_manzana",
  "rueda|pelota|libro": "exp_rueda_pelota_libro",
- "rueda|pelota|libro|ruki-moki": "exp_rueda_pelota_libro"
+ "rueda|pelota|libro|ruki-moki": "exp_rueda_pelota_libro",
+ "iman|clavo|madera": "exp_iman_clavo_madera",
+ "iman|clavo|madera|bopi-luma": "exp_iman_clavo_madera"
 }

@@ -566,5 +566,27 @@
     ],
     "status": "draft",
     "batch": "17_36"
+  },
+  {
+    "id": "exp_pesa_naranja_pluma",
+    "template": "episode",
+    "title": "¿Cuál pesa más? ⚖️ ¿La naranja o la pluma?",
+    "cast": [
+      "tuki",
+      "bolita"
+    ],
+    "status": "approved",
+    "auto": true
+  },
+  {
+    "id": "exp_pesa_piedra_hoja",
+    "template": "episode",
+    "title": "¿Cuál pesa más? ⚖️ ¿La piedra o la hoja?",
+    "cast": [
+      "tuki",
+      "bolita"
+    ],
+    "status": "approved",
+    "auto": true
   }
 ]

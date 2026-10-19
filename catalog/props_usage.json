@@ -3960,5 +3960,151 @@
    }
   ],
   "order": 48
+ },
+ "exp_pesa_naranja_pluma": {
+  "env": "aula",
+  "family": "pastel",
+  "decor": [
+   {
+    "prop": "pouf",
+    "style": 0,
+    "seed": 820250,
+    "loc": [
+     -3.51,
+     0.48,
+     0.0
+    ],
+    "scale": 1.08,
+    "rot": 2.8
+   },
+   {
+    "prop": "play_mat",
+    "style": 2,
+    "seed": 163804,
+    "loc": [
+     -0.84,
+     2.68,
+     0.0
+    ],
+    "scale": 0.92,
+    "rot": 5.0
+   },
+   {
+    "prop": "soft_token",
+    "style": 0,
+    "seed": 555563,
+    "loc": [
+     -2.23,
+     2.36,
+     0.0
+    ],
+    "scale": 1.25,
+    "rot": -26.0
+   },
+   {
+    "prop": "pebbles",
+    "style": 2,
+    "seed": 729500,
+    "loc": [
+     4.62,
+     1.97,
+     0.0
+    ],
+    "scale": 1.22,
+    "rot": 1.5
+   },
+   {
+    "prop": "floor_lamp",
+    "style": 0,
+    "seed": 736763,
+    "loc": [
+     3.19,
+     2.91,
+     0.0
+    ],
+    "scale": 0.96,
+    "rot": 2.2
+   }
+  ],
+  "order": 49
+ },
+ "exp_pesa_piedra_hoja": {
+  "env": "casa",
+  "family": "pastel",
+  "decor": [
+   {
+    "prop": "bunting",
+    "style": 0,
+    "seed": 141537,
+    "loc": [
+     4.75,
+     2.32,
+     0.0
+    ],
+    "scale": 0.99,
+    "rot": -1.2
+   },
+   {
+    "prop": "pouf",
+    "style": 1,
+    "seed": 643697,
+    "loc": [
+     -1.14,
+     3.14,
+     0.0
+    ],
+    "scale": 1.24,
+    "rot": 8.9
+   },
+   {
+    "prop": "planter_box",
+    "style": 0,
+    "seed": 504964,
+    "loc": [
+     -3.19,
+     0.3,
+     0.0
+    ],
+    "scale": 1.15,
+    "rot": 21.8
+   },
+   {
+    "prop": "toy_blocks",
+    "style": 2,
+    "seed": 876634,
+    "loc": [
+     -2.28,
+     2.95,
+     0.0
+    ],
+    "scale": 0.94,
+    "rot": -8.7
+   },
+   {
+    "prop": "flower_pot",
+    "style": 1,
+    "seed": 103075,
+    "loc": [
+     -4.88,
+     0.29,
+     0.0
+    ],
+    "scale": 1.1,
+    "rot": -17.7
+   },
+   {
+    "prop": "led_lantern",
+    "style": 0,
+    "seed": 214131,
+    "loc": [
+     1.19,
+     3.52,
+     0.0
+    ],
+    "scale": 1.02,
+    "rot": 4.1
+   }
+  ],
+  "order": 50
  }
 }

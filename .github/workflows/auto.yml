@@ -1,0 +1,42 @@
+name: auto
+on:
+  schedule:
+    - cron: "41 6 * * *"
+    - cron: "41 18 * * *"
+  workflow_dispatch:
+    inputs:
+      n:
+        description: "Count"
+        default: "2"
+      force:
+        description: "Force"
+        type: boolean
+        default: false
+permissions:
+  contents: write
+  actions: write
+concurrency:
+  group: auto
+jobs:
+  gen:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python auto/gen.py "${{ inputs.n || '2' }}" ${{ inputs.force && '--force' || '' }} | tee out.txt
+      - env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name Claude; git config user.email noreply@anthropic.com
+          git add episodes catalog
+          if ! git diff --cached --quiet; then
+            git commit -qm "Add episodes"
+            git pull -q --rebase origin main
+            git push -q origin HEAD:main
+            gh api -X POST repos/${{ github.repository }}/actions/workflows/voices.yml/dispatches -f ref=main || true
+          fi

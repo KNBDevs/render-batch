@@ -13,6 +13,8 @@ STATS = os.path.join(ROOT, "state", "stats.json")
 KEY = os.environ.get("GEMINI_API_KEY", "")
 MODEL = os.environ.get("TEXT_MODEL", "gemini-2.5-flash")
 TOTAL = 720
+LOG = []
+LOGF = os.path.join(ROOT, "catalog", "auto_log.json")
 T0 = 200
 FRAMES = [10, 70, 140, T0 + 235, T0 + 315, T0 + 410]
 MAXS = [2.2, 2.6, 2.0, 2.8, 3.2, 2.4]
@@ -90,11 +92,12 @@ def weights():
     return {m: 1.0 + (sum(v) / len(v)) / 2000.0 if v else 1.5 for m, v in ((m, perf.get(m, [])) for m in MECH)}
 
 
-def pick(used, rnd):
+def pick(used, rnd, avoid=()):
     w = weights()
     mechs = list(MECH)
     rnd.shuffle(mechs)
     mechs.sort(key=lambda m: -w[m] * rnd.uniform(0.6, 1.4))
+    mechs = [m for m in mechs if m not in avoid] + [m for m in mechs if m in avoid]
     for strict in (True, False):
         for m in mechs:
             M = MECH[m]
@@ -102,7 +105,7 @@ def pick(used, rnd):
             rnd.shuffle(combos)
             for y, n in combos:
                 key = f"{m}|{y}|{n}"
-                pair = rnd.choice(PAIRS)
+                pair = rnd.choice([p for p in PAIRS if not set(p) & set(avoid)] or PAIRS)
                 k2 = f"{key}|{'-'.join(pair)}"
                 if strict and key in used:
                     continue
@@ -152,22 +155,28 @@ descripcion: 1-2 frases sencillas sobre lo que se aprende."""
 def valid(js, m, y, n):
     L = js.get("lineas")
     if not isinstance(L, list) or len(L) != 6:
-        return False
-    for t, lim in zip(L, LIMS):
-        if not isinstance(t, str) or not (4 <= len(t) <= lim) or t.strip()[-1] not in "!?.…":
-            return False
+        return "lineas"
+    for i, (t, lim) in enumerate(zip(L, LIMS)):
+        if not isinstance(t, str):
+            return f"tipo {i}"
+        t = t.strip()
+        if not (4 <= len(t) <= lim):
+            return f"long {i} {len(t)}>{lim}"
+        if re.sub(r"[\s\u200d\ufe0f\u2600-\u27bf\U0001F000-\U0001FAFF]+$", "", t)[-1:] not in "!?.…»":
+            return f"fin {i}"
     blob = norm(" ".join(L) + js.get("titulo", ""))
-    if any(w in blob for w in ("suscri", "like", "comenta", "campanita", "susto", "miedo")):
-        return False
-    ny, nn = norm(OBJ[y]["name"]).split()[0], norm(OBJ[n]["name"]).split()[0]
+    for w in ("suscri", "like", "comenta", "campanita", "susto", "miedo"):
+        if w in blob:
+            return f"veto {w}"
+    ny, nn = norm(OBJ[y]["name"]).split()[-1], norm(OBJ[n]["name"]).split()[-1]
     if ny not in norm(L[1]) or nn not in norm(L[1]):
-        return False
+        return "pregunta sin objetos"
     if ny not in norm(L[3]):
-        return False
+        return "resultado sin objeto"
     t = js.get("titulo", "")
-    if not (10 <= len(t) <= 82 and "¿" in t and "?" in t and "#" not in t):
-        return False
-    return True
+    if not (10 <= len(t) <= 85 and "?" in t and "#" not in t):
+        return f"titulo {t}"
+    return None
 
 
 def fallback(m, y, n, pair, hol, rnd):
@@ -194,11 +203,16 @@ def script(m, y, n, pair, hol, rnd):
         for _ in range(3):
             try:
                 js = gemini(p)
-                if valid(js, m, y, n):
+                if isinstance(js, dict) and "lineas" in js:
+                    js["lineas"] = [x.strip() for x in js["lineas"]]
+                why = valid(js, m, y, n)
+                LOG.append({"t": datetime.now(timezone.utc).isoformat()[:19], "ok": not why, "why": why})
+                if not why:
                     js["source"] = "gemini"
                     return js
-                print("invalid", json.dumps(js, ensure_ascii=False)[:300], flush=True)
+                print("invalid", why, json.dumps(js, ensure_ascii=False)[:300], flush=True)
             except Exception as e:
+                LOG.append({"t": datetime.now(timezone.utc).isoformat()[:19], "ok": False, "why": str(e)[:200]})
                 print("gemini err", e, flush=True)
     js = fallback(m, y, n, pair, hol, rnd)
     js["source"] = "fallback"
@@ -260,10 +274,11 @@ def make(n_max, force=False):
     used = load(USED, {})
     q = load(QUEUE, [])
     made = []
+    made_info = []
     for i in range(need):
         seed = int(datetime.now(timezone.utc).timestamp()) + i * 7919
         rnd = random.Random(seed)
-        ch = pick(used, rnd)
+        ch = pick(used, rnd, [x for e in made_info for x in e])
         if not ch:
             break
         m, y, n, pair = ch
@@ -279,8 +294,11 @@ def make(n_max, force=False):
         used[f"{m}|{y}|{n}|{'-'.join(pair)}"] = eid
         q.append({"id": eid, "template": "episode", "title": title.split(" #")[0], "cast": list(pair), "status": "approved", "auto": True})
         made.append(eid)
+        made_info.append((m, pair[0], pair[1]))
         print("made", eid, js.get("source"), "|", title, flush=True)
     json.dump(used, open(USED, "w"), ensure_ascii=False, indent=1)
+    old = load(LOGF, [])
+    json.dump((old + LOG)[-30:], open(LOGF, "w"), ensure_ascii=False, indent=1)
     json.dump(q, open(QUEUE, "w"), ensure_ascii=False, indent=2)
     return made
 

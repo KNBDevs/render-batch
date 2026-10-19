@@ -4106,5 +4106,151 @@
    }
   ],
   "order": 50
+ },
+ "exp_rueda_rueda_caja": {
+  "env": "aula",
+  "family": "pastel",
+  "decor": [
+   {
+    "prop": "pebbles",
+    "style": 0,
+    "seed": 269892,
+    "loc": [
+     2.12,
+     2.42,
+     0.0
+    ],
+    "scale": 1.01,
+    "rot": 25.5
+   },
+   {
+    "prop": "soft_token",
+    "style": 2,
+    "seed": 833762,
+    "loc": [
+     -1.98,
+     3.79,
+     0.0
+    ],
+    "scale": 0.96,
+    "rot": -29.0
+   },
+   {
+    "prop": "floor_lamp",
+    "style": 1,
+    "seed": 461132,
+    "loc": [
+     -1.25,
+     4.19,
+     0.0
+    ],
+    "scale": 1.18,
+    "rot": -25.8
+   },
+   {
+    "prop": "play_mat",
+    "style": 2,
+    "seed": 706541,
+    "loc": [
+     1.3,
+     2.48,
+     0.0
+    ],
+    "scale": 0.98,
+    "rot": -13.5
+   },
+   {
+    "prop": "pouf",
+    "style": 1,
+    "seed": 389020,
+    "loc": [
+     4.87,
+     1.3,
+     0.0
+    ],
+    "scale": 1.11,
+    "rot": -24.7
+   }
+  ],
+  "order": 51
+ },
+ "exp_iman_tornillo_manzana": {
+  "env": "casa",
+  "family": "pastel",
+  "decor": [
+   {
+    "prop": "toy_blocks",
+    "style": 0,
+    "seed": 705125,
+    "loc": [
+     3.27,
+     1.63,
+     0.0
+    ],
+    "scale": 1.15,
+    "rot": 21.7
+   },
+   {
+    "prop": "ball_basket",
+    "style": 0,
+    "seed": 686973,
+    "loc": [
+     -3.27,
+     2.02,
+     0.0
+    ],
+    "scale": 1.0,
+    "rot": -4.5
+   },
+   {
+    "prop": "led_lantern",
+    "style": 2,
+    "seed": 616773,
+    "loc": [
+     -2.46,
+     3.66,
+     0.0
+    ],
+    "scale": 1.13,
+    "rot": -32.5
+   },
+   {
+    "prop": "play_mat",
+    "style": 0,
+    "seed": 294179,
+    "loc": [
+     -4.65,
+     2.9,
+     0.0
+    ],
+    "scale": 1.1,
+    "rot": 21.4
+   },
+   {
+    "prop": "soft_token",
+    "style": 1,
+    "seed": 538385,
+    "loc": [
+     2.02,
+     3.71,
+     0.0
+    ],
+    "scale": 1.1,
+    "rot": -29.9
+   },
+   {
+    "prop": "bunting",
+    "style": 2,
+    "seed": 526760,
+    "loc": [
+     4.51,
+     1.24,
+     0.0
+    ],
+    "scale": 1.02,
+    "rot": -33.2
+   }
+  ],
+  "order": 52
  }
 }

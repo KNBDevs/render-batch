@@ -4398,5 +4398,35 @@
   "engine": "gemini",
   "voice": "Puck",
   "dev": -5.7
+ },
+ "ep_exp_rueda_pelota_libro_b1": {
+  "hash": "e3539c1d456c",
+  "dur": 4.26,
+  "text": "¿Cuál rodará por la rampa? ¿La pelota o el libro?",
+  "asr": 1.0,
+  "heard": "¿Cuál rodará por la rampa, la pelota o el libro?",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": -3.0
+ },
+ "ep_exp_rueda_pelota_libro_b2": {
+  "hash": "1fc23929ea4d",
+  "dur": 2.98,
+  "text": "¡La pelota rueda! ¡Y el libro no rueda!",
+  "asr": 1.0,
+  "heard": "La pelota rueda y el libro no rueda.",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": -0.35
+ },
+ "ep_exp_rueda_pelota_libro_b3": {
+  "hash": "1b522d99adf6",
+  "dur": 1.72,
+  "text": "¡Qué experimento tan chulo!",
+  "asr": 1.0,
+  "heard": "¡Qué experimento tan chulo!",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": -1.75
  }
 }

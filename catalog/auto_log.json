@@ -28,5 +28,23 @@
   "t": "2026-10-19T20:11:16",
   "ok": false,
   "why": "HTTP Error 404: Not Found"
+ },
+ {
+  "model": "gemini-3.8-flash"
+ },
+ {
+  "t": "2026-10-19T20:12:18",
+  "ok": false,
+  "why": "HTTP Error 503: Service Unavailable"
+ },
+ {
+  "t": "2026-10-19T20:12:18",
+  "ok": false,
+  "why": "HTTP Error 503: Service Unavailable"
+ },
+ {
+  "t": "2026-10-19T20:12:19",
+  "ok": false,
+  "why": "HTTP Error 503: Service Unavailable"
  }
 ]

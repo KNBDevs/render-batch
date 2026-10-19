@@ -588,5 +588,16 @@
     ],
     "status": "approved",
     "auto": true
+  },
+  {
+    "id": "exp_rueda_pelota_libro",
+    "template": "episode",
+    "title": "¿Rueda o no rueda? 🛝 ¿La pelota o el libro?",
+    "cast": [
+      "ruki",
+      "moki"
+    ],
+    "status": "approved",
+    "auto": true
   }
 ]

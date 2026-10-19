@@ -4252,5 +4252,72 @@
    }
   ],
   "order": 52
+ },
+ "exp_rueda_pelota_libro": {
+  "env": "aula",
+  "family": "pastel",
+  "decor": [
+   {
+    "prop": "pebbles",
+    "style": 1,
+    "seed": 544347,
+    "loc": [
+     4.51,
+     2.05,
+     0.0
+    ],
+    "scale": 1.15,
+    "rot": -6.2
+   },
+   {
+    "prop": "pouf",
+    "style": 2,
+    "seed": 54833,
+    "loc": [
+     -1.13,
+     4.43,
+     0.0
+    ],
+    "scale": 0.9,
+    "rot": -11.7
+   },
+   {
+    "prop": "floor_lamp",
+    "style": 2,
+    "seed": 221274,
+    "loc": [
+     3.21,
+     2.58,
+     0.0
+    ],
+    "scale": 1.16,
+    "rot": -15.9
+   },
+   {
+    "prop": "play_mat",
+    "style": 1,
+    "seed": 679303,
+    "loc": [
+     -3.7,
+     0.99,
+     0.0
+    ],
+    "scale": 0.91,
+    "rot": -25.2
+   },
+   {
+    "prop": "soft_token",
+    "style": 2,
+    "seed": 445989,
+    "loc": [
+     -4.8,
+     2.23,
+     0.0
+    ],
+    "scale": 0.89,
+    "rot": -11.6
+   }
+  ],
+  "order": 53
  }
 }

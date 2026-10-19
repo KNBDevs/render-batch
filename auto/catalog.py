@@ -22,7 +22,7 @@ MECH = {
               "rule": "Lo que tiene aire dentro o es de madera o corcho flota; el metal, el cristal y las piedras se hunden.", "env": ["patio", "lab", "casa"]},
     "rueda": {"yes": ["pelota", "canica", "naranja", "rueda", "manzana"], "no": ["madera", "libro", "caja"],
               "verb_yes": "rueda", "verb_no": "no rueda", "q": "¿Cuál rodará por la rampa?", "emoji": "🛝",
-              "rule": "Lo redondo rueda; lo que tiene lados planos se queda quieto.", "env": ["patio", "plaza", "aula"]},
+              "rule": "Lo redondo rueda; lo que tiene lados planos no rueda, se queda en su sitio.", "env": ["patio", "plaza", "aula"]},
     "iman": {"yes": ["clavo", "clip", "tornillo"], "no": ["hoja", "pelota", "madera", "corcho", "manzana", "pluma"],
              "verb_yes": "se pega al imán", "verb_no": "no se mueve", "q": "¿Cuál se pegará al imán?", "emoji": "🧲",
              "rule": "El imán atrae cosas de hierro, como clavos y clips; la madera, el plástico y las hojas, no.", "env": ["lab", "aula", "casa"]},

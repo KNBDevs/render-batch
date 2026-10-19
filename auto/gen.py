@@ -1,4 +1,4 @@
-import json, os, sys, random, re, subprocess, urllib.request, unicodedata
+import json, os, sys, random, re, subprocess, time, urllib.request, urllib.error, unicodedata
 from datetime import datetime, timezone, timedelta, date
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -14,6 +14,7 @@ KEY = os.environ.get("GEMINI_API_KEY", "")
 MODEL = os.environ.get("TEXT_MODEL", "")
 TOTAL = 720
 LOG = []
+CANDS = []
 LOGF = os.path.join(ROOT, "catalog", "auto_log.json")
 T0 = 200
 FRAMES = [10, 70, 140, T0 + 235, T0 + 315, T0 + 410]
@@ -125,15 +126,32 @@ def model():
     ok = [m["name"].split("/")[-1] for m in ms if "generateContent" in m.get("supportedGenerationMethods", [])]
     pref = [n for n in ok if "flash" in n and not any(b in n for b in bad)] or [n for n in ok if "flash" in n and "tts" not in n and "image" not in n] or ok
     pref.sort(key=lambda n: [int(x) if x.isdigit() else 0 for x in re.findall(r"\d+", n)], reverse=True)
+    CANDS[:] = pref[:4]
     MODEL = pref[0]
-    LOG.append({"model": MODEL})
+    LOG.append({"models": CANDS})
     return MODEL
 
 
 def gemini(prompt):
+    global MODEL
+    model()
+    last = None
+    for name in [MODEL] + [c for c in CANDS if c != MODEL]:
+        for wait in (0, 20, 45):
+            time.sleep(wait)
+            try:
+                return gemini_one(prompt, name)
+            except urllib.error.HTTPError as e:
+                last = e
+                if e.code not in (429, 500, 503):
+                    raise
+    raise last
+
+
+def gemini_one(prompt, name):
     body = {"contents": [{"parts": [{"text": prompt}]}],
             "generationConfig": {"responseMimeType": "application/json", "temperature": 1.0}}
-    r = urllib.request.Request(f"https://generativelanguage.googleapis.com/v1beta/models/{model()}:generateContent",
+    r = urllib.request.Request(f"https://generativelanguage.googleapis.com/v1beta/models/{name}:generateContent",
                                data=json.dumps(body).encode(), headers={"x-goog-api-key": KEY, "Content-Type": "application/json"})
     d = json.load(urllib.request.urlopen(r, timeout=120))
     return json.loads(d["candidates"][0]["content"]["parts"][0]["text"])

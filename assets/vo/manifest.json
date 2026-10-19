@@ -4388,5 +4388,15 @@
   "engine": "gemini",
   "voice": "Sulafat",
   "dev": 0.0
+ },
+ "ep_hw26_01_nombre_p2": {
+  "hash": "a8aa8429a680",
+  "dur": 1.55,
+  "text": "¡Antes en el calendario!",
+  "asr": 1.0,
+  "heard": "Antes en el calendario.",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": -5.7
  }
 }

@@ -4508,5 +4508,15 @@
   "engine": "gemini",
   "voice": "Puck",
   "dev": -0.65
+ },
+ "ep_exp_iman_tornillo_pluma_a1": {
+  "hash": "b1b45f167a1a",
+  "dur": 3.04,
+  "text": "¡Mira: tornillo y pluma!",
+  "asr": 1.0,
+  "heard": "¡Mira, tornillo y pluma!",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 1.26
  }
 }

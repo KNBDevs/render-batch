@@ -17,7 +17,7 @@ SFX = [(18, 'pop', 0.2), (36, 'tock', 0.18), (52, 'tock', 0.18), (68, 'tock', 0.
        (412, 'pop', 0.2), (466, 'sparkle', 0.2), (600, 'boing_up', 0.18), (618, 'pop', 0.25), (664, 'tock', 0.3), (666, 'sparkle', 0.3),
        (742, 'boing_up', 0.2), (764, 'sparkle', 0.25)]
 META = {
-    'title': 'La sal que seguía ahí 🧂💧 ¿Adónde se fue? #shorts',
+    'title': '¿La sal desaparece o sigue en el agua? 🧂💧 La sal que seguía ahí #shorts',
     'description': 'Bopi mezcla un poco de sal en agua y busca los granitos con una linterna. Ruki le muestra un dibujo: la sal se ha disuelto y sigue en el agua, aunque ya no la veamos. Aprende jugando qué es disolver.\n\n#pimoruki #dibujosanimados #videosinfantiles #aprenderjugando #shorts',
     'tags': ['pimoruki', 'dibujos animados', 'videos infantiles', 'aprender jugando', 'disolver', 'sal', 'agua', 'ciencia para niños', 'experimentos', 'educación infantil', 'bopi', 'shorts'],
 }

@@ -17,7 +17,7 @@ SFX = [(16, 'pop', 0.25), (46, 'tock', 0.2), (52, 'tock', 0.2), (58, 'boing_up',
        (400, 'sparkle', 0.22), (492, 'drip', 0.25), (512, 'drip', 0.2), (572, 'boing_up', 0.2), (583, 'boing_up', 0.2), (594, 'boing_up', 0.2),
        (652, 'whistle_up', 0.15), (702, 'pop', 0.25), (740, 'boing_up', 0.2), (772, 'sparkle', 0.22)]
 META = {
-    'title': 'El cubito sin abrigo 🧊 ¿Adónde se fue el hielo? #shorts',
+    'title': '¿El cubito se escapa o se derrite? 🧊💧 El cubito sin abrigo #shorts',
     'description': 'Tuki le hace unos zapatitos a un cubito de hielo... ¡y cuando vuelve solo queda agua! Luma le enseña que el hielo es agua sólida y que, al calentarse poco a poco, se derrite y se convierte en agua líquida. Aprende jugando con el hielo.\n\n#pimoruki #dibujosanimados #videosinfantiles #aprenderjugando #shorts',
     'tags': ['pimoruki', 'dibujos animados', 'videos infantiles', 'aprender jugando', 'hielo', 'derretir', 'agua', 'ciencia para niños', 'sólido y líquido', 'educación infantil', 'tuki', 'shorts'],
 }

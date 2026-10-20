@@ -6,12 +6,29 @@ EID = 'sal_disuelta'
 Z0 = 0.08
 auto_dress(EID, ENV)
 rng = random.Random(21)
+DK0, DK1 = 92, 110
+for l in list(bpy.data.lights):
+    e = l.energy
+    for f, k in ((0, 0.12), (DK0, 0.12), (DK1, 1.0)):
+        l.energy = e * k
+        l.keyframe_insert('energy', frame=f)
+bgs = sc.world.node_tree.nodes['Background'].inputs[1]
+for f, v in ((0, 0.08), (DK0, 0.08), (DK1, 0.5)):
+    bgs.default_value = v
+    bgs.keyframe_insert('default_value', frame=f)
+skys = bpy.data.materials['Sky'].node_tree.nodes['Emission'].inputs[1]
+for f, v in ((0, 0.18), (DK0, 0.18), (DK1, 1.0)):
+    skys.default_value = v
+    skys.keyframe_insert('default_value', frame=f)
 
 W0 = ((0.0, -6.5, 2.05), (0.0, -1.4, 0.8), 31)
 WT = ((-0.05, -6.0, 1.95), (-0.05, -1.7, 0.95), 27)
 WS = ((-0.6, -3.9, 1.35), (-0.6, -1.9, 0.88), 36)
 WC = ((-0.35, -3.25, 1.2), (-0.35, -2.0, 0.9), 40)
-camkey(0, WS)
+WK = ((-0.74, -3.6, 1.18), (-0.7, -2.0, 0.96), 37)
+camkey(0, WK)
+camkey(44, WK)
+camkey(58, WS)
 camkey(96, WS)
 camkey(110, WT)
 camkey(250, WT)
@@ -91,15 +108,21 @@ K(spoon, 'rotation_euler', 244, (0, 0, math.radians(1440 + 20)))
 torch = spawn('toy_torch', 0, 404, 'pastel', (0, 0, 0), 1.3, 0)
 beam = next(o for o in torch.children_recursive if o.name.startswith('beam'))
 TP = Vector((-0.5, -2.02, TOP + 0.38))
-K(torch, 'location', 0, tuple(TP + Vector((-0.1, 0.1, -0.3))))
-K(torch, 'scale', 0, (0, 0, 0))
-K(torch, 'scale', 62, (0, 0, 0))
-K(torch, 'scale', 70, (1.3, 1.3, 1.3))
-K(torch, 'location', 70, tuple(TP))
-K(beam, 'scale', 0, (0.001, 0.001, 0.001))
-K(beam, 'scale', 74, (0.001, 0.001, 0.001))
-K(beam, 'scale', 78, (1, 1, 1))
-for f, yaw, pitch in ((74, -8, 22), (88, 8, 26), (102, -6, 24), (116, 4, 22), (132, -2, -8), (150, -6, -6), (170, 2, -8), (196, -4, -6)):
+K(torch, 'location', 0, tuple(TP))
+K(torch, 'scale', 0, (1.3, 1.3, 1.3))
+K(beam, 'scale', 0, (1, 1, 1))
+bpy.ops.object.light_add(type='SPOT', location=(0, 0, 0.02))
+tl = bpy.context.object
+tl.parent = beam
+tl.rotation_euler = (math.pi, 0, 0)
+tl.data.color = (1.0, 0.93, 0.7)
+tl.data.spot_size = math.radians(40)
+tl.data.spot_blend = 0.5
+tl.data.shadow_soft_size = 0.02
+for f, v in ((0, 60), (DK0, 60), (DK1, 0)):
+    tl.data.energy = v
+    tl.data.keyframe_insert('energy', frame=f)
+for f, yaw, pitch in ((0, -10, 20), (18, 6, 26), (36, -4, 22), (54, 8, 24), (74, -8, 22), (88, 8, 26), (102, -6, 24), (116, 4, 22), (132, -2, -8), (150, -6, -6), (170, 2, -8), (196, -4, -6)):
     K(torch, 'rotation_euler', f, (0, math.radians(pitch), math.radians(yaw)))
 K(beam, 'scale', 236, (1, 1, 1))
 K(beam, 'scale', 240, (0.001, 0.001, 0.001))
@@ -195,8 +218,7 @@ T.place(bopi, 0, B0)
 T.turn(bopi, 0, 35)
 T.arm(bopi, 'R', 0, fwd=-35, out=15)
 T.arm(bopi, 'R', 100, fwd=-35, out=15)
-T.arm(bopi, 'L', 60, 0, None)
-T.arm(bopi, 'L', 68, fwd=-70, out=10)
+T.arm(bopi, 'L', 0, fwd=-70, out=10)
 T.arm(bopi, 'L', 236, fwd=-70, out=10)
 T.rest_arm(bopi, 'L', 248)
 T.arm(bopi, 'R', 116, fwd=-80, out=20)

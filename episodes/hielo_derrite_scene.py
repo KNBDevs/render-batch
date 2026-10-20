@@ -5,11 +5,21 @@ from props.lib import spawn, auto_dress, M, MA
 EID = 'hielo_derrite'
 Z0 = 0.08
 auto_dress(EID, ENV)
+for l in bpy.data.lights:
+    if l.type == 'SUN':
+        l.color = (1.0, 0.7, 0.42)
+        l.energy *= 1.15
+    else:
+        l.color = (1.0, 0.88, 0.72)
+sc.world.node_tree.nodes['Background'].inputs[0].default_value = (1.0, 0.72, 0.5, 1)
 
 W0 = ((0.0, -6.5, 2.05), (0.0, -1.4, 0.8), 31)
 WT = ((-0.05, -6.0, 1.95), (-0.05, -1.7, 0.95), 27)
 WS = ((0.0, -3.05, 1.7), (0.0, -2.0, 0.76), 28)
-camkey(0, WT)
+WM = ((-0.68, -3.7, 1.22), (-0.66, -2.0, 0.9), 36)
+camkey(0, WM)
+camkey(44, WM)
+camkey(54, WT)
 camkey(56, WT)
 camkey(64, WS)
 camkey(94, WS)

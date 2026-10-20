@@ -566,5 +566,27 @@
     ],
     "status": "draft",
     "batch": "17_36"
+  },
+  {
+    "id": "exp_flota_corcho_clavo",
+    "template": "episode",
+    "title": "¿Flota o se hunde? 💧 ¿El corcho o el clavo?",
+    "cast": [
+      "pimo",
+      "luma"
+    ],
+    "status": "approved",
+    "auto": true
+  },
+  {
+    "id": "exp_iman_tornillo_pluma",
+    "template": "episode",
+    "title": "¿El tornillo o la pluma se pegará al imán? 🧲",
+    "cast": [
+      "ruki",
+      "moki"
+    ],
+    "status": "approved",
+    "auto": true
   }
 ]

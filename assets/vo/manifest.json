@@ -4488,5 +4488,25 @@
   "engine": "gemini",
   "voice": "Enceladus",
   "dev": -4.55
+ },
+ "ep_exp_flota_corcho_clavo_a3": {
+  "hash": "a6e11569acb2",
+  "dur": 1.45,
+  "text": "¡El metal se hunde!",
+  "asr": 1.0,
+  "heard": "El metal se hunde.",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": 0.6
+ },
+ "ep_hw26_14_final_p1": {
+  "hash": "34e67ae03e65",
+  "dur": 2.47,
+  "text": "Hoy celebramos Halloween a nuestra manera.",
+  "asr": 1.0,
+  "heard": "Hoy celebramos Halloween a nuestra manera.",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": -0.65
  }
 }

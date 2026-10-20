@@ -8,23 +8,20 @@ auto_dress(EID, ENV)
 
 W0 = ((0.0, -6.5, 2.05), (0.0, -1.4, 0.8), 31)
 WT = ((0.0, -5.4, 1.75), (0.0, -1.7, 1.0), 25)
-WS = ((0.0, -3.15, 1.22), (0.0, -2.0, 0.9), 30)
-camkey(0, WT)
-camkey(70, WT)
-camkey(80, WS)
-camkey(170, WS)
-camkey(182, WT)
-camkey(228, WT)
-camkey(238, WS)
-camkey(500, WS)
-camkey(512, WT)
-camkey(640, WT)
-camkey(650, WS)
-camkey(745, WS)
-camkey(756, W0)
-camkey(TOTAL - 1, W0)
+WM = ((0.0, -5.0, 2.45), (0.0, -1.72, 0.76), 26)
+WS = ((0.0, -2.78, 1.78), (0.0, -2.0, 0.88), 30)
+W1 = ((-0.74, -2.62, 1.02), (-0.66, -1.3, 0.8), 26)
+W2 = ((-0.74, -2.5, 1.02), (-0.66, -1.3, 0.82), 27)
+for f, w in ((0, W1), (56, W2), (68, WM), (230, WM), (240, WS), (282, WS), (292, WM), (622, WM), (630, WS), (662, WS), (670, WM), (745, WM), (756, W0), (TOTAL - 1, W0)):
+    camkey(f, w)
+for l in list(bpy.data.lights):
+    c0 = tuple(l.color)
+    for f, c in ((0, (0.5, 0.8, 1.0)), (56, (0.5, 0.8, 1.0)), (70, c0)):
+        l.color = c
+        l.keyframe_insert('color', frame=f)
 
-spawn('low_table', 0, 2201, (0.62, 0.8, 0.98), (0.0, -2.0, Z0), 1.0, 0)
+tbl = spawn('low_table', 0, 2201, (0.62, 0.8, 0.98), (0.0, -2.0, Z0), 1.0, 0)
+tbl.scale.x = 0.62
 TOP = Z0 + 0.62
 TUB = Vector((0.0, -2.0, TOP + 0.008))
 tub = spawn('water_tray', 1, 618, 'candy', tuple(TUB), 1.0, 0)
@@ -36,7 +33,7 @@ for o in tub.children_recursive:
 SURF = TUB.z + 0.012 + 0.26 * 0.72
 FLOOR = TUB.z + 0.012
 C.rounded_box('surf', (0, -2.0, SURF), (0.59, 0.33, 0.004), 0.002, MA((0.4, 0.72, 1.0), 0.42, rough=0.03, emit=0.12), None)
-spawn('snack_plate', 1, 3150, (0.5, 0.75, 0.6), (0.48, -1.82, TOP), 0.42, 0)
+spawn('snack_plate', 1, 3150, (0.5, 0.75, 0.6), (0.44, -1.72, TOP), 0.36, 0)
 
 
 def sticker(parent, front, z, style, seed):
@@ -53,7 +50,7 @@ for o in (stone, cork):
         if hasattr(c, 'cycles'):
             c.cycles.use_motion_blur = False
 
-S_HAND = Vector((-0.62, -1.95, TOP + 0.36))
+S_HAND = Vector((-0.48, -1.6, TOP + 0.36))
 S_ABOVE = Vector((-0.12, -2.0, SURF + 0.18))
 S_SURF = Vector((-0.12, -2.0, SURF - 0.04))
 S_BOT = Vector((-0.12, -2.02, FLOOR))
@@ -83,7 +80,7 @@ for k in range(7):
     K(b, 'scale', f0 + 17, (0.008,) * 3)
     K(b, 'scale', f0 + 19, (0, 0, 0))
 
-C_HAND = Vector((0.62, -2.0, TOP + 0.36))
+C_HAND = Vector((0.48, -1.6, TOP + 0.36))
 C_ABOVE = Vector((0.14, -2.0, SURF + 0.18))
 C_FLOAT = Vector((0.14, -2.0, SURF - 0.045))
 K(cork, 'location', 0, tuple(C_HAND))
@@ -114,7 +111,7 @@ st2 = spawn('boat_sticker', 2, 19, 'candy', (0, 0, 0), 0.85, 0)
 K(st2, 'scale', 0, (0, 0, 0))
 K(st2, 'scale', 596, (0, 0, 0))
 K(st2, 'scale', 604, (0.95, 0.95, 0.95))
-K(st2, 'location', 596, (-0.6, -1.9, TOP + 0.42))
+K(st2, 'location', 596, (-0.44, -1.55, TOP + 0.42))
 K(st2, 'rotation_euler', 596, (math.radians(90), 0, math.radians(20)))
 K(st2, 'location', 618, (-0.1, -2.1, TOP + 0.45))
 K(st2, 'location', 632, tuple(C_FLOAT + Vector((0, -0.12, 0.08))))
@@ -140,12 +137,12 @@ for k in range(4):
 
 bolita = make('bolita', 1.4)
 ruki = make('ruki', 1.45)
-B0 = Vector((-0.95, -1.62, Z0))
-R0 = Vector((0.95, -1.72, Z0))
+B0 = Vector((-0.7, -1.12, Z0))
+R0 = Vector((0.68, -1.12, Z0))
 T.place(bolita, 0, B0)
-T.turn(bolita, 0, 35)
+T.turn(bolita, 0, 20)
 T.place(ruki, 0, R0)
-T.turn(ruki, 0, -35)
+T.turn(ruki, 0, -20)
 T.arm(bolita, 'R', 0, fwd=-80, out=20)
 T.arm(bolita, 'R', 56, fwd=-80, out=20)
 T.arm(bolita, 'R', 72, fwd=-60, out=10)

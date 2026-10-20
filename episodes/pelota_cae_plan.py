@@ -17,7 +17,7 @@ SFX = [(39, 'boing', 0.32), (44, 'boing', 0.14), (63, 'boing_up', 0.15), (91, 'b
        (174, 'whistle_down', 0.15), (300, 'sparkle', 0.22), (403, 'boing_up', 0.15), (465, 'boing', 0.3), (470, 'boing', 0.12),
        (586, 'whistle_up', 0.22), (660, 'pop', 0.22)]
 META = {
-    'title': 'La pelota que se negaba a subir ⚽ ¿Por qué cae? #shorts',
+    'title': '¿La pelota sube o cae? ⚽ La pelota que no obedecía #shorts',
     'description': 'Tuki le ordena a su pelota que suba, pero al soltarla siempre cae. Ruki le explica que la Tierra tira de las cosas hacia el suelo. Aprende jugando qué pasa cuando soltamos una pelota.\n\n#pimoruki #dibujosanimados #videosinfantiles #aprenderjugando #shorts',
     'tags': ['pimoruki', 'dibujos animados', 'videos infantiles', 'aprender jugando', 'gravedad', 'caer', 'pelota', 'ciencia para niños', 'educación infantil', 'preescolar', 'tuki', 'shorts'],
 }

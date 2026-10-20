@@ -17,7 +17,7 @@ SFX = [(26, 'tock', 0.25), (170, 'drip', 0.2), (176, 'drip', 0.2), (182, 'drip',
        (248, 'tock', 0.3), (304, 'splat', 0.12), (334, 'sparkle', 0.2), (414, 'sparkle', 0.2), (512, 'drip', 0.25), (518, 'drip', 0.25),
        (524, 'drip', 0.25), (530, 'drip', 0.2), (536, 'drip', 0.15), (604, 'pop', 0.22), (688, 'pop', 0.22), (710, 'tock', 0.2)]
 META = {
-    'title': 'La esponja sedienta 🧽💧 ¿Quién recoge el agua? #shorts',
+    'title': '¿Esponja o cuchara: quién recoge el agua? 🧽💧 La esponja sedienta #shorts',
     'description': 'Moki le ofrece un vaso de agua a una esponja como si tuviera sed. Pimo compara una cuchara y una esponja: el agua entra en los pequeños huecos de la esponja y, al apretarla, sale. Aprende jugando cómo absorbe una esponja.\n\n#pimoruki #dibujosanimados #videosinfantiles #aprenderjugando #shorts',
     'tags': ['pimoruki', 'dibujos animados', 'videos infantiles', 'aprender jugando', 'esponja', 'absorber', 'agua', 'ciencia para niños', 'experimentos', 'educación infantil', 'moki', 'shorts'],
 }

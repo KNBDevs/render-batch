@@ -14,7 +14,7 @@ def out(k, v):
 
 SCHED = os.path.join(HERE, "state", "schedule.json")
 MAD = ZoneInfo("Europe/Madrid")
-HORIZON_DAYS = 7
+HORIZON_DAYS = 4
 FLOOR = datetime(2026, 10, 7, 0, 0, tzinfo=MAD)
 
 

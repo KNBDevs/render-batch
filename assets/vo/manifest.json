@@ -4518,5 +4518,45 @@
   "engine": "gemini",
   "voice": "Umbriel",
   "dev": 1.26
+ },
+ "ep_exp_iman_tornillo_pluma_a3": {
+  "hash": "010c5b7f5e66",
+  "dur": 2.45,
+  "text": "¡El imán solo atrae cosas de hierro!",
+  "asr": 1.0,
+  "heard": "El imán solo atrae cosas de hierro.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 6.36
+ },
+ "ep_hw26_07_arana_c1": {
+  "hash": "d4fadf3f8218",
+  "dur": 0.57,
+  "text": "Uno.",
+  "asr": 1.0,
+  "heard": "¡Uno!",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 0.0
+ },
+ "ep_hw26_07_arana_c7": {
+  "hash": "42317acfd077",
+  "dur": 0.67,
+  "text": "Siete.",
+  "asr": 1.0,
+  "heard": "7",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 0.0
+ },
+ "ep_exp_iman_tornillo_pluma_a2": {
+  "hash": "cb95438be800",
+  "dur": 2.01,
+  "text": "¿Cuál crees? ¡A ver!",
+  "asr": 1.0,
+  "heard": "¿Cuál crees? ¿A ver?",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 2.76
  }
 }

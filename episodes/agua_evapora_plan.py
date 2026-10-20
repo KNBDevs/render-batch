@@ -16,7 +16,7 @@ SFX = [(20, 'tock', 0.15), (26, 'tock', 0.15), (32, 'tock', 0.15), (38, 'tock', 
        (328, 'sparkle', 0.28), (420, 'pop', 0.15), (480, 'pop', 0.15), (566, 'pop', 0.2), (604, 'whistle_up', 0.18), (622, 'boing', 0.2),
        (672, 'boing_up', 0.18), (726, 'boing_up', 0.2), (774, 'sparkle', 0.22)]
 META = {
-    'title': 'El charco que se hizo pequeño 💧☀️ ¿Quién se llevó el agua? #shorts',
+    'title': '¿El agua se escapa o se evapora? 💧☀️ El charco que se hizo pequeño #shorts',
     'description': 'El Doctor Gruño pone una valla diminuta alrededor de un plato con agua para que no se escape. Después de un rato hay menos agua: Pimo le explica que parte del agua ha pasado al aire como vapor. Aprende jugando qué es la evaporación.\n\n#pimoruki #dibujosanimados #videosinfantiles #aprenderjugando #shorts',
     'tags': ['pimoruki', 'dibujos animados', 'videos infantiles', 'aprender jugando', 'evaporación', 'agua', 'vapor', 'ciencia para niños', 'experimentos', 'educación infantil', 'doctor gruño', 'shorts'],
 }

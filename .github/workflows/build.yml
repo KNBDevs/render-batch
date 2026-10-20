@@ -193,13 +193,17 @@ jobs:
         if: ${{ github.event_name == 'schedule' || inputs.deliver }}
         env:
           HOOK: ${{ secrets.DELIVERY_HOOK }}
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
         run: |
-          if [ -z "$HOOK" ]; then echo "No delivery hook configured; output kept as artifact."; exit 0; fi
+          if [ -z "$HOOK" ] && [ -z "$YT_REFRESH_TOKEN" ]; then echo "No delivery configured; output kept as artifact."; exit 0; fi
           PA=$(jq -r '.publishAt // empty' spec.json)
           if [ -n "$PA" ] && [ "$(date -u -d "$PA" +%s)" -lt "$(( $(date -u +%s) + 600 ))" ]; then
             PA=$(date -u -d '+15 min' +%Y-%m-%dT%H:%M:%SZ)
             jq --arg a "$PA" --arg l "$(TZ=Europe/Madrid date -d "$PA" '+%d/%m/%Y %H:%M')" '.publishAt=$a | .publishLocal=$l' spec.json > s.tmp && mv s.tmp spec.json
           fi
+          if [ -n "$YT_REFRESH_TOKEN" ]; then python3 tools/yt_upload.py out.mp4 meta.json spec.json; exit $?; fi
           curl -sS --fail --retry 3 -X POST "$HOOK" \
             -F "file=@out.mp4;type=video/mp4" \
             -F "title=$(jq -r .title meta.json)" \

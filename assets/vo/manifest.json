@@ -4398,5 +4398,95 @@
   "engine": "gemini",
   "voice": "Puck",
   "dev": -5.7
+ },
+ "ep_exp_flota_corcho_clavo_b1": {
+  "hash": "01d82a60a461",
+  "dur": 2.75,
+  "text": "¿Flotará el corcho o el clavo?",
+  "asr": 1.0,
+  "heard": "Flotará el corcho o el clavo",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": -1.8
+ },
+ "ep_exp_flota_corcho_clavo_b2": {
+  "hash": "9aa11b206840",
+  "dur": 1.46,
+  "text": "¡El corcho flota!",
+  "asr": 1.0,
+  "heard": "el corcho flota",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": -1.5
+ },
+ "ep_exp_flota_corcho_clavo_b3": {
+  "hash": "b114ad3dee2c",
+  "dur": 1.62,
+  "text": "¡Probando se aprende!",
+  "asr": 1.0,
+  "heard": "¡Probando se aprende!",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": 0.15
+ },
+ "ep_hw26_12_recuerdos_l1": {
+  "hash": "33581375c888",
+  "dur": 1.54,
+  "text": "¿Por qué guardamos fotos?",
+  "asr": 1.0,
+  "heard": "¿Por qué guardamos fotos?",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": -6.0
+ },
+ "ep_hw26_12_recuerdos_l2": {
+  "hash": "63b2301a9ac9",
+  "dur": 2.14,
+  "text": "Me gustaría escuchar su historia.",
+  "asr": 1.0,
+  "heard": "Me gustaría escuchar su historia.",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": -5.1
+ },
+ "ep_exp_iman_tornillo_pluma_b1": {
+  "hash": "8a8fa5d5664e",
+  "dur": 4.03,
+  "text": "¿Cuál irá al imán: pluma o tornillo?",
+  "asr": 1.0,
+  "heard": "¿Cuál irá al imán?  Pluma o tornillo.",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": 0.25
+ },
+ "ep_exp_iman_tornillo_pluma_b2": {
+  "hash": "bd9ca92184f5",
+  "dur": 2.93,
+  "text": "¡El tornillo se pega y la pluma no!",
+  "asr": 1.0,
+  "heard": "El tornillo se pega y la pluma no.",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": 3.35
+ },
+ "ep_exp_iman_tornillo_pluma_b3": {
+  "hash": "9d92e73d24ab",
+  "dur": 2.18,
+  "text": "¡Qué magia tiene la ciencia!",
+  "asr": 1.0,
+  "heard": "¿Qué magia tiene la ciencia?",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": -2.35
+ },
+ "ep_raices_agua_m2": {
+  "hash": "299e11b48a76",
+  "dur": 2.31,
+  "text": "Hum... no sale.",
+  "asr": 1.0,
+  "heard": "Hmm, no sale.",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": -4.55
  }
 }

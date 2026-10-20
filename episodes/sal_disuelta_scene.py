@@ -141,7 +141,7 @@ for k in range(5):
     for c in range(3):
         f0 = 460 + c * 30 + k * 5
         K(g, 'scale', f0, (0, 0, 0))
-        K(g, 'scale', f0 + 5, (1, 1, 1))
+        K(g, 'scale', f0 + 5, (0.012, 0.012, 0.012))
         K(g, 'scale', f0 + 11, (0, 0, 0))
 
 PNL = Vector((0.25, -1.5, Z0))

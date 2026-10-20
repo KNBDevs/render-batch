@@ -163,9 +163,7 @@ def finish(seg, sr, key, e, asr):
     segs = list(segs)
     heard = " ".join(s.text for s in segs)
     words = [w for s in segs for w in (s.words or [])]
-    a_, b_ = norm(e["text"]), norm(heard)
-    sm_ = difflib.SequenceMatcher(None, a_, b_, autojunk=False)
-    sc = min(sm_.ratio(), sum(n for _, _, n in sm_.get_matching_blocks()) / max(1, len(a_)) + 0.05)
+    sc = score(e["text"], heard)
     a0, a1 = (max(0, words[0].start - 0.08), words[-1].end + 0.25) if words else (0, len(seg) / sr)
     d = a1 - a0
     af = (f"atrim={a0:.3f}:{a1:.3f},asetpts=PTS-STARTPTS,highpass=f=80,"
@@ -187,6 +185,35 @@ def finish(seg, sr, key, e, asr):
             "heard": heard.strip(), "engine": "gemini", "voice": VOICES[e["char"]][0], "dev": st, "_path": final}
 
 
+INTERJ = {"hum", "hmm", "mmm", "mm", "hm", "eh", "ah", "oh", "uh", "um", "ay", "mmmm"}
+
+
+def _sc(a_, b_):
+    sm_ = difflib.SequenceMatcher(None, a_, b_, autojunk=False)
+    return min(sm_.ratio(), sum(n for _, _, n in sm_.get_matching_blocks()) / max(1, len(a_)) + 0.05)
+
+
+def score(text, heard):
+    a_ = [w for w in norm(text) if w not in INTERJ]
+    b_ = [w for w in norm(heard) if w not in INTERJ]
+    if not a_:
+        return 1.0 if not b_ else _sc(norm(text), norm(heard))
+    if re.search(r"\w\.\.\.\s*\w", text):
+        return max(_sc(a_, b_), _sc(list("".join(a_)), list("".join(b_))))
+    return _sc(a_, b_)
+
+
+FAILS = os.path.join(OUT, "fails.json")
+
+
+def load_fails():
+    try:
+        return json.load(open(FAILS))
+    except Exception:
+        return {}
+
+
+FAIL = load_fails()
 PAIRS = []
 NAMES = {"pimo": "Pimo", "luma": "Luma", "ruki": "Ruki", "moki": "Moki", "tuki": "Tuki", "bolita": "Bolita", "bopi": "Bopi", "gruno": "Gruno", "narrador": "Narradora", "nubi": "Nubi", "seda": "Seda", "velo": "Velo"}
 
@@ -214,20 +241,26 @@ def store(man, todo, results):
 def rank():
     from datetime import date, timedelta
     q = json.load(open(os.path.join(ROOT, "catalog", "queue.json")))
+    pub = set(json.load(open(os.path.join(ROOT, "state", "published.json"))))
+    today = date.today()
     r, n = {}, 0
     for it in q:
-        if it.get("template") != "episode":
+        if it.get("template") != "episode" or it["id"] in pub:
             continue
         if it.get("publish_local"):
-            d = date.fromisoformat(it["publish_local"][:10])
+            d = date.fromisoformat(it["publish_local"][:10]) - timedelta(days=4)
+        elif it.get("status") == "approved":
+            d = today
         else:
-            d = date(2026, 10, 7) + timedelta(days=n // 2)
+            d = today + timedelta(days=2 + n // 2)
             n += 1
-        r[f"ep_{it['id']}_"] = (d.isoformat(), n)
+        r[f"ep_{it['id']}_"] = (max(d, today).isoformat(), n)
     return r
 
 
 def prio(k, R):
+    if FAIL.get(k, 0) >= 3:
+        return ("9998", FAIL[k])
     for p, v in R.items():
         if k.startswith(p):
             return v
@@ -278,6 +311,12 @@ def run_group(cids, man, allL, asr):
         print(c, k, res["dur"], res["asr"], "|", e["text"], "|", res["heard"], flush=True)
     for c in cids:
         store(man, jobs[c][0], results[c])
+    for c, k, e in seq:
+        if man.get(k, {}).get("hash") == digest(c, e["text"]):
+            FAIL.pop(k, None)
+        else:
+            FAIL[k] = FAIL.get(k, 0) + 1
+    json.dump(FAIL, open(FAILS, "w"), indent=1)
     return all(r["asr"] >= 0.7 for c in cids for _, r in results[c].values())
 
 

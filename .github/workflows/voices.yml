@@ -48,3 +48,7 @@ jobs:
           if [ "$(cat _missing.txt 2>/dev/null)" = "0" ] && ! jq -e 'index("intro_v2")' state/published.json >/dev/null; then
             gh workflow run build.yml -R "$R" -f template=queue -f deliver=true
           fi
+      - if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X POST repos/${{ github.repository }}/actions/workflows/build.yml/dispatches -f ref=main -f 'inputs[template]=queue' -F 'inputs[deliver]=true' || true

@@ -16,14 +16,14 @@ TOTAL = 720
 LOG = []
 CANDS = []
 LOGF = os.path.join(ROOT, "catalog", "auto_log.json")
-T0 = 200
-FRAMES = [10, 70, 140, T0 + 235, T0 + 315, T0 + 410]
-MAXS = [2.2, 2.6, 2.0, 2.8, 3.2, 2.4]
-LIMS = [int(m * 15) for m in MAXS]
+T0 = 205
+FRAMES = [10, 66, 152, 440, 522, 612]
+MAXS = [2.2, 3.4, 1.9, 3.2, 3.4, 2.6]
+LIMS = [int(m * 11) for m in MAXS]
 TRAIT = {"pimo": "curioso y preguntón", "luma": "alegre y risueña", "ruki": "tranquilo y sereno", "moki": "soñador y dulce",
          "tuki": "juguetón y enérgico", "bolita": "valiente e impulsiva", "bopi": "robot ordenado que dice bip bop", "gruno": "inventor presumido"}
-SHORT_RULE = {"flota": "Lo que tiene aire o es de madera flota.", "rueda": "Lo redondo rueda; lo plano, no.",
-              "iman": "El imán atrae las cosas de hierro.", "pesa": "La balanza baja del lado que pesa más."}
+SHORT_RULE = {"flota": "Lo que tiene aire flota.", "rueda": "Lo redondo rueda.",
+              "iman": "El imán atrae el hierro.", "pesa": "Baja el lado que pesa más."}
 QSHORT = {"flota": "¿Flota o se hunde?", "rueda": "¿Rueda o no rueda?", "iman": "¿Se pega al imán?", "pesa": "¿Cuál pesa más?"}
 
 
@@ -215,14 +215,14 @@ def valid(js, m, y, n):
 def fallback(m, y, n, pair, hol, rnd):
     M = MECH[m]
     Y, N = label(y), label(n)
-    l1 = rnd.choice([f"¡Mira! ¡Tengo {Y} y {N}!", "¡Hoy toca experimento!", f"¡{Y[0].upper() + Y[1:]} y {N}!"])
-    l2 = f"{M['q']} ¿{Y[0].upper() + Y[1:]} o {N}?"
-    l3 = rnd.choice(["¿Tú qué crees? ¡Vamos a probar!", "¡Piensa tu respuesta! ¡A ver!", "¿Lo adivinas? ¡Probamos!"])
-    l4 = f"¡{Y[0].upper() + Y[1:]} {M['verb_yes']}! ¡Y {N} {M['verb_no']}!"
+    l1 = rnd.choice(["¡Hoy toca experimento!", "¡Mira qué tengo!", "¡Vamos a probar algo!"])
+    l2 = {"flota": f"¿Flotará {Y} o {N}?", "rueda": f"¿Rodará {Y} o {N}?", "iman": f"¿Se pegará {Y} o {N}?", "pesa": f"¿Pesará más {Y} o {N}?"}[m]
+    l3 = rnd.choice(["¿Tú qué crees?", "¿Lo adivinas?", "¡Piensa! ¡A ver!"])
+    l4 = f"¡{Y[0].upper() + Y[1:]} {M['verb_yes']}!"
     l5 = SHORT_RULE[m]
     if m == "flota":
-        l5 = {"clavo": "¡El metal se hunde en el agua!", "tornillo": "¡El metal se hunde en el agua!", "piedra": "¡Las piedras se hunden en el agua!", "canica": "¡El cristal se hunde en el agua!"}[n]
-    l6 = f"¡Feliz {hol['label']}, amigos!" if hol else rnd.choice(["¡Probando se aprende!", "¡Qué experimento tan chulo!", "¡Otra vez, otra vez!"])
+        l5 = {"clavo": "¡El metal se hunde!", "tornillo": "¡El metal se hunde!", "piedra": "¡Las piedras se hunden!", "canica": "¡El cristal se hunde!"}[n]
+    l6 = f"¡Feliz {hol['label']}!" if hol else rnd.choice(["¡Probando se aprende!", "¡Qué experimento!", "¡Otra vez, otra vez!"])
     t = f"{QSHORT[m]} {M['emoji']} ¿{Y[0].upper() + Y[1:]} o {N}?"
     d = f"{NAME[pair[0]]} y {NAME[pair[1]]} prueban con {Y} y {N}. {SHORT_RULE[m]}"
     return {"lineas": [l1, l2, l3, l4, l5, l6], "titulo": t, "descripcion": d}

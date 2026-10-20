@@ -566,49 +566,5 @@
     ],
     "status": "draft",
     "batch": "17_36"
-  },
-  {
-    "id": "exp_rueda_rueda_caja",
-    "template": "episode",
-    "title": "¿Rueda o no rueda? 🛝 ¿La rueda o la caja?",
-    "cast": [
-      "bopi",
-      "luma"
-    ],
-    "status": "approved",
-    "auto": true
-  },
-  {
-    "id": "exp_iman_tornillo_manzana",
-    "template": "episode",
-    "title": "¿Se pega al imán? 🧲 ¿El tornillo o la manzana?",
-    "cast": [
-      "pimo",
-      "bolita"
-    ],
-    "status": "approved",
-    "auto": true
-  },
-  {
-    "id": "exp_rueda_pelota_libro",
-    "template": "episode",
-    "title": "¿Rueda o no rueda? 🛝 ¿La pelota o el libro?",
-    "cast": [
-      "ruki",
-      "moki"
-    ],
-    "status": "approved",
-    "auto": true
-  },
-  {
-    "id": "exp_iman_clavo_madera",
-    "template": "episode",
-    "title": "¿Se pegará al imán el clavo o el bloque de madera? 🧲",
-    "cast": [
-      "bopi",
-      "luma"
-    ],
-    "status": "approved",
-    "auto": true
   }
 ]

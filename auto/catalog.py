@@ -4,7 +4,7 @@ OBJ = {
     "piedra": {"art": "la", "name": "piedra", "float": False, "roll": False, "magnet": False, "w": 5, "emoji": "🪨"},
     "manzana": {"art": "la", "name": "manzana", "float": True, "roll": True, "magnet": False, "w": 3, "emoji": "🍎"},
     "naranja": {"art": "la", "name": "naranja", "float": True, "roll": True, "magnet": False, "w": 3, "emoji": "🍊"},
-    "madera": {"art": "el", "name": "bloque de madera", "float": True, "roll": False, "magnet": False, "w": 3, "emoji": "🪵"},
+    "madera": {"art": "la", "name": "madera", "float": True, "roll": False, "magnet": False, "w": 3, "emoji": "🪵"},
     "hoja": {"art": "la", "name": "hoja", "float": True, "roll": False, "magnet": False, "w": 0, "emoji": "🍃"},
     "pluma": {"art": "la", "name": "pluma", "float": True, "roll": False, "magnet": False, "w": 0, "emoji": "🪶"},
     "canica": {"art": "la", "name": "canica", "float": False, "roll": True, "magnet": False, "w": 2, "emoji": "🔮"},

@@ -9,8 +9,19 @@ auto_dress(EID, ENV)
 W0 = ((0.0, -6.4, 2.2), (0.0, -1.5, 0.8), 31)
 WT = ((0.0, -5.5, 2.35), (0.0, -1.8, 0.8), 30)
 WJ = ((0.12, -3.1, 1.45), (0.14, -2.05, 1.0), 30)
-camkey(0, WT)
-camkey(430, WT)
+W1 = ((-0.52, -3.55, 1.55), (-0.5, -1.85, 0.95), 24)
+W2 = ((-0.48, -3.7, 1.58), (-0.48, -1.85, 0.95), 24)
+for f, w in ((0, W1), (84, W2), (96, WT), (430, WT)):
+    camkey(f, w)
+for l in list(bpy.data.lights):
+    c0 = tuple(l.color)
+    for f, c in ((0, (0.55, 0.95, 0.7)), (84, (0.55, 0.95, 0.7)), (98, c0)):
+        l.color = c
+        l.keyframe_insert('color', frame=f)
+sky_em = bpy.data.materials['Sky'].node_tree.nodes['Emission'].inputs['Strength']
+for f, v in ((0, 0.4), (84, 0.4), (98, sky_em.default_value)):
+    sky_em.default_value = v
+    sky_em.keyframe_insert('default_value', frame=f)
 camkey(442, WJ)
 camkey(630, WJ)
 camkey(642, WT)
@@ -30,7 +41,7 @@ T.pop_in(alb, 384, 0.9, 8)
 
 seed_m = M((0.86, 0.68, 0.5), rough=0.45, coat=0.5)
 eye_m = M((0.72, 0.52, 0.38), rough=0.5, coat=0.3)
-root_m = M((0.88, 0.66, 0.4), rough=0.5, coat=0.3)
+root_m = M((0.96, 0.58, 0.26), rough=0.45, coat=0.4)
 stem_m = M((0.36, 0.7, 0.28), rough=0.45, coat=0.5)
 leaf_m = M((0.26, 0.66, 0.24), rough=0.45, coat=0.5)
 seed = C.empty('seed', None, (0, 0, 0))
@@ -48,9 +59,9 @@ for k in range(0, 21, 2):
 K(seed, 'location', 236, tuple(SEAT))
 
 rootg = C.empty('rootg', seed, (0.0, 0, 0.02))
-C.tube('r', [(0, 0, 0), (0.01, 0, -0.03), (0.0, 0, -0.07), (0.015, 0, -0.11)], 0.008, root_m, rootg)
-C.tube('r2', [(0.0, 0, -0.06), (-0.03, 0, -0.08)], 0.004, root_m, rootg)
-C.tube('r3', [(0.008, 0, -0.09), (0.04, 0, -0.11)], 0.004, root_m, rootg)
+C.tube('r', [(0, 0, 0), (0.035, -0.025, -0.008), (0.075, -0.035, -0.016), (0.115, -0.04, -0.026)], 0.012, root_m, rootg)
+C.tube('r2', [(0.06, -0.032, -0.014), (0.075, -0.06, -0.03)], 0.006, root_m, rootg)
+C.tube('r3', [(0.095, -0.038, -0.02), (0.11, -0.012, -0.034)], 0.006, root_m, rootg)
 shoot = C.empty('shoot', seed, (0.0, 0, 0.03))
 C.tube('st', [(0, 0, 0), (0.0, 0, 0.12), (0.01, 0, 0.24)], 0.011, stem_m, shoot)
 for sx in (-1, 1):

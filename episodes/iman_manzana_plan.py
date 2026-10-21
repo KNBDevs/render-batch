@@ -5,11 +5,11 @@ ENV = 'lab'
 LINES = [
     ('g1', 'gruno', '¡Ven aquí, manzana! ¡Ven!', 10, 2.0),
     ('g2', 'gruno', '¿Eh? ¡Yo quería la manzana!', 84, 2.0),
-    ('b1', 'bopi', '¡Bip! Probamos a la misma distancia.', 160, 2.6),
-    ('b2', 'bopi', 'La madera no se mueve.', 240, 1.8),
-    ('b3', 'bopi', 'Este hierro sí se acerca.', 318, 1.8),
-    ('p1', 'pimo', 'La madera y la manzana, no.', 408, 2.0),
-    ('p2', 'pimo', 'El imán no elige lo más rico. Depende del material.', 480, 3.4),
+    ('b1', 'bopi', '¡Bip! Probamos a la misma distancia.', 150, 2.6),
+    ('b2', 'bopi', 'La madera no se mueve.', 258, 1.8),
+    ('b3', 'bopi', 'Este hierro sí se acerca.', 338, 1.8),
+    ('p1', 'pimo', 'La madera y la manzana, no.', 424, 2.0),
+    ('p2', 'pimo', 'El imán no elige lo más rico, depende del material.', 480, 3.4),
     ('g3', 'gruno', '¡Ja! ¡Ahora pone HIERRO!', 600, 1.8),
     ('p3', 'pimo', 'Escribirlo no cambia el material.', 700, 2.2),
 ]

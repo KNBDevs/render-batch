@@ -120,7 +120,7 @@
     "season": "halloween_2026",
     "title": "Ocho patas, ninguna de sobra",
     "publish_local": "2026-10-28T14:00",
-    "status": "draft"
+    "status": "approved"
   },
   {
     "id": "hw26_08_murcielago",
@@ -475,7 +475,7 @@
       "moki",
       "luma"
     ],
-    "status": "draft",
+    "status": "approved",
     "batch": "17_36"
   },
   {
@@ -486,7 +486,7 @@
       "pimo",
       "ruki"
     ],
-    "status": "draft",
+    "status": "approved",
     "batch": "17_36"
   },
   {

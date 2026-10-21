@@ -280,7 +280,7 @@ def write(eid, m, y, n, pair, hol, js, rnd, seed):
     look = rnd.choice(LOOKS)
     who = [a, b, a, b, a, b]
     keys = ["a1", "b1", "a2", "b2", "a3", "b3"]
-    lines = [(k, c, t, f, mx) for k, c, t, f, mx in zip(keys, who, js["lineas"], FRAMES, MAXS)]
+    base = [(k, c, t, mx) for k, c, t, mx in zip(keys, who, js["lineas"], MAXS)]
     emo = (hol["emoji"] + " ") if hol else ""
     title = f"{js['titulo'].strip()} {emo}#shorts".replace("  ", " ")[:100]
     desc = (js["descripcion"].strip() + "\n\n#pimoruki #dibujosanimados #videosinfantiles #aprenderjugando #shorts")
@@ -289,9 +289,10 @@ def write(eid, m, y, n, pair, hol, js, rnd, seed):
             "preescolar", NAME[a].lower(), "shorts"]
     auto = {"mech": m, "win": y, "lose": n, "order": order, "chars": [a, b], "heights": [HEIGHT[a], HEIGHT[b]],
             "env": env, "look": look, "holiday": hol["id"] if hol else None, "seed": seed, "t0": T0, "src": js.get("source")}
-    src = ["FPS = 24", f"TOTAL = {TOTAL}", "MOOD = " + repr(rnd.choice(["happy", "silly", "calm"])), f"ENV = {env!r}",
-           "LINES = " + repr(lines), "SFX = " + repr(sfx(m, y, order)),
-           "META = " + repr({"title": title, "description": desc, "tags": tags}), "AUTO = " + repr(auto)]
+    src = ["FPS = 24", "MOOD = " + repr(rnd.choice(["happy", "silly", "calm"])), f"ENV = {env!r}",
+           "META = " + repr({"title": title, "description": desc, "tags": tags}), "AUTO = " + repr(auto),
+           "BASE = " + repr(base), "from auto.timing import layout",
+           f"TOTAL, LINES, SFX = layout({eid!r}, BASE, AUTO)"]
     open(os.path.join(ROOT, "episodes", f"{eid}_plan.py"), "w").write("\n".join(src) + "\n")
     open(os.path.join(ROOT, "episodes", f"{eid}_scene.py"), "w").write(f"from auto.scene import build\nbuild({eid!r})\n")
     subprocess.run([sys.executable, os.path.join(ROOT, "props", "record.py"), eid, env], check=False, stdout=subprocess.DEVNULL)

@@ -1,6 +1,7 @@
 import json, os, sys, subprocess, glob, importlib.util, unicodedata, re
 from datetime import datetime, timezone
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, ROOT)
 OUT = os.path.join(ROOT, "state", "stats.json")
 URL = os.environ.get("CHANNEL_URL", "https://www.youtube.com/@Pimoruki/shorts")
 

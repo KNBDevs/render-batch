@@ -17,7 +17,7 @@ SFX = [(46, 'whistle_up', 0.15), (58, 'tock', 0.4), (150, 'whistle_up', 0.18), (
        (300, 'pop', 0.2), (328, 'whistle_up', 0.12), (338, 'tock', 0.4), (339, 'sparkle', 0.3), (565, 'boing_up', 0.18), (576, 'tock', 0.25),
        (598, 'sparkle', 0.2), (606, 'pop', 0.25), (770, 'bip', 0.3)]
 META = {
-    'title': 'El imán que no quería la manzana 🧲🍎 ¿Qué se acerca? #shorts',
+    'title': 'El imán que no quería la manzana 🧲🍎 ¿Manzana o hierro? #shorts',
     'description': 'El Doctor Gruño quiere atraer una manzana con un imán... ¡pero solo se acerca la arandela de hierro! Bopi y Pimo prueban madera y hierro a la misma distancia y descubren que el imán depende del material. Aprende jugando con imanes.\n\n#pimoruki #dibujosanimados #videosinfantiles #aprenderjugando #shorts',
     'tags': ['pimoruki', 'dibujos animados', 'videos infantiles', 'aprender jugando', 'imán', 'magnetismo', 'hierro', 'ciencia para niños', 'experimentos', 'educación infantil', 'doctor gruño', 'shorts'],
 }

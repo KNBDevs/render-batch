@@ -2439,16 +2439,6 @@
   "voice": "Puck",
   "dev": -5.9
  },
- "ep_iman_manzana_p2": {
-  "hash": "95c79536f1d7",
-  "dur": 2.15,
-  "text": "El imán no elige lo más rico. Depende del material.",
-  "asr": 0.75,
-  "heard": "El imán no elige lo más rico.",
-  "engine": "gemini",
-  "voice": "Puck",
-  "dev": 0.0
- },
  "ep_puente_cooperacion_p1": {
   "hash": "fe033303820c",
   "dur": 1.86,

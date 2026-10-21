@@ -7,24 +7,30 @@ Z0 = 0.08
 auto_dress(EID, ENV)
 
 W0 = ((0.0, -6.5, 2.05), (0.0, -1.4, 0.8), 31)
-WT = ((0.0, -5.7, 2.6), (0.0, -1.85, 0.82), 29)
+WT = ((0.0, -4.8, 2.25), (0.0, -1.8, 0.85), 26)
 WS = ((0.18, -3.9, 2.25), (0.18, -2.0, 0.72), 27)
-camkey(0, WT)
-camkey(184, WT)
-camkey(196, WS)
-camkey(340, WS)
-camkey(352, WT)
-camkey(740, WT)
-camkey(756, W0)
-camkey(TOTAL - 1, W0)
+W1 = ((0.4, -3.3, 1.8), (-0.32, -1.85, 0.86), 27)
+W2 = ((0.36, -3.45, 1.84), (-0.3, -1.85, 0.86), 27)
+for f, w in ((0, W1), (84, W2), (96, WT), (184, WT), (196, WS), (340, WS), (352, WT), (740, WT), (756, W0), (TOTAL - 1, W0)):
+    camkey(f, w)
+for l in list(bpy.data.lights):
+    c0 = tuple(l.color)
+    for f, c in ((0, (1.0, 0.72, 0.42)), (84, (1.0, 0.72, 0.42)), (98, c0)):
+        l.color = c
+        l.keyframe_insert('color', frame=f)
+sky_em = bpy.data.materials['Sky'].node_tree.nodes['Emission'].inputs['Strength']
+for f, v in ((0, 0.45), (84, 0.45), (98, sky_em.default_value)):
+    sky_em.default_value = v
+    sky_em.keyframe_insert('default_value', frame=f)
 
 TC = Vector((0.0, -2.0, Z0))
 spawn('low_table', 1, 61, 'candy', tuple(TC), 1.05, 0)
-TOP = Z0 + 0.62
+TOP = Z0 + 0.62 * 1.05
 
 paper = M((0.98, 0.97, 0.93), rough=0.7, coat=0.1)
 ink = M((0.35, 0.72, 0.42), rough=0.5, coat=0.3)
 sheet = C.empty('sheet', None, (0, 0, 0))
+sheet.scale = (1.3, 1.3, 1.3)
 C.rounded_box('pg', (0, 0, 0.006), (0.3, 0.22, 0.008), 0.003, paper, sheet)
 lp = [(0.11 * math.cos(2 * math.pi * k / 40) * (1 - 0.35 * abs(math.sin(2 * math.pi * k / 40))), 0.07 * math.sin(2 * math.pi * k / 40), 0.012) for k in range(41)]
 C.tube('lf', lp, 0.005, ink, sheet)
@@ -48,25 +54,25 @@ def scoot(f0, x0, x1, n=3, step=10):
             K(sheet, 'rotation_euler', f + step // 2, (0, math.radians(-6), 0))
 
 
-K(sheet, 'location', 0, (0.3, -2.0, TOP))
-scoot(14, 0.3, 0.12, 3, 10)
-scoot(70, 0.12, 0.0, 2, 10)
-scoot(120, 0.0, -0.08, 2, 10)
-K(sheet, 'location', 200, (-0.08, -2.0, TOP))
-scoot(282, -0.08, -0.22, 3, 12)
-scoot(430, -0.22, -0.34, 3, 12)
-K(sheet, 'location', 600, (-0.34, -2.0, TOP))
+K(sheet, 'location', 0, (0.22, -2.0, TOP))
+scoot(14, 0.22, 0.12, 3, 10)
+scoot(70, 0.12, 0.04, 2, 10)
+scoot(120, 0.04, 0.0, 2, 10)
+K(sheet, 'location', 200, (0.0, -2.0, TOP))
+scoot(282, 0.0, -0.1, 3, 12)
+scoot(430, -0.1, -0.2, 3, 12)
+K(sheet, 'location', 600, (-0.2, -2.0, TOP))
 
 luma = make('luma', 1.45)
 moki = make('moki', 1.4)
-LU0 = Vector((1.05, -1.7, Z0))
-MO0 = Vector((-1.0, -1.42, Z0))
+LU0 = Vector((0.9, -1.7, Z0))
+MO0 = Vector((-0.88, -1.42, Z0))
 T.place(luma, 0, LU0)
 T.turn(luma, 0, -55)
 T.place(moki, 0, MO0)
 T.turn(moki, 0, 30)
 
-fan = spawn('hand_fan', 0, 71, 'candy', (0.58, -2.18, TOP - 0.1), 1.25, 0)
+fan = spawn('hand_fan', 0, 71, 'candy', (0.5, -2.18, TOP - 0.1), 1.25, 0)
 fbase = (0, 0, math.radians(38))
 fan.rotation_euler = fbase
 T.arm(luma, 'R', 0, fwd=-35, out=55)
@@ -117,7 +123,7 @@ blow(350, 410, 0.55, -0.05)
 blow(426, 484, 0.5, -0.2)
 word3d('¡AIRE!', (0.32, 0.62, 0.98), (0.0, -2.2, 1.32), 356, 414, 0.24, 1.0)
 
-pw = spawn('pinwheel', 1, 81, 'candy', (-0.36, -2.16, TOP), 1.35, -35)
+pw = spawn('pinwheel', 1, 81, 'candy', (-0.38, -2.22, TOP), 1.35, -35)
 rotor = next(o for o in pw.children_recursive if o.name.startswith('rotor'))
 T.pop_in(pw, 600, 1.35, 8)
 T.arm(moki, 'R', 596, fwd=-10, out=None)
@@ -147,8 +153,8 @@ T.turn(moki, 516, 40)
 gesture(moki, 'bounce', 530)
 T.turn(moki, 600, 50)
 T.turn(luma, 600, -50)
-hop_to(moki, 610, MO0 + Vector((0.18, -0.05, 0)), Vector((-0.95, -1.55, Z0)), 14, 0.3)
-T.place(moki, 700, Vector((-0.95, -1.55, Z0)))
+hop_to(moki, 610, MO0 + Vector((0.18, -0.05, 0)), Vector((-0.85, -1.55, Z0)), 14, 0.3)
+T.place(moki, 700, Vector((-0.85, -1.55, Z0)))
 gesture(moki, 'bounce', 712)
 gesture(luma, 'bounce', 716)
 confetti(740, (0.0, -1.9, 1.3), 18, 0.8)

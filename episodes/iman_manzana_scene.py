@@ -7,29 +7,29 @@ Z0 = 0.08
 auto_dress(EID, ENV)
 
 W0 = ((0.0, -6.6, 2.1), (0.0, -1.4, 0.8), 31)
-WA = ((-0.2, -5.2, 1.5), (-0.2, -2.0, 0.85), 36)
-WT = ((0.15, -5.7, 1.85), (0.15, -1.9, 0.8), 30)
-WW = ((-0.1, -5.3, 1.55), (-0.1, -1.9, 0.85), 34)
-camkey(0, W0)
-camkey(26, W0)
-camkey(36, WA)
-camkey(92, WA)
-camkey(104, W0)
-camkey(150, W0)
-camkey(164, WT)
-camkey(390, WT)
-camkey(404, W0)
-camkey(578, W0)
-camkey(592, WW)
-camkey(712, WW)
-camkey(728, W0)
-camkey(TOTAL - 1, W0)
+W1 = ((-0.05, -3.45, 1.32), (-0.68, -1.75, 0.98), 27)
+W2 = ((-0.12, -3.6, 1.34), (-0.66, -1.75, 0.98), 27)
+WA = ((-0.55, -4.9, 1.55), (-0.55, -1.9, 0.9), 30)
+WT = ((0.5, -4.35, 1.6), (0.42, -1.9, 0.88), 28)
+WW = ((-0.25, -4.9, 1.55), (-0.3, -1.8, 0.9), 29)
+for f, w in ((0, W1), (58, W2), (70, WA), (92, WA), (104, W0), (150, W0), (164, WT), (390, WT), (404, W0), (578, W0),
+             (592, WW), (712, WW), (728, W0), (TOTAL - 1, W0)):
+    camkey(f, w)
+for l in list(bpy.data.lights):
+    c0 = tuple(l.color)
+    for f, c in ((0, (0.7, 0.5, 1.0)), (58, (0.7, 0.5, 1.0)), (72, c0)):
+        l.color = c
+        l.keyframe_insert('color', frame=f)
+sky_em = bpy.data.materials['Sky'].node_tree.nodes['Emission'].inputs['Strength']
+for f, v in ((0, 0.3), (58, 0.3), (72, sky_em.default_value)):
+    sky_em.default_value = v
+    sky_em.keyframe_insert('default_value', frame=f)
 
 TC = Vector((0.0, -2.0, Z0))
 table = spawn('low_table', 0, 21, 'candy', tuple(TC), 1.0, 0)
 TOP = Z0 + 0.62
 MARK = Vector((-0.05, -2.0, TOP))
-POLE_OFF = 0.08
+POLE_OFF = 0.1
 
 tray_m = M((0.98, 0.95, 0.9), rough=0.35, coat=0.6)
 tray = C.empty('tray', None, (-0.08, -2.0, TOP))
@@ -38,9 +38,11 @@ C.tube('trayr', [(-0.27, -0.17, 0.03), (0.27, -0.17, 0.03), (0.27, 0.17, 0.03), 
 apple = spawn('fruit', 0, 3, 'pastel', (0, 0, 0), 1.25, 0)
 iron = M((0.55, 0.57, 0.62), rough=0.3, coat=0.5)
 washer = C.empty('washer', None, (0, 0, 0))
+washer.scale = (1.4, 1.4, 1.4)
 C.lathe('wsh', [(0.0, 0.035), (0.0, 0.1), (0.008, 0.106), (0.022, 0.106), (0.03, 0.1), (0.03, 0.035), (0.022, 0.03), (0.008, 0.03)], iron, washer, segs=48)
 wood = M((0.86, 0.64, 0.4), rough=0.6, coat=0.2)
 token = C.empty('token', None, (0, 0, 0))
+token.scale = (1.5, 1.5, 1.5)
 C.lathe('tok', [(0.0, 0.0), (0.0, 0.09), (0.006, 0.1), (0.034, 0.1), (0.04, 0.09), (0.04, 0.0)], wood, token, segs=40)
 for k in range(3):
     C.tube('ring', [(math.cos(j * 6.2832 / 32) * (0.03 + 0.022 * k), math.sin(j * 6.2832 / 32) * (0.03 + 0.022 * k), 0.041) for j in range(33)], 0.003, M((0.7, 0.48, 0.28), rough=0.7), token)
@@ -52,9 +54,9 @@ K(washer, 'location', 0, tuple(W0P))
 
 mag = spawn('toy_magnet', 0, 12, 'candy', (0, 0, 0), 1.0, 0)
 GM = Vector((-0.78, -2.0, TOP + 0.17))
-K(mag, 'location', 0, tuple(GM + Vector((-0.1, 0.25, 0.25))))
+K(mag, 'location', 0, tuple(GM + Vector((0.05, -0.12, 0.06))))
 K(mag, 'rotation_euler', 0, (0, math.radians(-90), 0))
-K(mag, 'location', 24, tuple(GM + Vector((-0.1, 0.25, 0.25))))
+K(mag, 'location', 24, tuple(GM + Vector((0.05, -0.12, 0.06))))
 K(mag, 'location', 36, tuple(GM))
 for k, f in enumerate(range(36, 84, 6)):
     K(mag, 'location', f, tuple(GM + Vector((0.015 * (1 if k % 2 else -1), 0, 0))))

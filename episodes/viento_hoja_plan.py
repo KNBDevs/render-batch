@@ -12,9 +12,9 @@ LINES = [
     ('m3', 'moki', 'El viento es aire en movimiento.', 520, 2.2),
     ('m4', 'moki', 'Abanico, ¿bailas con el molinillo?', 620, 2.4),
 ]
-SFX = []
+SFX = [(356, 'sparkle', 0.2), (600, 'pop', 0.25), (692, 'sparkle', 0.2), (740, 'popper', 0.2)]
 META = {
-    'title': 'La hoja que bailaba sin piernas 🍃 ¿Quién la mueve? #shorts',
+    'title': 'La hoja que bailaba sin piernas 🍃 ¿Patas o aire? #shorts',
     'description': 'Moki busca los pies de una hoja de papel que se mueve por la mesa. Luma le enseña el abanico: quieto, la hoja se para; moviéndolo despacio, el aire empuja la hoja. El viento es aire en movimiento. Aprende jugando con el aire.\n\n#pimoruki #dibujosanimados #videosinfantiles #aprenderjugando #shorts',
     'tags': ['pimoruki', 'dibujos animados', 'videos infantiles', 'aprender jugando', 'viento', 'aire', 'ciencia para niños', 'abanico', 'educación infantil', 'preescolar', 'moki', 'shorts'],
 }

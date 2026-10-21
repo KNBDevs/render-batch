@@ -4658,5 +4658,15 @@
   "engine": "gemini",
   "voice": "Algenib",
   "dev": -1.45
+ },
+ "ep_hw26_13_fantasia_sombra_u1": {
+  "hash": "133875a5c0ad",
+  "dur": 2.17,
+  "text": "¡Hola! ¿Me habéis dibujado?",
+  "asr": 1.0,
+  "heard": "¡Hola! ¿Me habéis dibujado?",
+  "engine": "gemini",
+  "voice": "Achernar",
+  "dev": 0.0
  }
 }

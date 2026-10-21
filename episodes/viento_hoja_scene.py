@@ -96,12 +96,12 @@ K(fan, 'rotation_euler', 262, fbase)
 wave(276, 340, 26, 12)
 wave(424, 480, 26, 12)
 
-air = MA((1.0, 1.0, 1.0), 0.45, emit=0.6)
+air = MA((0.45, 0.72, 1.0), 0.75, emit=0.4)
 streaks = []
 for k in range(3):
     o = C.empty('air', None, (0.45, -2.08 - 0.05 * (k - 1), TOP + 0.08 + 0.06 * k))
     pts = [(-0.18 * j / 12, 0, 0.025 * math.sin(j * 0.9 + k)) for j in range(13)]
-    C.tube('st', pts, 0.008, air, o)
+    C.tube('st', pts, 0.012, air, o)
     o.scale = (0, 0, 0)
     streaks.append(o)
 
@@ -121,7 +121,7 @@ def blow(f0, f1, x0, x1):
 blow(280, 340, 0.55, 0.0)
 blow(350, 410, 0.55, -0.05)
 blow(426, 484, 0.5, -0.2)
-word3d('¡AIRE!', (0.32, 0.62, 0.98), (0.0, -2.2, 1.32), 356, 414, 0.24, 1.0)
+word3d('¡AIRE!', (0.1, 0.36, 0.86), (0.0, -2.2, 1.36), 356, 414, 0.3, 1.1)
 
 pw = spawn('pinwheel', 1, 81, 'candy', (-0.38, -2.22, TOP), 1.35, -35)
 rotor = next(o for o in pw.children_recursive if o.name.startswith('rotor'))

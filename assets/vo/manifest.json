@@ -4548,5 +4548,115 @@
   "engine": "gemini",
   "voice": "Umbriel",
   "dev": 2.76
+ },
+ "ep_exp_flota_corcho_clavo_a1": {
+  "hash": "2e67ba98bc78",
+  "dur": 1.47,
+  "text": "¡Vamos a probar algo!",
+  "asr": 1.0,
+  "heard": "Vamos a probar algo.",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": -6.0
+ },
+ "ep_exp_flota_corcho_clavo_a2": {
+  "hash": "5632777249d1",
+  "dur": 0.88,
+  "text": "¿Lo adivinas?",
+  "asr": 1.0,
+  "heard": "¿Lo adivinas?",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": 0.0
+ },
+ "ep_hw26_07_arana_c8": {
+  "hash": "80f5a3bb5561",
+  "dur": 0.52,
+  "text": "Ocho.",
+  "asr": 1.0,
+  "heard": "8",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 4.81
+ },
+ "ep_hw26_11_mexico_n3": {
+  "hash": "78dfd63e37e6",
+  "dur": 3.5,
+  "text": "Es una tradición propia, distinta de Halloween.",
+  "asr": 0.86,
+  "heard": "Es una acredición propia, distinta de Halloween.",
+  "engine": "gemini",
+  "voice": "Sulafat",
+  "dev": 0.0
+ },
+ "ep_hw26_12_recuerdos_n1": {
+  "hash": "dc6851f167ab",
+  "dur": 7.23,
+  "text": "Las fotos y las historias nos ayudan a recordar a personas que han muerto y a quienes seguimos queriendo.",
+  "asr": 1.0,
+  "heard": "Las fotos y las historias nos ayudan a recordar a personas que han muerto y a quienes seguimos queriendo.",
+  "engine": "gemini",
+  "voice": "Sulafat",
+  "dev": 0.0
+ },
+ "ep_hw26_12_recuerdos_n2": {
+  "hash": "ffd40d68f8d2",
+  "dur": 3.17,
+  "text": "Cada familia puede hacerlo de una manera diferente.",
+  "asr": 1.0,
+  "heard": "Cada familia puede hacerlo de una manera diferente.",
+  "engine": "gemini",
+  "voice": "Sulafat",
+  "dev": 0.0
+ },
+ "ep_hw26_13_fantasia_sombra_n1": {
+  "hash": "458f8837a666",
+  "dur": 6.13,
+  "text": "Esta figura es una sombra. Los fantasmas de nuestra fiesta son personajes de cuento.",
+  "asr": 1.0,
+  "heard": "Esta figura es una sombra. Los fantasmas de nuestra fiesta son personajes de cuento.",
+  "engine": "gemini",
+  "voice": "Sulafat",
+  "dev": 0.0
+ },
+ "ep_hw26_14_final_n1": {
+  "hash": "b2044f09f77f",
+  "dur": 7.16,
+  "text": "No son la misma celebración. Hemos conocido disfraces, historias y distintas formas de recordar.",
+  "asr": 1.0,
+  "heard": "No son la misma celebración. Hemos conocido disfraces, historias y distintas formas de recordar.",
+  "engine": "gemini",
+  "voice": "Sulafat",
+  "dev": 0.0
+ },
+ "ep_hw26_14_final_n2": {
+  "hash": "bcf06887246b",
+  "dur": 4.36,
+  "text": "Y respetamos a quienes celebran de otra manera, o no celebran.",
+  "asr": 1.0,
+  "heard": "y respetamos a quienes celebran de otra manera o no celebran.",
+  "engine": "gemini",
+  "voice": "Sulafat",
+  "dev": 0.0
+ },
+ "ep_hw26_13_fantasia_sombra_g1": {
+  "hash": "df6f199816c5",
+  "dur": 2.41,
+  "text": "¡Mi sombra misteriosa!",
+  "asr": 1.0,
+  "heard": "Mi sombra misteriosa",
+  "engine": "gemini",
+  "voice": "Algenib",
+  "dev": -3.4
+ },
+ "ep_hw26_14_final_g2": {
+  "hash": "1cc2c3d9581a",
+  "dur": 2.21,
+  "text": "¡La sonrisa va por aquí!",
+  "asr": 1.0,
+  "heard": "La sonrisa va por aquí.",
+  "engine": "gemini",
+  "voice": "Algenib",
+  "dev": -1.45
  }
 }

@@ -79,7 +79,7 @@ def pop(o, f, d=8):
     K(o, 'scale', f + d, (1, 1, 1))
 
 
-SIZE = {"clavo": 0.75, "tornillo": 0.75, "clip": 0.7, "hoja": 0.8, "pluma": 1.0, "libro": 0.6, "canica": 0.5}
+SIZE = {"clavo": 1.0, "tornillo": 1.0, "clip": 1.0, "hoja": 1.1, "pluma": 1.3, "libro": 0.6, "canica": 0.55}
 FRONT_Y = -0.6
 
 

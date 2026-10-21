@@ -56,7 +56,7 @@ def build(kind, root, s=0.32):
         return r * 0.2
     if kind == "pluma":
         e = C.empty("pl", root, (-r * 0.9, 0, r * 0.1), (math.radians(90), 0, math.radians(8)))
-        C.leaf("vane", r * 1.9, r * 0.6, 0.25, M((0.55, 0.75, 1.0), 0.6, 0.2), e)
+        C.leaf("vane", r * 1.9, r * 0.6, 0.25, M((1.0, 0.45, 0.7), 0.5, 0.3), e)
         C.tube("quill", [(-r * 0.95, 0, r * 0.1), (r * 0.9, 0, r * 0.16)], r * 0.035, M((0.95, 0.85, 0.7), 0.5, 0.2), root)
         return r * 0.25
     if kind == "canica":

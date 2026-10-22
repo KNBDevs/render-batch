@@ -4698,5 +4698,25 @@
   "engine": "gemini",
   "voice": "Fenrir",
   "dev": -7.1
+ },
+ "ep_hw26_10_santos_difuntos_p2": {
+  "hash": "e90dc8b4a2d4",
+  "dur": 2.03,
+  "text": "Podemos aprender y respetar.",
+  "asr": 1.0,
+  "heard": "¡Podemos aprender y respetar!",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": -6.48
+ },
+ "ep_iman_manzana_p2": {
+  "hash": "7b35ce7173d5",
+  "dur": 3.72,
+  "text": "El imán no elige lo más rico, depende del material.",
+  "asr": 1.0,
+  "heard": "El imán no elige lo más rico, depende del material.",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": -7.5
  }
 }

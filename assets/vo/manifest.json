@@ -4668,5 +4668,35 @@
   "engine": "gemini",
   "voice": "Achernar",
   "dev": 0.0
+ },
+ "ep_hw26_14_final_g1": {
+  "hash": "c5e579c7ef05",
+  "dur": 3.62,
+  "text": "¡Todo se llama Halloween!",
+  "asr": 0.89,
+  "heard": "¡Haha! Todo se llama Halloween.",
+  "engine": "gemini",
+  "voice": "Algenib",
+  "dev": 5.0
+ },
+ "ep_silabas_mesa_t2": {
+  "hash": "906aa752bb52",
+  "dur": 1.63,
+  "text": "¡Pe... lo... ta!",
+  "asr": 1.0,
+  "heard": "pelota",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": -4.65
+ },
+ "ep_silabas_mesa_t3": {
+  "hash": "99e6e8925328",
+  "dur": 3.4,
+  "text": "¡Me... sa! ¡Pe... lo... ta!",
+  "asr": 1.0,
+  "heard": "¡Me sape lota!",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": -7.1
  }
 }

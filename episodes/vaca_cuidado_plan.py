@@ -19,7 +19,7 @@ SONG = (442, 726)
 SFX = [(24, 'tock', 0.3), (44, 'tock', 0.3), (120, 'tock', 0.3), (134, 'tock', 0.3), (148, 'tock', 0.3),
        (330, 'moo', 0.22), (480, 'drip', 0.2), (500, 'drip', 0.2), (812, 'sparkle', 0.2), (900, 'moo', 0.18)]
 META = {
-    'title': 'La vaca no trabaja con botones 🐄🎵 ¿Qué necesita? #shorts',
+    'title': '¿Botón o agua? 🐄🎵 La vaca no trabaja con botones #shorts',
     'description': 'El Doctor Gruño pulsa su mando para que una vaca empiece su espectáculo... pero la vaca va a beber y a comer. Gruño aprende a mirar lo que necesita: agua limpia, alimento y tranquilidad. Canción original de Pimoruki sobre cuidar a los animales.\n\n#pimoruki #dibujosanimados #videosinfantiles #aprenderjugando #shorts',
     'tags': ['pimoruki', 'dibujos animados', 'videos infantiles', 'aprender jugando', 'canción infantil', 'vaca', 'cuidar animales', 'granja', 'educación infantil', 'preescolar', 'doctor gruño', 'shorts'],
 }

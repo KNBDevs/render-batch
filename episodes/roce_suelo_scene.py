@@ -7,8 +7,8 @@ Z0 = 0.08
 auto_dress(EID, ENV)
 
 W0 = ((0.0, -6.9, 2.5), (0.0, -1.3, 0.85), 30)
-WT = ((0.0, -5.3, 2.45), (0.0, -1.4, 0.62), 31)
-WR = ((-0.6, -4.5, 1.9), (0.12, -1.5, 0.5), 27)
+WT = ((0.0, -5.4, 2.5), (0.02, -1.4, 0.64), 26)
+WR = ((-0.42, -4.75, 1.95), (0.0, -1.5, 0.5), 26)
 W1 = ((0.6, -4.1, 0.86), (0.68, -1.7, 0.7), 24)
 W2 = ((0.56, -4.25, 0.88), (0.68, -1.7, 0.7), 24)
 camkey(0, W1)
@@ -127,7 +127,7 @@ T.pop_in(flags[1], 372, 1.0, 8)
 
 word3d('¡ROZAN!', (0.98, 0.55, 0.4), (0.0, -1.6, 1.3), 484, 540, 0.24, 1.0)
 
-comb_m = M((0.62, 0.45, 0.92), rough=0.35, coat=0.7)
+comb_m = M((0.98, 0.76, 0.28), rough=0.35, coat=0.7)
 comb = C.empty('comb', None, (0, 0, 0))
 C.rounded_box('spine', (0, 0, 0.1), (0.32, 0.07, 0.06), 0.025, comb_m, comb)
 for k in range(9):
@@ -135,8 +135,8 @@ for k in range(9):
     C.tube('tooth', [(x, 0, 0.08), (x, 0, 0.0)], 0.009, comb_m, comb)
 K(comb, 'scale', 0, (0, 0, 0))
 K(comb, 'scale', 640, (0, 0, 0))
-K(comb, 'scale', 648, (1.1, 1.1, 1.1))
-K(comb, 'scale', 652, (1, 1, 1))
+K(comb, 'scale', 648, (1.45, 1.45, 1.45))
+K(comb, 'scale', 652, (1.3, 1.3, 1.3))
 K(comb, 'location', 640, (XR, Y0 + 0.2, ZT + 0.06))
 for k in range(4):
     f = 652 + k * 12
@@ -151,9 +151,9 @@ slide(BR, XR, 716, DR, NR)
 
 gruno = make('gruno', 1.5)
 bopi = make('bopi', 1.35)
-GR0 = Vector((1.05, -1.55, Z0))
-GR1 = Vector((0.9, -1.15, Z0))
-BO0 = Vector((-0.92, -1.6, Z0))
+GR0 = Vector((0.95, -1.5, Z0))
+GR1 = Vector((0.82, -1.12, Z0))
+BO0 = Vector((-0.84, -1.6, Z0))
 T.place(gruno, 0, GR0)
 T.turn(gruno, 0, -30)
 T.place(bopi, 0, BO0)

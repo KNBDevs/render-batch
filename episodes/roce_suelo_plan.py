@@ -15,7 +15,7 @@ LINES = [
 ]
 SFX = []
 META = {
-    'title': 'Los patines del carrito 🧱 ¿Por qué se frena? #shorts',
+    'title': '¿Pista lisa o alfombrilla? 🧱 ¿Dónde se frena antes el bloque? #shorts',
     'description': 'El Doctor Gruño le grita «¡Corre más!» a un bloque que se para en la alfombrilla. Bopi hace una prueba justa: mismo empujón en una pista lisa y en otra rugosa. En esta prueba, la alfombrilla frena antes el bloque: las superficies rozan. Aprende jugando qué es el rozamiento.\n\n#pimoruki #dibujosanimados #videosinfantiles #aprenderjugando #shorts',
     'tags': ['pimoruki', 'dibujos animados', 'videos infantiles', 'aprender jugando', 'rozamiento', 'ciencia para niños', 'experimentos', 'superficies', 'educación infantil', 'preescolar', 'bopi', 'shorts'],
 }

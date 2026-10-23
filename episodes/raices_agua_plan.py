@@ -14,7 +14,7 @@ LINES = [
 ]
 SFX = []
 META = {
-    'title': 'Las raíces beben por abajo 🪴 ¿Dónde está el agua? #shorts',
+    'title': '¿Vaso o tierra? 🪴 ¿Por dónde bebe la planta? #shorts',
     'description': 'Moki deja un vaso junto a la planta esperando que salga a beber. Pimo riega un poco la tierra y un dibujo por dentro de la maceta muestra cómo el agua llega a las raíces: las raíces absorben agua y sujetan la planta. Aprende jugando a cuidar las plantas.\n\n#pimoruki #dibujosanimados #videosinfantiles #aprenderjugando #shorts',
     'tags': ['pimoruki', 'dibujos animados', 'videos infantiles', 'aprender jugando', 'raíces', 'plantas', 'regar', 'ciencia para niños', 'naturaleza', 'educación infantil', 'preescolar', 'shorts'],
 }

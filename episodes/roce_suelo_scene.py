@@ -8,8 +8,21 @@ auto_dress(EID, ENV)
 
 W0 = ((0.0, -6.9, 2.5), (0.0, -1.3, 0.85), 30)
 WT = ((0.0, -5.3, 2.45), (0.0, -1.4, 0.62), 31)
-WR = ((-0.7, -4.3, 1.9), (0.2, -1.5, 0.45), 31)
-camkey(0, WT)
+WR = ((-0.6, -4.5, 1.9), (0.12, -1.5, 0.5), 27)
+W1 = ((0.6, -4.1, 0.86), (0.68, -1.7, 0.7), 24)
+W2 = ((0.56, -4.25, 0.88), (0.68, -1.7, 0.7), 24)
+camkey(0, W1)
+camkey(72, W2)
+camkey(84, WT)
+for l in list(bpy.data.lights):
+    c0 = tuple(l.color)
+    for f, c in ((0, (1.0, 0.68, 0.42)), (72, (1.0, 0.68, 0.42)), (86, c0)):
+        l.color = c
+        l.keyframe_insert('color', frame=f)
+sky_em = bpy.data.materials['Sky'].node_tree.nodes['Emission'].inputs['Strength']
+for f, v in ((0, 0.35), (72, 0.35), (86, sky_em.default_value)):
+    sky_em.default_value = v
+    sky_em.keyframe_insert('default_value', frame=f)
 camkey(560, WT)
 camkey(572, WR)
 camkey(724, WR)

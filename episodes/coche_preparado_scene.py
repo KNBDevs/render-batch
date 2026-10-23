@@ -9,9 +9,22 @@ auto_dress(EID, ENV)
 BEAT = 60 / 124 * FPS
 
 W0 = ((0.0, -6.8, 3.1), (0.0, -1.4, 0.8), 31)
-WC = ((0.1, -5.4, 3.0), (0.1, -1.3, 0.75), 31)
-WB = ((0.0, -4.4, 2.9), (0.0, -1.2, 0.85), 31)
-camkey(0, WC)
+WC = ((0.1, -5.2, 3.9), (0.1, -1.25, 0.85), 31)
+WB = ((0.38, -4.3, 3.7), (0.15, -1.15, 1.0), 31)
+W1 = ((-0.85, -3.9, 0.6), (-0.1, -1.4, 1.0), 23)
+W2 = ((-0.75, -4.0, 0.62), (-0.1, -1.4, 1.0), 23)
+camkey(0, W1)
+camkey(70, W2)
+camkey(82, WC)
+for l in list(bpy.data.lights):
+    c0 = tuple(l.color)
+    for f, c in ((0, (1.0, 0.84, 0.5)), (70, (1.0, 0.84, 0.5)), (84, c0)):
+        l.color = c
+        l.keyframe_insert('color', frame=f)
+sky_em = bpy.data.materials['Sky'].node_tree.nodes['Emission'].inputs['Strength']
+for f, v in ((0, 0.45), (70, 0.45), (84, sky_em.default_value)):
+    sky_em.default_value = v
+    sky_em.keyframe_insert('default_value', frame=f)
 camkey(186, WC)
 camkey(198, WB)
 camkey(268, WB)
@@ -30,11 +43,11 @@ car = spawn('toy_car', 0, 17, 'candy', tuple(CAR0), 1.0, YAW)
 wheels = [o for o in car.children if o.name.startswith('wheel')]
 steer = next(o for o in car.children if o.name.startswith('steer'))
 
-SEAT_G = (0.12, -0.3)
-SEAT_B = (0.12, 0.3)
-SEAT_O = (-0.6, 0.04)
+SEAT_G = (0.12, -0.44)
+SEAT_B = (0.12, 0.4)
+SEAT_O = (-0.6, 0.08)
 ZF = 0.2 + 0.29
-ZR = 0.2 + 0.53
+ZR = 0.2 + 0.73
 
 gruno = make('gruno', 1.12)
 bopi = make('bopi', 1.0)
@@ -80,12 +93,13 @@ lamp(1, 0, False)
 lamp(2, 0, False)
 lamp(1, 412, False)
 lamp(1, 416, True)
-lamp(2, 548, False)
-lamp(2, 552, True)
+lamp(2, 734, False)
+lamp(2, 738, True)
 
 boost = C.empty('boost', car, (SEAT_O[0], SEAT_O[1], 0.2 + 0.41))
-C.rounded_box('bs', (0.02, 0, 0.06), (0.38, 0.46, 0.12), 0.05, M((0.55, 0.78, 0.98), rough=0.5, coat=0.4), boost)
-C.rounded_box('bsb', (-0.17, 0, 0.2), (0.08, 0.46, 0.32), 0.04, M((0.55, 0.78, 0.98), rough=0.5, coat=0.4), boost)
+C.rounded_box('bsl', (0.02, 0, 0.1), (0.34, 0.42, 0.2), 0.05, M((0.98, 0.78, 0.4), rough=0.5, coat=0.4), boost)
+C.rounded_box('bs', (0.02, 0, 0.26), (0.38, 0.46, 0.12), 0.05, M((0.55, 0.78, 0.98), rough=0.5, coat=0.4), boost)
+C.rounded_box('bsb', (-0.17, 0, 0.4), (0.08, 0.46, 0.32), 0.04, M((0.55, 0.78, 0.98), rough=0.5, coat=0.4), boost)
 bar_m = M((0.98, 0.72, 0.3), rough=0.45, coat=0.5)
 pad_m = M((0.98, 0.9, 0.7), rough=0.6, coat=0.2)
 
@@ -109,8 +123,8 @@ for f in (204, 220):
 K(bo, 'rotation_euler', 396, (0, math.radians(-30), 0))
 K(bo, 'rotation_euler', 410, (0, 0, 0))
 K(bb, 'rotation_euler', 0, UP)
-K(bb, 'rotation_euler', 536, UP)
-K(bb, 'rotation_euler', 550, (0, 0, 0))
+K(bb, 'rotation_euler', 722, UP)
+K(bb, 'rotation_euler', 736, (0, 0, 0))
 
 gog_m = M((0.98, 0.55, 0.3), rough=0.35, coat=0.7)
 lens_m = MA((0.6, 0.85, 1.0), 0.5, rough=0.05, emit=0.2)
@@ -182,10 +196,16 @@ T.arm(bopi, 'L', 400, fwd=-60, out=20)
 T.rest_arm(bopi, 'L', 410)
 T.turn(bopi, 420, 60)
 BO_IN = Vector((SEAT_B[0], SEAT_B[1], ZF))
-T.place(bopi, 506, BO_OUT)
-hop_to(bopi, 508, BO_OUT, BO_IN, 18, 0.6)
-T.place(bopi, 527, BO_IN)
-T.turn(bopi, 512, 90)
+T.place(bopi, 696, BO_OUT)
+hop_to(bopi, 698, BO_OUT, BO_IN, 18, 0.6)
+T.place(bopi, 717, BO_IN)
+T.turn(bopi, 702, 90)
+for j, fb in enumerate(range(470, 690, int(BEAT * 2))):
+    T.turn(bopi, fb, 40 + (14 if j % 2 else -14))
+T.turn(bopi, 694, 60)
+T.arm(bopi, 'R', 524, fwd=-40, out=60)
+T.arm(bopi, 'R', 590, fwd=-40, out=60)
+T.rest_arm(bopi, 'R', 600)
 f = SONG0 + 6
 k = 0
 while f < SONG1 - 4:

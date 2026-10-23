@@ -7,14 +7,16 @@ Z0 = 0.08
 auto_dress(EID, ENV)
 BEAT = 60 / 124 * FPS
 
-W0 = ((0.0, -6.6, 1.95), (0.0, -1.3, 0.8), 27)
-WN = ((-0.45, -5.2, 1.85), (-0.65, -1.4, 0.75), 31)
+W0 = ((0.0, -6.6, 1.95), (0.0, -1.3, 0.8), 25)
+OP = ((-0.62, -4.4, 1.35), (-0.6, -1.5, 0.85), 26)
+OP2 = ((-0.58, -4.55, 1.37), (-0.6, -1.5, 0.85), 26)
+WN = ((-1.45, -5.0, 2.15), (-0.72, -1.4, 0.8), 30)
 MG = ((-0.95, -5.1, 1.65), (-0.85, -1.3, 0.85), 31)
 MP = ((0.7, -4.6, 1.55), (0.7, -1.3, 0.8), 31)
-NC = ((-0.6, -4.3, 1.6), (-0.75, -1.4, 0.7), 31)
-camkey(0, W0)
-camkey(70, W0)
-camkey(84, WN)
+NC = ((-0.6, -4.2, 1.35), (-0.56, -1.6, 0.62), 27)
+camkey(0, OP)
+camkey(64, OP2)
+camkey(76, WN)
 camkey(240, WN)
 camkey(256, W0)
 for a, b, pose in ((446, 515, MG), (522, 586, MP)):
@@ -24,8 +26,8 @@ for a, b, pose in ((446, 515, MG), (522, 586, MP)):
     camkey(b + 1, W0)
 camkey(786, W0)
 camkey(787, NC)
-camkey(850, NC)
-camkey(851, W0)
+camkey(862, NC)
+camkey(863, W0)
 camkey(TOTAL - 1, W0)
 
 swing = spawn('net_swing', 0, 31, 'candy', (-0.38, -1.9, Z0), 1.0, 0)
@@ -39,12 +41,18 @@ K(ele, 'location', 0, tuple(E0))
 K(ele, 'rotation_euler', 0, (0, 0, math.radians(ER)))
 
 K(hang, 'scale', 0, (1, 1, 1))
-EN = Vector((-0.18, -1.95, Z0 + 0.42))
-for f in range(78, 132, 2):
-    u = (f - 78) / 54
+NB = Z0 + 0.43 - 0.12
+EN = Vector((-0.38, -1.9, NB - 0.12 * 1.3))
+EA = Vector((-0.38, -1.9, NB))
+for f in range(78, 109, 2):
+    u = (f - 78) / 30
     u2 = u * u * (3 - 2 * u)
-    p = E0.lerp(EN, u2)
-    p.z = E0.z + (EN.z - E0.z) * min(1, u * 1.6)
+    p = E0.lerp(EA, u2)
+    p.z = E0.z + (EA.z - E0.z) * u + 0.55 * math.sin(math.pi * u)
+    K(ele, 'location', f, tuple(p))
+for f in range(108, 137, 2):
+    u = (f - 108) / 28
+    p = EA.lerp(EN, u)
     K(ele, 'location', f, tuple(p))
 K(ele, 'rotation_euler', 78, (0, 0, math.radians(ER)))
 K(ele, 'rotation_euler', 100, (0, 0, math.radians(30)))
@@ -55,7 +63,7 @@ for f in range(156, 186, 2):
     u = (f - 156) / 30
     u2 = u * u * (3 - 2 * u)
     p = EN.lerp(E0, u2)
-    p.z = EN.z + (E0.z - EN.z) * u2
+    p.z = EN.z + (E0.z - EN.z) * u + 0.55 * math.sin(math.pi * u)
     K(ele, 'location', f, tuple(p))
 K(ele, 'rotation_euler', 160, (0, 0, math.radians(30)))
 K(ele, 'rotation_euler', 186, (0, 0, math.radians(ER)))
@@ -138,8 +146,8 @@ for j in range(10):
 
 gruno = make('gruno', 1.6)
 pimo = make('pimo', 1.45)
-G0 = Vector((-1.12, -1.05, Z0))
-P0 = Vector((1.12, -0.95, Z0))
+G0 = Vector((-0.98, -1.05, Z0))
+P0 = Vector((1.0, -0.95, Z0))
 T.place(gruno, 0, G0)
 T.turn(gruno, 0, 25)
 T.place(pimo, 0, P0)
@@ -165,7 +173,7 @@ T.arm(pimo, 'R', 150, fwd=-90, out=40)
 T.arm(pimo, 'R', 200, fwd=-90, out=40)
 T.rest_arm(pimo, 'R', 210)
 pimo['hold'].location = P0
-P1 = Vector((1.18, -0.82, Z0))
+P1 = Vector((1.05, -0.82, Z0))
 hop_to(pimo, 140, P0, P1, 10, apex=0.2)
 T.turn(gruno, 156, 25)
 S(gruno, 158, (1, 1, 1))
@@ -222,10 +230,10 @@ C.rounded_box('rb', (0, 0, 0), (0.08, 0.04, 0.18), 0.02, M((0.3, 0.3, 0.38), rou
 for j, (x, z, c) in enumerate(((-0.018, 0.05, (1, 0.3, 0.3)), (0.018, 0.05, (0.3, 0.9, 0.4)), (0.0, 0.0, (1.0, 0.8, 0.2)))):
     C.sphere('btn', (x, -0.022, z), (0.013, 0.008, 0.013), M(c, coat=0.7), remote, 10)
 RH = G0 + Vector((0.45, -0.4, 0.75))
-RN = Vector((-0.38, -1.9, Z0 + 0.55 - 0.12 - 0.11))
+RN = Vector((-0.38, -1.9, NB + 0.02))
 K(remote, 'scale', 0, (0, 0, 0))
 K(remote, 'scale', 698, (0, 0, 0))
-K(remote, 'scale', 704, (1, 1, 1))
+K(remote, 'scale', 704, (1.4, 1.4, 1.4))
 K(remote, 'location', 698, tuple(RH))
 K(remote, 'location', 728, tuple(RH))
 for f in range(728, 750, 2):

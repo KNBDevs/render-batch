@@ -18,7 +18,7 @@ SONG = (372, 662)
 SFX = [(20, 'sparkle', 0.2), (106, 'whistle_down', 0.14), (168, 'boing', 0.25), (304, 'pop', 0.22), (312, 'pop', 0.22),
        (333, 'boing_up', 0.18), (356, 'tock', 0.3), (368, 'sparkle', 0.22), (704, 'pop', 0.2), (750, 'tock', 0.25), (852, 'boing', 0.22)]
 META = {
-    'title': 'El elefante y el sitio equivocado 🐘🎵 ¡Podemos elegir otro! #shorts',
+    'title': 'El elefante y el sitio equivocado 🐘🎵 ¿Red pequeña o escalón? #shorts',
     'description': 'El Doctor Gruño quiere subir un elefante de juguete a una red diminuta. Pimo le ayuda a ver que ese sitio no es adecuado y eligen otro lugar para bailar. Canción original de Pimoruki: cambiar de plan también es una buena decisión.\n\n#pimoruki #dibujosanimados #videosinfantiles #aprenderjugando #shorts',
     'tags': ['pimoruki', 'dibujos animados', 'videos infantiles', 'aprender jugando', 'canción infantil', 'elefante', 'seguridad', 'elegir', 'educación infantil', 'preescolar', 'doctor gruño', 'shorts'],
 }

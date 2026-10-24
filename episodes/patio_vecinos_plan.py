@@ -17,7 +17,7 @@ LINES = [
 SONG = (392, 700)
 SFX = []
 META = {
-    'title': 'Un patio también tiene vecinos 🪴🎵 ¿Es una portería? #shorts',
+    'title': 'Un patio también tiene vecinos 🪴🎵 ¿Maceta o portería? #shorts',
     'description': 'Tuki quiere usar una maceta como portería, pero Moki le recuerda que la maceta cuida una planta. Ruki les enseña otro sitio para jugar. Canción original de Pimoruki: lo que es de otros, lo respetamos.\n\n#pimoruki #dibujosanimados #videosinfantiles #aprenderjugando #shorts',
     'tags': ['pimoruki', 'dibujos animados', 'videos infantiles', 'aprender jugando', 'canción infantil', 'respeto', 'plantas', 'patio', 'convivencia', 'educación infantil', 'preescolar', 'shorts'],
 }

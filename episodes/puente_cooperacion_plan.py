@@ -18,7 +18,7 @@ SFX = [(66, 'whistle_up', 0.2), (90, 'clonk', 0.35), (141, 'whistle_down', 0.2),
        (453, 'sparkle', 0.3), (492, 'popper', 0.3), (572, 'pop', 0.25), (576, 'pop', 0.25), (592, 'pop', 0.25), (610, 'pop', 0.25),
        (683, 'boing_up', 0.2), (741, 'boing_up', 0.2), (762, 'boing', 0.25), (766, 'sparkle', 0.25)]
 META = {
-    'title': 'Gruño quiere todas las piezas 🌉 ¿Quién pone la última? #shorts',
+    'title': 'El puente que no llegaba 🌉 ¿Llegará a la otra orilla? #shorts',
     'description': 'El Doctor Gruño quiere todas las piezas para él, pero su puente de juguete no llega a la otra orilla. Con Ruki y Pimo, cada uno pone una parte... ¡y el puente se completa! Aprende jugando a cooperar.\n\n#pimoruki #dibujosanimados #videosinfantiles #aprenderjugando #shorts',
     'tags': ['pimoruki', 'dibujos animados', 'videos infantiles', 'aprender jugando', 'cooperar', 'trabajo en equipo',
              'construir', 'puente', 'educación infantil', 'preescolar', 'doctor gruño', 'shorts'],

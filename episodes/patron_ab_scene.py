@@ -100,7 +100,7 @@ T.rest_arm(bopi, 'L', 150)
 T.turn(bopi, 156, -25)
 T.turn(tuki, 150, 15)
 
-for i, f in enumerate((182, 197, 213, 228)):
+for i, f in enumerate((182, 202, 228, 249)):
     pulse(tiles[i], f)
 T.arm(bopi, 'L', 178, 0, None)
 T.arm(bopi, 'L', 184, fwd=-45, out=55)

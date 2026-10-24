@@ -81,4 +81,5 @@ REGISTRY = {
     "care_sign": {"styles": 3, "envs": ["patio", "plaza", "casa", "aula"], "tags": ["cartel", "cuidado"], "decor": False},
     "toy_train": {"styles": 3, "envs": ["casa", "aula", "patio"], "tags": ["juguete", "tren"], "decor": False},
     "symbol_tile": {"styles": 3, "envs": ["casa", "aula"], "tags": ["ficha", "pictograma", "tarjeta"], "decor": False},
+    "card_easel": {"styles": 3, "envs": ["casa", "aula"], "tags": ["atril", "tarjeta", "soporte"], "decor": False},
 }

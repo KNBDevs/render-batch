@@ -11,9 +11,9 @@ LINES = [
     ('t3', 'tuki', '¡Me... sa! ¡Pe... lo... ta!', 530, 3.0),
     ('t4', 'tuki', 'Mis manos no guardaban la palabra... ¡solo daban palmadas!', 650, 3.4),
 ]
-SFX = []
+SFX = [(147, 'clap', 0.35), (165, 'clap', 0.35), (231, 'clap', 0.35), (243, 'clap', 0.35), (262, 'clap', 0.35), (531, 'clap', 0.35), (548, 'clap', 0.35), (570, 'clap', 0.35), (582, 'clap', 0.35), (600, 'clap', 0.35), (752, 'clap', 0.35), (764, 'clap', 0.35)]
 META = {
-    'title': 'La palabra que cabía en palmadas 👏 ¿Me-sa? #shorts',
+    'title': '¿Cabe una palabra en tus manos? 👏 La palabra que cabía en palmadas #shorts',
     'description': 'Tuki intenta guardar la palabra «mesa» en sus manos. Pimo le enseña a decirla despacio con una palmada en cada parte: me-sa, pe-lo-ta. Estas partes se llaman sílabas. Aprende jugando con las palabras.\n\n#pimoruki #dibujosanimados #videosinfantiles #aprenderjugando #shorts',
     'tags': ['pimoruki', 'dibujos animados', 'videos infantiles', 'aprender jugando', 'sílabas', 'palmadas', 'lenguaje', 'palabras', 'educación infantil', 'preescolar', 'tuki', 'shorts'],
 }

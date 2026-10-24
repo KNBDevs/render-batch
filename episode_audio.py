@@ -146,7 +146,7 @@ def moo():
     return S.lp(s, 900) * np.sin(np.pi * u) ** 0.7 * 0.55
 
 
-SFX = {"pop": lambda: pop(), "boing": lambda: boing(170), "boing_up": lambda: boing(260, 0.35, up=True), "splat": lambda: splat(),
+SFX = {"pop": lambda: pop(), "clap": lambda: clap(), "boing": lambda: boing(170), "boing_up": lambda: boing(260, 0.35, up=True), "splat": lambda: splat(),
        "sparkle": lambda: sparkle(88), "popper": lambda: popper(), "bip": lambda: bip(88),
        "whistle_down": lambda: slide_whistle(1400, 400, 0.5), "whistle_up": lambda: slide_whistle(500, 1500, 0.5),
        "clonk": lambda: S.lp(kick(), 1500), "tock": lambda: tock(),

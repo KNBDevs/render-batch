@@ -2520,6 +2520,32 @@ def symbol_tile(r, s, fam, root, icon="hoja"):
     return g
 
 
+def card_easel(r, s, fam, root):
+    a, b = [_rich(x, 1.25, 0.9) for x in _cols(r, fam, 2)]
+    am = M(a, rough=0.4, coat=0.6)
+    bm_ = M(b, rough=0.45, coat=0.5)
+    if s == 0:
+        for sx in (-1, 1):
+            C.tube("leg", [(sx * 0.15, -0.04, 0.0), (sx * 0.09, 0.02, 0.42)], 0.016, am, root)
+        C.tube("back", [(0, 0.16, 0.0), (0, 0.03, 0.4)], 0.014, am, root)
+        C.sphere("top", (0, 0.02, 0.43), (0.03,) * 3, bm_, root, 16)
+        C.rounded_box("ledge", (0, -0.06, 0.07), (0.36, 0.08, 0.025), 0.3, bm_, root)
+        z = 0.085
+    elif s == 1:
+        C.lathe("foot", [(0, 0.0), (0, 0.13), (0.015, 0.14), (0.035, 0.12), (0.04, 0.0)], am, root, segs=40, sy=0.7)
+        C.tube("stem", [(0, 0.03, 0.03), (0, 0.03, 0.2)], 0.018, am, root)
+        C.rounded_box("ledge", (0, -0.01, 0.2), (0.34, 0.09, 0.03), 0.3, bm_, root)
+        C.rounded_box("lip", (0, -0.05, 0.225), (0.34, 0.015, 0.03), 0.3, bm_, root)
+        z = 0.215
+    else:
+        C.rounded_box("block", (0, 0.0, 0.06), (0.36, 0.14, 0.12), 0.35, am, root)
+        C.rounded_box("slot", (0, -0.012, 0.121), (0.32, 0.02, 0.006), 0.2, M((0.2, 0.2, 0.25)), root)
+        for sx in (-1, 1):
+            C.sphere("knob", (sx * 0.2, 0, 0.06), (0.03,) * 3, bm_, root, 16)
+        z = 0.11
+    return C.empty("card", root, (0, -0.012, z), (math.radians(-6), 0, 0))
+
+
 GEN = {k: v for k, v in globals().items() if k in REGISTRY}
 
 

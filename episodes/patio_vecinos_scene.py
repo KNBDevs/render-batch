@@ -10,18 +10,36 @@ auto_dress(EID, ENV)
 BEAT = 60 / 124 * FPS
 
 W0 = ((0.0, -6.4, 2.2), (0.0, -1.4, 0.75), 31)
+W1 = ((0.05, -4.5, 0.82), (0.05, -1.7, 0.78), 25)
+W2 = ((0.0, -4.7, 0.86), (0.0, -1.7, 0.78), 25)
 WP = ((0.25, -4.7, 1.75), (0.25, -1.45, 0.7), 31)
-WM = ((-0.45, -5.3, 2.0), (-0.45, -1.4, 0.6), 31)
-camkey(0, W0)
+WS = ((-0.15, -5.7, 1.6), (-0.15, -1.7, 0.72), 26)
+WM = ((-0.15, -6.3, 2.0), (-0.15, -1.5, 0.66), 28)
+camkey(0, W1)
+camkey(60, W2)
+camkey(72, W0)
 camkey(110, W0)
 camkey(122, WP)
 camkey(280, WP)
 camkey(292, W0)
+camkey(530, W0)
+camkey(542, WS)
+camkey(626, WS)
+camkey(638, W0)
 camkey(720, W0)
 camkey(732, WM)
 camkey(840, WM)
 camkey(852, WP)
 camkey(TOTAL - 1, WP)
+for l in list(bpy.data.lights):
+    c0 = tuple(l.color)
+    for f, c in ((0, (1.0, 0.74, 0.5)), (60, (1.0, 0.74, 0.5)), (74, c0)):
+        l.color = c
+        l.keyframe_insert('color', frame=f)
+sky_em = bpy.data.materials['Sky'].node_tree.nodes['Emission'].inputs['Strength']
+for f, v in ((0, 0.45), (60, 0.45), (74, sky_em.default_value)):
+    sky_em.default_value = v
+    sky_em.keyframe_insert('default_value', frame=f)
 
 POT = Vector((0.42, -1.75, Z0))
 pr = C.empty('pot', None, tuple(POT))
@@ -166,6 +184,8 @@ while f < SONG1 - 4:
     k += 1
     f += BEAT * 2
 T.turn(moki, SONG1 + 4, -40)
+for k, f in enumerate(range(int(SONG0 + 20), int(SONG1 - 20), int(BEAT * 4))):
+    gesture(tuki if k % 2 else ruki, 'bounce', f)
 T.turn(tuki, 704, 30)
 T.turn(ruki, 704, -10)
 T.arm(tuki, 'R', 734, fwd=-80, out=20)

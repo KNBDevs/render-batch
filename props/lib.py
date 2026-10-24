@@ -2426,6 +2426,100 @@ def label_board(r, s, fam, root):
     return root
 
 
+def toy_train(r, s, fam, root, n=5, gap=0.44):
+    a, b, c = [_rich(x, 1.3, 0.95) for x in _cols(r, fam, 3)]
+    am = M(a, rough=0.4, coat=0.6)
+    bm_ = M(b, rough=0.45, coat=0.5)
+    cm = M(c, rough=0.45, coat=0.5)
+    wm = M((0.16, 0.15, 0.2), rough=0.5, coat=0.3)
+    hub = M((0.97, 0.94, 0.86), rough=0.4, coat=0.4)
+    win = M((0.75, 0.9, 1.0), rough=0.2, coat=0.8, emit=0.1)
+
+    def wheels(x, w, z=0.06):
+        for sx in (-1, 1):
+            for sy in (-1, 1):
+                C.sphere("wh", (x + sx * w * 0.3, sy * 0.13, z), (0.06, 0.03, 0.06), wm, root, 20)
+                C.sphere("hub", (x + sx * w * 0.3, sy * 0.158, z), (0.025, 0.008, 0.025), hub, root, 12)
+
+    C.rounded_box("cab", (0.05, 0, 0.26), (0.2, 0.26, 0.3), 0.12, am, root)
+    C.rounded_box("roof", (0.05, 0, 0.43), (0.26, 0.3, 0.05), 0.2, bm_, root)
+    C.sphere("win", (0.05, -0.132, 0.3), (0.06, 0.008, 0.055), win, root, 20)
+    if s == 0:
+        C.rounded_box("boiler", (-0.16, 0, 0.2), (0.26, 0.22, 0.2), 0.3, cm, root)
+        C.lathe("funnel", [(0, 0), (0.04, 0), (0.035, 0.1), (0.06, 0.14), (0, 0.14)], bm_, C.empty("fn", root, (-0.22, 0, 0.29)), segs=24)
+    elif s == 1:
+        dk = C.empty("bo", root, (-0.06, 0, 0.2), (0, math.radians(-90), 0))
+        C.lathe("boiler", [(0, 0), (0.1, 0), (0.1, 0.24), (0.06, 0.27), (0, 0.27)], cm, dk, segs=32)
+        C.sphere("dome", (-0.18, 0, 0.31), (0.05,) * 3, bm_, root, 20)
+        C.sphere("lamp", (-0.33, 0, 0.22), (0.03, 0.03, 0.03), M((1, 0.9, 0.5), emit=0.6), root, 12)
+    else:
+        C.rounded_box("nose", (-0.17, 0, 0.18), (0.26, 0.24, 0.18), 0.45, cm, root)
+        C.sphere("bump", (-0.3, 0, 0.14), (0.05, 0.1, 0.05), bm_, root, 20)
+    C.rounded_box("chassis", (-0.05, 0, 0.1), (0.48, 0.24, 0.05), 0.2, bm_, root)
+    wheels(-0.05, 0.48)
+    slots = []
+    for i in range(n):
+        x = gap * (i + 1)
+        C.tube("link", [(x - gap + 0.2, 0, 0.1), (x - 0.17, 0, 0.1)], 0.012, wm, root)
+        col = [am, cm, bm_][i % 3] if s != 1 else [cm, am][i % 2]
+        if s == 2:
+            C.rounded_box("bed", (x, 0, 0.14), (0.34, 0.26, 0.1), 0.35, col, root)
+        else:
+            C.rounded_box("bed", (x, 0, 0.13), (0.34, 0.26, 0.08), 0.2, col, root)
+            C.rounded_box("lip", (x, 0.11, 0.2), (0.32, 0.04, 0.07), 0.2, bm_ if s == 0 else am, root)
+        wheels(x, 0.34)
+        slots.append(C.empty("slot", root, (x, 0, 0.18)))
+    return slots
+
+
+def symbol_tile(r, s, fam, root, icon="hoja"):
+    a, b = [_rich(x, 1.2, 0.95) for x in _cols(r, fam, 2)]
+    rim = M(a, rough=0.4, coat=0.6)
+    face = M((0.98, 0.96, 0.9), rough=0.55, coat=0.2)
+    if s == 0:
+        C.rounded_box("rim", (0, 0.01, 0.15), (0.3, 0.05, 0.3), 0.25, rim, root)
+        C.rounded_box("face", (0, -0.016, 0.15), (0.25, 0.01, 0.25), 0.2, face, root)
+    elif s == 1:
+        dk = C.empty("dk", root, (0, 0.03, 0.155), (math.radians(90), 0, 0))
+        C.lathe("rim", [(0, 0), (0.155, 0), (0.16, 0.03), (0.155, 0.06), (0, 0.06)], rim, dk, segs=48)
+        C.sphere("face", (0, -0.032, 0.155), (0.13, 0.004, 0.13), face, root, 32)
+    else:
+        C.rounded_box("rim", (0, 0.01, 0.15), (0.3, 0.05, 0.3), 0.45, rim, root)
+        C.rounded_box("face", (0, -0.016, 0.15), (0.24, 0.01, 0.24), 0.45, face, root)
+        C.sphere("tab", (0, 0.01, 0.31), (0.04, 0.02, 0.025), M(b, rough=0.4, coat=0.5), root, 16)
+    g = C.empty("icon", root, (0, -0.04, 0.15))
+    if icon == "hoja":
+        lm = M((0.28, 0.72, 0.32), rough=0.4, coat=0.5)
+        C.sphere("leaf", (0, 0, 0.0), (0.055, 0.01, 0.1), lm, g, 24, rot=(0, math.radians(-30), 0))
+        C.tube("vein", [(-0.045, -0.008, -0.08), (0.04, -0.008, 0.07)], 0.006, M((0.2, 0.5, 0.25)), g)
+        C.tube("stem", [(-0.045, -0.006, -0.08), (-0.065, -0.006, -0.11)], 0.008, M((0.2, 0.5, 0.25)), g)
+    elif icon == "flor":
+        pm = M((1.0, 0.45, 0.6), rough=0.4, coat=0.5)
+        for k in range(6):
+            q = k * 6.2832 / 6
+            C.sphere("pet", (math.cos(q) * 0.055, 0, math.sin(q) * 0.055), (0.04, 0.01, 0.04), pm, g, 20)
+        C.sphere("ctr", (0, -0.008, 0), (0.035, 0.01, 0.035), M((1, 0.82, 0.2), coat=0.5), g, 20)
+    elif icon == "zapato":
+        um = M((0.12, 0.38, 0.92), rough=0.4, coat=0.5)
+        dm = M((0.2, 0.2, 0.28), rough=0.5, coat=0.3)
+        C.rounded_box("sole", (0.0, 0, -0.075), (0.22, 0.02, 0.03), 0.3, dm, g)
+        C.sphere("toe", (-0.06, -0.002, -0.045), (0.05, 0.012, 0.035), um, g, 24)
+        C.rounded_box("body", (0.0, 0, -0.04), (0.16, 0.022, 0.05), 0.3, um, g)
+        C.rounded_box("ankle", (0.05, 0, 0.01), (0.085, 0.022, 0.11), 0.3, um, g)
+        C.tube("collar", [(0.008, -0.014, 0.065), (0.05, -0.014, 0.072), (0.092, -0.014, 0.065)], 0.008, face, g)
+        for k in range(3):
+            C.tube("lace", [(-0.035 + k * 0.022, -0.016, -0.02 + k * 0.022), (-0.012 + k * 0.022, -0.016, -0.005 + k * 0.022)], 0.006, face, g)
+    elif icon == "mesa":
+        tm = M((0.85, 0.55, 0.3), rough=0.45, coat=0.5)
+        C.rounded_box("top", (0, 0, 0.03), (0.2, 0.02, 0.035), 0.3, tm, g)
+        for x in (-0.075, 0.075):
+            C.rounded_box("leg", (x, 0, -0.04), (0.025, 0.02, 0.11), 0.3, tm, g)
+    elif icon == "pelota":
+        C.sphere("ball", (0, 0, 0), (0.085, 0.012, 0.085), M((1, 0.35, 0.3), coat=0.6), g, 32)
+        C.tube("band", [(math.cos(k * 6.2832 / 24) * 0.087, -0.006, math.sin(k * 6.2832 / 24) * 0.03) for k in range(25)], 0.01, face, g)
+    return g
+
+
 GEN = {k: v for k, v in globals().items() if k in REGISTRY}
 
 

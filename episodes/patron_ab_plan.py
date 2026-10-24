@@ -14,7 +14,7 @@ LINES = [
 ]
 SFX = []
 META = {
-    'title': 'El tren que repetía su dibujo 🚂 ¿Qué toca después? #shorts',
+    'title': '¿Hoja o flor? El tren que repetía su dibujo 🚂 #shorts',
     'description': 'Tuki quiere poner su zapato en un tren de fichas: hoja, flor, hoja, flor. Bopi le enseña a mirar la pareja que se repite para descubrir qué toca después. Aprende jugando a continuar series.\n\n#pimoruki #dibujosanimados #videosinfantiles #aprenderjugando #shorts',
     'tags': ['pimoruki', 'dibujos animados', 'videos infantiles', 'aprender jugando', 'series', 'patrones', 'lógica', 'tren', 'educación infantil', 'preescolar', 'tuki', 'shorts'],
 }

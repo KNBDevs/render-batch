@@ -79,4 +79,6 @@ REGISTRY = {
     "shadow_lamp": {"styles": 3, "envs": ["halloween", "casa", "aula"], "tags": ["lampara", "luz", "sombras"], "decor": False},
     "label_board": {"styles": 3, "envs": ["halloween", "aula", "plaza", "casa"], "tags": ["tablero", "etiquetas", "clasificar"], "decor": False},
     "care_sign": {"styles": 3, "envs": ["patio", "plaza", "casa", "aula"], "tags": ["cartel", "cuidado"], "decor": False},
+    "toy_train": {"styles": 3, "envs": ["casa", "aula", "patio"], "tags": ["juguete", "tren"], "decor": False},
+    "symbol_tile": {"styles": 3, "envs": ["casa", "aula"], "tags": ["ficha", "pictograma", "tarjeta"], "decor": False},
 }

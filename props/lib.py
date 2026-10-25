@@ -2517,7 +2517,66 @@ def symbol_tile(r, s, fam, root, icon="hoja"):
     elif icon == "pelota":
         C.sphere("ball", (0, 0, 0), (0.085, 0.012, 0.085), M((1, 0.35, 0.3), coat=0.6), g, 32)
         C.tube("band", [(math.cos(k * 6.2832 / 24) * 0.087, -0.006, math.sin(k * 6.2832 / 24) * 0.03) for k in range(25)], 0.01, face, g)
+    elif icon == "gato":
+        fm = M((1.0, 0.58, 0.22), rough=0.4, coat=0.5)
+        pk = M((1.0, 0.55, 0.62), rough=0.4, coat=0.4)
+        ink = M((0.15, 0.12, 0.18), rough=0.4, coat=0.5)
+        C.sphere("head", (0, 0, -0.01), (0.085, 0.012, 0.07), fm, g, 32)
+        for sx in (-1, 1):
+            C.sphere("ear", (sx * 0.055, 0.0, 0.06), (0.03, 0.011, 0.045), fm, g, 20, rot=(0, math.radians(sx * 25), 0))
+            C.sphere("earin", (sx * 0.053, -0.006, 0.058), (0.017, 0.008, 0.028), pk, g, 16, rot=(0, math.radians(sx * 25), 0))
+            C.sphere("eye", (sx * 0.03, -0.012, 0.0), (0.012, 0.006, 0.016), ink, g, 16)
+            for k in (-1, 0, 1):
+                C.tube("wh", [(sx * 0.035, -0.012, -0.03 + k * 0.005), (sx * 0.1, -0.012, -0.025 + k * 0.016)], 0.0035, ink, g)
+        C.sphere("nose", (0, -0.013, -0.022), (0.011, 0.006, 0.008), pk, g, 16)
+    elif icon == "pato":
+        ym = M((1.0, 0.68, 0.02), rough=0.4, coat=0.5)
+        om = M((0.95, 0.32, 0.04), rough=0.4, coat=0.5)
+        ink = M((0.15, 0.12, 0.18), rough=0.4, coat=0.5)
+        C.sphere("body", (0.015, 0, -0.05), (0.085, 0.012, 0.05), ym, g, 32)
+        C.sphere("tail", (0.09, 0, -0.03), (0.025, 0.01, 0.018), ym, g, 16, rot=(0, math.radians(-30), 0))
+        C.sphere("head", (-0.04, -0.002, 0.035), (0.045, 0.012, 0.045), ym, g, 28)
+        C.sphere("beak", (-0.09, -0.004, 0.025), (0.03, 0.009, 0.012), om, g, 16)
+        C.sphere("eye", (-0.05, -0.014, 0.05), (0.009, 0.005, 0.011), ink, g, 12)
+        C.sphere("wing", (0.03, -0.01, -0.045), (0.04, 0.006, 0.024), M((0.92, 0.55, 0.0), coat=0.5), g, 20, rot=(0, math.radians(-15), 0))
     return g
+
+
+def pair_stand(r, s, fam, root):
+    a, b = [_rich(x, 1.25, 0.92) for x in _cols(r, fam, 2)]
+    am = M(a, rough=0.4, coat=0.6)
+    bm_ = M(b, rough=0.4, coat=0.6)
+    if s == 0:
+        C.rounded_box("base", (0, 0, 0.05), (1.0, 0.22, 0.1), 0.4, am, root)
+        for sx in (-1, 1):
+            C.rounded_box("cradle", (sx * 0.26, -0.05, 0.12), (0.4, 0.08, 0.05), 0.4, bm_, root)
+            C.tube("post", [(sx * 0.26, 0.06, 0.08), (sx * 0.26, 0.04, 0.42)], 0.016, am, root)
+        z, y = 0.135, -0.06
+        arcz = 0.5
+    elif s == 1:
+        for sx in (-1, 1):
+            C.lathe("ped", [(0, 0), (0.17, 0), (0.18, 0.03), (0.15, 0.09), (0.0, 0.09)], am, C.empty("pd", root, (sx * 0.28, 0, 0)), segs=48)
+            C.rounded_box("ledge", (sx * 0.28, -0.04, 0.11), (0.34, 0.09, 0.04), 0.4, bm_, root)
+        C.rounded_box("bar", (0, 0.0, 0.05), (0.3, 0.07, 0.05), 0.5, bm_, root)
+        z, y = 0.125, -0.05
+        arcz = 0.48
+    else:
+        C.rounded_box("tray", (0, 0, 0.04), (1.02, 0.26, 0.08), 0.5, am, root)
+        C.rounded_box("rim", (0, -0.11, 0.085), (1.0, 0.04, 0.03), 0.5, bm_, root)
+        for sx in (-1, 1):
+            C.sphere("knob", (sx * 0.52, 0, 0.06), (0.05,) * 3, bm_, root, 20)
+        z, y = 0.09, -0.06
+        arcz = 0.46
+    sa = C.empty("slotA", root, (-0.26, y, z), (math.radians(-6), 0, 0))
+    sb = C.empty("slotB", root, (0.26, y, z), (math.radians(-6), 0, 0))
+    lk = C.empty("link", root, (0, y - 0.02, arcz))
+    lm = M((1.0, 0.82, 0.25), rough=0.3, coat=0.7, emit=0.6)
+    pts = [(math.cos(math.pi * k / 16) * 0.26, 0, math.sin(math.pi * k / 16) * 0.12) for k in range(17)]
+    C.tube("arc", pts, 0.018, lm, lk)
+    for sx in (-1, 1):
+        C.sphere("end", (sx * 0.26, 0, 0), (0.035,) * 3, lm, lk, 16)
+    C.sphere("mid", (0, 0, 0.12), (0.05, 0.03, 0.05), lm, lk, 20)
+    return sa
 
 
 def card_easel(r, s, fam, root):

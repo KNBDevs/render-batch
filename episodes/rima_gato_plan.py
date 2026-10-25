@@ -14,7 +14,7 @@ LINES = [
 ]
 SFX = []
 META = {
-    'title': 'El gato buscaba su zapato 👟 ¿Riman? #shorts',
+    'title': '¿Gato rima con mesa o con zapato? 🐱👟 El gato buscaba su zapato #shorts',
     'description': 'Moki junta las tarjetas de gato y mesa y dice que riman. Luma le propone escuchar los finales: gato, zapato; gato, pato. Sus finales suenan parecidos: ¡riman! Aprende jugando con las rimas.\n\n#pimoruki #dibujosanimados #videosinfantiles #aprenderjugando #shorts',
     'tags': ['pimoruki', 'dibujos animados', 'videos infantiles', 'aprender jugando', 'rimas', 'palabras', 'lenguaje', 'conciencia fonológica', 'educación infantil', 'preescolar', 'moki', 'shorts'],
 }

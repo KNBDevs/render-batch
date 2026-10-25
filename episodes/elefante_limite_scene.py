@@ -42,8 +42,8 @@ K(ele, 'rotation_euler', 0, (0, 0, math.radians(ER)))
 
 K(hang, 'scale', 0, (1, 1, 1))
 NB = Z0 + 0.43 - 0.12
-EN = Vector((-0.38, -1.9, NB - 0.12 * 1.3))
-EA = Vector((-0.38, -1.9, NB))
+EN = Vector((-0.38, -1.9, Z0 + 0.6))
+EA = Vector((-0.38, -1.9, Z0 + 0.66))
 for f in range(78, 109, 2):
     u = (f - 78) / 30
     u2 = u * u * (3 - 2 * u)
@@ -57,7 +57,7 @@ for f in range(108, 137, 2):
 K(ele, 'rotation_euler', 78, (0, 0, math.radians(ER)))
 K(ele, 'rotation_euler', 100, (0, 0, math.radians(30)))
 K(hang, 'scale', 108, (1, 1, 1))
-K(hang, 'scale', 136, (1.05, 1.0, 2.3))
+K(hang, 'scale', 136, (1.03, 1.0, 1.3))
 K(ele, 'location', 150, tuple(EN))
 for f in range(156, 186, 2):
     u = (f - 156) / 30
@@ -67,7 +67,7 @@ for f in range(156, 186, 2):
     K(ele, 'location', f, tuple(p))
 K(ele, 'rotation_euler', 160, (0, 0, math.radians(30)))
 K(ele, 'rotation_euler', 186, (0, 0, math.radians(ER)))
-K(hang, 'scale', 156, (1.05, 1.0, 2.3))
+K(hang, 'scale', 156, (1.03, 1.0, 1.3))
 K(hang, 'scale', 168, (1.0, 1.0, 0.8))
 K(hang, 'scale', 176, (1.0, 1.0, 1.15))
 K(hang, 'scale', 184, (1.0, 1.0, 0.95))

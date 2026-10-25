@@ -335,23 +335,23 @@
     "status": "approved"
   },
   {
-    "id": "puente_cooperacion",
-    "template": "episode",
-    "title": "Gruño quiere todas las piezas",
-    "cast": [
-      "gruno",
-      "ruki",
-      "pimo"
-    ],
-    "status": "approved"
-  },
-  {
     "id": "iman_manzana",
     "template": "episode",
     "title": "El imán que no quería la manzana",
     "cast": [
       "bopi",
       "pimo",
+      "gruno"
+    ],
+    "status": "approved",
+    "batch": "17_36"
+  },
+  {
+    "id": "roce_suelo",
+    "template": "episode",
+    "title": "Los patines del carrito",
+    "cast": [
+      "bopi",
       "gruno"
     ],
     "status": "approved",
@@ -369,12 +369,12 @@
     "batch": "17_36"
   },
   {
-    "id": "elefante_limite",
+    "id": "semilla_brota",
     "template": "episode",
-    "title": "El elefante y el sitio equivocado",
+    "title": "La semilla del álbum",
     "cast": [
-      "gruno",
-      "pimo"
+      "pimo",
+      "ruki"
     ],
     "status": "approved",
     "batch": "17_36"
@@ -435,33 +435,32 @@
     "batch": "17_36"
   },
   {
+    "id": "raices_agua",
+    "template": "episode",
+    "title": "Las raíces beben por abajo",
+    "cast": [
+      "pimo",
+      "moki"
+    ],
+    "status": "approved",
+    "batch": "17_36"
+  },
+  {
+    "id": "elefante_limite",
+    "template": "episode",
+    "title": "El elefante y el sitio equivocado",
+    "cast": [
+      "gruno",
+      "pimo"
+    ],
+    "status": "approved",
+    "batch": "17_36"
+  },
+  {
     "id": "vaca_cuidado",
     "template": "episode",
     "title": "La vaca no trabaja con botones",
     "cast": [
-      "gruno"
-    ],
-    "status": "approved",
-    "batch": "17_36"
-  },
-  {
-    "id": "roce_suelo",
-    "template": "episode",
-    "title": "Los patines del carrito",
-    "cast": [
-      "bopi",
-      "gruno"
-    ],
-    "status": "approved",
-    "batch": "17_36"
-  },
-  {
-    "id": "coche_preparado",
-    "template": "episode",
-    "title": "El coche espera al cinturón",
-    "cast": [
-      "bopi",
-      "bolita",
       "gruno"
     ],
     "status": "approved",
@@ -479,23 +478,13 @@
     "batch": "17_36"
   },
   {
-    "id": "semilla_brota",
+    "id": "coche_preparado",
     "template": "episode",
-    "title": "La semilla del álbum",
+    "title": "El coche espera al cinturón",
     "cast": [
-      "pimo",
-      "ruki"
-    ],
-    "status": "approved",
-    "batch": "17_36"
-  },
-  {
-    "id": "raices_agua",
-    "template": "episode",
-    "title": "Las raíces beben por abajo",
-    "cast": [
-      "pimo",
-      "moki"
+      "bopi",
+      "bolita",
+      "gruno"
     ],
     "status": "approved",
     "batch": "17_36"
@@ -566,6 +555,17 @@
     ],
     "status": "draft",
     "batch": "17_36"
+  },
+  {
+    "id": "puente_cooperacion",
+    "template": "episode",
+    "title": "Gruño quiere todas las piezas",
+    "cast": [
+      "gruno",
+      "ruki",
+      "pimo"
+    ],
+    "status": "approved"
   },
   {
     "id": "exp_flota_corcho_clavo",

@@ -94,9 +94,9 @@ K(boat, 'scale', 420, (BS,) * 3)
 K(boat, 'scale', 446, (BS * 1.1, BS * 1.1, BS * 0.85))
 K(boat, 'scale', 452, (BS,) * 3)
 for k, f in enumerate(range(456, 712, 16)):
-    dx = 0.1 * math.sin(k * 0.8)
+    dx = 0.025 * math.sin(k * 0.8)
     K(boat, 'location', f, tuple(B1 + Vector((dx, 0, 0.012 * (1 if k % 2 else -1)))))
-    K(boat, 'rotation_euler', f, (math.radians(3 if k % 2 else -3), 0, math.radians(6 * math.sin(k * 0.8))))
+    K(boat, 'rotation_euler', f, (math.radians(3 if k % 2 else -3), 0, math.radians(1.5 * math.sin(k * 0.8))))
 K(boat, 'location', 728, tuple(B1))
 K(boat, 'rotation_euler', 728, (0, 0, 0))
 for f in range(740, 940, 20):

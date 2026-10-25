@@ -2555,7 +2555,7 @@ def pair_stand(r, s, fam, root):
         arcz = 0.5
     elif s == 1:
         for sx in (-1, 1):
-            C.lathe("ped", [(0, 0), (0.17, 0), (0.18, 0.03), (0.15, 0.09), (0.0, 0.09)], am, C.empty("pd", root, (sx * 0.28, 0, 0)), segs=48)
+            C.lathe("ped", [(0, 0), (0, 0.17), (0.03, 0.18), (0.09, 0.15), (0.09, 0.0)], am, C.empty("pd", root, (sx * 0.28, 0, 0)), segs=48)
             C.rounded_box("ledge", (sx * 0.28, -0.04, 0.11), (0.34, 0.09, 0.04), 0.4, bm_, root)
         C.rounded_box("bar", (0, 0.0, 0.05), (0.3, 0.07, 0.05), 0.5, bm_, root)
         z, y = 0.125, -0.05
@@ -2604,6 +2604,59 @@ def card_easel(r, s, fam, root):
         z = 0.11
     return C.empty("card", root, (0, -0.012, z), (math.radians(-6), 0, 0))
 
+
+
+def boat_rig(r, s, fam, root):
+    from props.costumes import flat
+    a, b = [_rich(x, 1.3, 0.95) for x in _cols(r, fam, 2)]
+    pole = M((0.95, 0.9, 0.82), rough=0.45, coat=0.4)
+    cloth = M((0.99, 0.97, 0.93), rough=0.6, coat=0.2)
+    C.tube("mast", [(0, 0, -0.06), (0, 0, 0.46)], 0.016, pole, root)
+    C.sphere("cap", (0, 0, 0.47), (0.026,) * 3, M(b, coat=0.6), root, 16)
+    if s == 0:
+        pts = [(0.025, 0.07), (0.025, 0.42), (0.27, 0.09)]
+    elif s == 1:
+        pts = [(0.025, 0.06)] + [(0.025 + 0.24 * math.sin(math.pi * k / 16) ** 0.8 * (1 - k / 16) ** 0.3, 0.06 + 0.36 * k / 16) for k in range(1, 16)] + [(0.025, 0.42)]
+    else:
+        pts = [(0.025, 0.08), (0.025, 0.42), (0.2, 0.38), (0.25, 0.1)]
+    flat("sail", pts, 0.014, cloth, root, bevel=0.006)
+    C.tube("stripe", [(0.03, 0, 0.2), (0.17 if s != 2 else 0.22, 0, 0.2)], 0.012, M(a, coat=0.6), root)
+    C.tube("boom", [(0.0, 0, 0.065), (0.25, 0, 0.065)], 0.01, pole, root)
+
+
+def boat_peg(r, s, fam, root):
+    a = _rich(_cols(r, fam, 2)[1], 1.35, 1.0)
+    pm = M(a, rough=0.35, coat=0.7)
+    C.lathe("peg", [(0.0, 0.034), (0.006, 0.05), (0.03, 0.055), (0.05, 0.052), (0.056, 0.034), (0.056, 0.022)], pm, root, segs=40)
+    for k in range(6):
+        q = k * 6.2832 / 6
+        C.sphere("grip", (math.cos(q) * 0.056, math.sin(q) * 0.056, 0.028), (0.014, 0.014, 0.02), pm, root, 12)
+
+
+def toy_sailboat(r, s, fam, root):
+    a, b = [_rich(x, 1.25, 0.95) for x in _cols(r, fam, 2)]
+    hm = M(a, rough=0.35, coat=0.7)
+    dm = M((0.97, 0.94, 0.88), rough=0.5, coat=0.4)
+    tm = M(b, rough=0.4, coat=0.6)
+    if s == 0:
+        C.lathe("hull", [(0.0, 0.0), (0.0, 0.14), (0.03, 0.17), (0.09, 0.18), (0.1, 0.0)], hm, C.empty("hp", root, (0, 0, 0)), segs=48, sx=1.7)
+        C.rounded_box("deck", (0, 0, 0.1), (0.5, 0.26, 0.02), 0.4, dm, root)
+        C.tube("rail", [(math.cos(k * 6.2832 / 40) * 0.29, math.sin(k * 6.2832 / 40) * 0.17, 0.11) for k in range(41)], 0.012, tm, root)
+    elif s == 1:
+        C.sphere("hull", (0, 0, 0.06), (0.32, 0.12, 0.08), hm, root, 40)
+        C.rounded_box("deck", (0, 0, 0.1), (0.48, 0.18, 0.02), 0.5, dm, root)
+        C.sphere("bow", (-0.3, 0, 0.1), (0.04,) * 3, tm, root, 16)
+    else:
+        for y in (-0.12, 0.12):
+            C.sphere("pontoon", (0, y, 0.05), (0.3, 0.06, 0.05), hm, root, 32)
+        C.rounded_box("deck", (0, 0, 0.1), (0.42, 0.32, 0.03), 0.4, dm, root)
+    C.lathe("socket", [(0.0, 0.03), (0.035, 0.03), (0.04, 0.0), (0.0, 0.0)], tm, C.empty("sk", root, (0, 0, 0.1)), segs=32)
+    C.sphere("window", (0.14, -0.13 if s != 2 else -0.17, 0.08), (0.035, 0.01, 0.035), M((0.55, 0.85, 1.0), rough=0.1, coat=0.8, emit=0.15), root, 20)
+    rig = C.empty("rig", root, (0, 0, 0.13))
+    boat_rig(r, s, fam, rig)
+    peg = C.empty("peg", root, (0, 0, 0.1))
+    boat_peg(r, s, fam, peg)
+    return rig, peg
 
 GEN = {k: v for k, v in globals().items() if k in REGISTRY}
 

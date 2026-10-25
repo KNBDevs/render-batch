@@ -1,0 +1,236 @@
+from stage import *
+from episodes.barco_revision_plan import *
+import ep_tools as T
+import random
+from props.lib import spawn, auto_dress, M, boat_rig
+EID = 'barco_revision'
+Z0 = 0.08
+auto_dress(EID, ENV)
+TB = Vector((0.0, -1.35, Z0))
+bench = spawn('low_table', 0, 3601, (0.98, 0.72, 0.45), tuple(TB), 1.0, 0)
+bench.scale = (1.6, 1.25, 1.0)
+TOP = Z0 + 0.62
+tub_root, tub_top = None, None
+tub = spawn('water_tray', 1, 3610, (0.5, 0.8, 1.0), (0.42, TB.y, TOP), 1.25, 0)
+WTOP = TOP + 0.012 * 1.25 + 0.26 * 0.72 * 1.25
+BS = 1.15
+B0 = Vector((-0.45, TB.y - 0.02, TOP))
+boat = spawn('toy_sailboat', 0, 3620, (1.0, 0.45, 0.35), tuple(B0), BS, 0)
+rig = next(o for o in boat.children if o.name.startswith('rig'))
+peg = next(o for o in boat.children if o.name.startswith('peg'))
+RIG0 = Vector(rig.location)
+PEG0 = Vector(peg.location)
+
+gruno = make('gruno', 1.6)
+bopi = make('bopi', 1.4)
+GP = Vector((-1.2, -1.15, Z0))
+BP = Vector((1.25, -1.15, Z0))
+T.place(gruno, 0, GP)
+T.turn(gruno, 0, 20)
+T.place(bopi, 0, BP)
+T.turn(bopi, 0, -30)
+HEAD = 1.3
+
+hs = C.empty('head_sail', gruno['spin'], (-0.05, 0.06, HEAD), (0, math.radians(-10), 0))
+boat_rig(random.Random(3620), 0, (1.0, 0.45, 0.35), hs)
+hs.scale = (1.6,) * 3
+
+
+def L(w):
+    return (Vector(w) - B0) / BS
+
+
+K(rig, 'scale', 0, (0, 0, 0))
+K(rig, 'scale', 83, (0, 0, 0))
+K(rig, 'scale', 84, (1, 1, 1))
+K(hs, 'scale', 83, (1.6,) * 3)
+K(hs, 'scale', 84, (0, 0, 0))
+H0 = GP + Vector((0.0, 0.06, HEAD + 0.08))
+K(rig, 'location', 84, tuple(L(H0)))
+K(rig, 'rotation_euler', 84, (0, math.radians(-10), 0))
+for t in range(0, 15, 2):
+    u = t / 14
+    p = H0.lerp(B0 + RIG0 * BS + Vector((0, 0, 0.05)), u)
+    p.z += 0.3 * 4 * u * (1 - u)
+    K(rig, 'location', 86 + t, tuple(L(p)))
+K(rig, 'rotation_euler', 100, (0, 0, 0))
+K(rig, 'location', 104, tuple(RIG0 + Vector((0, 0, 0.04))))
+K(rig, 'rotation_euler', 104, (0, 0, 0))
+LY = RIG0 + Vector((0.12, -0.1, -0.08))
+K(rig, 'location', 116, tuple(LY))
+K(rig, 'rotation_euler', 116, (math.radians(-6), math.radians(-84), 0))
+K(rig, 'rotation_euler', 119, (math.radians(-6), math.radians(-80), 0))
+K(rig, 'rotation_euler', 122, (math.radians(-6), math.radians(-84), 0))
+PL = PEG0 + Vector((0.32, -0.16, -0.085))
+K(peg, 'location', 0, tuple(PL))
+K(peg, 'scale', 0, (1.9,) * 3)
+K(peg, 'location', 300, tuple(PL))
+for f in range(226, 292, 12):
+    K(peg, 'scale', f, (1.9,) * 3)
+    K(peg, 'scale', f + 6, (2.4,) * 3)
+K(peg, 'scale', 298, (1.9,) * 3)
+K(rig, 'location', 312, tuple(LY))
+K(rig, 'rotation_euler', 312, (math.radians(-6), math.radians(-84), 0))
+K(rig, 'location', 326, tuple(RIG0 + Vector((0, 0, 0.12))))
+K(rig, 'rotation_euler', 326, (0, 0, 0))
+K(rig, 'location', 336, tuple(RIG0))
+K(peg, 'location', 336, tuple(PL + Vector((0, 0, 0.0))))
+K(peg, 'location', 348, tuple(PEG0 + Vector((0, 0, 0.42))))
+K(peg, 'location', 362, tuple(PEG0 + Vector((0, 0, 0.12))))
+K(peg, 'location', 370, tuple(PEG0))
+K(peg, 'scale', 370, (1.9,) * 3)
+K(peg, 'scale', 373, (2.3, 2.3, 1.5))
+K(peg, 'scale', 378, (1.9,) * 3)
+ck = word3d('¡clic!', (1.0, 0.5, 0.15), (-0.45, -1.6, 1.25), 372, 400, size=0.22)
+
+B1 = Vector((0.42, TB.y, WTOP - 0.04))
+K(boat, 'location', 420, tuple(B0))
+for t in range(0, 25, 2):
+    u = t / 24
+    p = B0.lerp(B1, u)
+    p.z += 0.35 * 4 * u * (1 - u)
+    K(boat, 'location', 420 + t, tuple(p))
+K(boat, 'scale', 420, (BS,) * 3)
+K(boat, 'scale', 446, (BS * 1.1, BS * 1.1, BS * 0.85))
+K(boat, 'scale', 452, (BS,) * 3)
+for k, f in enumerate(range(456, 712, 16)):
+    dx = 0.1 * math.sin(k * 0.8)
+    K(boat, 'location', f, tuple(B1 + Vector((dx, 0, 0.012 * (1 if k % 2 else -1)))))
+    K(boat, 'rotation_euler', f, (math.radians(3 if k % 2 else -3), 0, math.radians(6 * math.sin(k * 0.8))))
+K(boat, 'location', 728, tuple(B1))
+K(boat, 'rotation_euler', 728, (0, 0, 0))
+for f in range(740, 940, 20):
+    K(boat, 'rotation_euler', f, (math.radians(2), 0, 0))
+    K(boat, 'rotation_euler', f + 10, (math.radians(-2), 0, 0))
+
+C0 = ((-0.95, -3.3, 1.0), (-1.1, -1.1, 1.4), 26)
+W1 = ((-0.05, -7.0, 2.2), (-0.05, -1.1, 1.15), 30)
+MB = ((0.55, -4.9, 1.7), (0.55, -1.3, 1.0), 30)
+MG = ((-0.75, -4.8, 1.65), (-0.75, -1.2, 1.2), 30)
+MS = ((0.85, -4.7, 1.6), (0.85, -1.25, 1.1), 30)
+camkey(0, C0)
+camkey(70, ((-1.0, -3.5, 1.05), (-1.1, -1.1, 1.4), 26))
+camkey(84, W1)
+camkey(200, W1)
+camkey(214, MB)
+camkey(300, MB)
+camkey(312, W1)
+camkey(392, W1)
+camkey(404, MS)
+camkey(462, MS)
+camkey(470, MG)
+camkey(532, MG)
+camkey(540, MS)
+camkey(604, MS)
+camkey(612, MG)
+camkey(690, MG)
+camkey(704, W1)
+camkey(800, W1)
+camkey(814, MG)
+camkey(TOTAL - 1, ((-0.7, -4.7, 1.65), (-0.75, -1.2, 1.25), 30))
+
+for f in (34, 46, 58):
+    K(gruno['hold'], 'location', f, tuple(GP))
+    K(gruno['hold'], 'location', f + 5, tuple(GP + Vector((0, 0, 0.22))))
+    K(gruno['hold'], 'location', f + 10, tuple(GP))
+    S(gruno, f + 10, (1.1, 1.1, 0.9))
+    S(gruno, f + 13, (1, 1, 1))
+T.arm(gruno, 'R', 20, 0, None)
+T.arm(gruno, 'R', 28, fwd=-30, out=110)
+T.arm(gruno, 'R', 76, fwd=-30, out=110)
+T.arm(gruno, 'R', 84, fwd=-120, out=30)
+T.arm(gruno, 'R', 96, fwd=-60, out=40)
+T.rest_arm(gruno, 'R', 112)
+T.turn(gruno, 80, 40)
+T.turn(gruno, 124, 30)
+for k, f in enumerate(range(118, 136, 6)):
+    K(gruno['spin'], 'rotation_euler', f, (0, math.radians(8 if k % 2 else -8), math.radians(30)))
+K(gruno['spin'], 'rotation_euler', 138, (0, 0, math.radians(30)))
+
+T.turn(bopi, 118, -40)
+gesture(bopi, 'bounce', 122)
+T.arm(bopi, 'L', 220, 0, None)
+T.arm(bopi, 'L', 230, fwd=-70, out=60)
+T.rest_arm(bopi, 'L', 296)
+T.turn(bopi, 222, -55)
+T.turn(bopi, 300, -35)
+
+T.turn(gruno, 300, 45)
+T.arm(gruno, 'R', 306, 0, None)
+T.arm(gruno, 'R', 316, fwd=-75, out=40)
+T.arm(gruno, 'R', 334, fwd=-75, out=30)
+T.rest_arm(gruno, 'R', 346)
+T.arm(bopi, 'L', 336, 0, None)
+T.arm(bopi, 'L', 346, fwd=-80, out=45)
+T.rest_arm(bopi, 'L', 380)
+confetti(374, (-0.45, -1.4, 1.1), n=10, spread=1.2)
+
+for ch, f0, f1 in ((bopi, 400, 466), (gruno, 470, 530), (bopi, 540, 606), (gruno, 612, 680)):
+    T.arm(ch, 'L', f0, fwd=-30, out=80)
+    T.arm(ch, 'R', f0, fwd=-30, out=80)
+    for k, f in enumerate(range(f0 + 6, f1, 12)):
+        K(ch['spin'], 'rotation_euler', f, (0, math.radians(10 if k % 2 else -10), ch['spin'].rotation_euler[2]))
+        T.arm(ch, 'L', f, fwd=-30, out=95 if k % 2 else 65)
+        T.arm(ch, 'R', f, fwd=-30, out=65 if k % 2 else 95)
+    T.rest_arm(ch, 'L', f1 + 6)
+    T.rest_arm(ch, 'R', f1 + 6)
+gesture(gruno, 'sway', 410)
+gesture(bopi, 'sway', 480)
+gesture(gruno, 'sway', 550)
+gesture(bopi, 'bounce', 620)
+gesture(gruno, 'hops', 676)
+gesture(bopi, 'hops', 676)
+
+note_m = C.mat('notes', (0.25, 0.4, 0.95), rough=0.3, emit=0.6)
+rr = random.Random(32)
+SONG0, SONG1 = SONG
+for j in range(9):
+    n = C.empty('note', None, (0, 0, 0))
+    C.sphere('h', (0, 0, 0), (0.07, 0.028, 0.056), note_m, n, 12)
+    C.tube('s', [(0.064, 0, 0.0), (0.064, 0, 0.22)], 0.014, note_m, n)
+    C.tube('fl', [(0.064, 0, 0.22), (0.13, 0, 0.16)], 0.014, note_m, n)
+    f0 = SONG0 + j * 32
+    p0 = Vector((rr.uniform(-1.0, 1.0), -0.9, rr.uniform(2.1, 2.4)))
+    K(n, 'scale', 0, (0, 0, 0))
+    K(n, 'scale', f0, (0, 0, 0))
+    K(n, 'scale', f0 + 6, (1.15, 1.15, 1.15))
+    K(n, 'location', f0, tuple(p0))
+    K(n, 'location', f0 + 30, tuple(p0 + Vector((rr.uniform(-0.2, 0.2), 0, 0.3))))
+    K(n, 'scale', f0 + 24, (1.15, 1.15, 1.15))
+    K(n, 'scale', f0 + 30, (0, 0, 0))
+
+T.arm(bopi, 'R', 728, 0, None)
+T.arm(bopi, 'R', 736, fwd=-20, out=150)
+T.arm(bopi, 'R', 780, fwd=-20, out=150)
+T.rest_arm(bopi, 'R', 790)
+gesture(bopi, 'breathe', 740)
+
+hat = C.empty('cap', gruno['spin'], (0.0, 0.1, HEAD + 0.1), (math.radians(-18), 0, 0))
+cm = M((0.15, 0.3, 0.75), rough=0.5, coat=0.4)
+wm = M((0.98, 0.96, 0.9), rough=0.5, coat=0.3)
+C.lathe('crown', [(0.0, 0.0), (0.0, 0.2), (0.03, 0.21), (0.09, 0.2), (0.13, 0.16), (0.14, 0.0)], cm, hat, segs=48)
+C.lathe('band', [(0.0, 0.212), (0.05, 0.215), (0.05, 0.0)], wm, hat, segs=48)
+C.sphere('visor', (0.0, -0.18, 0.01), (0.15, 0.1, 0.015), cm, hat, 32)
+C.sphere('badge', (0.0, -0.212, 0.035), (0.03, 0.01, 0.03), M((1.0, 0.75, 0.15), coat=0.7, emit=0.2), hat, 16)
+HS = 1.25
+K(hat, 'scale', 0, (0, 0, 0))
+K(hat, 'scale', 811, (0, 0, 0))
+K(hat, 'location', 811, (0.0, 0.1, HEAD + 0.7))
+K(hat, 'scale', 812, (HS,) * 3)
+K(hat, 'location', 824, (0.0, 0.1, HEAD + 0.1))
+S(gruno, 824, (1.08, 1.08, 0.92))
+S(gruno, 828, (1, 1, 1))
+T.turn(gruno, 808, 10)
+T.arm(gruno, 'L', 806, 0, None)
+T.arm(gruno, 'R', 806, 0, None)
+T.arm(gruno, 'L', 814, fwd=-20, out=150)
+T.arm(gruno, 'R', 814, fwd=-20, out=150)
+T.rest_arm(gruno, 'L', 830)
+T.arm(gruno, 'R', 830, fwd=-40, out=60)
+T.arm(gruno, 'R', 900, fwd=-40, out=60)
+T.rest_arm(gruno, 'R', 912)
+gesture(gruno, 'breathe', 900)
+
+T.lines(EID, LINES)
+T.blinks(gruno, (60, 160, 260, 380, 500, 640, 760, 880))
+T.blinks(bopi, (40, 150, 280, 420, 560, 700, 860))

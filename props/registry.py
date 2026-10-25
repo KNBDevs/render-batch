@@ -83,5 +83,6 @@ REGISTRY = {
     "symbol_tile": {"styles": 3, "envs": ["casa", "aula"], "tags": ["ficha", "pictograma", "tarjeta"], "decor": False},
     "card_easel": {"styles": 3, "envs": ["casa", "aula"], "tags": ["atril", "tarjeta", "soporte"], "decor": False},
     "toy_sailboat": {"styles": 3, "envs": ["patio", "casa", "aula"], "tags": ["barco", "juguete", "vela"], "decor": False},
+    "soft_doll": {"styles": 3, "envs": ["casa", "aula"], "tags": ["juguete", "muñeca", "cuidar"], "decor": False},
     "pair_stand": {"styles": 3, "envs": ["casa", "aula"], "tags": ["atril", "pareja", "tarjetas", "rima"], "decor": False},
 }

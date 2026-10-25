@@ -2658,6 +2658,53 @@ def toy_sailboat(r, s, fam, root):
     boat_peg(r, s, fam, peg)
     return rig, peg
 
+
+def doll_bow(r, s, fam, root):
+    c = _rich(_cols(r, fam, 3)[2], 1.4, 1.0)
+    bm = M(c, rough=0.35, coat=0.7)
+    for sx in (-1, 1):
+        C.sphere("loop", (sx * 0.045, 0, 0.0), (0.045, 0.016, 0.03), bm, root, 24, rot=(0, math.radians(sx * 18), 0))
+        C.tube("tail", [(sx * 0.008, -0.004, -0.01), (sx * 0.025, -0.006, -0.05), (sx * 0.035, -0.004, -0.085)], 0.009, bm, root, radii=[1.0, 0.9, 0.7])
+    C.sphere("knot", (0, -0.008, 0), (0.017, 0.014, 0.019), bm, root, 16)
+
+
+def soft_doll(r, s, fam, root):
+    a, b, c = [_rich(x, 1.25, 0.97) for x in _cols(r, fam, 3)]
+    skin = M((1.0, 0.86, 0.74), rough=0.75, coat=0.05)
+    cloth = M(a, rough=0.8, coat=0.08)
+    hair = M([(0.85, 0.42, 0.2), (0.35, 0.22, 0.14), (0.98, 0.78, 0.35)][s], rough=0.85, coat=0.05)
+    dark = M((0.14, 0.1, 0.12), rough=0.4, coat=0.5)
+    shoe = M(b, rough=0.6, coat=0.3)
+    if s == 1:
+        C.lathe("dress", [(0.06, 0.0), (0.06, 0.1), (0.08, 0.1), (0.2, 0.065), (0.24, 0.05), (0.25, 0.0)], cloth, root, segs=48)
+    else:
+        C.lathe("dress", [(0.06, 0.0), (0.06, 0.13), (0.08, 0.132), (0.12, 0.11), (0.2, 0.07), (0.25, 0.05), (0.26, 0.0)], cloth, root, segs=48)
+    if s == 2:
+        for k in range(8):
+            q = k * 6.2832 / 8
+            C.sphere("dot", (math.cos(q) * 0.11, math.sin(q) * 0.11, 0.11), (0.014, 0.014, 0.014), M(b, coat=0.5), root, 12)
+    for sx in (-1, 1):
+        C.tube("leg", [(sx * 0.04, 0, 0.07), (sx * 0.045, 0, 0.0)], 0.022, skin, root)
+        C.sphere("shoe", (sx * 0.046, -0.015, 0.0), (0.03, 0.042, 0.02), shoe, root, 16)
+        C.tube("arm", [(sx * 0.065, 0, 0.23), (sx * 0.11, -0.01, 0.17), (sx * 0.12, -0.02, 0.12)], 0.02, cloth, root)
+        C.sphere("hand", (sx * 0.12, -0.022, 0.11), (0.024, 0.024, 0.024), skin, root, 16)
+    C.sphere("head", (0, 0, 0.33), (0.085, 0.08, 0.085), skin, root, 32)
+    C.sphere("hair", (0, 0.012, 0.36), (0.092, 0.084, 0.07), hair, root, 32)
+    if s == 0:
+        for sx in (-1, 1):
+            C.sphere("tail", (sx * 0.1, 0.01, 0.33), (0.03, 0.03, 0.05), hair, root, 16)
+    elif s == 1:
+        C.sphere("bun", (0, 0.03, 0.43), (0.04, 0.04, 0.035), hair, root, 20)
+    else:
+        C.sphere("fringe", (0, -0.04, 0.38), (0.07, 0.035, 0.03), hair, root, 20)
+    for sx in (-1, 1):
+        C.sphere("eye", (sx * 0.03, -0.077, 0.335), (0.012, 0.006, 0.012), dark, root, 12)
+        C.sphere("cheek", (sx * 0.05, -0.068, 0.31), (0.014, 0.005, 0.01), M((1.0, 0.55, 0.55), rough=0.7), root, 12)
+    C.tube("smile", [(0.02 * math.cos(math.radians(t)), -0.081, 0.305 + 0.012 * math.sin(math.radians(t))) for t in range(200, 341, 20)], 0.0035, dark, root)
+    bow = C.empty("ribbon", root, [(0.075, -0.02, 0.4), (0.0, -0.06, 0.24), (0.0, -0.085, 0.13)][s])
+    doll_bow(r, s, fam, bow)
+    return bow
+
 GEN = {k: v for k, v in globals().items() if k in REGISTRY}
 
 

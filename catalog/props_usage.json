@@ -4544,5 +4544,72 @@
    }
   ],
   "order": 56
+ },
+ "plastilina_bota": {
+  "env": "aula",
+  "family": "pastel",
+  "decor": [
+   {
+    "prop": "pouf",
+    "style": 0,
+    "seed": 285327,
+    "loc": [
+     -3.64,
+     1.7,
+     0.0
+    ],
+    "scale": 1.18,
+    "rot": -9.9
+   },
+   {
+    "prop": "soft_token",
+    "style": 0,
+    "seed": 129297,
+    "loc": [
+     -4.63,
+     1.13,
+     0.0
+    ],
+    "scale": 1.07,
+    "rot": 24.4
+   },
+   {
+    "prop": "play_mat",
+    "style": 0,
+    "seed": 547757,
+    "loc": [
+     -2.09,
+     3.25,
+     0.0
+    ],
+    "scale": 1.03,
+    "rot": 4.6
+   },
+   {
+    "prop": "floor_lamp",
+    "style": 1,
+    "seed": 333412,
+    "loc": [
+     3.24,
+     1.29,
+     0.0
+    ],
+    "scale": 0.88,
+    "rot": -17.1
+   },
+   {
+    "prop": "pebbles",
+    "style": 1,
+    "seed": 232395,
+    "loc": [
+     -0.87,
+     1.72,
+     0.0
+    ],
+    "scale": 1.06,
+    "rot": 11.6
+   }
+  ],
+  "order": 57
  }
 }

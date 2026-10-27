@@ -588,5 +588,16 @@
     ],
     "status": "approved",
     "auto": true
+  },
+  {
+    "id": "plastilina_bota",
+    "template": "episode",
+    "status": "draft",
+    "title": "La plastilina que no botaba",
+    "cast": [
+      "bolita",
+      "pimo"
+    ],
+    "batch": "37_plus"
   }
 ]

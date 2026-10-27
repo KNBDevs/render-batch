@@ -85,4 +85,5 @@ REGISTRY = {
     "toy_sailboat": {"styles": 3, "envs": ["patio", "casa", "aula"], "tags": ["barco", "juguete", "vela"], "decor": False},
     "soft_doll": {"styles": 3, "envs": ["casa", "aula"], "tags": ["juguete", "muñeca", "cuidar"], "decor": False},
     "pair_stand": {"styles": 3, "envs": ["casa", "aula"], "tags": ["atril", "pareja", "tarjetas", "rima"], "decor": False},
+    "drop_tower": {"styles": 3, "envs": ["casa", "aula", "patio", "lab"], "tags": ["altura", "medir", "experimento"], "decor": False},
 }

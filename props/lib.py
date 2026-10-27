@@ -2705,6 +2705,42 @@ def soft_doll(r, s, fam, root):
     doll_bow(r, s, fam, bow)
     return bow
 
+
+def drop_tower(r, s, fam, root, H=1.3):
+    cs = [_rich(x, 1.7, 0.95) for x in _cols(r, fam, 6)]
+    frame = M(cs[0], rough=0.4, coat=0.6)
+    trim = M((0.98, 0.96, 0.92), rough=0.35, coat=0.7)
+    n = 6
+    if s == 0:
+        C.lathe("foot", [(0, 0), (0.2, 0), (0.21, 0.04), (0.17, 0.08), (0, 0.08)], trim, root, segs=48)
+        h = (H - 0.12) / n
+        for k in range(n):
+            C.rounded_box("band", (0, 0, 0.08 + h * (k + 0.5)), (0.17, 0.17, h * 0.96), 0.3, M(cs[k % 6], rough=0.4, coat=0.6), root)
+    elif s == 1:
+        C.rounded_box("foot", (0, 0, 0.04), (0.5, 0.2, 0.08), 0.4, trim, root)
+        for sx in (-1, 1):
+            C.tube("rail", [(sx * 0.07, 0, 0.06), (sx * 0.07, 0, H - 0.04)], 0.032, frame, root)
+        for k in range(n):
+            z = 0.12 + (H - 0.2) * (k + 0.5) / n
+            C.tube("rung", [(-0.07, 0, z), (0.07, 0, z)], 0.02, M(cs[k % 6], rough=0.4, coat=0.6), root)
+            C.sphere("tick", (0, -0.03, z), (0.045, 0.015, 0.045), M(cs[k % 6], rough=0.4, coat=0.6), root, 16)
+    else:
+        C.rounded_box("foot", (0, 0, 0.04), (0.36, 0.26, 0.08), 0.5, trim, root)
+        C.rounded_box("board", (0, 0, H * 0.5 + 0.02), (0.26, 0.07, H - 0.1), 0.3, trim, root)
+        for k in range(n):
+            z = 0.12 + (H - 0.2) * (k + 0.5) / n
+            C.sphere("dot", (0, -0.04, z), (0.055, 0.015, 0.055), M(cs[k % 6], rough=0.4, coat=0.6), root, 16)
+    C.rounded_box("arm", (0, -0.04, H), (0.66, 0.1, 0.08), 0.5, frame, root)
+    C.sphere("cap", (0, -0.04, H + 0.05), (0.07, 0.07, 0.07), M(cs[2], rough=0.35, coat=0.7), root, 20)
+    out = []
+    for sx in (-1, 1):
+        piv = C.empty("trayL" if sx < 0 else "trayR", root, (sx * 0.14, -0.1, H - 0.01))
+        C.rounded_box("tray", (sx * 0.11, -0.04, 0.0), (0.24, 0.22, 0.05), 0.4, M(cs[3 if sx < 0 else 4], rough=0.4, coat=0.6), piv)
+        C.rounded_box("lip", (sx * 0.22, -0.04, 0.025), (0.03, 0.22, 0.04), 0.5, trim, piv)
+        out.append(piv)
+    return out
+
+
 GEN = {k: v for k, v in globals().items() if k in REGISTRY}
 
 

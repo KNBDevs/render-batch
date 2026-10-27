@@ -4611,5 +4611,84 @@
    }
   ],
   "order": 57
+ },
+ "papel_cae": {
+  "env": "casa",
+  "family": "pastel",
+  "decor": [
+   {
+    "prop": "play_mat",
+    "style": 2,
+    "seed": 248983,
+    "loc": [
+     2.16,
+     4.1,
+     0.0
+    ],
+    "scale": 1.02,
+    "rot": 15.7
+   },
+   {
+    "prop": "bunting",
+    "style": 0,
+    "seed": 672575,
+    "loc": [
+     4.83,
+     2.47,
+     0.0
+    ],
+    "scale": 1.15,
+    "rot": 27.7
+   },
+   {
+    "prop": "ball_basket",
+    "style": 2,
+    "seed": 2381,
+    "loc": [
+     -3.24,
+     3.37,
+     0.0
+    ],
+    "scale": 1.01,
+    "rot": -12.1
+   },
+   {
+    "prop": "planter_box",
+    "style": 0,
+    "seed": 951974,
+    "loc": [
+     -1.19,
+     3.37,
+     0.0
+    ],
+    "scale": 1.12,
+    "rot": -6.3
+   },
+   {
+    "prop": "led_lantern",
+    "style": 1,
+    "seed": 759886,
+    "loc": [
+     -2.33,
+     2.94,
+     0.0
+    ],
+    "scale": 1.09,
+    "rot": 8.0
+   },
+   {
+    "prop": "flower_pot",
+    "style": 1,
+    "seed": 14304,
+    "loc": [
+     0.9,
+     2.84,
+     0.0
+    ],
+    "scale": 1.18,
+    "rot": -31.3
+   }
+  ],
+  "order": 58
  }
 }

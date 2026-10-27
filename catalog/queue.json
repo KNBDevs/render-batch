@@ -599,5 +599,16 @@
       "pimo"
     ],
     "batch": "37_plus"
+  },
+  {
+    "id": "papel_cae",
+    "template": "episode",
+    "status": "draft",
+    "title": "La carta que bailaba",
+    "cast": [
+      "tuki",
+      "moki"
+    ],
+    "batch": "37_plus"
   }
 ]

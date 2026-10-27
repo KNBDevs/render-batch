@@ -4718,5 +4718,85 @@
   "engine": "gemini",
   "voice": "Puck",
   "dev": -7.5
+ },
+ "ep_plastilina_bota_b2": {
+  "hash": "9d63130df55d",
+  "dur": 2.28,
+  "text": "¡Plof! ¿Mi plastilina no bota?",
+  "asr": 1.0,
+  "heard": "¡Plof! ¿Mi plastilina no vota?",
+  "engine": "gemini",
+  "voice": "Zephyr",
+  "dev": -1.95
+ },
+ "ep_plastilina_bota_b3": {
+  "hash": "0f6e6fc28426",
+  "dur": 2.08,
+  "text": "¡La pelota sube y sube!",
+  "asr": 1.0,
+  "heard": "La pelota sube y sube.",
+  "engine": "gemini",
+  "voice": "Zephyr",
+  "dev": -1.45
+ },
+ "ep_plastilina_bota_b4": {
+  "hash": "99dcd5eabac9",
+  "dur": 2.39,
+  "text": "Y la plastilina se queda aplastada.",
+  "asr": 0.83,
+  "heard": "Y la plastelina se queda aplastada.",
+  "engine": "gemini",
+  "voice": "Zephyr",
+  "dev": -4.3
+ },
+ "ep_plastilina_bota_b5": {
+  "hash": "9e2906792930",
+  "dur": 2.21,
+  "text": "¡Pues con plastilina hago una estrella!",
+  "asr": 1.0,
+  "heard": "Pues con plastilina hago una estrella.",
+  "engine": "gemini",
+  "voice": "Zephyr",
+  "dev": -3.55
+ },
+ "ep_plastilina_bota_b1": {
+  "hash": "0c810824c930",
+  "dur": 1.26,
+  "text": "¡Mira cómo bota!",
+  "asr": 1.0,
+  "heard": "¡Mira cómo vota!",
+  "engine": "gemini",
+  "voice": "Zephyr",
+  "dev": -3.99
+ },
+ "ep_plastilina_bota_p3": {
+  "hash": "06ac25b7da78",
+  "dur": 2.86,
+  "text": "Al chocar, la pelota se aplasta un poquito...",
+  "asr": 1.0,
+  "heard": "Al chocar, la pelota se aplasta un poquito.",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": 0.0
+ },
+ "ep_plastilina_bota_p2": {
+  "hash": "416f05c91623",
+  "dur": 3.56,
+  "text": "¿Cuál botará más: la pelota o la plastilina?",
+  "asr": 1.0,
+  "heard": "¿Cuál votará más? ¿La pelota o la plastilina?",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": -3.59
+ },
+ "ep_plastilina_bota_p4": {
+  "hash": "b924c0482bea",
+  "dur": 2.84,
+  "text": "...y vuelve a su forma. ¡Por eso bota!",
+  "asr": 1.0,
+  "heard": "Y vuelve a su forma, por eso vota.",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": 0.6
  }
 }

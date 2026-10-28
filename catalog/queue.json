@@ -592,7 +592,7 @@
   {
     "id": "plastilina_bota",
     "template": "episode",
-    "status": "draft",
+    "status": "approved",
     "title": "La plastilina que no botaba",
     "cast": [
       "bolita",
@@ -603,7 +603,7 @@
   {
     "id": "papel_cae",
     "template": "episode",
-    "status": "draft",
+    "status": "approved",
     "title": "La carta que bailaba",
     "cast": [
       "tuki",

@@ -4798,5 +4798,105 @@
   "engine": "gemini",
   "voice": "Puck",
   "dev": 0.6
+ },
+ "ep_papel_cae_m1": {
+  "hash": "fa7aa1eb0378",
+  "dur": 3.96,
+  "text": "¡Qué hoja tan lenta! Parece que baila.",
+  "asr": 1.0,
+  "heard": "¡Qué hoja tan lenta! ¡Parece que baila!",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": 1.75
+ },
+ "ep_papel_cae_m2": {
+  "hash": "acef06e0a2c3",
+  "dur": 4.37,
+  "text": "¿Cuál llegará antes al suelo: la hoja o la bola?",
+  "asr": 1.0,
+  "heard": "¿Cuál llegará antes al suelo? ¿La hoja o la bola?",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": -2.05
+ },
+ "ep_papel_cae_m3": {
+  "hash": "f6bf08605cf1",
+  "dur": 3.39,
+  "text": "La hoja es ancha y el aire la frena.",
+  "asr": 1.0,
+  "heard": "La hoja es ancha y el aire la frena.",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": -0.55
+ },
+ "ep_papel_cae_m4": {
+  "hash": "595924c014b0",
+  "dur": 3.17,
+  "text": "La bola es pequeña y cae deprisa.",
+  "asr": 0.8,
+  "heard": "La bola es pequeña y cae de prisa.",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": -2.0
+ },
+ "ep_papel_cae_m5": {
+  "hash": "bedc34f73c89",
+  "dur": 2.23,
+  "text": "¡Arrugadita, pero ha llegado!",
+  "asr": 1.0,
+  "heard": "Arrugadita, pero ha llegado.",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": -1.44
+ },
+ "ep_papel_cae_t1": {
+  "hash": "2949710bba97",
+  "dur": 1.25,
+  "text": "¡Carta para Moki!",
+  "asr": 1.0,
+  "heard": "¡Carta para Moki!",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": 0.0
+ },
+ "ep_papel_cae_t2": {
+  "hash": "f33d4a42e673",
+  "dur": 1.75,
+  "text": "¿Y si la arrugo en una bola?",
+  "asr": 1.0,
+  "heard": "¿Y si la arrugó en una bola?",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": -7.7
+ },
+ "ep_papel_cae_t3": {
+  "hash": "f564ef1c2ef6",
+  "dur": 1.54,
+  "text": "¡La bola ha llegado primero!",
+  "asr": 1.0,
+  "heard": "La bola ha llegado primero.",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": 0.0
+ },
+ "ep_papel_cae_t4": {
+  "hash": "a6d2ee8646e2",
+  "dur": 1.21,
+  "text": "¡Pues carta en bola!",
+  "asr": 1.0,
+  "heard": "¡Pues carta en bola!",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": 0.0
+ },
+ "ep_plastilina_bota_p1": {
+  "hash": "b2574159f4ee",
+  "dur": 2.29,
+  "text": "Vamos a probar desde la misma altura.",
+  "asr": 1.0,
+  "heard": "Vamos a probar desde la misma altura.",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": -5.1
  }
 }

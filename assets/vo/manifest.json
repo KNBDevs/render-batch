@@ -4988,5 +4988,35 @@
   "engine": "gemini",
   "voice": "Iapetus",
   "dev": -3.8
+ },
+ "ep_linterna_espejo_b2": {
+  "hash": "be554fc89c3b",
+  "dur": 5.11,
+  "text": "¿Qué devolverá la luz: el espejo o el cartón?",
+  "asr": 1.0,
+  "heard": "¿Qué devolverá la luz, el espejo o el cartón?",
+  "engine": "gemini",
+  "voice": "Iapetus",
+  "dev": -6.1
+ },
+ "ep_linterna_espejo_b3": {
+  "hash": "841559f97685",
+  "dur": 6.61,
+  "text": "El espejo es liso y brillante: devuelve la luz.",
+  "asr": 1.0,
+  "heard": "El espejo es liso y brillante. Devuelve la luz.",
+  "engine": "gemini",
+  "voice": "Iapetus",
+  "dev": -0.1
+ },
+ "ep_linterna_espejo_b4": {
+  "hash": "fb7f9d4a4669",
+  "dur": 3.15,
+  "text": "Pero nunca a los ojos, ¿vale?",
+  "asr": 1.0,
+  "heard": "pero nunca a los ojos, ¿vale?",
+  "engine": "gemini",
+  "voice": "Iapetus",
+  "dev": 0.3
  }
 }

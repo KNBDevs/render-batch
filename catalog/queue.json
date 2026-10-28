@@ -610,5 +610,27 @@
       "moki"
     ],
     "batch": "37_plus"
+  },
+  {
+    "id": "lapiz_agua",
+    "template": "episode",
+    "status": "draft",
+    "title": "El lápiz que se rompía en el agua",
+    "cast": [
+      "luma",
+      "ruki"
+    ],
+    "batch": "37_plus"
+  },
+  {
+    "id": "linterna_espejo",
+    "template": "episode",
+    "status": "draft",
+    "title": "El espejo que devolvía la luz",
+    "cast": [
+      "pimo",
+      "bopi"
+    ],
+    "batch": "37_plus"
   }
 ]

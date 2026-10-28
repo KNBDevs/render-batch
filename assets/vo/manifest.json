@@ -4898,5 +4898,95 @@
   "engine": "gemini",
   "voice": "Puck",
   "dev": -5.1
+ },
+ "ep_lapiz_agua_l1": {
+  "hash": "1e9e69fc1f6a",
+  "dur": 2.48,
+  "text": "¡Oh, no! ¡El lápiz se ha roto!",
+  "asr": 1.0,
+  "heard": "¡Oh no! ¡El lápiz se ha roto!",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": 3.1
+ },
+ "ep_lapiz_agua_l2": {
+  "hash": "3669280b15c6",
+  "dur": 1.1,
+  "text": "¡Está entero!",
+  "asr": 1.0,
+  "heard": "¡Está entero!",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": 0.0
+ },
+ "ep_lapiz_agua_l3": {
+  "hash": "8f88612a626e",
+  "dur": 1.58,
+  "text": "¡Parece roto otra vez!",
+  "asr": 1.0,
+  "heard": "¡Parece roto otra vez!",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": 5.4
+ },
+ "ep_lapiz_agua_l4": {
+  "hash": "8db89bd145fd",
+  "dur": 3.03,
+  "text": "¡Pues mi pajita también se dobla... de mentira!",
+  "asr": 1.0,
+  "heard": "Pues mi pajita también se dobla, de mentira.",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": 0.2
+ },
+ "ep_lapiz_agua_r1": {
+  "hash": "575989714fd8",
+  "dur": 2.82,
+  "text": "Espera. Vamos a sacarlo del agua.",
+  "asr": 1.0,
+  "heard": "Espera, vamos a sacarlo del agua.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 2.36
+ },
+ "ep_lapiz_agua_r2": {
+  "hash": "b3c77523efb1",
+  "dur": 4.91,
+  "text": "Si lo metemos otra vez, ¿estará roto o entero?",
+  "asr": 1.0,
+  "heard": "Si lo metemos otra vez, estará roto o entero.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 5.41
+ },
+ "ep_lapiz_agua_r3": {
+  "hash": "a2e7ee357532",
+  "dur": 4.12,
+  "text": "Sigue entero. Lo que cambia es cómo lo vemos.",
+  "asr": 1.0,
+  "heard": "Sigue entero. Lo que cambia es cómo lo vemos.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 2.66
+ },
+ "ep_lapiz_agua_r4": {
+  "hash": "611cffc93851",
+  "dur": 4.39,
+  "text": "La luz cambia de camino al pasar del agua al aire.",
+  "asr": 1.0,
+  "heard": "La luz cambia de camino al pasar del agua al aire.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 2.56
+ },
+ "ep_linterna_espejo_b1": {
+  "hash": "ec505ed3f0a8",
+  "dur": 5.51,
+  "text": "La linterna no llega. La luz va recta.",
+  "asr": 1.0,
+  "heard": "La linterna no llega, la luz va recta.",
+  "engine": "gemini",
+  "voice": "Iapetus",
+  "dev": -3.8
  }
 }

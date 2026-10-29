@@ -632,5 +632,27 @@
       "bopi"
     ],
     "batch": "37_plus"
+  },
+  {
+    "id": "balanza_globo",
+    "template": "episode",
+    "status": "draft",
+    "title": "El globo que no pesaba",
+    "cast": [
+      "bolita",
+      "moki"
+    ],
+    "batch": "37_plus"
+  },
+  {
+    "id": "rampa_alta",
+    "template": "episode",
+    "status": "draft",
+    "title": "La pelota que llegó más lejos",
+    "cast": [
+      "tuki",
+      "ruki"
+    ],
+    "batch": "37_plus"
   }
 ]

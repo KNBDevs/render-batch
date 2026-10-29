@@ -90,4 +90,6 @@ REGISTRY = {
     "striped_straw": {"styles": 3, "envs": ["casa", "cocina", "patio"], "tags": ["pajita", "beber"], "decor": False},
     "hand_mirror": {"styles": 3, "envs": ["casa", "aula", "lab"], "tags": ["espejo", "luz"], "decor": False},
     "sea_shell": {"styles": 3, "envs": ["casa", "aula", "patio"], "tags": ["caracola", "mar"], "decor": False},
+    "toy_balance": {"styles": 3, "envs": ["casa", "aula", "lab"], "tags": ["balanza", "peso"], "decor": False},
+    "big_balloon": {"styles": 3, "envs": ["casa", "patio", "aula"], "tags": ["globo", "aire"], "decor": False},
 }

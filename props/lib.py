@@ -2871,6 +2871,73 @@ def sea_shell(r, s, fam, root):
     return root
 
 
+def toy_balance(r, s, fam, root):
+    c, d, e = [_rich(x, 1.4, 0.95) for x in _cols(r, fam, 3)]
+    bm = M(c, rough=0.4, coat=0.7)
+    am = M(d, rough=0.35, coat=0.8)
+    pm = M(e, rough=0.3, coat=0.8)
+    gold = M((1.0, 0.8, 0.3), rough=0.3, coat=0.9)
+    H = 0.62
+    HL = 0.42
+    if s == 0:
+        C.lathe("base", [(0, 0), (0, 0.2), (0.03, 0.21), (0.07, 0.18), (0.09, 0.08), (0.1, 0)], bm, root, segs=48)
+        C.lathe("post", [(0.09, 0.0), (0.09, 0.035), (H, 0.03), (H, 0.0)], am, root, segs=32)
+    elif s == 1:
+        C.rounded_box("base", (0, 0, 0.05), (0.56, 0.3, 0.1), 0.4, bm, root)
+        for sx in (-1, 1):
+            C.tube("leg", [(sx * 0.16, 0, 0.09), (sx * 0.05, 0, H - 0.06), (0, 0, H)], 0.026, am, root)
+    else:
+        C.sphere("base", (0, 0, 0.08), (0.22, 0.22, 0.09), bm, root, 40)
+        C.tube("post", [(0, 0, 0.14), (0.0, 0, H)], 0.034, am, root)
+        for k in range(5):
+            a = k * 6.2832 / 5
+            C.sphere("bead", (math.cos(a) * 0.17, math.sin(a) * 0.17, 0.12), (0.035, 0.035, 0.03), gold, root, 16)
+    piv = C.empty("beam_pivot", root, (0, 0, H))
+    C.sphere("hub", (0, -0.01, 0), (0.05, 0.05, 0.05), gold, piv, 24)
+    C.tube("beam", [(-HL, 0, 0), (0, 0, 0.012), (HL, 0, 0)], 0.024, am, piv)
+    C.tube("needle", [(0, -0.03, 0), (0, -0.03, 0.14)], 0.012, gold, piv)
+    pans = []
+    for side, sx in (("L", -1), ("R", 1)):
+        C.sphere("tip", (sx * HL, 0, 0), (0.032, 0.032, 0.032), gold, piv, 16)
+        hang = C.empty(f"hang_{side}", piv, (sx * HL, 0, 0))
+        R = 0.17
+        if s == 2:
+            C.tube("rod", [(0, 0, 0), (0, 0, 0.12)], 0.016, gold, hang)
+            pz = 0.12
+        else:
+            pz = -0.26
+            n = 3 if s == 0 else 2
+            for k in range(n):
+                a = k * 6.2832 / n + (0.0 if s == 0 else 1.5708)
+                C.tube("cord", [(0, 0, -0.01), (math.cos(a) * R * 0.86, math.sin(a) * R * 0.86, pz + 0.02)], 0.006, gold, hang)
+        pan = C.empty(f"pan_{side}", hang, (0, 0, pz))
+        C.lathe("dish", [(0.0, 0.0), (0.0, R * 0.55), (0.015, R * 0.8), (0.045, R), (0.055, R * 1.02), (0.05, R * 0.95), (0.012, R * 0.55), (0.012, 0.0)], pm, pan, segs=48)
+        pans.append(pan)
+    return piv, pans
+
+
+def big_balloon(r, s, fam, root):
+    c, d = [_rich(x, 1.5, 0.98) for x in _cols(r, fam, 2)]
+    bm = M(c, rough=0.18, coat=1.0)
+    km = M(d, rough=0.3, coat=0.8)
+    R = 0.3
+    if s == 1:
+        C.sphere("body", (0, 0, R + 0.04), (R, R, R * 0.98), bm, root, 56)
+    else:
+        C.lathe("body", [(0.0, 0.0), (0.0, 0.03), (0.04, 0.09), (0.14, 0.22), (0.3, 0.3), (0.46, 0.27), (0.56, 0.17), (0.6, 0.06), (0.605, 0.0)], bm, root, segs=64)
+    C.lathe("knot", [(-0.04, 0.0), (-0.04, 0.02), (-0.01, 0.03), (0.01, 0.012), (0.02, 0.0)], bm, root, segs=24)
+    C.tube("ribbon", [(0, 0, -0.03), (0.05, 0.0, -0.035), (0.09, 0.02, -0.03), (0.13, 0.0, -0.034)], 0.006, km, root)
+    zc = 0.3
+    if s == 1:
+        C.tube("band", _ring(R * 1.005, zc + 0.04, 64), 0.016, km, root)
+    elif s == 2:
+        for k in range(7):
+            a = k * 6.2832 / 7
+            C.sphere("spot", (math.cos(a) * 0.29, math.sin(a) * 0.29, zc + 0.05 * math.sin(3 * a)), (0.045, 0.045, 0.045), km, root, 16)
+    C.sphere("shine", (-0.13, -0.22, zc + 0.15), (0.05, 0.02, 0.08), M((1, 1, 1), rough=0.1, coat=1.0, emit=0.6), root, 20, rot=(0.3, 0.5, 0))
+    return root
+
+
 GEN = {k: v for k, v in globals().items() if k in REGISTRY}
 
 

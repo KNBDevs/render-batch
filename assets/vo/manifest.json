@@ -5228,5 +5228,15 @@
   "engine": "gemini",
   "voice": "Fenrir",
   "dev": -4.35
+ },
+ "ep_linterna_espejo_p2": {
+  "hash": "7e0d4b54ca50",
+  "dur": 2.83,
+  "text": "¡Ya sé! ¿Y si ponemos algo delante?",
+  "asr": 1.0,
+  "heard": "Ya sé, y si ponemos algo delante.",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": -7.45
  }
 }

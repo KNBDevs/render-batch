@@ -5018,5 +5018,45 @@
   "engine": "gemini",
   "voice": "Iapetus",
   "dev": 0.3
+ },
+ "ep_linterna_espejo_p1": {
+  "hash": "c81fa1031ce3",
+  "dur": 2.86,
+  "text": "¡Mi caracola está detrás de la caja!",
+  "asr": 1.0,
+  "heard": "Mi caracola está detrás de la caja.",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": 0.0
+ },
+ "ep_linterna_espejo_p3": {
+  "hash": "21bdedb7d631",
+  "dur": 2.41,
+  "text": "¡El cartón casi no la devuelve!",
+  "asr": 1.0,
+  "heard": "El cartón casi no la devuelve.",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": 0.0
+ },
+ "ep_linterna_espejo_p4": {
+  "hash": "e7b1a1ee860e",
+  "dur": 2.69,
+  "text": "¡Y el espejo la manda hacia la caracola!",
+  "asr": 1.0,
+  "heard": "Y el espejo la manda hacia la caracola.",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": 0.0
+ },
+ "ep_linterna_espejo_p5": {
+  "hash": "6804ff07d0e2",
+  "dur": 2.02,
+  "text": "¡Mira, una luz que baila!",
+  "asr": 1.0,
+  "heard": "¡Mira una luz que baila!",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": 0.0
  }
 }

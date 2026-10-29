@@ -4690,5 +4690,151 @@
    }
   ],
   "order": 58
+ },
+ "lapiz_agua": {
+  "env": "casa",
+  "family": "pastel",
+  "decor": [
+   {
+    "prop": "flower_pot",
+    "style": 0,
+    "seed": 317194,
+    "loc": [
+     -2.38,
+     1.88,
+     0.0
+    ],
+    "scale": 1.11,
+    "rot": -10.3
+   },
+   {
+    "prop": "soft_token",
+    "style": 1,
+    "seed": 913848,
+    "loc": [
+     1.38,
+     1.77,
+     0.0
+    ],
+    "scale": 1.19,
+    "rot": 8.5
+   },
+   {
+    "prop": "ball_basket",
+    "style": 0,
+    "seed": 163507,
+    "loc": [
+     2.36,
+     3.54,
+     0.0
+    ],
+    "scale": 1.11,
+    "rot": 1.3
+   },
+   {
+    "prop": "toy_blocks",
+    "style": 0,
+    "seed": 255738,
+    "loc": [
+     3.43,
+     1.39,
+     0.0
+    ],
+    "scale": 1.09,
+    "rot": 0.6
+   },
+   {
+    "prop": "bunting",
+    "style": 2,
+    "seed": 333267,
+    "loc": [
+     -4.48,
+     0.94,
+     0.0
+    ],
+    "scale": 0.89,
+    "rot": -10.8
+   },
+   {
+    "prop": "pouf",
+    "style": 1,
+    "seed": 422050,
+    "loc": [
+     -3.65,
+     0.65,
+     0.0
+    ],
+    "scale": 0.92,
+    "rot": -15.3
+   }
+  ],
+  "order": 59
+ },
+ "linterna_espejo": {
+  "env": "aula",
+  "family": "pastel",
+  "decor": [
+   {
+    "prop": "soft_token",
+    "style": 2,
+    "seed": 941032,
+    "loc": [
+     0.93,
+     2.6,
+     0.0
+    ],
+    "scale": 1.23,
+    "rot": -7.4
+   },
+   {
+    "prop": "pouf",
+    "style": 2,
+    "seed": 556081,
+    "loc": [
+     3.3,
+     1.13,
+     0.0
+    ],
+    "scale": 1.04,
+    "rot": 30.5
+   },
+   {
+    "prop": "play_mat",
+    "style": 1,
+    "seed": 367095,
+    "loc": [
+     4.33,
+     2.77,
+     0.0
+    ],
+    "scale": 1.2,
+    "rot": -20.3
+   },
+   {
+    "prop": "floor_lamp",
+    "style": 2,
+    "seed": 698973,
+    "loc": [
+     -2.29,
+     3.1,
+     0.0
+    ],
+    "scale": 0.97,
+    "rot": 15.1
+   },
+   {
+    "prop": "pebbles",
+    "style": 1,
+    "seed": 828328,
+    "loc": [
+     -4.88,
+     1.2,
+     0.0
+    ],
+    "scale": 1.19,
+    "rot": -25.7
+   }
+  ],
+  "order": 60
  }
 }

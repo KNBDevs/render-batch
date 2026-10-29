@@ -86,4 +86,8 @@ REGISTRY = {
     "soft_doll": {"styles": 3, "envs": ["casa", "aula"], "tags": ["juguete", "muñeca", "cuidar"], "decor": False},
     "pair_stand": {"styles": 3, "envs": ["casa", "aula"], "tags": ["atril", "pareja", "tarjetas", "rima"], "decor": False},
     "drop_tower": {"styles": 3, "envs": ["casa", "aula", "patio", "lab"], "tags": ["altura", "medir", "experimento"], "decor": False},
+    "big_pencil": {"styles": 3, "envs": ["casa", "aula", "lab"], "tags": ["lápiz", "escribir"], "decor": False},
+    "striped_straw": {"styles": 3, "envs": ["casa", "cocina", "patio"], "tags": ["pajita", "beber"], "decor": False},
+    "hand_mirror": {"styles": 3, "envs": ["casa", "aula", "lab"], "tags": ["espejo", "luz"], "decor": False},
+    "sea_shell": {"styles": 3, "envs": ["casa", "aula", "patio"], "tags": ["caracola", "mar"], "decor": False},
 }

@@ -2741,6 +2741,136 @@ def drop_tower(r, s, fam, root, H=1.3):
     return out
 
 
+def big_pencil(r, s, fam, root, L=0.8, cut=None):
+    c, d, e = [_rich(x, 1.4, 0.95) for x in _cols(r, fam, 3)]
+    body = M(c, rough=0.4, coat=0.6)
+    wood = M((0.98, 0.84, 0.62), rough=0.6, coat=0.2)
+    lead = M((0.22, 0.22, 0.3), rough=0.35, coat=0.5)
+    band = M((0.86, 0.86, 0.9), rough=0.25, coat=0.9)
+    eras = M((1.0, 0.6, 0.7), rough=0.6, coat=0.2)
+    R = [0.034, 0.03, 0.04][s]
+    segs = [6, 40, 3][s]
+    tip = R * 3.2
+    cut = L * 0.45 if cut is None else cut
+    under = C.empty("under", root, (0, 0, 0))
+    up = C.empty("upper", root, (0, 0, 0))
+    def seg(name, z0, z1, m, parent, rr=R):
+        C.lathe(name, [(z0, 0.0), (z0, rr * 0.92), (z0 + 0.006, rr), (z1 - 0.006, rr), (z1, rr * 0.92), (z1, 0.0)], m, parent, segs=segs)
+    C.lathe("wood", [(0.0, 0.0), (0.0, R * 0.28), (tip, R * 0.98), (tip, 0.0)], wood, under, segs=32)
+    C.lathe("lead", [(-0.004, 0.0), (-0.004, R * 0.08), (tip * 0.3, R * 0.34), (tip * 0.3, 0.0)], lead, under, segs=24)
+    seg("body", tip, cut, body, under)
+    top = L - R * 2.6
+    seg("body", cut, top, body, up)
+    if s == 1:
+        for k in range(5):
+            z = tip + (top - tip) * (k + 0.5) / 5
+            C.tube("stripe", _ring(R + 0.002, z, 32), 0.006, M(d, rough=0.4, coat=0.6), under if z < cut else up)
+    elif s == 2:
+        C.tube("grip", _ring(R * 0.62, top - 0.08, 3), 0.012, M(d, rough=0.6, coat=0.2), up)
+    C.lathe("ferrule", [(top, 0.0), (top, R * 1.02), (top + R * 1.1, R * 1.02), (top + R * 1.1, 0.0)], band, up, segs=32)
+    for z in (top + R * 0.3, top + R * 0.8):
+        C.tube("rib", _ring(R * 1.04, z, 32), 0.004, band, up)
+    C.lathe("eraser", [(top + R * 1.1, 0.0), (top + R * 1.1, R * 0.98), (L - R * 0.3, R * 0.95), (L, R * 0.6), (L + 0.004, 0.0)], eras if s != 2 else M(e, rough=0.6, coat=0.2), up, segs=32)
+    return under, up
+
+
+def striped_straw(r, s, fam, root, L=0.7, cut=None):
+    a, b = [_rich(x, 1.5, 0.97) for x in _cols(r, fam, 2)]
+    ma, mb = M(a, rough=0.35, coat=0.7), M((0.99, 0.98, 0.96), rough=0.35, coat=0.7)
+    if s == 2:
+        mb = M(b, rough=0.35, coat=0.7)
+    R = [0.022, 0.02, 0.026][s]
+    cut = L * 0.45 if cut is None else cut
+    under = C.empty("under", root, (0, 0, 0))
+    up = C.empty("upper", root, (0, 0, 0))
+    n = 14
+    h = L / n
+    for k in range(n):
+        z0, z1 = k * h, (k + 1) * h
+        par = under if z1 <= cut + 1e-6 else up
+        if z0 < cut < z1:
+            par = under
+        prof = [(z0, R - 0.006), (z0, R), (z1, R), (z1, R - 0.006)]
+        C.lathe("band", prof, ma if k % 2 == 0 else mb, par, segs=28)
+    if s == 1:
+        neck = C.empty("neck", up, (0, 0, L))
+        for k in range(5):
+            C.tube("acc", _ring(R * 1.08, 0.012 * k, 28), 0.004, mb, neck)
+        C.tube("tip", [(0, 0, 0.05), (0.03, 0, 0.1), (0.08, 0, 0.12)], R * 0.95, ma, neck)
+    if s == 2:
+        C.tube("bead", _ring(R * 1.3, L * 0.85, 28), 0.008, M((1.0, 0.85, 0.4), rough=0.3, coat=0.8), up)
+    return under, up
+
+
+def hand_mirror(r, s, fam, root):
+    c, d = [_rich(x, 1.4, 0.95) for x in _cols(r, fam, 2)]
+    fm = M(c, rough=0.35, coat=0.8)
+    hm = M(d, rough=0.4, coat=0.6)
+    glass = C.mat("toy_mirror", (0.92, 0.95, 1.0), rough=0.03, metal=1.0)
+    face = C.empty("face", root, (0, 0, 0.36))
+    if s == 0:
+        R = 0.16
+        C.tube("rim", [(math.cos(k * 6.2832 / 56) * R, 0, math.sin(k * 6.2832 / 56) * R) for k in range(57)], 0.024, fm, face)
+        C.sphere("glass", (0, -0.004, 0), (R * 0.96, 0.01, R * 0.96), glass, face, 48)
+        C.sphere("back", (0, 0.014, 0), (R * 1.02, 0.014, R * 1.02), fm, face, 40)
+        C.tube("handle", [(0, 0.004, -R - 0.01), (0, 0.004, -R - 0.17)], 0.026, hm, face)
+        C.sphere("knob", (0, 0.004, -R - 0.19), (0.036, 0.036, 0.03), fm, face, 20)
+        C.lathe("foot", [(0, 0.0), (0, 0.11), (0.03, 0.1), (0.04, 0.0)], hm, root, segs=40)
+    elif s == 1:
+        RX, RZ = 0.15, 0.2
+        C.tube("rim", [(math.cos(k * 6.2832 / 56) * RX, 0, math.sin(k * 6.2832 / 56) * RZ) for k in range(57)], 0.026, fm, face)
+        C.sphere("glass", (0, -0.004, 0), (RX * 0.95, 0.01, RZ * 0.95), glass, face, 48)
+        C.sphere("back", (0, 0.014, 0), (RX * 1.02, 0.014, RZ * 1.02), fm, face, 40)
+        for sx in (-1, 1):
+            C.tube("leg", [(sx * 0.05, 0.03, -RZ * 0.7), (sx * 0.12, 0.12, -0.36)], 0.014, hm, face)
+        C.tube("prop", [(0, 0.03, -RZ * 0.4), (0, 0.18, -0.36)], 0.014, hm, face)
+    else:
+        R = 0.12
+        for k in range(6):
+            a = k * 6.2832 / 6
+            C.sphere("petal", (math.cos(a) * R * 1.12, 0.008, math.sin(a) * R * 1.12), (0.07, 0.02, 0.07), fm, face, 24)
+        C.sphere("glass", (0, -0.016, 0), (R, 0.01, R), glass, face, 48)
+        C.sphere("back", (0, 0.01, 0), (R * 1.05, 0.016, R * 1.05), hm, face, 40)
+        C.tube("stem", [(0, 0.01, -R - 0.06), (0, 0.01, -0.32)], 0.02, hm, face)
+        C.rounded_box("base", (0, 0, 0.02), (0.22, 0.14, 0.04), 0.5, hm, root)
+    return face
+
+
+def sea_shell(r, s, fam, root):
+    c, d = [_rich(x, 1.2, 0.98) for x in _cols(r, fam, 2)]
+    sm = M(c, rough=0.35, coat=0.7)
+    lm = M(d, rough=0.35, coat=0.7)
+    inner = M((1.0, 0.78, 0.8), rough=0.3, coat=0.8)
+    if s == 0:
+        n = 22
+        for k in range(n):
+            u = k / (n - 1)
+            a = u * 6.2832 * 2.6
+            rr = 0.1 * (1 - u) + 0.012
+            z = 0.06 + u * 0.22
+            C.sphere("whorl", (math.cos(a) * rr * 0.55, math.sin(a) * rr * 0.55, z), (rr, rr, rr * 0.75), sm if k % 2 else lm, root, 20)
+        C.sphere("mouth", (0.0, -0.07, 0.07), (0.08, 0.035, 0.065), inner, root, 24)
+        C.tube("lip", [(math.cos(k * 6.2832 / 30) * 0.085, -0.085, 0.07 + math.sin(k * 6.2832 / 30) * 0.07) for k in range(31)], 0.012, lm, root)
+    elif s == 1:
+        pts = []
+        for k in range(60):
+            a = k * 0.22
+            rr = 0.02 + 0.0026 * k
+            pts.append((math.cos(a) * rr, 0.0, 0.12 + math.sin(a) * rr))
+        C.tube("spiral", pts, 0.05, sm, root, radii=[0.2 + 0.8 * k / 59 for k in range(60)])
+        C.sphere("core", (0, 0.0, 0.12), (0.03, 0.045, 0.03), lm, root, 16)
+        C.sphere("mouth", (pts[-1][0], -0.012, pts[-1][2]), (0.045, 0.04, 0.05), inner, root, 20)
+        C.rounded_box("foot", (0, 0, 0.02), (0.24, 0.12, 0.04), 0.5, lm, root)
+    else:
+        F = C.empty("fan", root, (0, 0, 0.02), (math.radians(70), 0, 0))
+        for k in range(9):
+            a = math.radians(-60 + 15 * k)
+            C.tube("rib", [(0, 0, 0), (math.sin(a) * 0.17, 0.0, math.cos(a) * 0.17)], 0.022, sm if k % 2 else lm, F)
+        C.sphere("web", (0, 0.006, 0.09), (0.14, 0.012, 0.09), sm, F, 32)
+        C.rounded_box("hinge", (0, 0, 0.0), (0.07, 0.03, 0.03), 0.5, lm, F)
+    return root
+
+
 GEN = {k: v for k, v in globals().items() if k in REGISTRY}
 
 

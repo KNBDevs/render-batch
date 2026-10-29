@@ -17,7 +17,7 @@ for f, c in ((0, (1.0, 0.62, 0.42, 1)), (64, (1.0, 0.62, 0.42, 1)), (78, tuple(b
     bgc.keyframe_insert('default_value', frame=f)
 
 BC = Vector((0.0, -1.95, Z0))
-BSC = 1.25
+BSC = 1.5
 H, HL, PZ = 0.62 * BSC, 0.42 * BSC, 0.12 * BSC
 bal = spawn('toy_balance', 2, 5120, 'candy', tuple(BC), BSC, 0)
 piv = next(o for o in bal.children_recursive if o.name.startswith('beam_pivot'))
@@ -40,11 +40,11 @@ def pan_top(side, a):
 for f, a in ((0, 0), (150, 0), (164, -TIP), (358, -TIP), (374, TIP * 1.1), (380, TIP * 0.95), (386, TIP)):
     tilt(f, a)
 
-GS = 1.2
+GS = 1.0
 free = spawn('big_balloon', 0, 8061, 'candy', (0, 0, 0), GS, 0)
 onpan = spawn('big_balloon', 0, 8061, 'candy', (0, 0, 0.0), GS / BSC, 0, pan['L'])
-B0 = Vector((-1.85, -1.95, Z0 + 0.04 * GS))
-B1 = Vector((-0.92, -1.95, Z0 + 0.04 * GS))
+B0 = Vector((-1.9, -1.95, Z0 + 0.04 * GS))
+B1 = Vector((-1.1, -1.95, Z0 + 0.04 * GS))
 for k, f in enumerate(range(0, 66, 6)):
     u = f / 64
     K(free, 'location', f, tuple(B0.lerp(B1, min(1, u))))
@@ -64,7 +64,7 @@ K(onpan, 'scale', 0, (0, 0, 0))
 K(onpan, 'scale', SW1, (0, 0, 0))
 K(onpan, 'scale', SW1 + 1, (GS / BSC,) * 3)
 SW2 = 712
-HEAD = Vector((-1.5, -1.8, Z0 + 1.24))
+HEAD = Vector((-1.45, -1.8, Z0 + 1.04))
 PL2 = pan_top('L', TIP)
 K(onpan, 'scale', SW2, (GS / BSC,) * 3)
 K(onpan, 'scale', SW2 + 1, (0, 0, 0))
@@ -84,7 +84,7 @@ K(free, 'location', TOTAL - 1, tuple(HEAD))
 AS = 1.1
 af = spawn('fruit', 0, 3, 'pastel', (0, 0, 0), AS, 0)
 ap = spawn('fruit', 0, 3, 'pastel', (0, 0, 0.004), AS / BSC, 0, pan['R'])
-AH = Vector((1.02, -2.08, Z0 + 1.02))
+AH = Vector((1.05, -2.2, Z0 + 0.72))
 PR = pan_top('R', -TIP)
 AV = PR + Vector((0, 0, 0.36))
 K(af, 'location', 0, tuple(AH))
@@ -105,7 +105,7 @@ K(ap, 'scale', SW3 + 1, (AS / BSC,) * 3)
 
 def card(txt, rgb, loc, w, f_in, f_out, size=0.15):
     h = C.empty('lab', None, loc)
-    C.rounded_box('card', (0, 0, 0), (w, 0.03, 0.22), 0.5, M((1.0, 0.98, 0.94), rough=0.5, coat=0.3, emit=0.15), h)
+    C.rounded_box('card', (0, 0, 0), (w, 0.03, 0.3), 0.5, M((1.0, 0.98, 0.94), rough=0.5, coat=0.3, emit=0.15), h)
     glyph(txt, size, 0.012, M(rgb, rough=0.35, coat=0.5, emit=0.15), h, (0, -0.022, -0.004))
     T.pop_in(h, f_in, 1.0, 8)
     T.pop_out(h, f_out, 1.0, 6)
@@ -113,11 +113,11 @@ def card(txt, rgb, loc, w, f_in, f_out, size=0.15):
 
 
 PLq = pan_top('L', -TIP)
-card('?', (0.85, 0.25, 0.08), (PLq.x, BC.y - 0.35, PLq.z + 0.98), 0.24, 244, 352, 0.17)
-card('?', (0.08, 0.3, 0.85), (AV.x, BC.y - 0.35, AV.z + 0.42), 0.24, 250, 352, 0.17)
+card('?', (0.85, 0.25, 0.08), (PLq.x, BC.y - 0.35, PLq.z + 0.85), 0.34, 244, 352, 0.26)
+card('?', (0.08, 0.3, 0.85), (AV.x, BC.y - 0.35, AV.z + 0.45), 0.34, 250, 352, 0.26)
 PLd = pan_top('L', TIP)
-card('AIRE', (0.15, 0.45, 0.9), (PLd.x - 0.05, BC.y - 0.5, PLd.z + 1.0), 0.5, 520, 604, 0.13)
-air = C.empty('air', None, (PLd.x, BC.y - 0.42, PLd.z + 0.42))
+card('AIRE', (0.15, 0.45, 0.9), (PLd.x - 0.05, BC.y - 0.5, PLd.z + 0.88), 0.66, 520, 604, 0.19)
+air = C.empty('air', None, (PLd.x, BC.y - 0.36, PLd.z + 0.33))
 am = M((0.75, 0.9, 1.0), rough=0.2, coat=0.6, emit=0.5)
 for k in range(5):
     a = k * 6.2832 / 5
@@ -126,21 +126,21 @@ T.pop_in(air, 526, 1.0, 8)
 T.pop_out(air, 604, 1.0, 6)
 
 PRd = pan_top('R', TIP)
-arrow = C.empty('arrow', None, (PRd.x + 0.42, BC.y - 0.2, PRd.z + 0.2))
+arrow = C.empty('arrow', None, (PRd.x, BC.y - 0.32, PRd.z - 0.42))
 lm = M((1.0, 0.78, 0.12), rough=0.3, coat=0.5, emit=1.0)
 C.tube('shaft', [(0, 0, 0.28), (0, 0, -0.18)], 0.03, lm, arrow)
 C.tube('h1', [(0, 0, -0.2), (-0.1, 0, -0.08)], 0.028, lm, arrow)
 C.tube('h2', [(0, 0, -0.2), (0.1, 0, -0.08)], 0.028, lm, arrow)
 T.pop_in(arrow, 382, 1.0, 8)
 for k, f in enumerate(range(392, 500, 10)):
-    K(arrow, 'location', f, tuple(Vector((PRd.x + 0.42, BC.y - 0.2, PRd.z + 0.2 - (0.06 if k % 2 else 0.0)))))
+    K(arrow, 'location', f, tuple(Vector((PRd.x, BC.y - 0.32, PRd.z - 0.42 - (0.06 if k % 2 else 0.0)))))
 T.pop_out(arrow, 502, 1.0, 6)
 
-bol = make('bolita', 1.3)
-mok = make('moki', 1.4)
-BL0 = Vector((-2.55, -1.95, Z0))
-BL1 = Vector((-1.62, -1.95, Z0))
-BLs = Vector((-1.5, -1.8, Z0))
+bol = make('bolita', 1.1)
+mok = make('moki', 1.2)
+BL0 = Vector((-2.6, -1.95, Z0))
+BL1 = Vector((-1.8, -1.95, Z0))
+BLs = Vector((-1.45, -1.8, Z0))
 for k, f in enumerate(range(0, 66, 6)):
     T.place(bol, f, BL0.lerp(BL1, min(1, f / 64)))
     S(bol, f, (1.06, 1.06, 0.92) if k % 2 else (0.98, 0.98, 1.03))
@@ -152,7 +152,7 @@ for side in ('L', 'R'):
     T.rest_arm(bol, side, 74)
 T.turn(bol, 70, 30)
 T.place(bol, 108, BL1)
-T.place(bol, 120, Vector((-1.45, -1.95, Z0)))
+T.place(bol, 120, Vector((-1.7, -1.95, Z0)))
 for side in ('L', 'R'):
     T.arm(bol, side, 112, 0, None)
     T.arm(bol, side, 122, fwd=-150, out=25)
@@ -161,7 +161,7 @@ for side in ('L', 'R'):
 S(bol, 122, (1.1, 1.1, 0.88))
 S(bol, 134, (0.95, 0.95, 1.06))
 S(bol, 150, (1, 1, 1))
-T.place(bol, 156, Vector((-1.45, -1.95, Z0)))
+T.place(bol, 156, Vector((-1.7, -1.95, Z0)))
 T.place(bol, 168, BLs)
 T.turn(bol, 168, 25)
 T.turn(bol, 236, 35)
@@ -193,7 +193,7 @@ for f, dz in ((768, 0.0), (774, 0.35), (780, 0.0), (786, 0.3), (792, 0.0)):
 land(bol, 792)
 gesture(bol, 'sway', 812)
 
-MK = Vector((1.22, -1.8, Z0))
+MK = Vector((1.35, -1.8, Z0))
 T.place(mok, 0, MK)
 T.turn(mok, 0, -35)
 gesture(mok, 'breathe', 20)
@@ -228,14 +228,14 @@ T.turn(mok, 740, -40)
 gesture(mok, 'bounce', 790)
 C.wave(mok, 'R', 820, cycles=2, period=8)
 
-OP0 = ((-2.05, -3.7, 0.32), (-1.95, -1.95, 0.95), 24)
-OP1 = ((-1.25, -3.7, 0.32), (-1.15, -1.95, 0.95), 24)
-W0 = ((0.0, -6.4, 1.85), (0.0, -1.7, 0.92), 31)
-WM = ((0.62, -4.3, 1.5), (0.62, -1.95, 1.12), 30)
-WQ = ((0.0, -5.3, 1.6), (0.0, -1.95, 1.08), 30)
-WS = ((0.15, -4.5, 1.25), (0.15, -1.95, 0.98), 30)
-WB = ((-0.75, -4.2, 1.35), (-0.75, -1.9, 1.0), 30)
-WE = ((-0.4, -4.9, 1.55), (-0.4, -1.9, 1.15), 30)
+OP0 = ((-2.35, -4.0, 0.42), (-2.2, -1.95, 0.78), 24)
+OP1 = ((-1.65, -4.0, 0.42), (-1.5, -1.95, 0.78), 24)
+W0 = ((0.0, -7.3, 1.85), (0.0, -1.8, 0.95), 28)
+WM = ((0.9, -5.9, 1.45), (0.9, -1.95, 0.95), 30)
+WQ = ((0.0, -7.25, 1.8), (0.0, -1.95, 1.15), 30)
+WS = ((0.0, -6.85, 1.5), (0.0, -1.95, 1.0), 30)
+WB = ((-0.95, -5.9, 1.45), (-0.95, -1.9, 0.95), 30)
+WE = ((-0.3, -6.9, 1.75), (-0.3, -1.9, 1.05), 30)
 camkey(0, OP0)
 camkey(64, OP1)
 for a, b, pose in ((66, 162, W0), (164, 234, WM), (236, 350, WQ), (352, 440, WS), (442, 612, W0), (614, 700, WB), (702, 760, WE), (762, TOTAL - 1, W0)):

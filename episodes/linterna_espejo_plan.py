@@ -5,7 +5,7 @@ ENV = 'aula'
 LINES = [
     ('p1', 'pimo', '¡Mi caracola está detrás de la caja!', 8, 2.4),
     ('b1', 'bopi', 'La linterna no llega. La luz va recta.', 90, 2.6),
-    ('p2', 'pimo', '¿Y si ponemos algo delante?', 176, 1.8),
+    ('p2', 'pimo', '¡Ya sé! ¿Y si ponemos algo delante?', 176, 2.4),
     ('b2', 'bopi', '¿Qué devolverá la luz: el espejo o el cartón?', 236, 3.2),
     ('p3', 'pimo', '¡El cartón casi no la devuelve!', 396, 2.0),
     ('p4', 'pimo', '¡Y el espejo la manda hacia la caracola!', 468, 2.6),

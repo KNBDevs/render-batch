@@ -5058,5 +5058,175 @@
   "engine": "gemini",
   "voice": "Puck",
   "dev": 0.0
+ },
+ "ep_balanza_globo_b1": {
+  "hash": "f430ca2b6c1c",
+  "dur": 3.09,
+  "text": "¡Uf! ¡Este globo pesa muchísimo!",
+  "asr": 0.8,
+  "heard": "¡Uff! Este globo pesa muchísimo!",
+  "engine": "gemini",
+  "voice": "Zephyr",
+  "dev": -3.45
+ },
+ "ep_balanza_globo_b2": {
+  "hash": "9a90f3f01ee5",
+  "dur": 1.59,
+  "text": "¡La manzana baja!",
+  "asr": 1.0,
+  "heard": "La Manzana Baja",
+  "engine": "gemini",
+  "voice": "Zephyr",
+  "dev": 0.35
+ },
+ "ep_balanza_globo_b4": {
+  "hash": "9fd289961a33",
+  "dur": 1.87,
+  "text": "¡Pues es un gorro ligerito!",
+  "asr": 0.8,
+  "heard": "Pues es un borro ligerito.",
+  "engine": "gemini",
+  "voice": "Zephyr",
+  "dev": 1.45
+ },
+ "ep_balanza_globo_b3": {
+  "hash": "cbe9ae7c786b",
+  "dur": 2.05,
+  "text": "¡Grande no siempre es pesado!",
+  "asr": 1.0,
+  "heard": "Grande no siempre es pesado.",
+  "engine": "gemini",
+  "voice": "Zephyr",
+  "dev": -3.05
+ },
+ "ep_balanza_globo_m1": {
+  "hash": "83f63a9d45a2",
+  "dur": 3.59,
+  "text": "¿Seguro? Vamos a ponerlo en la balanza.",
+  "asr": 1.0,
+  "heard": "Seguro, vamos a ponerlo en la balanza.",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": -2.15
+ },
+ "ep_balanza_globo_m2": {
+  "hash": "448ba80de402",
+  "dur": 2.96,
+  "text": "Y en este lado, una manzana pequeña.",
+  "asr": 1.0,
+  "heard": "Y en este lado una manzana pequeña.",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": 0.75
+ },
+ "ep_balanza_globo_m3": {
+  "hash": "658673af8260",
+  "dur": 3.68,
+  "text": "¿Qué pesará más: el globo o la manzana?",
+  "asr": 1.0,
+  "heard": "¿Qué pesará más, el globo o la manzana?",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": -2.45
+ },
+ "ep_balanza_globo_m4": {
+  "hash": "b711c3dade07",
+  "dur": 1.98,
+  "text": "Baja el lado que pesa más.",
+  "asr": 1.0,
+  "heard": "Baja el lado que pesa más.",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": -3.15
+ },
+ "ep_balanza_globo_m5": {
+  "hash": "678ff2d098c9",
+  "dur": 3.36,
+  "text": "El globo es grande, pero está lleno de aire.",
+  "asr": 1.0,
+  "heard": "El globo es grande, pero está lleno de aire.",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": -3.1
+ },
+ "ep_rampa_alta_r1": {
+  "hash": "edefbc0d60cd",
+  "dur": 2.99,
+  "text": "Probemos con una rampa más alta.",
+  "asr": 1.0,
+  "heard": "Provemos con una rampa más alta.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 2.41
+ },
+ "ep_rampa_alta_r2": {
+  "hash": "078398f84aea",
+  "dur": 4.74,
+  "text": "¿Cuál llegará más lejos: la de la rampa alta o la baja?",
+  "asr": 1.0,
+  "heard": "¿Cuál llegará más lejos? ¿La de la rampa alta o la baja?",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 2.46
+ },
+ "ep_rampa_alta_r3": {
+  "hash": "b3cc5900cb64",
+  "dur": 3.86,
+  "text": "Cuanto más alta es la rampa, más deprisa baja.",
+  "asr": 1.0,
+  "heard": "Cuanto más alta es la rampa, más deprisa baja.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 1.46
+ },
+ "ep_rampa_alta_r4": {
+  "hash": "933345119bd6",
+  "dur": 3.21,
+  "text": "Y con más velocidad, llega más lejos.",
+  "asr": 1.0,
+  "heard": "y con más velocidad llega más lejos.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 0.56
+ },
+ "ep_rampa_alta_t1": {
+  "hash": "18d4233545f0",
+  "dur": 2.49,
+  "text": "¡Vamos, pelota, llega a la portería!",
+  "asr": 0.88,
+  "heard": "¡Vamos pelota! ¡Llega la portería!",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": -3.7
+ },
+ "ep_rampa_alta_t2": {
+  "hash": "d1cb9a94292a",
+  "dur": 1.35,
+  "text": "¡Oh! Se ha parado.",
+  "asr": 1.0,
+  "heard": "¡Oh! ¡Se ha parado!",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": 0.0
+ },
+ "ep_rampa_alta_t3": {
+  "hash": "6a891547fb8e",
+  "dur": 1.97,
+  "text": "¡La de la rampa alta va volando!",
+  "asr": 1.0,
+  "heard": "La de la rampa alta va volando.",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": 4.51
+ },
+ "ep_rampa_alta_t4": {
+  "hash": "87f01b57dcc5",
+  "dur": 3.01,
+  "text": "¡Un poquito más alta... y gol!",
+  "asr": 1.0,
+  "heard": "Un poquito más alta y ¡gol!",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": -4.35
  }
 }

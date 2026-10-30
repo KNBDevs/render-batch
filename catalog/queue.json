@@ -636,7 +636,7 @@
   {
     "id": "balanza_globo",
     "template": "episode",
-    "status": "draft",
+    "status": "approved",
     "title": "El globo que no pesaba",
     "cast": [
       "bolita",

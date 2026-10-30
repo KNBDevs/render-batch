@@ -4989,16 +4989,6 @@
   "voice": "Iapetus",
   "dev": -3.8
  },
- "ep_linterna_espejo_b2": {
-  "hash": "be554fc89c3b",
-  "dur": 5.11,
-  "text": "¿Qué devolverá la luz: el espejo o el cartón?",
-  "asr": 1.0,
-  "heard": "¿Qué devolverá la luz, el espejo o el cartón?",
-  "engine": "gemini",
-  "voice": "Iapetus",
-  "dev": -6.1
- },
  "ep_linterna_espejo_b3": {
   "hash": "841559f97685",
   "dur": 6.61,
@@ -5019,32 +5009,12 @@
   "voice": "Iapetus",
   "dev": 0.3
  },
- "ep_linterna_espejo_p1": {
-  "hash": "c81fa1031ce3",
-  "dur": 2.86,
-  "text": "¡Mi caracola está detrás de la caja!",
-  "asr": 1.0,
-  "heard": "Mi caracola está detrás de la caja.",
-  "engine": "gemini",
-  "voice": "Puck",
-  "dev": 0.0
- },
  "ep_linterna_espejo_p3": {
   "hash": "21bdedb7d631",
   "dur": 2.41,
   "text": "¡El cartón casi no la devuelve!",
   "asr": 1.0,
   "heard": "El cartón casi no la devuelve.",
-  "engine": "gemini",
-  "voice": "Puck",
-  "dev": 0.0
- },
- "ep_linterna_espejo_p4": {
-  "hash": "e7b1a1ee860e",
-  "dur": 2.69,
-  "text": "¡Y el espejo la manda hacia la caracola!",
-  "asr": 1.0,
-  "heard": "Y el espejo la manda hacia la caracola.",
   "engine": "gemini",
   "voice": "Puck",
   "dev": 0.0
@@ -5228,15 +5198,5 @@
   "engine": "gemini",
   "voice": "Fenrir",
   "dev": -4.35
- },
- "ep_linterna_espejo_p2": {
-  "hash": "7e0d4b54ca50",
-  "dur": 2.83,
-  "text": "¡Ya sé! ¿Y si ponemos algo delante?",
-  "asr": 1.0,
-  "heard": "Ya sé, y si ponemos algo delante.",
-  "engine": "gemini",
-  "voice": "Puck",
-  "dev": -7.45
  }
 }

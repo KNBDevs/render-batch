@@ -5198,5 +5198,35 @@
   "engine": "gemini",
   "voice": "Fenrir",
   "dev": -4.35
+ },
+ "ep_linterna_espejo_b2": {
+  "hash": "be554fc89c3b",
+  "dur": 5.57,
+  "text": "¿Qué devolverá la luz: el espejo o el cartón?",
+  "asr": 1.0,
+  "heard": "que devolverá la luz, el espejo o el cartón.",
+  "engine": "gemini",
+  "voice": "Iapetus",
+  "dev": 1.0
+ },
+ "ep_linterna_espejo_p2": {
+  "hash": "7e0d4b54ca50",
+  "dur": 2.88,
+  "text": "¡Ya sé! ¿Y si ponemos algo delante?",
+  "asr": 1.0,
+  "heard": "Ya sé. ¿Y si ponemos algo delante?",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": -7.6
+ },
+ "ep_linterna_espejo_p1": {
+  "hash": "c81fa1031ce3",
+  "dur": 2.71,
+  "text": "¡Mi caracola está detrás de la caja!",
+  "asr": 1.0,
+  "heard": "Mi caracola está detrás de la caja.",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": 0.0
  }
 }

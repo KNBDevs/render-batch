@@ -84,7 +84,7 @@ K(free, 'location', TOTAL - 1, tuple(HEAD))
 AS = 1.1
 af = spawn('fruit', 0, 3, 'pastel', (0, 0, 0), AS, 0)
 ap = spawn('fruit', 0, 3, 'pastel', (0, 0, 0.004), AS / BSC, 0, pan['R'])
-AH = Vector((0.95, -2.3, Z0 + 0.5))
+AH = Vector((0.62, -2.2, Z0 + 0.42))
 PR = pan_top('R', -TIP)
 AV = PR + Vector((0, 0, 0.36))
 K(af, 'location', 0, tuple(AH))

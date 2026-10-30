@@ -92,4 +92,6 @@ REGISTRY = {
     "sea_shell": {"styles": 3, "envs": ["casa", "aula", "patio"], "tags": ["caracola", "mar"], "decor": False},
     "toy_balance": {"styles": 3, "envs": ["casa", "aula", "lab"], "tags": ["balanza", "peso"], "decor": False},
     "big_balloon": {"styles": 3, "envs": ["casa", "patio", "aula"], "tags": ["globo", "aire"], "decor": False},
+    "toy_ramp": {"styles": 3, "envs": ["patio", "aula", "casa"], "tags": ["rampa", "altura", "velocidad"], "decor": False},
+    "toy_goal": {"styles": 3, "envs": ["patio", "aula"], "tags": ["portería", "pelota", "gol"], "decor": False},
 }

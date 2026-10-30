@@ -2938,6 +2938,70 @@ def big_balloon(r, s, fam, root):
     return root
 
 
+def toy_ramp(r, s, fam, root, L=0.9, W=0.34, H=0.25):
+    c, d, e = [_rich(x, 1.4, 0.95) for x in _cols(r, fam, 3)]
+    bm = M(c, rough=0.35, coat=0.8)
+    rm = M(d, rough=0.35, coat=0.8)
+    pm = M(e, rough=0.4, coat=0.7)
+    white = M((0.98, 0.97, 0.94), rough=0.4, coat=0.6)
+    a = math.asin(min(0.95, H / L))
+    tilt = C.empty("tilt", root, (0, 0, 0), (a, 0, 0))
+    C.rounded_box("board", (0, L / 2, 0.02), (W, L, 0.04), 0.12, bm, tilt)
+    C.rounded_box("lip", (0, 0.03, 0.006), (W, 0.06, 0.012), 0.3, bm, tilt)
+    rh = 0.05 if s != 1 else 0.08
+    for sx in (-1, 1):
+        if s == 2:
+            C.tube("rail", [(sx * (W / 2 - 0.015), 0.02, 0.05), (sx * (W / 2 - 0.015), L - 0.02, 0.05)], 0.018, rm, tilt)
+        else:
+            C.rounded_box("rail", (sx * (W / 2 + 0.012), L / 2, 0.02 + rh / 2), (0.03, L, rh + 0.04), 0.3, rm, tilt)
+    if s == 0:
+        for k in range(4):
+            C.rounded_box("stripe", (0, 0.12 + k * (L - 0.24) / 3, 0.042), (W * 0.6, 0.035, 0.006), 0.3, white, tilt)
+    elif s == 2:
+        for k in range(3):
+            y = 0.2 + k * (L - 0.35) / 2
+            C.tube("chev", [(-0.07, y + 0.05, 0.045), (0, y, 0.045), (0.07, y + 0.05, 0.045)], 0.012, white, tilt)
+    post = C.empty("post", root, (0, L * math.cos(a) - 0.07, 0))
+    post.scale = (1, 1, H - 0.012)
+    if s == 0:
+        C.rounded_box("col", (0, 0, 0.5), (W * 0.9, 0.12, 1.0), 0.06, pm, post)
+    elif s == 1:
+        for sx in (-1, 1):
+            C.rounded_box("leg", (sx * (W / 2 - 0.03), 0, 0.5), (0.05, 0.1, 1.0), 0.15, pm, post)
+        C.rounded_box("bar", (0, 0, 0.92), (W - 0.02, 0.08, 0.14), 0.15, pm, post)
+    else:
+        C.lathe("pillar", [(0, 0.0), (0, 0.075), (0.04, 0.075), (0.06, 0.06), (0.94, 0.06), (0.97, 0.075), (1.0, 0.075), (1.0, 0.0)], pm, post, segs=40)
+    C.rounded_box("foot", (0, L * math.cos(a) - 0.07, 0.015), (W * 1.05, 0.2, 0.03), 0.3, rm, root)
+    return tilt, post, L
+
+
+def toy_goal(r, s, fam, root, W=0.7, H=0.42):
+    c, d = [_rich(x, 1.4, 0.95) for x in _cols(r, fam, 2)]
+    fm = M(c, rough=0.3, coat=0.9)
+    nm = M(tuple(0.55 + 0.45 * v for v in d), rough=0.6, coat=0.2)
+    D = 0.32
+    if s == 1:
+        pts = [(math.cos(math.pi * k / 24) * W / 2, 0, math.sin(math.pi * k / 24) * H) for k in range(25)]
+        C.tube("frame", pts, 0.035, fm, root)
+    else:
+        C.tube("frame", [(-W / 2, 0, 0), (-W / 2, 0, H), (W / 2, 0, H), (W / 2, 0, 0)], 0.035, fm, root)
+    for sx in (-1, 1):
+        if s == 2:
+            C.rounded_box("foot", (sx * W / 2, D / 2, 0.02), (0.08, D + 0.08, 0.04), 0.3, fm, root)
+        else:
+            C.tube("back", [(sx * W / 2, 0, 0.0), (sx * W / 2, D, 0.0)], 0.022, fm, root)
+        C.sphere("cap", (sx * W / 2, 0, 0.03), (0.05, 0.05, 0.03), fm, root, 20)
+    net = C.empty("net", root, (0, 0, 0))
+    for k in range(9):
+        x = -W / 2 + W * k / 8
+        z = H if s != 1 else math.sqrt(max(0.0, 1 - (2 * x / W) ** 2)) * H
+        C.tube("nv", [(x, 0.0, z), (x, D * 0.6, z * 0.75), (x, D, 0.0)], 0.006, nm, net)
+    for j in range(5):
+        t = j / 4
+        C.tube("nh", [(-W / 2, D * (0.3 + 0.7 * t), H * (1 - t) * 0.9), (W / 2, D * (0.3 + 0.7 * t), H * (1 - t) * 0.9)], 0.006, nm, net)
+    return net
+
+
 GEN = {k: v for k, v in globals().items() if k in REGISTRY}
 
 

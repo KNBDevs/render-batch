@@ -4915,5 +4915,84 @@
    }
   ],
   "order": 61
+ },
+ "rampa_alta": {
+  "env": "patio",
+  "family": "fresh",
+  "decor": [
+   {
+    "prop": "bush",
+    "style": 0,
+    "seed": 217048,
+    "loc": [
+     4.61,
+     2.72,
+     0.0
+    ],
+    "scale": 0.93,
+    "rot": -27.7
+   },
+   {
+    "prop": "bench",
+    "style": 1,
+    "seed": 630718,
+    "loc": [
+     1.92,
+     4.43,
+     0.0
+    ],
+    "scale": 1.07,
+    "rot": 2.2
+   },
+   {
+    "prop": "birdhouse",
+    "style": 1,
+    "seed": 719373,
+    "loc": [
+     3.2,
+     3.4,
+     0.0
+    ],
+    "scale": 1.22,
+    "rot": -5.8
+   },
+   {
+    "prop": "fence",
+    "style": 2,
+    "seed": 328870,
+    "loc": [
+     0.81,
+     1.74,
+     0.0
+    ],
+    "scale": 1.13,
+    "rot": 30.0
+   },
+   {
+    "prop": "planter_box",
+    "style": 2,
+    "seed": 566468,
+    "loc": [
+     -2.28,
+     3.37,
+     0.0
+    ],
+    "scale": 0.9,
+    "rot": 21.9
+   },
+   {
+    "prop": "mushroom_stool",
+    "style": 0,
+    "seed": 297982,
+    "loc": [
+     -1.38,
+     3.65,
+     0.0
+    ],
+    "scale": 0.87,
+    "rot": 17.8
+   }
+  ],
+  "order": 62
  }
 }

@@ -5228,5 +5228,15 @@
   "engine": "gemini",
   "voice": "Puck",
   "dev": 0.0
+ },
+ "ep_linterna_espejo_p4": {
+  "hash": "5ac85e1ee4c4",
+  "dur": 3.56,
+  "text": "¡Anda! ¡Y el espejo la manda hacia la caracola!",
+  "asr": 1.0,
+  "heard": "¡Anda! Y el espejo la manda hacia la caracola.",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": -7.05
  }
 }

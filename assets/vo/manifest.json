@@ -5338,5 +5338,75 @@
   "engine": "gemini",
   "voice": "Enceladus",
   "dev": -0.65
+ },
+ "ep_piedras_sube_p1": {
+  "hash": "c3f1fd9c4e0b",
+  "dur": 2.58,
+  "text": "Tengo una idea: ¡vamos a meter piedras!",
+  "asr": 1.0,
+  "heard": "¡Tengo una idea! ¡Vamos a meter piedras!",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": -6.4
+ },
+ "ep_piedras_sube_p2": {
+  "hash": "5032d272f447",
+  "dur": 3.43,
+  "text": "¿Qué pasará con el agua: sube o se queda igual?",
+  "asr": 1.0,
+  "heard": "¿Qué pasará con el agua? ¿Sube o se queda igual?",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": -8.0
+ },
+ "ep_piedras_sube_p4": {
+  "hash": "982b23337811",
+  "dur": 2.85,
+  "text": "El agua se aparta y solo puede subir.",
+  "asr": 1.0,
+  "heard": "El agua se aparta y solo puede subir.",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": -5.8
+ },
+ "ep_piedras_sube_t1": {
+  "hash": "206be2608e5a",
+  "dur": 3.08,
+  "text": "¡Mi pelotita se ha quedado abajo! ¡No llego!",
+  "asr": 1.0,
+  "heard": "Mi pelotita se ha quedado abajo. No llego.",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": -7.4
+ },
+ "ep_piedras_sube_t2": {
+  "hash": "05b870d5d865",
+  "dur": 1.42,
+  "text": "¡El agua está subiendo!",
+  "asr": 1.0,
+  "heard": "¿El agua está subiendo?",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": -6.1
+ },
+ "ep_piedras_sube_t3": {
+  "hash": "166ab23594ab",
+  "dur": 1.91,
+  "text": "¡Y la pelotita sube con ella!",
+  "asr": 1.0,
+  "heard": "Y la pelotita sube con ella.",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": -7.0
+ },
+ "ep_piedras_sube_t4": {
+  "hash": "fd64bb01fc9f",
+  "dur": 2.09,
+  "text": "¡Ya llego! ¡Gracias, piedras!",
+  "asr": 1.0,
+  "heard": "¡Ya llego! ¡Gracias, piedras!",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": 1.05
  }
 }

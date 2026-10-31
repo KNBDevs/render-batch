@@ -5238,5 +5238,105 @@
   "engine": "gemini",
   "voice": "Puck",
   "dev": -7.05
+ },
+ "ep_vaso_suda_l1": {
+  "hash": "05c0d33bde36",
+  "dur": 2.86,
+  "text": "¡Oh, no! ¡Mi vaso está goteando!",
+  "asr": 1.0,
+  "heard": "Oh no, mi vaso está goteando",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": -1.35
+ },
+ "ep_vaso_suda_l2": {
+  "hash": "1a9475e7a34b",
+  "dur": 2.56,
+  "text": "¡Las gotas de fuera no son azules!",
+  "asr": 1.0,
+  "heard": "Las gotas de fuera no son azules.",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": -2.15
+ },
+ "ep_vaso_suda_l3": {
+  "hash": "e9e8d117670c",
+  "dur": 2.49,
+  "text": "¡Y el vaso sin hielo sigue seco!",
+  "asr": 1.0,
+  "heard": "Y el vaso sin hielo sigue seco.",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": -4.3
+ },
+ "ep_vaso_suda_l4": {
+  "hash": "3333637ff6ad",
+  "dur": 1.84,
+  "text": "Moki... ¿has sido tú?",
+  "asr": 0.75,
+  "heard": "Moki, ¿ha sido tú?",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": -2.0
+ },
+ "ep_vaso_suda_m1": {
+  "hash": "b84e2329fd1b",
+  "dur": 3.74,
+  "text": "¿Goteando? Pero el agua de dentro es azul.",
+  "asr": 1.0,
+  "heard": "Goteando, pero el agua de dentro es azul.",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": 0.35
+ },
+ "ep_vaso_suda_m2": {
+  "hash": "783c5c27a079",
+  "dur": 2.75,
+  "text": "Vamos a probar con otro vaso sin hielo.",
+  "asr": 1.0,
+  "heard": "Vamos a probar con otro vaso sin hielo.",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": 2.65
+ },
+ "ep_vaso_suda_m3": {
+  "hash": "1a04a3efaf7e",
+  "dur": 4.17,
+  "text": "¿De dónde salen las gotas: de dentro o del aire?",
+  "asr": 1.0,
+  "heard": "¿De dónde salen las gotas? ¿De dentro o del aire?",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": -0.55
+ },
+ "ep_vaso_suda_m4": {
+  "hash": "bd38f1833015",
+  "dur": 2.26,
+  "text": "El aire tiene agua que no vemos.",
+  "asr": 1.0,
+  "heard": "El aire tiene agua que no vemos.",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": 0.95
+ },
+ "ep_vaso_suda_m5": {
+  "hash": "46552edddc9e",
+  "dur": 3.56,
+  "text": "Al tocar el vaso frío, se convierte en gotitas.",
+  "asr": 1.0,
+  "heard": "Al tocar el vaso frío, se convierte en gotitas.",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": -0.85
+ },
+ "ep_vaso_suda_m6": {
+  "hash": "08c4d7e11bf2",
+  "dur": 2.26,
+  "text": "¡Yo no! ¡Ha sido el aire!",
+  "asr": 1.0,
+  "heard": "Yo no. Ha sido el aire.",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": -0.65
  }
 }

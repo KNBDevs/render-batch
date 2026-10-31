@@ -8,7 +8,7 @@ LINES = [
     ('p2', 'pimo', '¡Ya sé! ¿Y si ponemos algo delante?', 176, 2.4),
     ('b2', 'bopi', '¿Qué devolverá la luz: el espejo o el cartón?', 236, 3.2),
     ('p3', 'pimo', '¡El cartón casi no la devuelve!', 396, 2.0),
-    ('p4', 'pimo', '¡Y el espejo la manda hacia la caracola!', 468, 2.6),
+    ('p4', 'pimo', '¡Anda! ¡Y el espejo la manda hacia la caracola!', 466, 3.2),
     ('b3', 'bopi', 'El espejo es liso y brillante: devuelve la luz.', 560, 3.0),
     ('b4', 'bopi', 'Pero nunca a los ojos, ¿vale?', 650, 1.8),
     ('p5', 'pimo', '¡Mira, una luz que baila!', 740, 2.0),

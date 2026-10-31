@@ -654,5 +654,16 @@
       "ruki"
     ],
     "batch": "37_plus"
+  },
+  {
+    "id": "vaso_suda",
+    "template": "episode",
+    "status": "draft",
+    "title": "El vaso que sudaba",
+    "cast": [
+      "luma",
+      "moki"
+    ],
+    "batch": "37_plus"
   }
 ]

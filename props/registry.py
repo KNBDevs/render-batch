@@ -94,4 +94,5 @@ REGISTRY = {
     "big_balloon": {"styles": 3, "envs": ["casa", "patio", "aula"], "tags": ["globo", "aire"], "decor": False},
     "toy_ramp": {"styles": 3, "envs": ["patio", "aula", "casa"], "tags": ["rampa", "altura", "velocidad"], "decor": False},
     "toy_goal": {"styles": 3, "envs": ["patio", "aula"], "tags": ["portería", "pelota", "gol"], "decor": False},
+    "coaster": {"styles": 3, "envs": ["casa", "aula"], "tags": ["posavasos", "vaso", "mesa"], "decor": False},
 }

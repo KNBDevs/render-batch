@@ -3002,6 +3002,28 @@ def toy_goal(r, s, fam, root, W=0.7, H=0.42):
     return net
 
 
+def coaster(r, s, fam, root):
+    c, d = [_rich(x, 1.3, 0.95) for x in _cols(r, fam, 2)]
+    cm = M(c, rough=0.4, coat=0.7)
+    dm = M(d, rough=0.4, coat=0.6)
+    if s == 0:
+        C.lathe("disc", [(0, 0.0), (0, 0.15), (0.006, 0.16), (0.018, 0.16), (0.024, 0.15), (0.024, 0.0)], cm, root, segs=48)
+        C.tube("ring", _ring(0.128, 0.026, 48), 0.009, dm, root)
+        for k in range(8):
+            a = k * 6.2832 / 8
+            C.sphere("dot", (math.cos(a) * 0.145, math.sin(a) * 0.145, 0.025), (0.008, 0.008, 0.004), dm, root, 10)
+    elif s == 1:
+        C.rounded_box("tile", (0, 0, 0.012), (0.3, 0.3, 0.024), 0.25, cm, root)
+        for k in (-1, 0, 1):
+            C.rounded_box("gx", (k * 0.075, 0, 0.026), (0.012, 0.24, 0.004), 0.4, dm, root)
+            C.rounded_box("gy", (0, k * 0.075, 0.026), (0.24, 0.012, 0.004), 0.4, dm, root)
+    else:
+        for k in range(6):
+            a = k * 6.2832 / 6
+            C.lathe("lobe", [(0, 0.0), (0, 0.065), (0.022, 0.065), (0.022, 0.0)], cm, root, segs=32).location = (math.cos(a) * 0.09, math.sin(a) * 0.09, 0)
+        C.lathe("mid", [(0, 0.0), (0, 0.1), (0.026, 0.1), (0.026, 0.0)], dm, root, segs=40)
+
+
 GEN = {k: v for k, v in globals().items() if k in REGISTRY}
 
 

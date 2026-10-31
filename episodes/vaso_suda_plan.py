@@ -4,9 +4,9 @@ MOOD = 'happy'
 ENV = 'casa'
 LINES = [
     ('l1', 'luma', '¡Oh, no! ¡Mi vaso está goteando!', 8, 2.2),
-    ('m1', 'moki', '¿Goteando? Pero el agua de dentro es azul.', 80, 2.8),
-    ('m2', 'moki', 'Vamos a probar con otro vaso sin hielo.', 160, 2.6),
-    ('m3', 'moki', '¿De dónde salen las gotas: de dentro o del aire?', 236, 3.2),
+    ('m1', 'moki', '¿Goteando? Pero el agua de dentro es azul.', 80, 3.8),
+    ('m2', 'moki', 'Vamos a probar con otro vaso sin hielo.', 174, 2.8),
+    ('m3', 'moki', '¿De dónde salen las gotas: de dentro o del aire?', 246, 4.2),
     ('l2', 'luma', '¡Las gotas de fuera no son azules!', 402, 2.2),
     ('l3', 'luma', '¡Y el vaso sin hielo sigue seco!', 472, 2.2),
     ('m4', 'moki', 'El aire tiene agua que no vemos.', 550, 2.4),

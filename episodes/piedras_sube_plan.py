@@ -8,7 +8,7 @@ LINES = [
     ('p2', 'pimo', '¿Qué pasará con el agua: sube o se queda igual?', 206, 4.2),
     ('t2', 'tuki', '¡El agua está subiendo!', 356, 2.2),
     ('t3', 'tuki', '¡Y la pelotita sube con ella!', 432, 2.8),
-    ('p3', 'pimo', 'Las piedras ocupan sitio dentro del agua.', 512, 3.8),
+    ('p3', 'pimo', 'Las piedras ocupan un sitio en el agua.', 512, 3.8),
     ('p4', 'pimo', 'El agua se aparta y solo puede subir.', 616, 3.4),
     ('t4', 'tuki', '¡Ya llego! ¡Gracias, piedras!', 742, 2.8),
 ]

@@ -670,10 +670,10 @@
     "id": "piedras_sube",
     "template": "episode",
     "status": "draft",
-    "title": "El vaso que sudaba",
+    "title": "La pelotita y las piedras",
     "cast": [
-      "luma",
-      "moki"
+      "tuki",
+      "pimo"
     ],
     "batch": "37_plus"
   }

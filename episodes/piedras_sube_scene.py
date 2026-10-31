@@ -25,7 +25,7 @@ JX = -0.05
 jar = C.empty('jar', None, (JX, YC, TOP))
 jar.scale = (JS, JS, JS)
 R, RI, H, BOT = 0.075, 0.067, 0.40, 0.02
-glass = MA((0.9, 0.97, 1.0), 0.12)
+glass = MA((0.9, 0.97, 1.0), 0.06)
 C.lathe('jar_glass', [(0, 0.0), (0, R * 0.92), (0.012, R), (H, R), (H + 0.004, R - 0.004), (H, RI), (BOT, RI), (BOT, 0.0)], glass, jar, segs=56)
 C.tube('jar_rim', [(math.cos(a) * (R + 0.003), math.sin(a) * (R + 0.003), H - 0.008) for a in [i * math.tau / 48 for i in range(49)]], 0.007, M((0.98, 0.55, 0.62), coat=0.7), jar)
 C.tube('jar_foot', [(math.cos(a) * (R * 0.94), math.sin(a) * (R * 0.94), 0.008) for a in [i * math.tau / 48 for i in range(49)]], 0.008, M((0.55, 0.78, 0.98), coat=0.7), jar)
@@ -35,7 +35,7 @@ C.tube('mark', [(math.cos(a) * (R + 0.002), math.sin(a) * (R + 0.002), L0W) for 
 for z in (0.10, 0.15, 0.25, 0.30, 0.35):
     C.tube('tick', [(math.cos(a) * (R + 0.002), math.sin(a) * (R + 0.002), z) for a in [math.radians(d) for d in range(-104, -75, 7)]], 0.0022, M((0.4, 0.55, 0.8), rough=0.4), jar)
 
-water = MA((0.25, 0.62, 1.0), 0.32, rough=0.03, emit=0.04)
+water = MA((0.2, 0.55, 1.0), 0.22, rough=0.03, emit=0.0)
 piv = C.empty('wpiv', jar, (0, 0, BOT + 0.001))
 C.lathe('water', [(0, 0.0), (0, RI - 0.003), (1.0, RI - 0.003), (1.0, 0.0)], water, piv, segs=48)
 LV = [L0W, 0.238, 0.275, 0.313, 0.35]
@@ -54,7 +54,7 @@ for k, f in enumerate(DROPS):
 
 BR = 0.034
 ball = C.empty('ball', jar, (0, 0, LV[0]))
-C.sphere('ball_b', (0, 0, 0), (BR, BR, BR), M((1.0, 0.55, 0.12), rough=0.3, coat=0.8), ball, 24)
+C.sphere('ball_b', (0, 0, 0), (BR, BR, BR), M((1.0, 0.45, 0.05), rough=0.3, coat=0.8, emit=0.35), ball, 24)
 C.tube('ball_band', [(math.cos(a) * (BR + 0.001), math.sin(a) * (BR + 0.001), 0) for a in [i * math.tau / 32 for i in range(33)]], 0.005, M((1, 1, 1), rough=0.3, coat=0.6), ball)
 ball.rotation_euler = (math.radians(70), 0, math.radians(20))
 
@@ -71,7 +71,7 @@ for k, f in enumerate(DROPS):
     bz(f + 5, LV[k + 1] + 0.01, -0.01 * (-1) ** k)
     bz(f + 11, LV[k + 1], 0.008 * (-1) ** k)
 
-stm = [M(c, rough=0.55, coat=0.35) for c in ((0.2, 0.19, 0.26), (0.32, 0.22, 0.16), (0.16, 0.25, 0.24), (0.28, 0.22, 0.32))]
+stm = [M(c, rough=0.55, coat=0.35) for c in ((0.12, 0.11, 0.17), (0.24, 0.13, 0.08), (0.08, 0.17, 0.16), (0.2, 0.13, 0.24))]
 BW = Vector((0.36, YC + 0.06, TOP))
 spawn('mixing_bowl', 1, 2207, 'candy', tuple(BW), 1.1, 0)
 SS = ((0.058, 0.05, 0.036), (0.055, 0.05, 0.038), (0.06, 0.048, 0.035), (0.054, 0.05, 0.036))
@@ -119,10 +119,10 @@ for k, s in enumerate(stones):
 
 arm_ = M((1.0, 0.78, 0.15), rough=0.3, coat=0.4, emit=1.0)
 ups = C.empty('ups', jar, (0, 0, 0))
-for x in (-0.115, 0.115):
+for x in (-0.097, 0.097):
     C.tube('au', [(x, -0.02, 0.2), (x, -0.02, 0.33)], 0.008, arm_, ups)
-    C.tube('al', [(x - 0.022, -0.02, 0.305), (x, -0.02, 0.335)], 0.007, arm_, ups)
-    C.tube('ar', [(x + 0.022, -0.02, 0.305), (x, -0.02, 0.335)], 0.007, arm_, ups)
+    C.tube('al', [(x - 0.018, -0.02, 0.305), (x, -0.02, 0.335)], 0.007, arm_, ups)
+    C.tube('ar', [(x + 0.018, -0.02, 0.305), (x, -0.02, 0.335)], 0.007, arm_, ups)
 K(ups, 'scale', 0, (0, 0, 0))
 K(ups, 'scale', 622, (0, 0, 0))
 K(ups, 'scale', 632, (1, 1, 1))
@@ -157,8 +157,8 @@ for a, b, pose in ((58, 200, W0), (202, 318, WQ), (320, 424, CJ), (426, 508, CJ)
 
 tuki = make('tuki', 1.4)
 pimo = make('pimo', 1.3)
-T0 = Vector((-0.74, -1.42, Z0))
-P0 = Vector((0.76, -1.36, Z0))
+T0 = Vector((-0.84, -1.42, Z0))
+P0 = Vector((0.84, -1.36, Z0))
 T.place(tuki, 0, T0)
 T.turn(tuki, 0, 30)
 for f in (0, 20, 40):

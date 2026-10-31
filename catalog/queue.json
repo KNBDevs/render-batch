@@ -665,5 +665,16 @@
       "moki"
     ],
     "batch": "37_plus"
+  },
+  {
+    "id": "piedras_sube",
+    "template": "episode",
+    "status": "draft",
+    "title": "El vaso que sudaba",
+    "cast": [
+      "luma",
+      "moki"
+    ],
+    "batch": "37_plus"
   }
 ]

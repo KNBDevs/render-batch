@@ -5073,5 +5073,84 @@
    }
   ],
   "order": 63
+ },
+ "piedras_sube": {
+  "env": "casa",
+  "family": "pastel",
+  "decor": [
+   {
+    "prop": "floor_lamp",
+    "style": 1,
+    "seed": 424375,
+    "loc": [
+     -1.2,
+     4.36,
+     0.0
+    ],
+    "scale": 1.2,
+    "rot": 21.8
+   },
+   {
+    "prop": "soft_token",
+    "style": 0,
+    "seed": 98198,
+    "loc": [
+     -2.39,
+     4.06,
+     0.0
+    ],
+    "scale": 1.13,
+    "rot": 26.9
+   },
+   {
+    "prop": "pouf",
+    "style": 0,
+    "seed": 360549,
+    "loc": [
+     2.37,
+     3.55,
+     0.0
+    ],
+    "scale": 1.09,
+    "rot": 5.5
+   },
+   {
+    "prop": "play_mat",
+    "style": 0,
+    "seed": 275161,
+    "loc": [
+     3.34,
+     1.1,
+     0.0
+    ],
+    "scale": 1.03,
+    "rot": -33.2
+   },
+   {
+    "prop": "ball_basket",
+    "style": 0,
+    "seed": 779352,
+    "loc": [
+     1.12,
+     3.27,
+     0.0
+    ],
+    "scale": 1.08,
+    "rot": -31.1
+   },
+   {
+    "prop": "led_lantern",
+    "style": 0,
+    "seed": 586615,
+    "loc": [
+     -4.58,
+     2.0,
+     0.0
+    ],
+    "scale": 1.01,
+    "rot": 29.4
+   }
+  ],
+  "order": 64
  }
 }

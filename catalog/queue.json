@@ -658,7 +658,7 @@
   {
     "id": "vaso_suda",
     "template": "episode",
-    "status": "draft",
+    "status": "approved",
     "title": "El vaso que sudaba",
     "cast": [
       "luma",

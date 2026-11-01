@@ -687,5 +687,16 @@
       "moki"
     ],
     "batch": "37_plus"
+  },
+  {
+    "id": "sombra_crece",
+    "template": "episode",
+    "status": "draft",
+    "title": "La estrella que se hacía gigante",
+    "cast": [
+      "tuki",
+      "luma"
+    ],
+    "batch": "37_plus"
   }
 ]

@@ -680,7 +680,7 @@
   {
     "id": "papel_fuerte",
     "template": "episode",
-    "status": "draft",
+    "status": "approved",
     "title": "El papel que se hizo fuerte",
     "cast": [
       "ruki",

@@ -5408,5 +5408,85 @@
   "engine": "gemini",
   "voice": "Fenrir",
   "dev": 1.05
+ },
+ "ep_papel_fuerte_m1": {
+  "hash": "7f0d158ac4b7",
+  "dur": 3.07,
+  "text": "¿Y si lo doblamos como un acordeón?",
+  "asr": 1.0,
+  "heard": "y si lo doblamos como un acordeón",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": 2.95
+ },
+ "ep_papel_fuerte_m2": {
+  "hash": "c458206fb78f",
+  "dur": 3.22,
+  "text": "Los pliegues hacen el papel más fuerte.",
+  "asr": 1.0,
+  "heard": "Los pliegues hacen el papel más fuerte.",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": -1.15
+ },
+ "ep_papel_fuerte_m3": {
+  "hash": "e887df56bd48",
+  "dur": 3.28,
+  "text": "¡También aguanta! ¡Doblado es más fuerte!",
+  "asr": 1.0,
+  "heard": "También aguanta. Doblado es más fuerte.",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": -2.05
+ },
+ "ep_papel_fuerte_r1": {
+  "hash": "fec8a963d198",
+  "dur": 3.23,
+  "text": "¡Oh, no! ¡El papel no aguanta la manzana!",
+  "asr": 0.93,
+  "heard": "No, no, el papel no aguanta la manzana.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 2.11
+ },
+ "ep_papel_fuerte_r2": {
+  "hash": "cb3a79c8931a",
+  "dur": 4.39,
+  "text": "¿Qué pasará con la manzana: aguanta o se cae?",
+  "asr": 1.0,
+  "heard": "¿Qué pasará con la manzana? ¿Aguanta o se cae?",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 0.71
+ },
+ "ep_papel_fuerte_r3": {
+  "hash": "4188fe882b22",
+  "dur": 2.13,
+  "text": "¡Aguanta! ¡No se cae!",
+  "asr": 1.0,
+  "heard": "¡Aguanta! ¡No se cae!",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 2.06
+ },
+ "ep_papel_fuerte_r4": {
+  "hash": "5bf4951075f2",
+  "dur": 2.22,
+  "text": "¿Y si ponemos otra manzana?",
+  "asr": 1.0,
+  "heard": "Y si ponemos otra manzana.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 1.61
+ },
+ "ep_papel_fuerte_r5": {
+  "hash": "aec05bc63220",
+  "dur": 1.64,
+  "text": "¡Papel forzudo!",
+  "asr": 1.0,
+  "heard": "Papel Forzudo",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 2.36
  }
 }

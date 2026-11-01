@@ -669,7 +669,7 @@
   {
     "id": "piedras_sube",
     "template": "episode",
-    "status": "draft",
+    "status": "approved",
     "title": "La pelotita y las piedras",
     "cast": [
       "tuki",

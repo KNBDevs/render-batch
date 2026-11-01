@@ -5498,5 +5498,75 @@
   "engine": "gemini",
   "voice": "Puck",
   "dev": -7.1
+ },
+ "ep_sombra_crece_l1": {
+  "hash": "52351b79c01d",
+  "dur": 2.71,
+  "text": "Es la sombra de mi estrella pequeñita.",
+  "asr": 1.0,
+  "heard": "Es la sombra de mi estrella pequeñita.",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": 3.6
+ },
+ "ep_sombra_crece_l2": {
+  "hash": "26d15907b47d",
+  "dur": 4.0,
+  "text": "¿Qué pasará con la sombra: se hace grande o pequeña?",
+  "asr": 1.0,
+  "heard": "¿Qué pasará con la sombra? ¿Se hace grande o pequeña?",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": -3.7
+ },
+ "ep_sombra_crece_l3": {
+  "hash": "1c103fcb1b5d",
+  "dur": 2.83,
+  "text": "Cerca de la luz, la sombra es grande.",
+  "asr": 0.94,
+  "heard": "Cerca de la luz y la sombra es grande.",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": 0.7
+ },
+ "ep_sombra_crece_l4": {
+  "hash": "45e80b5d651a",
+  "dur": 3.04,
+  "text": "Lejos de la luz, la sombra es pequeña.",
+  "asr": 1.0,
+  "heard": "Lejos de la luz, la sombra es pequeña.",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": -1.35
+ },
+ "ep_sombra_crece_t1": {
+  "hash": "45861c4aea25",
+  "dur": 2.22,
+  "text": "¡Hala! ¡Una estrella gigante!",
+  "asr": 1.0,
+  "heard": "¡Hala! ¡Una estrella gigante!",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": -3.7
+ },
+ "ep_sombra_crece_t3": {
+  "hash": "00aa8afa937b",
+  "dur": 1.12,
+  "text": "¡Se hace pequeña!",
+  "asr": 1.0,
+  "heard": "Se hace pequeña.",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": 0.0
+ },
+ "ep_sombra_crece_t4": {
+  "hash": "3c2e15a7fcef",
+  "dur": 2.46,
+  "text": "¡Otra vez gigante! ¡Hola, estrella!",
+  "asr": 1.0,
+  "heard": "¡Otra vez gigante! ¡Hola estrella!",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": -1.5
  }
 }

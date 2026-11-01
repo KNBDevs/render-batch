@@ -3024,6 +3024,30 @@ def coaster(r, s, fam, root):
         C.lathe("mid", [(0, 0.0), (0, 0.1), (0.026, 0.1), (0.026, 0.0)], dm, root, segs=40)
 
 
+def book_stack(r, s, fam, root):
+    cs = [_rich(x, 1.3, 0.92) for x in _cols(r, fam, 3)]
+    pg = M((0.98, 0.95, 0.86), rough=0.6, coat=0.15)
+    hs = ((0.07, 0.06, 0.07), (0.11, 0.09, 0.0), (0.05, 0.08, 0.07))[s]
+    z = 0.0
+    for k, h in enumerate(hs):
+        if h <= 0:
+            continue
+        w, d = 0.26 - 0.01 * k, 0.34 - 0.012 * k
+        cm = M(cs[k], rough=0.38, coat=0.65)
+        b = C.empty("book", root, (0.006 * (k % 2) - 0.003, 0.0, z), (0, 0, math.radians((-3, 2, -1)[k])))
+        C.rounded_box("cover_b", (0, 0, 0.006), (w, d, 0.012), 0.3, cm, b)
+        C.rounded_box("cover_t", (0, 0, h - 0.006), (w, d, 0.012), 0.3, cm, b)
+        C.rounded_box("spine", (-w / 2 + 0.008, 0, h / 2), (0.016, d, h), 0.3, cm, b)
+        C.rounded_box("pages", (0.006, 0, h / 2), (w - 0.022, d - 0.02, h - 0.022), 0.08, pg, b)
+        if s == 1:
+            C.tube("ribbon", [(0.02, -d / 2 + 0.01, h - 0.004), (0.022, -d / 2 - 0.006, h - 0.03), (0.026, -d / 2 - 0.004, h - 0.07)], 0.006, M(cs[2], rough=0.4, coat=0.5), b)
+        elif s == 2:
+            C.sphere("label", (-w / 2 + 0.001, 0, h / 2), (0.004, 0.05, h * 0.28), M((1, 1, 1), rough=0.4, coat=0.5), b, 16)
+        else:
+            C.rounded_box("band", (-w / 2 + 0.03, 0, h - 0.0005), (0.018, d + 0.002, 0.004), 0.4, M(cs[(k + 1) % 3], rough=0.4, coat=0.5), b)
+        z += h
+
+
 GEN = {k: v for k, v in globals().items() if k in REGISTRY}
 
 

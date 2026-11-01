@@ -5152,5 +5152,84 @@
    }
   ],
   "order": 64
+ },
+ "papel_fuerte": {
+  "env": "casa",
+  "family": "pastel",
+  "decor": [
+   {
+    "prop": "planter_box",
+    "style": 0,
+    "seed": 241005,
+    "loc": [
+     -3.21,
+     1.52,
+     0.0
+    ],
+    "scale": 1.24,
+    "rot": 30.6
+   },
+   {
+    "prop": "flower_pot",
+    "style": 1,
+    "seed": 583886,
+    "loc": [
+     -4.82,
+     2.18,
+     0.0
+    ],
+    "scale": 0.86,
+    "rot": 32.1
+   },
+   {
+    "prop": "play_mat",
+    "style": 2,
+    "seed": 86518,
+    "loc": [
+     -1.19,
+     2.49,
+     0.0
+    ],
+    "scale": 1.03,
+    "rot": 7.3
+   },
+   {
+    "prop": "ball_basket",
+    "style": 2,
+    "seed": 260892,
+    "loc": [
+     1.02,
+     4.17,
+     0.0
+    ],
+    "scale": 1.02,
+    "rot": 8.3
+   },
+   {
+    "prop": "led_lantern",
+    "style": 1,
+    "seed": 167237,
+    "loc": [
+     2.2,
+     2.6,
+     0.0
+    ],
+    "scale": 1.03,
+    "rot": 24.6
+   },
+   {
+    "prop": "bunting",
+    "style": 0,
+    "seed": 276153,
+    "loc": [
+     4.78,
+     2.79,
+     0.0
+    ],
+    "scale": 1.03,
+    "rot": 31.7
+   }
+  ],
+  "order": 65
  }
 }

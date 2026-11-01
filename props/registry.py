@@ -95,4 +95,5 @@ REGISTRY = {
     "toy_ramp": {"styles": 3, "envs": ["patio", "aula", "casa"], "tags": ["rampa", "altura", "velocidad"], "decor": False},
     "toy_goal": {"styles": 3, "envs": ["patio", "aula"], "tags": ["portería", "pelota", "gol"], "decor": False},
     "coaster": {"styles": 3, "envs": ["casa", "aula"], "tags": ["posavasos", "vaso", "mesa"], "decor": False},
+    "book_stack": {"styles": 3, "envs": ["casa", "aula"], "tags": ["libros", "pila", "mesa"], "decor": False},
 }

@@ -676,5 +676,16 @@
       "pimo"
     ],
     "batch": "37_plus"
+  },
+  {
+    "id": "papel_fuerte",
+    "template": "episode",
+    "status": "draft",
+    "title": "El papel que se hizo fuerte",
+    "cast": [
+      "ruki",
+      "moki"
+    ],
+    "batch": "37_plus"
   }
 ]

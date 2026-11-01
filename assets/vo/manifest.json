@@ -5488,5 +5488,15 @@
   "engine": "gemini",
   "voice": "Umbriel",
   "dev": 2.36
+ },
+ "ep_piedras_sube_p3": {
+  "hash": "222e2cbe6308",
+  "dur": 3.24,
+  "text": "¡Las piedras ocupan un sitio en el agua!",
+  "asr": 1.0,
+  "heard": "Las piedras ocupan un sitio en el agua.",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": -7.1
  }
 }

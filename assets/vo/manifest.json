@@ -5648,5 +5648,15 @@
   "engine": "gemini",
   "voice": "Puck",
   "dev": 3.85
+ },
+ "ep_vaso_arcoiris_p3": {
+  "hash": "bfd6056c79b4",
+  "dur": 3.28,
+  "text": "¡La luz del sol lleva colores escondidos!",
+  "asr": 1.0,
+  "heard": "La luz del sol lleva colores escondidos.",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": -7.9
  }
 }

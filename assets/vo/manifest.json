@@ -5688,5 +5688,55 @@
   "engine": "gemini",
   "voice": "Enceladus",
   "dev": -2.05
+ },
+ "ep_torre_ancha_t1": {
+  "hash": "b7a8cce8501e",
+  "dur": 2.27,
+  "text": "¡Cada vez que salto, mi torre se cae!",
+  "asr": 1.0,
+  "heard": "Cada vez que saltó, mi torre se cae.",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": -4.6
+ },
+ "ep_torre_ancha_t2": {
+  "hash": "8c27309fed49",
+  "dur": 3.3,
+  "text": "¿Qué torre aguantará mi salto: la ancha o la estrecha?",
+  "asr": 1.0,
+  "heard": "¿Qué torre aguantará mi salto? ¿La ancha o la estrecha?",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": -6.8
+ },
+ "ep_torre_ancha_t3": {
+  "hash": "a06c88f24750",
+  "dur": 1.3,
+  "text": "¡La estrecha se cae!",
+  "asr": 1.0,
+  "heard": "La estrecha se cae.",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": 0.0
+ },
+ "ep_torre_ancha_t4": {
+  "hash": "c39bed2a0c77",
+  "dur": 1.22,
+  "text": "¿Y si salto más fuerte?",
+  "asr": 0.8,
+  "heard": "¿Y se saltó más fuerte?",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": 0.35
+ },
+ "ep_torre_ancha_t5": {
+  "hash": "6d5469e02b1c",
+  "dur": 2.66,
+  "text": "¡No se cae! ¡Torre ancha, torre fuerte!",
+  "asr": 1.0,
+  "heard": "No se cae, torre ancha, torre fuerte.",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": -2.5
  }
 }

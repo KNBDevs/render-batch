@@ -8,7 +8,7 @@ LINES = [
     ('b2', 'bolita', '¿Y si ponemos un vaso sin agua?', 170, 2.6),
     ('p2', 'pimo', '¿Dónde saldrá el arcoíris: en el vaso vacío o en el de agua?', 250, 4.4),
     ('b3', 'bolita', '¡Solo en el vaso con agua!', 410, 2.0),
-    ('p3', 'pimo', 'La luz del sol lleva colores escondidos.', 500, 3.0),
+    ('p3', 'pimo', '¡La luz del sol lleva colores escondidos!', 500, 3.2),
     ('p4', 'pimo', 'El agua los separa, ¡y aparece el arcoíris!', 600, 3.4),
     ('b4', 'bolita', '¡Dos vasos con agua, dos arcoíris!', 772, 2.8),
 ]

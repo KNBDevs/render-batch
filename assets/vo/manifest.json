@@ -5568,5 +5568,85 @@
   "engine": "gemini",
   "voice": "Fenrir",
   "dev": -1.5
+ },
+ "ep_sombra_crece_t2": {
+  "hash": "c19a47f56ae5",
+  "dur": 2.12,
+  "text": "¿Y si la alejamos de la linterna?",
+  "asr": 1.0,
+  "heard": "y si la alejamos de la linterna.",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": -4.25
+ },
+ "ep_vaso_arcoiris_b1": {
+  "hash": "0a55b187c2a8",
+  "dur": 2.21,
+  "text": "¡Alguien ha pintado un arcoíris!",
+  "asr": 1.0,
+  "heard": "¡Alguien ha pintado un arcoíris!",
+  "engine": "gemini",
+  "voice": "Zephyr",
+  "dev": -2.55
+ },
+ "ep_vaso_arcoiris_b2": {
+  "hash": "9107e5054a44",
+  "dur": 2.33,
+  "text": "¿Y si ponemos un vaso sin agua?",
+  "asr": 1.0,
+  "heard": "Y sí ponemos un vaso sin agua.",
+  "engine": "gemini",
+  "voice": "Zephyr",
+  "dev": -2.75
+ },
+ "ep_vaso_arcoiris_b3": {
+  "hash": "988d7e615752",
+  "dur": 1.7,
+  "text": "¡Solo en el vaso con agua!",
+  "asr": 1.0,
+  "heard": "Solo en el vaso con agua.",
+  "engine": "gemini",
+  "voice": "Zephyr",
+  "dev": -6.45
+ },
+ "ep_vaso_arcoiris_b4": {
+  "hash": "096cb2ab2caf",
+  "dur": 2.7,
+  "text": "¡Dos vasos con agua, dos arcoíris!",
+  "asr": 1.0,
+  "heard": "Dos vasos con agua. Dos arcoíris.",
+  "engine": "gemini",
+  "voice": "Zephyr",
+  "dev": -4.3
+ },
+ "ep_vaso_arcoiris_p1": {
+  "hash": "b1452833a49f",
+  "dur": 2.92,
+  "text": "No es pintura. ¡Es la luz del sol!",
+  "asr": 1.0,
+  "heard": "¡No es pintura, es la luz del sol!",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": 6.4
+ },
+ "ep_vaso_arcoiris_p2": {
+  "hash": "d888ea0df4e0",
+  "dur": 4.09,
+  "text": "¿Dónde saldrá el arcoíris: en el vaso vacío o en el de agua?",
+  "asr": 1.0,
+  "heard": "¿Dónde saldrá el arcoiris, en el vaso vacío o en el de agua?",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": -7.35
+ },
+ "ep_vaso_arcoiris_p4": {
+  "hash": "4778c629e3b8",
+  "dur": 2.82,
+  "text": "El agua los separa, ¡y aparece el arcoíris!",
+  "asr": 0.88,
+  "heard": "El agua lo separa y aparece el arcoíris.",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": 3.85
  }
 }

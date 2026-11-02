@@ -5658,5 +5658,35 @@
   "engine": "gemini",
   "voice": "Puck",
   "dev": -7.9
+ },
+ "ep_torre_ancha_m1": {
+  "hash": "4445f39f00fd",
+  "dur": 3.22,
+  "text": "¿Y si la hacemos con la base ancha?",
+  "asr": 1.0,
+  "heard": "y si la hacemos con la base ancha.",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": -1.4
+ },
+ "ep_torre_ancha_m2": {
+  "hash": "cc098f8778e3",
+  "dur": 2.3,
+  "text": "¡Y la ancha aguanta!",
+  "asr": 1.0,
+  "heard": "Y la ancha aguanta.",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": -1.55
+ },
+ "ep_torre_ancha_m3": {
+  "hash": "b3840de67dcf",
+  "dur": 3.49,
+  "text": "Con la base ancha, la torre se apoya mejor.",
+  "asr": 1.0,
+  "heard": "Con la base ancha, la torre se apoya mejor.",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": -2.05
  }
 }

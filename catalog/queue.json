@@ -709,5 +709,16 @@
       "pimo"
     ],
     "batch": "37_plus"
+  },
+  {
+    "id": "torre_ancha",
+    "template": "episode",
+    "status": "draft",
+    "title": "La torre que no se caía",
+    "cast": [
+      "tuki",
+      "moki"
+    ],
+    "batch": "37_plus"
   }
 ]

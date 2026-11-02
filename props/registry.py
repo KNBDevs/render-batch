@@ -97,4 +97,5 @@ REGISTRY = {
     "coaster": {"styles": 3, "envs": ["casa", "aula"], "tags": ["posavasos", "vaso", "mesa"], "decor": False},
     "book_stack": {"styles": 3, "envs": ["casa", "aula"], "tags": ["libros", "pila", "mesa"], "decor": False},
     "pitcher": {"styles": 3, "envs": ["casa", "aula"], "tags": ["jarra", "agua", "mesa"], "decor": False},
+    "soft_block": {"styles": 3, "envs": ["casa", "aula", "plaza"], "tags": ["bloque", "torre", "juguete"], "decor": False},
 }

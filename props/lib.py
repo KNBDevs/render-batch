@@ -3076,6 +3076,27 @@ def pitcher(r, s, fam, root):
         C.tube("band", _ring(0.074, 0.03, 48), 0.009, dm, root)
 
 
+def soft_block(r, s, fam, root, sz=0.18):
+    c, d = [_rich(x, 1.3, 0.95) for x in _cols(r, fam, 2)]
+    cm = M(c, rough=0.55, coat=0.35)
+    dm = M(d, rough=0.4, coat=0.6)
+    h = sz / 2
+    C.rounded_box("foam", (0, 0, h), (sz, sz, sz), 0.16, cm, root)
+    for k, rot in enumerate(((90, 0, 0), (90, 0, 180), (90, 0, 90), (90, 0, -90))):
+        e = C.empty("face", root, (0, 0, h), tuple(math.radians(a) for a in rot))
+        f = C.empty("emb", e, (0, 0, h - 0.002))
+        if s == 0:
+            pts = [((0.055 if i % 2 == 0 else 0.024) * sz / 0.18 * math.cos(math.pi / 2 + i * math.pi / 5),
+                    (0.055 if i % 2 == 0 else 0.024) * sz / 0.18 * math.sin(math.pi / 2 + i * math.pi / 5)) for i in range(10)]
+            _slab("star", pts, 0.008, dm, f, 0.0, 0.004)
+        elif s == 1:
+            C.tube("ring", _ring(0.045 * sz / 0.18, 0.0, 40), 0.011 * sz / 0.18, dm, f)
+            C.sphere("dot", (0, 0, 0.002), (0.016 * sz / 0.18, 0.016 * sz / 0.18, 0.006), dm, f, 16)
+        else:
+            for j in (-1, 1):
+                C.rounded_box("band", (0, j * 0.032 * sz / 0.18, 0.002), (sz * 0.7, 0.018 * sz / 0.18, 0.008), 0.4, dm, f)
+
+
 GEN = {k: v for k, v in globals().items() if k in REGISTRY}
 
 

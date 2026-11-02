@@ -3048,6 +3048,34 @@ def book_stack(r, s, fam, root):
         z += h
 
 
+def pitcher(r, s, fam, root):
+    c, d = [_rich(x, 1.3, 0.95) for x in _cols(r, fam, 2)]
+    cm = M(c, rough=0.35, coat=0.7)
+    dm = M(d, rough=0.4, coat=0.6)
+    if s == 0:
+        prof = [(0, 0.0), (0, 0.075), (0.01, 0.085), (0.1, 0.09), (0.17, 0.07), (0.2, 0.072)]
+    elif s == 1:
+        prof = [(0, 0.0), (0, 0.07), (0.012, 0.08), (0.17, 0.08), (0.2, 0.084)]
+    else:
+        prof = [(0, 0.0), (0, 0.06), (0.012, 0.072), (0.08, 0.095), (0.15, 0.08), (0.19, 0.06), (0.21, 0.064)]
+    th = 0.008
+    top = prof[-1]
+    inn = [(z, rr - th) for z, rr in prof[2:]][::-1] + [(0.014, prof[1][1] - th), (0.014, 0.0)]
+    C.lathe("jug", prof + [(top[0] + 0.004, top[1] - th * 0.5)] + inn, cm, root, segs=48)
+    C.tube("lip", _ring(top[1] + 0.002, top[0] - 0.004, 48), 0.007, dm, root)
+    C.sphere("spout", (top[1] + 0.012, 0, top[0] - 0.006), (0.032, 0.024, 0.012), cm, root, 20)
+    hz = top[0]
+    C.tube("handle", [(-top[1] + 0.004, 0, hz * 0.85), (-top[1] - 0.05, 0, hz * 0.8), (-top[1] - 0.06, 0, hz * 0.5), (-top[1] - 0.04, 0, hz * 0.28), (-prof[2][1] + 0.004, 0, hz * 0.25)], 0.013, dm, root)
+    if s == 0:
+        for k in range(5):
+            a = k * 6.2832 / 5 + 0.6
+            C.sphere("dot", (math.cos(a) * 0.088, math.sin(a) * 0.088, 0.11), (0.012, 0.012, 0.012), dm, root, 12)
+    elif s == 1:
+        C.tube("band", _ring(0.083, 0.1, 48), 0.01, dm, root)
+    else:
+        C.tube("band", _ring(0.074, 0.03, 48), 0.009, dm, root)
+
+
 GEN = {k: v for k, v in globals().items() if k in REGISTRY}
 
 

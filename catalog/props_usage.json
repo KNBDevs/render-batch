@@ -5310,5 +5310,84 @@
    }
   ],
   "order": 66
+ },
+ "vaso_arcoiris": {
+  "env": "casa",
+  "family": "pastel",
+  "decor": [
+   {
+    "prop": "soft_token",
+    "style": 2,
+    "seed": 46341,
+    "loc": [
+     4.73,
+     1.9,
+     0.0
+    ],
+    "scale": 1.24,
+    "rot": -32.5
+   },
+   {
+    "prop": "pouf",
+    "style": 2,
+    "seed": 960023,
+    "loc": [
+     2.28,
+     3.93,
+     0.0
+    ],
+    "scale": 1.17,
+    "rot": 14.3
+   },
+   {
+    "prop": "play_mat",
+    "style": 1,
+    "seed": 866047,
+    "loc": [
+     -0.93,
+     2.27,
+     0.0
+    ],
+    "scale": 0.99,
+    "rot": 10.0
+   },
+   {
+    "prop": "floor_lamp",
+    "style": 2,
+    "seed": 250911,
+    "loc": [
+     -4.64,
+     2.75,
+     0.0
+    ],
+    "scale": 0.9,
+    "rot": -11.5
+   },
+   {
+    "prop": "pebbles",
+    "style": 1,
+    "seed": 721242,
+    "loc": [
+     -3.23,
+     1.41,
+     0.0
+    ],
+    "scale": 0.97,
+    "rot": 0.9
+   },
+   {
+    "prop": "planter_box",
+    "style": 1,
+    "seed": 890229,
+    "loc": [
+     0.96,
+     3.37,
+     0.0
+    ],
+    "scale": 1.03,
+    "rot": 31.5
+   }
+  ],
+  "order": 67
  }
 }

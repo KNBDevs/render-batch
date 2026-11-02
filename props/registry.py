@@ -96,4 +96,5 @@ REGISTRY = {
     "toy_goal": {"styles": 3, "envs": ["patio", "aula"], "tags": ["portería", "pelota", "gol"], "decor": False},
     "coaster": {"styles": 3, "envs": ["casa", "aula"], "tags": ["posavasos", "vaso", "mesa"], "decor": False},
     "book_stack": {"styles": 3, "envs": ["casa", "aula"], "tags": ["libros", "pila", "mesa"], "decor": False},
+    "pitcher": {"styles": 3, "envs": ["casa", "aula"], "tags": ["jarra", "agua", "mesa"], "decor": False},
 }

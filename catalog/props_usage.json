@@ -5547,5 +5547,84 @@
    }
   ],
   "order": 69
+ },
+ "cubito_sombra": {
+  "env": "patio",
+  "family": "fresh",
+  "decor": [
+   {
+    "prop": "birdhouse",
+    "style": 0,
+    "seed": 245716,
+    "loc": [
+     4.35,
+     1.67,
+     0.0
+    ],
+    "scale": 1.12,
+    "rot": -1.5
+   },
+   {
+    "prop": "hay_seat",
+    "style": 2,
+    "seed": 212460,
+    "loc": [
+     -0.82,
+     3.99,
+     0.0
+    ],
+    "scale": 1.2,
+    "rot": -0.4
+   },
+   {
+    "prop": "fence",
+    "style": 2,
+    "seed": 2452,
+    "loc": [
+     -4.82,
+     3.2,
+     0.0
+    ],
+    "scale": 1.01,
+    "rot": 23.9
+   },
+   {
+    "prop": "bench",
+    "style": 2,
+    "seed": 389734,
+    "loc": [
+     2.32,
+     3.6,
+     0.0
+    ],
+    "scale": 0.88,
+    "rot": -34.5
+   },
+   {
+    "prop": "ball_basket",
+    "style": 1,
+    "seed": 615906,
+    "loc": [
+     3.37,
+     3.36,
+     0.0
+    ],
+    "scale": 1.14,
+    "rot": -6.9
+   },
+   {
+    "prop": "mushroom_stool",
+    "style": 0,
+    "seed": 470781,
+    "loc": [
+     1.01,
+     3.71,
+     0.0
+    ],
+    "scale": 1.14,
+    "rot": 34.2
+   }
+  ],
+  "order": 70
  }
 }

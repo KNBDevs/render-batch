@@ -3125,6 +3125,48 @@ def bubble_stand(r, s, fam, root, ring=0.17, h=0.95):
     return hub
 
 
+def toy_parasol(r, s, fam, root, R=0.5, h=0.85):
+    c, d, e = [_rich(x, 1.25, 0.95) for x in _cols(r, fam, 3)]
+    cm = M(c, rough=0.4, coat=0.6)
+    dm = M(d, rough=0.35, coat=0.7)
+    em = M(e, rough=0.3, coat=0.8)
+    if s == 0:
+        C.lathe("base", [(0.0, 0.0), (0.0, 0.16), (0.02, 0.17), (0.05, 0.14), (0.07, 0.05), (0.08, 0.0)], dm, root, segs=48)
+    elif s == 1:
+        C.rounded_box("base", (0, 0, 0.04), (0.3, 0.3, 0.08), 0.3, dm, root)
+    else:
+        for k in range(5):
+            a = k * 2 * math.pi / 5
+            C.sphere("petal", (0.1 * math.cos(a), 0.1 * math.sin(a), 0.03), (0.08, 0.08, 0.03), dm, root, 24)
+        C.sphere("core", (0, 0, 0.045), (0.06, 0.06, 0.03), em, root, 20)
+    C.tube("pole", [(0, 0, 0.05), (0, 0, h + 0.05)], 0.02, em, root)
+    if s == 2:
+        cz = h - 0.02
+        C.lathe("canopy", [(0.0, 0.0), (0.0, R), (0.04, R * 1.01), (0.1, R * 0.92), (0.2, R * 0.66), (0.26, R * 0.36), (0.28, 0.0)], cm, C.empty("cz", root, (0, 0, cz)), segs=64)
+        for k in range(7):
+            a = k * 2 * math.pi / 7
+            rr = R * (0.55 if k % 2 else 0.78)
+            zz = cz + (0.228 if k % 2 else 0.16)
+            C.sphere("dot", (rr * math.cos(a), rr * math.sin(a), zz), (0.05, 0.05, 0.02), em, root, 16, (0, math.radians(35 if k % 2 else 22), a))
+        C.sphere("tip", (0, 0, cz + 0.3), (0.035, 0.035, 0.035), em, root, 16)
+        return root
+    rise = 0.16 if s == 0 else 0.22
+    cz = h - rise * 0.4
+    C.lathe("canopy", [(0.0, 0.0), (0.0, R), (0.015, R), (rise * 0.6, R * 0.45), (rise, 0.04), (rise, 0.0)], cm, C.empty("cz", root, (0, 0, cz)), segs=64)
+    n = 8
+    for k in range(n):
+        a = k * 2 * math.pi / n
+        tip = (R * math.cos(a), R * math.sin(a), cz + 0.01)
+        if s == 0:
+            C.tube("rib", [(0, 0, cz + rise + 0.005), (R * 0.45 * math.cos(a), R * 0.45 * math.sin(a), cz + rise * 0.6 + 0.012), (tip[0] * 1.005, tip[1] * 1.005, tip[2] + 0.008)], 0.012, em, root)
+            C.sphere("end", tip, (0.025, 0.025, 0.025), em, root, 14)
+        else:
+            b = a + math.pi / n
+            C.sphere("scallop", (R * 0.97 * math.cos(b), R * 0.97 * math.sin(b), cz - 0.02), (0.07, 0.07, 0.045), dm, root, 20, (0, 0, b))
+    C.sphere("tip", (0, 0, cz + rise + 0.03), (0.035, 0.035, 0.035), dm if s == 0 else em, root, 16)
+    return root
+
+
 GEN = {k: v for k, v in globals().items() if k in REGISTRY}
 
 

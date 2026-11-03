@@ -731,5 +731,16 @@
       "pimo"
     ],
     "batch": "37_plus"
+  },
+  {
+    "id": "cubito_sombra",
+    "template": "episode",
+    "status": "draft",
+    "title": "El cubito que buscaba la sombra",
+    "cast": [
+      "tuki",
+      "ruki"
+    ],
+    "batch": "37_plus"
   }
 ]

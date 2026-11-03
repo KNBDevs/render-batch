@@ -5738,5 +5738,55 @@
   "engine": "gemini",
   "voice": "Fenrir",
   "dev": -2.5
+ },
+ "ep_burbuja_seca_b1": {
+  "hash": "415cc6eedfbe",
+  "dur": 2.85,
+  "text": "¡Mis burbujas explotan al tocar la bandeja!",
+  "asr": 1.0,
+  "heard": "Mis burbujas explotan al tocar la bandeja.",
+  "engine": "gemini",
+  "voice": "Zephyr",
+  "dev": -3.05
+ },
+ "ep_burbuja_seca_b2": {
+  "hash": "837842cbfd62",
+  "dur": 3.95,
+  "text": "¿Dónde explotará la burbuja: en la seca o en la mojada?",
+  "asr": 1.0,
+  "heard": "¿Dónde explotará la burbuja? ¿En la seca o en la mojada?",
+  "engine": "gemini",
+  "voice": "Zephyr",
+  "dev": -4.05
+ },
+ "ep_burbuja_seca_b3": {
+  "hash": "11ddc354f8d9",
+  "dur": 1.72,
+  "text": "¡En la seca, explota!",
+  "asr": 1.0,
+  "heard": "En la seca, explota.",
+  "engine": "gemini",
+  "voice": "Zephyr",
+  "dev": -1.25
+ },
+ "ep_burbuja_seca_b4": {
+  "hash": "dd9659a0da27",
+  "dur": 1.44,
+  "text": "¿Y si soplo muchas?",
+  "asr": 1.0,
+  "heard": "¿Y si soplo muchas?",
+  "engine": "gemini",
+  "voice": "Zephyr",
+  "dev": -4.55
+ },
+ "ep_burbuja_seca_b5": {
+  "hash": "8afeb67180b4",
+  "dur": 3.15,
+  "text": "¡No explota ninguna! ¡Una montaña de burbujas!",
+  "asr": 1.0,
+  "heard": "No explota ninguna, una montaña de burbujas.",
+  "engine": "gemini",
+  "voice": "Zephyr",
+  "dev": -2.95
  }
 }

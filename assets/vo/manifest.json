@@ -5808,5 +5808,25 @@
   "engine": "gemini",
   "voice": "Puck",
   "dev": -7.1
+ },
+ "ep_cubito_sombra_r1": {
+  "hash": "0c375b5747f1",
+  "dur": 3.11,
+  "text": "¡Oh, no! ¡Se ha hecho agua por el camino!",
+  "asr": 1.0,
+  "heard": "¿Oh, no? Se ha hecho agua por el camino.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 6.86
+ },
+ "ep_cubito_sombra_r4": {
+  "hash": "531a1a39bd85",
+  "dur": 2.92,
+  "text": "El calor del sol derrite el hielo.",
+  "asr": 1.0,
+  "heard": "El calor del sol derrite el hielo.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 2.86
  }
 }

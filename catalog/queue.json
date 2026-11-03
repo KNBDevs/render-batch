@@ -713,7 +713,7 @@
   {
     "id": "torre_ancha",
     "template": "episode",
-    "status": "draft",
+    "status": "approved",
     "title": "La torre que no se caía",
     "cast": [
       "tuki",

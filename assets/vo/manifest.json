@@ -5788,5 +5788,25 @@
   "engine": "gemini",
   "voice": "Zephyr",
   "dev": -2.95
+ },
+ "ep_burbuja_seca_p3": {
+  "hash": "aafdd5b31f51",
+  "dur": 2.86,
+  "text": "La burbuja explota si toca algo seco.",
+  "asr": 1.0,
+  "heard": "La burbuja explota si toca algo seco.",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": 0.0
+ },
+ "ep_burbuja_seca_p2": {
+  "hash": "970df49aaf0f",
+  "dur": 1.89,
+  "text": "¡Y en la mojada, se queda!",
+  "asr": 1.0,
+  "heard": "Y en la mojada se queda.",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": -7.1
  }
 }

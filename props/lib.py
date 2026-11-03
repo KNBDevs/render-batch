@@ -3097,6 +3097,34 @@ def soft_block(r, s, fam, root, sz=0.18):
                 C.rounded_box("band", (0, j * 0.032 * sz / 0.18, 0.002), (sz * 0.7, 0.018 * sz / 0.18, 0.008), 0.4, dm, f)
 
 
+def bubble_stand(r, s, fam, root, ring=0.17, h=0.95):
+    c, d, e = [_rich(x, 1.25, 0.95) for x in _cols(r, fam, 3)]
+    cm = M(c, rough=0.4, coat=0.6)
+    dm = M(d, rough=0.35, coat=0.7)
+    em = M(e, rough=0.3, coat=0.8)
+    if s == 0:
+        for k in range(6):
+            a = k * math.pi / 3
+            C.sphere("petal", (0.13 * math.cos(a), 0.13 * math.sin(a), 0.03), (0.09, 0.09, 0.03), cm, root, 24)
+        C.sphere("core", (0, 0, 0.04), (0.08, 0.08, 0.035), dm, root, 24)
+    elif s == 1:
+        C.lathe("base", [(0.0, 0.0), (0.0, 0.2), (0.02, 0.22), (0.05, 0.2), (0.06, 0.12), (0.07, 0.0)], cm, root, segs=48)
+        C.lathe("dish", [(0.07, 0.0), (0.07, 0.1), (0.11, 0.13), (0.115, 0.12), (0.08, 0.09), (0.08, 0.0)], dm, root, segs=48)
+        C.lathe("soap", [(0.0, 0.0), (0.0, 0.09), (0.004, 0.0)], MA((0.75, 0.9, 1.0), 0.55, emit=0.2), C.empty("lvl", root, (0, 0, 0.1)), segs=40)
+    else:
+        C.rounded_box("base", (0, 0, 0.035), (0.36, 0.26, 0.07), 0.35, cm, root)
+        for x in (-0.11, 0.11):
+            C.sphere("dot", (x, -0.131, 0.035), (0.025, 0.006, 0.025), em, root, 16)
+    C.tube("pole", [(0, 0, 0.05), (0, 0, h - ring - 0.02)], 0.022, dm, root)
+    C.sphere("knob", (0, 0, h - ring - 0.02), (0.035, 0.035, 0.035), em, root, 20)
+    hub = C.empty("ring_hub", root, (0, 0, h), (0, math.radians(90), 0))
+    C.tube("ring", _ring(ring, 0.0, 56), 0.02, em, hub)
+    C.tube("neck", [(ring + 0.0, 0, 0), (ring + 0.02, 0, 0)], 0.022, em, hub)
+    if s == 2:
+        C.sphere("tip", (0, 0, h + ring + 0.04), (0.04, 0.04, 0.04), M(e, rough=0.3, emit=0.6), root, 16)
+    return hub
+
+
 GEN = {k: v for k, v in globals().items() if k in REGISTRY}
 
 

@@ -5468,5 +5468,84 @@
    }
   ],
   "order": 68
+ },
+ "burbuja_seca": {
+  "env": "casa",
+  "family": "pastel",
+  "decor": [
+   {
+    "prop": "planter_box",
+    "style": 2,
+    "seed": 363566,
+    "loc": [
+     -4.81,
+     3.35,
+     0.0
+    ],
+    "scale": 1.01,
+    "rot": 5.9
+   },
+   {
+    "prop": "pebbles",
+    "style": 0,
+    "seed": 972880,
+    "loc": [
+     0.99,
+     1.94,
+     0.0
+    ],
+    "scale": 1.22,
+    "rot": 1.1
+   },
+   {
+    "prop": "play_mat",
+    "style": 2,
+    "seed": 964969,
+    "loc": [
+     2.09,
+     3.79,
+     0.0
+    ],
+    "scale": 0.88,
+    "rot": 0.3
+   },
+   {
+    "prop": "toy_blocks",
+    "style": 0,
+    "seed": 984030,
+    "loc": [
+     -3.14,
+     2.35,
+     0.0
+    ],
+    "scale": 0.96,
+    "rot": -33.3
+   },
+   {
+    "prop": "flower_pot",
+    "style": 0,
+    "seed": 442618,
+    "loc": [
+     3.58,
+     2.68,
+     0.0
+    ],
+    "scale": 1.11,
+    "rot": 13.2
+   },
+   {
+    "prop": "soft_token",
+    "style": 0,
+    "seed": 8094,
+    "loc": [
+     -2.46,
+     3.72,
+     0.0
+    ],
+    "scale": 1.07,
+    "rot": 30.2
+   }
+  ],
+  "order": 69
  }
 }

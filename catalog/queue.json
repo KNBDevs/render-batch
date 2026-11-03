@@ -720,5 +720,16 @@
       "moki"
     ],
     "batch": "37_plus"
+  },
+  {
+    "id": "burbuja_seca",
+    "template": "episode",
+    "status": "draft",
+    "title": "La burbuja que no explotaba",
+    "cast": [
+      "bolita",
+      "pimo"
+    ],
+    "batch": "37_plus"
   }
 ]

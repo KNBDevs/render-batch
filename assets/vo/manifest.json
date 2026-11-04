@@ -5888,5 +5888,55 @@
   "engine": "gemini",
   "voice": "Fenrir",
   "dev": 3.5
+ },
+ "ep_barquito_papel_m1": {
+  "hash": "ce056f6b9b20",
+  "dur": 2.73,
+  "text": "¡Mi barquito de papel se ha hundido!",
+  "asr": 1.0,
+  "heard": "Mi barquito de papel se ha hundido.",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": 3.91
+ },
+ "ep_barquito_papel_m2": {
+  "hash": "4c9116342b17",
+  "dur": 4.39,
+  "text": "¿Cuál aguantará flotando: el de papel o el de aluminio?",
+  "asr": 1.0,
+  "heard": "¿Cuál aguantará flotando?  El de papel o el de aluminio?",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": 1.65
+ },
+ "ep_barquito_papel_m3": {
+  "hash": "34d883c549d2",
+  "dur": 2.46,
+  "text": "¡Y el de aluminio sigue flotando!",
+  "asr": 1.0,
+  "heard": "y el de aluminio sigue flotando",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": 6.55
+ },
+ "ep_barquito_papel_m4": {
+  "hash": "20bb1be3f361",
+  "dur": 2.82,
+  "text": "¡Barquito de aluminio, a navegar!",
+  "asr": 1.0,
+  "heard": "Barquito de aluminio a navegar",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": 4.55
+ },
+ "ep_barquito_papel_p2": {
+  "hash": "f24e07bc42b7",
+  "dur": 2.11,
+  "text": "¡El de papel se empapa y se hunde!",
+  "asr": 1.0,
+  "heard": "El de papel se empapa y se hunde.",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": 0.0
  }
 }

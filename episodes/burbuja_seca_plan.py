@@ -4,7 +4,7 @@ MOOD = 'happy'
 ENV = 'casa'
 LINES = [
     ('b1', 'bolita', '¡Mis burbujas explotan al tocar la bandeja!', 8, 3.0),
-    ('p1', 'pimo', '¿Y si mojamos esta bandeja con agua y jabón?', 96, 3.0),
+    ('p1', 'pimo', '¿Y si mojamos esta bandeja… con agua y jabón?', 96, 3.0),
     ('b2', 'bolita', '¿Dónde explotará la burbuja: en la seca o en la mojada?', 206, 4.4),
     ('b3', 'bolita', '¡En la seca, explota!', 408, 2.0),
     ('p2', 'pimo', '¡Y en la mojada, se queda!', 466, 2.2),

@@ -5626,5 +5626,84 @@
    }
   ],
   "order": 70
+ },
+ "barquito_papel": {
+  "env": "casa",
+  "family": "pastel",
+  "decor": [
+   {
+    "prop": "floor_lamp",
+    "style": 0,
+    "seed": 598980,
+    "loc": [
+     3.45,
+     1.39,
+     0.0
+    ],
+    "scale": 1.21,
+    "rot": -18.9
+   },
+   {
+    "prop": "pouf",
+    "style": 0,
+    "seed": 271540,
+    "loc": [
+     -1.26,
+     4.4,
+     0.0
+    ],
+    "scale": 1.2,
+    "rot": 27.9
+   },
+   {
+    "prop": "led_lantern",
+    "style": 0,
+    "seed": 420488,
+    "loc": [
+     -3.11,
+     2.8,
+     0.0
+    ],
+    "scale": 1.23,
+    "rot": -21.1
+   },
+   {
+    "prop": "bunting",
+    "style": 1,
+    "seed": 414836,
+    "loc": [
+     -2.25,
+     2.13,
+     0.0
+    ],
+    "scale": 1.2,
+    "rot": 7.1
+   },
+   {
+    "prop": "play_mat",
+    "style": 0,
+    "seed": 708307,
+    "loc": [
+     4.31,
+     1.32,
+     0.0
+    ],
+    "scale": 0.87,
+    "rot": 0.3
+   },
+   {
+    "prop": "toy_blocks",
+    "style": 2,
+    "seed": 663644,
+    "loc": [
+     -4.79,
+     0.54,
+     0.0
+    ],
+    "scale": 0.88,
+    "rot": -7.3
+   }
+  ],
+  "order": 71
  }
 }

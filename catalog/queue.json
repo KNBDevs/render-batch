@@ -742,5 +742,16 @@
       "ruki"
     ],
     "batch": "37_plus"
+  },
+  {
+    "id": "barquito_papel",
+    "template": "episode",
+    "status": "draft",
+    "title": "El barquito que aguantaba",
+    "cast": [
+      "moki",
+      "pimo"
+    ],
+    "batch": "37_plus"
   }
 ]

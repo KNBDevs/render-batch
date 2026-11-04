@@ -3167,6 +3167,47 @@ def toy_parasol(r, s, fam, root, R=0.5, h=0.85):
     return root
 
 
+def paper_boat(r, s, fam, root):
+    a, b = [_rich(x, 1.2, 0.97) for x in _cols(r, fam, 2)]
+    if s == 2:
+        pm = M((0.56, 0.61, 0.7), rough=0.14, coat=1.0)
+        lm = M((0.97, 0.98, 1.0), rough=0.08, coat=1.0, emit=0.6)
+    elif s == 1:
+        pm = M((0.98, 0.95, 0.86), rough=0.6, coat=0.2)
+        lm = M((0.45, 0.62, 0.95), rough=0.5, coat=0.3)
+    else:
+        pm = M(tuple(min(1, v * 0.6 + 0.4) for v in a), rough=0.6, coat=0.25)
+        lm = M(b, rough=0.5, coat=0.3)
+    hull = [(-0.13, 0.0), (0.13, 0.0), (0.22, 0.1), (-0.22, 0.1)]
+    sail = [(-0.11, 0.09), (0.11, 0.09), (0.0, 0.25)]
+    for y, d in ((0.05, 0.014), (-0.064, 0.014)):
+        o = _slab("hull", hull, d, pm, root, bev=0.006)
+        o.rotation_euler = (math.pi / 2, 0, 0)
+        o.location = (0, y + d, 0)
+    C.rounded_box("keel", (0, 0, 0.006), (0.27, 0.11, 0.012), 0.3, pm, root)
+    o = _slab("sail", sail, 0.012, pm, root, bev=0.005)
+    o.rotation_euler = (math.pi / 2, 0, 0)
+    o.location = (0, 0.006, 0)
+    for y in (-0.066, 0.066):
+        C.tube("fold", [(-0.2, y, 0.098), (0.2, y, 0.098)], 0.004, lm, root)
+        if s == 1:
+            for z in (0.035, 0.065):
+                C.tube("line", [(-0.12 - z * 0.7, y * 1.02, z), (0.12 + z * 0.7, y * 1.02, z)], 0.0025, lm, root)
+    if s == 2:
+        dm = M((0.4, 0.45, 0.55), rough=0.2, coat=1.0)
+        for k in range(24):
+            x, z = r.uniform(-0.19, 0.19), r.uniform(0.015, 0.09)
+            if abs(x) < 0.12 + z * 0.9:
+                C.sphere("glint", (x, -0.066 if k % 2 else 0.066, z), (0.016, 0.003, 0.01), lm if k % 3 else dm, root, 8, (0, r.uniform(-0.6, 0.6), 0))
+        for k in range(6):
+            x, z = r.uniform(-0.08, 0.08), r.uniform(0.12, 0.18)
+            if abs(x) < 0.11 - (z - 0.09) * 0.7:
+                C.sphere("glint", (x, -0.008, z), (0.012, 0.003, 0.008), lm, root, 8)
+    else:
+        C.tube("crease", [(0, -0.008, 0.1), (0, -0.008, 0.235)], 0.003, lm, root)
+    return root
+
+
 GEN = {k: v for k, v in globals().items() if k in REGISTRY}
 
 

@@ -5828,5 +5828,65 @@
   "engine": "gemini",
   "voice": "Umbriel",
   "dev": 2.86
+ },
+ "ep_cubito_sombra_t1": {
+  "hash": "7349598401b7",
+  "dur": 2.77,
+  "text": "¡Mi cubito viaja en coche al vaso de Ruki!",
+  "asr": 0.89,
+  "heard": "Mi cubito viaja en coche al vaso de Rook.",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": 4.6
+ },
+ "ep_cubito_sombra_r2": {
+  "hash": "4f1ba2de3e26",
+  "dur": 5.74,
+  "text": "¿Cuál llegará entero, el del sol o el de la sombra?",
+  "asr": 1.0,
+  "heard": "¿Cuál llegará entero el del sol o el de la sombra?",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 1.86
+ },
+ "ep_cubito_sombra_r3": {
+  "hash": "515f27760221",
+  "dur": 3.0,
+  "text": "¡Y el de la sombra llega entero!",
+  "asr": 1.0,
+  "heard": "y el de la sombra llega entero.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 0.86
+ },
+ "ep_cubito_sombra_t2": {
+  "hash": "b1c90d5afa40",
+  "dur": 2.38,
+  "text": "¡Otra vez! ¡Ahora con dos cubitos!",
+  "asr": 0.83,
+  "heard": "¡Ostra vez, ahora con dos cubitos!",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": -9.0
+ },
+ "ep_cubito_sombra_t3": {
+  "hash": "399a44aeaee8",
+  "dur": 1.56,
+  "text": "¡El del sol se derrite!",
+  "asr": 1.0,
+  "heard": "El del sol se derrite.",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": 1.2
+ },
+ "ep_cubito_sombra_t4": {
+  "hash": "be097eb9caed",
+  "dur": 2.68,
+  "text": "¡Al vaso! ¡Zumo fresquito para los dos!",
+  "asr": 1.0,
+  "heard": "Al vaso, zumo fresquito para los dos.",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": 3.5
  }
 }

@@ -5938,5 +5938,15 @@
   "engine": "gemini",
   "voice": "Puck",
   "dev": 0.0
+ },
+ "ep_agua_camina_r1": {
+  "hash": "f16c583f0aee",
+  "dur": 3.94,
+  "text": "¿Y si le hacemos un puente de papel de cocina?",
+  "asr": 1.0,
+  "heard": "y si le hacemos un puente de papel de cocina.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 2.56
  }
 }

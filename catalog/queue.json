@@ -753,5 +753,27 @@
       "pimo"
     ],
     "batch": "37_plus"
+  },
+  {
+    "id": "agua_camina",
+    "template": "episode",
+    "status": "draft",
+    "title": "El agua que cruzaba el puente",
+    "cast": [
+      "tuki",
+      "ruki"
+    ],
+    "batch": "37_plus"
+  },
+  {
+    "id": "ventana_papel",
+    "template": "episode",
+    "status": "draft",
+    "title": "La ventana que brillaba",
+    "cast": [
+      "luma",
+      "bolita"
+    ],
+    "batch": "37_plus"
   }
 ]

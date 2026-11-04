@@ -5705,5 +5705,163 @@
    }
   ],
   "order": 71
+ },
+ "agua_camina": {
+  "env": "casa",
+  "family": "pastel",
+  "decor": [
+   {
+    "prop": "ball_basket",
+    "style": 2,
+    "seed": 260609,
+    "loc": [
+     -4.67,
+     0.62,
+     0.0
+    ],
+    "scale": 0.91,
+    "rot": 19.2
+   },
+   {
+    "prop": "led_lantern",
+    "style": 1,
+    "seed": 335772,
+    "loc": [
+     4.82,
+     3.18,
+     0.0
+    ],
+    "scale": 0.9,
+    "rot": 24.6
+   },
+   {
+    "prop": "floor_lamp",
+    "style": 1,
+    "seed": 106275,
+    "loc": [
+     -1.39,
+     3.01,
+     0.0
+    ],
+    "scale": 1.17,
+    "rot": 10.4
+   },
+   {
+    "prop": "planter_box",
+    "style": 0,
+    "seed": 780609,
+    "loc": [
+     2.32,
+     3.86,
+     0.0
+    ],
+    "scale": 0.98,
+    "rot": -10.5
+   },
+   {
+    "prop": "pebbles",
+    "style": 2,
+    "seed": 903783,
+    "loc": [
+     3.19,
+     2.68,
+     0.0
+    ],
+    "scale": 1.04,
+    "rot": 13.8
+   },
+   {
+    "prop": "flower_pot",
+    "style": 1,
+    "seed": 879198,
+    "loc": [
+     -2.38,
+     2.61,
+     0.0
+    ],
+    "scale": 0.85,
+    "rot": 18.2
+   }
+  ],
+  "order": 72
+ },
+ "ventana_papel": {
+  "env": "casa",
+  "family": "pastel",
+  "decor": [
+   {
+    "prop": "pouf",
+    "style": 1,
+    "seed": 848676,
+    "loc": [
+     -1.27,
+     3.96,
+     0.0
+    ],
+    "scale": 1.09,
+    "rot": 22.9
+   },
+   {
+    "prop": "soft_token",
+    "style": 1,
+    "seed": 631426,
+    "loc": [
+     -3.69,
+     1.93,
+     0.0
+    ],
+    "scale": 1.07,
+    "rot": -31.5
+   },
+   {
+    "prop": "bunting",
+    "style": 0,
+    "seed": 702110,
+    "loc": [
+     -1.95,
+     1.86,
+     0.0
+    ],
+    "scale": 1.05,
+    "rot": 13.9
+   },
+   {
+    "prop": "play_mat",
+    "style": 0,
+    "seed": 475529,
+    "loc": [
+     -4.66,
+     1.84,
+     0.0
+    ],
+    "scale": 1.15,
+    "rot": -1.6
+   },
+   {
+    "prop": "toy_blocks",
+    "style": 1,
+    "seed": 212897,
+    "loc": [
+     1.27,
+     2.75,
+     0.0
+    ],
+    "scale": 1.09,
+    "rot": -20.4
+   },
+   {
+    "prop": "planter_box",
+    "style": 2,
+    "seed": 601535,
+    "loc": [
+     2.17,
+     1.61,
+     0.0
+    ],
+    "scale": 1.01,
+    "rot": -0.9
+   }
+  ],
+  "order": 73
  }
 }

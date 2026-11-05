@@ -26,7 +26,7 @@ CSC = 3.0
 KC = CSC / 2.4
 ca = spawn('clear_cup', 1, 2201, 'fresh', (XA, CY, ZB), CSC, 0)
 cb = spawn('clear_cup', 1, 2202, 'candy', (XB, CY, ZB), CSC, 0)
-WM = MA((0.25, 0.5, 1.0), 0.8, rough=0.05, emit=0.2)
+WM = MA((0.01, 0.2, 0.9), 1.0, rough=0.05, emit=0.25)
 
 
 def water(cup):
@@ -38,12 +38,24 @@ def water(cup):
 
 
 wa, wb = water(ca), water(cb)
+for cup in (ca, cb):
+    for o in cup.children_recursive:
+        for m in (getattr(o.data, 'materials', None) or []):
+            if m and m.name.startswith('pa') and m is not WM:
+                b = m.node_tree.nodes['Principled BSDF']
+                if b.inputs['Alpha'].default_value < 0.3:
+                    b.inputs['Alpha'].default_value = 0.1
+                    b.inputs['Coat Weight'].default_value = 0.25
 LA, LB, LE = 0.86, 0.001, 0.44
 K(wa, 'scale', 0, (1, 1, LA))
 for f in range(4, 52, 6):
     K(wa, 'scale', f, (1.0 + 0.03 * ((f // 6) % 2), 1.0 + 0.03 * ((f // 6) % 2), LA + 0.03 * ((f // 6) % 2)))
 K(wa, 'scale', 56, (1, 1, LA))
 K(wb, 'scale', 0, (1, 1, LB))
+for o in wb.children:
+    for f, h in ((0, True), (523, True), (524, False)):
+        o.hide_render = h
+        o.keyframe_insert('hide_render', frame=f)
 K(wa, 'scale', 520, (1, 1, LA))
 K(wb, 'scale', 520, (1, 1, LB))
 K(wa, 'scale', 740, (1, 1, LE + 0.02))
@@ -93,7 +105,7 @@ K(strip, 'scale', 175, (1, 1, 1))
 K(strip, 'location', 175, (0, 0, 0.4))
 K(strip, 'location', 186, (0, 0, 0))
 
-DM = MA((0.3, 0.55, 1.0), 0.85, rough=0.05, emit=0.35)
+DM = MA((0.01, 0.2, 0.9), 1.0, rough=0.05, emit=0.25)
 half = [k for k in range(len(PTS)) if S[k] >= 0.52]
 for j, f0 in enumerate((524, 540, 556, 572, 590, 610, 632)):
     d = C.empty('drop', None, tuple(PTS[half[0]]))
@@ -154,7 +166,7 @@ for a, b, pose in ((60, 196, W), (198, 330, WQ), (332, 424, W), (426, 516, CSN),
 tuki = make('tuki', 1.4)
 ruki = make('ruki', 1.45)
 TK0 = Vector((-1.0, -1.3, Z0))
-RK0 = Vector((1.08, -1.05, Z0))
+RK0 = Vector((0.98, -0.62, Z0))
 T.place(tuki, 0, TK0)
 T.turn(tuki, 0, 55)
 gesture(tuki, 'breathe', 10)

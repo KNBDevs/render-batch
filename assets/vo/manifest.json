@@ -5948,5 +5948,135 @@
   "engine": "gemini",
   "voice": "Umbriel",
   "dev": 2.56
+ },
+ "ep_agua_camina_r2": {
+  "hash": "4eba6e96e6d1",
+  "dur": 3.42,
+  "text": "¡Y el agua baja al vaso vacío!",
+  "asr": 1.0,
+  "heard": "y el agua baja al vaso vacío.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 7.26
+ },
+ "ep_agua_camina_r3": {
+  "hash": "2593dece3027",
+  "dur": 4.66,
+  "text": "El papel chupa el agua y la lleva poquito a poco.",
+  "asr": 1.0,
+  "heard": "El papel chupa el agua y la lleva poquito a poco.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 7.06
+ },
+ "ep_agua_camina_t1": {
+  "hash": "53d145dfdb1e",
+  "dur": 2.47,
+  "text": "¡Salta, agua, salta al otro vaso!",
+  "asr": 1.0,
+  "heard": "¡Salta agua! ¡Salta al otro vaso!",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": -7.6
+ },
+ "ep_agua_camina_t3": {
+  "hash": "aa17276ec552",
+  "dur": 2.13,
+  "text": "¡El papel se está poniendo azul!",
+  "asr": 1.0,
+  "heard": "El papel se está poniendo azul.",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": -3.15
+ },
+ "ep_agua_camina_t2": {
+  "hash": "9a310f5de5a4",
+  "dur": 2.63,
+  "text": "¿Llegará el agua al vaso vacío: sí o no?",
+  "asr": 0.83,
+  "heard": "Llegará el agua al vaso vacío, ¿sí?",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": -8.2
+ },
+ "ep_agua_camina_t4": {
+  "hash": "d01c1a52b9ca",
+  "dur": 2.33,
+  "text": "¡Ha llegado! ¡Los dos vasos tienen agua!",
+  "asr": 1.0,
+  "heard": "¡Ha llegado! ¡Los dos vasos tienen agua!",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": 2.0
+ },
+ "ep_ventana_papel_b1": {
+  "hash": "7ad5ae6eda67",
+  "dur": 1.26,
+  "text": "¡Metemos la linterna dentro!",
+  "asr": 0.8,
+  "heard": "¡Metemos la linterna!",
+  "engine": "gemini",
+  "voice": "Zephyr",
+  "dev": -0.55
+ },
+ "ep_ventana_papel_b3": {
+  "hash": "7eb4687d0bce",
+  "dur": 3.81,
+  "text": "El papel fino deja pasar la luz; el cartón, no.",
+  "asr": 1.0,
+  "heard": "El papel fino deja pasar la luz. El cartón no.",
+  "engine": "gemini",
+  "voice": "Zephyr",
+  "dev": -2.3
+ },
+ "ep_ventana_papel_b2": {
+  "hash": "4b1ccc5d3b48",
+  "dur": 1.42,
+  "text": "¡La de papel brilla!",
+  "asr": 0.75,
+  "heard": "La de Papel Grisia",
+  "engine": "gemini",
+  "voice": "Zephyr",
+  "dev": -5.45
+ },
+ "ep_ventana_papel_l1": {
+  "hash": "b43acb2268f5",
+  "dur": 2.48,
+  "text": "¡Mi casita de cartón está a oscuras!",
+  "asr": 0.91,
+  "heard": "Mi casita de cartón está oscuras.",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": -1.4
+ },
+ "ep_ventana_papel_l2": {
+  "hash": "a3e02dbe4e90",
+  "dur": 3.43,
+  "text": "¿Qué ventana brillará: la de papel o la de cartón?",
+  "asr": 1.0,
+  "heard": "¿Qué ventana brillará? La de papel o la de cartón.",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": -6.5
+ },
+ "ep_ventana_papel_l3": {
+  "hash": "ddca12b210dd",
+  "dur": 1.93,
+  "text": "¡Y la de cartón sigue oscura!",
+  "asr": 1.0,
+  "heard": "Y la de cartón sigue oscura.",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": 0.1
+ },
+ "ep_ventana_papel_l4": {
+  "hash": "1e66cf7b990d",
+  "dur": 3.08,
+  "text": "¡Ahora todas mis ventanas, de papel!",
+  "asr": 1.0,
+  "heard": "Ahora todas mis ventanas de papel.",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": -3.2
  }
 }

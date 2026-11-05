@@ -757,7 +757,7 @@
   {
     "id": "agua_camina",
     "template": "episode",
-    "status": "draft",
+    "status": "approved",
     "title": "El agua que cruzaba el puente",
     "cast": [
       "tuki",
@@ -768,7 +768,7 @@
   {
     "id": "ventana_papel",
     "template": "episode",
-    "status": "draft",
+    "status": "approved",
     "title": "La ventana que brillaba",
     "cast": [
       "luma",

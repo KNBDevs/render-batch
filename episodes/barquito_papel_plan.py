@@ -4,7 +4,8 @@ MOOD = 'happy'
 ENV = 'casa'
 LINES = [
     ('m1', 'moki', '¡Mi barquito de papel se ha hundido!', 10, 2.8),
-    ('p1', 'pimo', '¿Y si hacemos otro de papel de aluminio?', 100, 3.0),
+    ('p4', 'pimo', '¿Y si hacemos otro?', 100, 1.4),
+    ('p5', 'pimo', '¡De papel de aluminio!', 140, 1.8),
     ('m2', 'moki', '¿Cuál aguantará flotando: el de papel o el de aluminio?', 236, 4.6),
     ('p2', 'pimo', '¡El de papel se empapa y se hunde!', 480, 2.6),
     ('m3', 'moki', '¡Y el de aluminio sigue flotando!', 548, 2.8),

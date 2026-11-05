@@ -5549,26 +5549,6 @@
   "voice": "Fenrir",
   "dev": -3.7
  },
- "ep_sombra_crece_t3": {
-  "hash": "00aa8afa937b",
-  "dur": 1.12,
-  "text": "¡Se hace pequeña!",
-  "asr": 1.0,
-  "heard": "Se hace pequeña.",
-  "engine": "gemini",
-  "voice": "Fenrir",
-  "dev": 0.0
- },
- "ep_sombra_crece_t4": {
-  "hash": "3c2e15a7fcef",
-  "dur": 2.46,
-  "text": "¡Otra vez gigante! ¡Hola, estrella!",
-  "asr": 1.0,
-  "heard": "¡Otra vez gigante! ¡Hola estrella!",
-  "engine": "gemini",
-  "voice": "Fenrir",
-  "dev": -1.5
- },
  "ep_sombra_crece_t2": {
   "hash": "c19a47f56ae5",
   "dur": 2.12,
@@ -5789,16 +5769,6 @@
   "voice": "Zephyr",
   "dev": -2.95
  },
- "ep_burbuja_seca_p3": {
-  "hash": "aafdd5b31f51",
-  "dur": 2.86,
-  "text": "La burbuja explota si toca algo seco.",
-  "asr": 1.0,
-  "heard": "La burbuja explota si toca algo seco.",
-  "engine": "gemini",
-  "voice": "Puck",
-  "dev": 0.0
- },
  "ep_burbuja_seca_p2": {
   "hash": "970df49aaf0f",
   "dur": 1.89,
@@ -5928,16 +5898,6 @@
   "engine": "gemini",
   "voice": "Enceladus",
   "dev": 4.55
- },
- "ep_barquito_papel_p2": {
-  "hash": "f24e07bc42b7",
-  "dur": 2.11,
-  "text": "¡El de papel se empapa y se hunde!",
-  "asr": 1.0,
-  "heard": "El de papel se empapa y se hunde.",
-  "engine": "gemini",
-  "voice": "Puck",
-  "dev": 0.0
  },
  "ep_agua_camina_r1": {
   "hash": "f16c583f0aee",

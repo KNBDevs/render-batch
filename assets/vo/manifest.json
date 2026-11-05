@@ -6038,5 +6038,15 @@
   "engine": "gemini",
   "voice": "Leda",
   "dev": -3.2
+ },
+ "ep_sombra_crece_t3": {
+  "hash": "00aa8afa937b",
+  "dur": 1.08,
+  "text": "¡Se hace pequeña!",
+  "asr": 1.0,
+  "heard": "¡Se hace pequeña!",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": 4.45
  }
 }

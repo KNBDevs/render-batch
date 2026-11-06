@@ -6148,5 +6148,65 @@
   "engine": "gemini",
   "voice": "Puck",
   "dev": 0.0
+ },
+ "ep_aceite_arriba_l1": {
+  "hash": "0970eba259ae",
+  "dur": 2.52,
+  "text": "¡Voy a mezclar el agua y el aceite!",
+  "asr": 1.0,
+  "heard": "Voy a mezclar el agua y el aceite.",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": -3.2
+ },
+ "ep_aceite_arriba_l2": {
+  "hash": "79dbbce463d3",
+  "dur": 3.46,
+  "text": "¿Dónde se quedará el aceite: arriba o abajo?",
+  "asr": 1.0,
+  "heard": "Donde se quedará el aceite arriba o abajo.",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": -3.5
+ },
+ "ep_aceite_arriba_l3": {
+  "hash": "3be76e56f941",
+  "dur": 2.19,
+  "text": "¡El aceite sube arriba otra vez!",
+  "asr": 1.0,
+  "heard": "El aceite sube arriba otra vez.",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": -1.4
+ },
+ "ep_aceite_arriba_l4": {
+  "hash": "4310717990be",
+  "dur": 2.18,
+  "text": "¡Aceite arriba, agua abajo!",
+  "asr": 1.0,
+  "heard": "Aceite arriba, agua abajo",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": -2.0
+ },
+ "ep_aceite_arriba_m2": {
+  "hash": "c6519f8ff926",
+  "dur": 2.3,
+  "text": "¡Mira, se está separando!",
+  "asr": 1.0,
+  "heard": "¡Mira! ¡Se está separando!",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": -6.45
+ },
+ "ep_aceite_arriba_m3": {
+  "hash": "b15fb432b974",
+  "dur": 4.59,
+  "text": "El aceite es más ligero que el agua y se queda flotando encima.",
+  "asr": 1.0,
+  "heard": "El aceite es más ligero que el agua y se queda flotando encima.",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": -4.05
  }
 }

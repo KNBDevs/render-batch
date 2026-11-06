@@ -691,7 +691,7 @@
   {
     "id": "sombra_crece",
     "template": "episode",
-    "status": "draft",
+    "status": "approved",
     "title": "La estrella que se hacía gigante",
     "cast": [
       "tuki",
@@ -724,7 +724,7 @@
   {
     "id": "burbuja_seca",
     "template": "episode",
-    "status": "draft",
+    "status": "approved",
     "title": "La burbuja que no explotaba",
     "cast": [
       "bolita",
@@ -746,7 +746,7 @@
   {
     "id": "barquito_papel",
     "template": "episode",
-    "status": "draft",
+    "status": "approved",
     "title": "El barquito que aguantaba",
     "cast": [
       "moki",

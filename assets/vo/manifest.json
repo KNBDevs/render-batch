@@ -6048,5 +6048,105 @@
   "engine": "gemini",
   "voice": "Fenrir",
   "dev": 4.45
+ },
+ "ep_sombra_crece_t5": {
+  "hash": "ecc48ad966b9",
+  "dur": 1.42,
+  "text": "¡Otra vez gigante!",
+  "asr": 1.0,
+  "heard": "¡Otra vez gigante!",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": 4.5
+ },
+ "ep_sombra_crece_t6": {
+  "hash": "9c39fa3e176e",
+  "dur": 1.09,
+  "text": "¡Hola, estrella!",
+  "asr": 1.0,
+  "heard": "¡Hola estrella!",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": 0.0
+ },
+ "ep_barquito_papel_p4": {
+  "hash": "4f0b3c25cd31",
+  "dur": 1.29,
+  "text": "¿Y si hacemos otro?",
+  "asr": 1.0,
+  "heard": "¿Y si hacemos otro?",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": 0.0
+ },
+ "ep_burbuja_seca_p5": {
+  "hash": "47965349330c",
+  "dur": 1.38,
+  "text": "¡Con agua y jabón!",
+  "asr": 1.0,
+  "heard": "¡Con agua y jabón!",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": 0.0
+ },
+ "ep_barquito_papel_p5": {
+  "hash": "c3372e81400c",
+  "dur": 1.54,
+  "text": "¡De papel de aluminio!",
+  "asr": 1.0,
+  "heard": "de papel de aluminio",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": -7.6
+ },
+ "ep_barquito_papel_p2": {
+  "hash": "f24e07bc42b7",
+  "dur": 2.1,
+  "text": "¡El de papel se empapa y se hunde!",
+  "asr": 1.0,
+  "heard": "El de papel se empapa y se hunde.",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": -6.2
+ },
+ "ep_barquito_papel_p7": {
+  "hash": "e6d6b6beef6b",
+  "dur": 1.27,
+  "text": "El aluminio, no.",
+  "asr": 1.0,
+  "heard": "El aluminio, ¿no?",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": -7.6
+ },
+ "ep_burbuja_seca_p3": {
+  "hash": "aafdd5b31f51",
+  "dur": 2.7,
+  "text": "La burbuja explota si toca algo seco.",
+  "asr": 1.0,
+  "heard": "La burbuja explota si toca algo seco.",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": -6.3
+ },
+ "ep_barquito_papel_p6": {
+  "hash": "5cf453bfc28b",
+  "dur": 2.32,
+  "text": "El papel se empapa de agua.",
+  "asr": 1.0,
+  "heard": "El papel se empapa de agua.",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": 0.0
+ },
+ "ep_burbuja_seca_p4": {
+  "hash": "371ce75c1e2a",
+  "dur": 2.09,
+  "text": "¿Y si mojamos esta bandeja?",
+  "asr": 1.0,
+  "heard": "Y si mojamos esta bandeja...",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": 0.0
  }
 }

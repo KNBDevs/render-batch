@@ -775,5 +775,17 @@
       "bolita"
     ],
     "batch": "37_plus"
+  },
+  {
+    "id": "aceite_arriba",
+    "template": "episode",
+    "status": "draft",
+    "immediate": false
+  },
+  {
+    "id": "luz_colores",
+    "template": "episode",
+    "status": "draft",
+    "immediate": false
   }
 ]

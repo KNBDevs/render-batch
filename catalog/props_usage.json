@@ -5863,5 +5863,163 @@
    }
   ],
   "order": 73
+ },
+ "aceite_arriba": {
+  "env": "casa",
+  "family": "pastel",
+  "decor": [
+   {
+    "prop": "planter_box",
+    "style": 1,
+    "seed": 932113,
+    "loc": [
+     -3.49,
+     1.63,
+     0.0
+    ],
+    "scale": 1.01,
+    "rot": 34.3
+   },
+   {
+    "prop": "floor_lamp",
+    "style": 2,
+    "seed": 99708,
+    "loc": [
+     -4.4,
+     2.38,
+     0.0
+    ],
+    "scale": 1.02,
+    "rot": 0.2
+   },
+   {
+    "prop": "pebbles",
+    "style": 1,
+    "seed": 335447,
+    "loc": [
+     -2.5,
+     2.2,
+     0.0
+    ],
+    "scale": 0.92,
+    "rot": -1.2
+   },
+   {
+    "prop": "play_mat",
+    "style": 1,
+    "seed": 102891,
+    "loc": [
+     1.12,
+     3.58,
+     0.0
+    ],
+    "scale": 1.06,
+    "rot": 28.5
+   },
+   {
+    "prop": "soft_token",
+    "style": 2,
+    "seed": 587177,
+    "loc": [
+     2.48,
+     3.88,
+     0.0
+    ],
+    "scale": 0.96,
+    "rot": -19.6
+   },
+   {
+    "prop": "pouf",
+    "style": 2,
+    "seed": 902555,
+    "loc": [
+     -1.09,
+     3.83,
+     0.0
+    ],
+    "scale": 0.96,
+    "rot": 6.3
+   }
+  ],
+  "order": 74
+ },
+ "luz_colores": {
+  "env": "casa",
+  "family": "pastel",
+  "decor": [
+   {
+    "prop": "ball_basket",
+    "style": 0,
+    "seed": 645018,
+    "loc": [
+     3.45,
+     1.0,
+     0.0
+    ],
+    "scale": 0.95,
+    "rot": -8.0
+   },
+   {
+    "prop": "led_lantern",
+    "style": 2,
+    "seed": 333546,
+    "loc": [
+     4.75,
+     3.23,
+     0.0
+    ],
+    "scale": 0.99,
+    "rot": -5.2
+   },
+   {
+    "prop": "flower_pot",
+    "style": 2,
+    "seed": 192578,
+    "loc": [
+     2.42,
+     3.93,
+     0.0
+    ],
+    "scale": 1.2,
+    "rot": -31.3
+   },
+   {
+    "prop": "bunting",
+    "style": 2,
+    "seed": 222924,
+    "loc": [
+     1.08,
+     3.45,
+     0.0
+    ],
+    "scale": 1.22,
+    "rot": 9.1
+   },
+   {
+    "prop": "toy_blocks",
+    "style": 0,
+    "seed": 72464,
+    "loc": [
+     -4.77,
+     2.94,
+     0.0
+    ],
+    "scale": 1.15,
+    "rot": -3.4
+   },
+   {
+    "prop": "play_mat",
+    "style": 2,
+    "seed": 917891,
+    "loc": [
+     -1.06,
+     2.5,
+     0.0
+    ],
+    "scale": 0.97,
+    "rot": -3.9
+   }
+  ],
+  "order": 75
  }
 }

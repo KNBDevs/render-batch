@@ -9,7 +9,8 @@ LINES = [
     ('m2', 'moki', '¿Cuál aguantará flotando: el de papel o el de aluminio?', 236, 4.6),
     ('p2', 'pimo', '¡El de papel se empapa y se hunde!', 480, 2.6),
     ('m3', 'moki', '¡Y el de aluminio sigue flotando!', 548, 2.8),
-    ('p3', 'pimo', 'El papel se empapa de agua; el aluminio, no.', 624, 3.4),
+    ('p6', 'pimo', 'El papel se empapa de agua.', 624, 2.0),
+    ('p7', 'pimo', 'El aluminio, no.', 682, 1.4),
     ('m4', 'moki', '¡Barquito de aluminio, a navegar!', 752, 2.8),
 ]
 SFX = [(2, 'sparkle', 0.12), (30, 'drip', 0.12), (36, 'whistle_down', 0.1), (44, 'pop', 0.08), (152, 'pop', 0.12),

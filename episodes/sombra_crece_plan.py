@@ -10,7 +10,8 @@ LINES = [
     ('t3', 'tuki', '¡Se hace pequeña!', 430, 1.8),
     ('l3', 'luma', 'Cerca de la luz, la sombra es grande.', 510, 3.0),
     ('l4', 'luma', 'Lejos de la luz, la sombra es pequeña.', 610, 3.0),
-    ('t4', 'tuki', '¡Otra vez gigante! ¡Hola, estrella!', 730, 3.0),
+    ('t5', 'tuki', '¡Otra vez gigante!', 730, 1.5),
+    ('t6', 'tuki', '¡Hola, estrella!', 774, 1.4),
 ]
 SFX = [(2, 'sparkle', 0.14), (60, 'pop', 0.12), (300, 'bip', 0.12), (306, 'bip', 0.12), (372, 'whistle_down', 0.1),
        (420, 'pop', 0.14), (470, 'sparkle', 0.14), (530, 'whistle_up', 0.1), (630, 'whistle_down', 0.1), (712, 'whistle_up', 0.1),

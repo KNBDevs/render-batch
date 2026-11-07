@@ -785,7 +785,7 @@
   {
     "id": "luz_colores",
     "template": "episode",
-    "status": "draft",
+    "status": "approved",
     "immediate": false
   }
 ]

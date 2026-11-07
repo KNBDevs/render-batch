@@ -6278,5 +6278,15 @@
   "engine": "gemini",
   "voice": "Iapetus",
   "dev": -2.95
+ },
+ "ep_aceite_arriba_m1": {
+  "hash": "67f50a4cf4ea",
+  "dur": 2.08,
+  "text": "¡Sacude la botella muy fuerte!",
+  "asr": 1.0,
+  "heard": "sacude la botella muy fuerte",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": -0.5
  }
 }

@@ -6288,5 +6288,45 @@
   "engine": "gemini",
   "voice": "Enceladus",
   "dev": -0.5
+ },
+ "ep_globo_papelitos_b1": {
+  "hash": "77ae9431fb85",
+  "dur": 2.62,
+  "text": "¿Y si frotamos el globo con esta bufanda de lana?",
+  "asr": 0.75,
+  "heard": "Y si frotamos el globo con esta bufandaguela...",
+  "engine": "gemini",
+  "voice": "Zephyr",
+  "dev": -1.35
+ },
+ "ep_globo_papelitos_b2": {
+  "hash": "6eee6f20d6e2",
+  "dur": 2.16,
+  "text": "¡Mira, los papelitos saltan!",
+  "asr": 1.0,
+  "heard": "¡Mira, los papelitos saltan!",
+  "engine": "gemini",
+  "voice": "Zephyr",
+  "dev": 0.8
+ },
+ "ep_globo_papelitos_b3": {
+  "hash": "b3665efc41b8",
+  "dur": 3.07,
+  "text": "Al frotar el globo con lana, atrae los papelitos.",
+  "asr": 1.0,
+  "heard": "Al frotar el globo con lana atrae los papelitos.",
+  "engine": "gemini",
+  "voice": "Zephyr",
+  "dev": -1.05
+ },
+ "ep_globo_papelitos_t2": {
+  "hash": "efbc1d4061b8",
+  "dur": 2.72,
+  "text": "¿Subirán los papelitos al globo: sí o no?",
+  "asr": 1.0,
+  "heard": "Subirán los papelitos al globo, ¿sí o no?",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": -2.6
  }
 }

@@ -6021,5 +6021,84 @@
    }
   ],
   "order": 75
+ },
+ "globo_papelitos": {
+  "env": "casa",
+  "family": "pastel",
+  "decor": [
+   {
+    "prop": "pebbles",
+    "style": 0,
+    "seed": 508274,
+    "loc": [
+     1.28,
+     2.67,
+     0.0
+    ],
+    "scale": 1.0,
+    "rot": -8.1
+   },
+   {
+    "prop": "flower_pot",
+    "style": 0,
+    "seed": 144169,
+    "loc": [
+     3.27,
+     3.14,
+     0.0
+    ],
+    "scale": 1.16,
+    "rot": -28.0
+   },
+   {
+    "prop": "soft_token",
+    "style": 0,
+    "seed": 333722,
+    "loc": [
+     -4.89,
+     1.43,
+     0.0
+    ],
+    "scale": 1.01,
+    "rot": -6.4
+   },
+   {
+    "prop": "ball_basket",
+    "style": 1,
+    "seed": 844664,
+    "loc": [
+     4.44,
+     0.5,
+     0.0
+    ],
+    "scale": 0.93,
+    "rot": -2.7
+   },
+   {
+    "prop": "bunting",
+    "style": 0,
+    "seed": 758677,
+    "loc": [
+     2.1,
+     2.29,
+     0.0
+    ],
+    "scale": 0.91,
+    "rot": -0.6
+   },
+   {
+    "prop": "led_lantern",
+    "style": 1,
+    "seed": 556014,
+    "loc": [
+     -2.08,
+     1.9,
+     0.0
+    ],
+    "scale": 0.94,
+    "rot": 32.0
+   }
+  ],
+  "order": 76
  }
 }

@@ -4,7 +4,7 @@ MOOD = 'happy'
 ENV = 'casa'
 LINES = [
     ('l1', 'luma', '¡Voy a mezclar el agua y el aceite!', 10, 2.6),
-    ('m1', 'moki', 'Agítala fuerte, fuerte.', 92, 2.2),
+    ('m1', 'moki', '¡Sacude la botella muy fuerte!', 92, 2.4),
     ('l2', 'luma', '¿Dónde se quedará el aceite: arriba o abajo?', 196, 4.0),
     ('m2', 'moki', '¡Mira, se está separando!', 404, 2.2),
     ('l3', 'luma', '¡El aceite sube arriba otra vez!', 470, 2.6),

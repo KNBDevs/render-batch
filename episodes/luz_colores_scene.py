@@ -84,7 +84,7 @@ def power(sp, f, v):
 
 
 P = 110
-for sp, fo in ((spr, 4), (spb, 40)):
+for sp, fo in ((spr, 4), (spb, 114)):
     power(sp, 0, 0)
     power(sp, fo, 0)
     power(sp, fo + 3, P)
@@ -128,8 +128,8 @@ def label(txt, rgb, loc, w, f_in, f_out, h=0.27, sz=0.2):
 MOR = (0.45, 0.15, 0.7)
 FUC = (1.0, 0.1, 0.65)
 TOPZ = Z0 + SZ + SH / 2 + 0.3
-label('¿MORADO?', MOR, (SX - 0.5, SY - 0.6, TOPZ), 1.05, 230, 344)
-label('¿ROSA?', FUC, (SX + 0.52, SY - 0.6, TOPZ + 0.3), 0.85, 236, 344)
+label('¿MORADO?', MOR, (SX - 0.5, SY - 0.6, TOPZ), 1.05, 270, 348)
+label('¿ROSA?', FUC, (SX + 0.52, SY - 0.6, TOPZ + 0.3), 0.85, 278, 348)
 label('LUZ', FUC, (SX + 0.4, SY - 0.45, Z0 + SZ + 0.36), 0.55, 560, 684, 0.22, 0.16)
 
 pc = C.empty('paint_card', None, (SX - 0.3, SY - 0.55, Z0 + SZ + 0.4))
@@ -152,7 +152,7 @@ WE = ((0.0, -5.1, 1.8), (0.0, -1.3, 0.95), 19.5)
 camkey(0, OP)
 camkey(30, OP)
 camkey(58, OP2)
-for a, b, pose in ((60, 190, W), (192, 350, WQ), (352, 466, CS), (468, 552, WQ), (554, 688, CS2), (690, TOTAL - 1, WE)):
+for a, b, pose in ((60, 236, W), (238, 350, WQ), (352, 466, CS), (468, 552, WQ), (554, 688, CS2), (690, TOTAL - 1, WE)):
     camkey(a, pose)
     camkey(b, pose)
 
@@ -165,16 +165,16 @@ T.turn(bopi, 0, 30)
 T.arm(bopi, 'R', 8, 0, None)
 T.arm(bopi, 'R', 14, fwd=-90, out=30)
 T.arm(bopi, 'R', 36, fwd=-90, out=30)
-T.arm(bopi, 'L', 38, 0, None)
-T.arm(bopi, 'L', 44, fwd=-90, out=30)
 T.rest_arm(bopi, 'R', 50)
-T.rest_arm(bopi, 'L', 70)
-T.turn(bopi, 196, 15)
-T.arm(bopi, 'R', 200, 0, None)
-T.arm(bopi, 'R', 206, fwd=-150, out=25)
-T.arm(bopi, 'R', 246, fwd=-150, out=25)
-T.rest_arm(bopi, 'R', 256)
-T.turn(bopi, 300, 30)
+T.arm(bopi, 'L', 104, 0, None)
+T.arm(bopi, 'L', 110, fwd=-90, out=30)
+T.rest_arm(bopi, 'L', 140)
+T.turn(bopi, 240, 15)
+T.arm(bopi, 'R', 246, 0, None)
+T.arm(bopi, 'R', 252, fwd=-150, out=25)
+T.arm(bopi, 'R', 292, fwd=-150, out=25)
+T.rest_arm(bopi, 'R', 302)
+T.turn(bopi, 320, 30)
 gesture(bopi, 'hops', 470)
 T.turn(bopi, 556, 35)
 T.arm(bopi, 'R', 700, 0, None)
@@ -186,12 +186,12 @@ C.wave(bopi, 'L', 826, cycles=2, period=8)
 
 T.place(ruki, 0, RK0)
 T.turn(ruki, 0, -30)
-T.arm(ruki, 'L', 108, 0, None)
-T.arm(ruki, 'L', 114, fwd=-110, out=45)
-T.arm(ruki, 'L', 130, fwd=-110, out=15)
-T.arm(ruki, 'L', 146, fwd=-110, out=45)
-T.arm(ruki, 'L', 162, fwd=-110, out=15)
-T.rest_arm(ruki, 'L', 172)
+T.arm(ruki, 'L', 150, 0, None)
+T.arm(ruki, 'L', 156, fwd=-110, out=45)
+T.arm(ruki, 'L', 172, fwd=-110, out=15)
+T.arm(ruki, 'L', 188, fwd=-110, out=45)
+T.arm(ruki, 'L', 204, fwd=-110, out=15)
+T.rest_arm(ruki, 'L', 214)
 T.turn(ruki, 300, -20)
 for side in ('L', 'R'):
     T.arm(ruki, side, 412, 0, None)

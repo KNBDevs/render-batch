@@ -6208,5 +6208,75 @@
   "engine": "gemini",
   "voice": "Enceladus",
   "dev": -4.05
+ },
+ "ep_luz_colores_r1": {
+  "hash": "787455fad326",
+  "dur": 3.81,
+  "text": "¿Y si juntamos las dos luces en la pantalla?",
+  "asr": 1.0,
+  "heard": "y si juntamos las dos luces en la pantalla.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 5.56
+ },
+ "ep_luz_colores_r3": {
+  "hash": "dd0b803d2d85",
+  "dur": 4.24,
+  "text": "Las luces de colores se mezclan distinto que las pinturas.",
+  "asr": 1.0,
+  "heard": "Las luces de colores se mezclan distinto que las pinturas.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 4.06
+ },
+ "ep_luz_colores_r2": {
+  "hash": "53b44c2d525e",
+  "dur": 1.88,
+  "text": "¡Sale rosa fucsia!",
+  "asr": 1.0,
+  "heard": "Sale rosa fucsia.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 5.11
+ },
+ "ep_luz_colores_b1": {
+  "hash": "ce261331bd22",
+  "dur": 5.46,
+  "text": "Linterna roja: encendida. Linterna azul: encendida.",
+  "asr": 1.0,
+  "heard": "Linterna roja encendida. Linterna azul encendida.",
+  "engine": "gemini",
+  "voice": "Iapetus",
+  "dev": -2.1
+ },
+ "ep_luz_colores_b2": {
+  "hash": "1917093be9b1",
+  "dur": 3.28,
+  "text": "¿Qué color saldrá: morado o rosa?",
+  "asr": 0.83,
+  "heard": "E color saldrá, morado o rosa.",
+  "engine": "gemini",
+  "voice": "Iapetus",
+  "dev": -6.2
+ },
+ "ep_luz_colores_b3": {
+  "hash": "ddd5e6b02155",
+  "dur": 2.36,
+  "text": "¡No es morado, como con la pintura!",
+  "asr": 1.0,
+  "heard": "No es morado como con la pintura.",
+  "engine": "gemini",
+  "voice": "Iapetus",
+  "dev": -5.15
+ },
+ "ep_luz_colores_b4": {
+  "hash": "4ee8550498d0",
+  "dur": 3.65,
+  "text": "¡Luz roja y luz azul: rosa fucsia!",
+  "asr": 1.0,
+  "heard": "Luz roja y luz azul, rosa fucsia.",
+  "engine": "gemini",
+  "voice": "Iapetus",
+  "dev": -2.95
  }
 }

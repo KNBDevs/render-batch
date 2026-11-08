@@ -803,7 +803,7 @@
   {
     "id": "barco_vela",
     "template": "episode",
-    "status": "draft",
+    "status": "approved",
     "immediate": false
   }
 ]

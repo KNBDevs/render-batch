@@ -13,7 +13,7 @@ LINES = [
 ]
 SFX = [(2, 'sparkle', 0.12), (60, 'bip', 0.1), (180, 'tock', 0.08), (196, 'tock', 0.08), (276, 'bip', 0.15),
        (282, 'bip', 0.15), (400, 'bip', 0.12), (404, 'sparkle', 0.18), (468, 'tock', 0.08), (566, 'sparkle', 0.12),
-       (620, 'tock', 0.08), (706, 'tock', 0.08), (740, 'tock', 0.08), (786, 'boing_up', 0.1), (806, 'pop', 0.14),
+       (556, 'tock', 0.08), (626, 'tock', 0.08), (706, 'tock', 0.08), (750, 'tock', 0.08), (794, 'tock', 0.08), (786, 'boing_up', 0.1), (806, 'pop', 0.14),
        (812, 'sparkle', 0.2)]
 META = {
     'title': '¿Vaso o plato? 🔦 ¿Por dónde pasará la luz? #shorts',

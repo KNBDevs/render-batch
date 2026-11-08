@@ -3,13 +3,13 @@ TOTAL = 864
 MOOD = 'happy'
 ENV = 'casa'
 LINES = [
-    ('m1', 'moki', '¡Barquito, navega hasta la otra orilla!', 10, 2.8),
-    ('b1', 'bopi', '¿Y si le ponemos una vela?', 92, 2.4),
-    ('m2', 'moki', '¿Qué barco llegará: el de vela o el que no tiene vela?', 246, 3.8),
-    ('b2', 'bopi', '¡Mira, el barco de vela avanza!', 410, 2.4),
-    ('m3', 'moki', '¡Ha llegado a la otra orilla!', 474, 2.2),
-    ('b3', 'bopi', 'La vela atrapa el viento y el viento empuja el barco.', 556, 4.0),
-    ('m4', 'moki', '¡Con vela, el viento te lleva!', 700, 2.4),
+    ('m1', 'moki', '¡Barquito, navega hasta la otra orilla!', 10, 3.3),
+    ('b1', 'bopi', '¿Y si le ponemos una vela?', 92, 4.6),
+    ('m2', 'moki', '¿Qué barco llegará: el de vela o el que no tiene vela?', 246, 5.2),
+    ('b2', 'bopi', '¡Mira, el barco de vela avanza!', 400, 4.1),
+    ('m3', 'moki', '¡Ha llegado a la otra orilla!', 500, 2.5),
+    ('b3', 'bopi', 'La vela atrapa el viento y el viento empuja el barco.', 562, 6.2),
+    ('m4', 'moki', '¡Con vela, el viento te lleva!', 712, 2.9),
 ]
 SFX = [(2, 'sparkle', 0.12), (40, 'tock', 0.08), (130, 'pop', 0.12), (182, 'pop', 0.1), (276, 'bip', 0.15),
        (282, 'bip', 0.15), (340, 'whistle_up', 0.07), (470, 'sparkle', 0.18), (566, 'sparkle', 0.12), (730, 'pop', 0.12),

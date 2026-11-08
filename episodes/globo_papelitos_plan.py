@@ -3,7 +3,7 @@ TOTAL = 864
 MOOD = 'happy'
 ENV = 'casa'
 LINES = [
-    ('t1', 'tuki', '¡Papelitos, subid a mi globo!', 10, 2.4),
+    ('t5', 'tuki', '¡Papelitos, venid hasta mi globo!', 10, 2.6),
     ('b1', 'bolita', '¿Y si frotamos el globo con esta bufanda de lana?', 92, 3.4),
     ('t2', 'tuki', '¿Subirán los papelitos al globo: sí o no?', 246, 3.4),
     ('b2', 'bolita', '¡Mira, los papelitos saltan!', 410, 2.2),

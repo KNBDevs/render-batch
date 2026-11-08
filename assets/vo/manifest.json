@@ -6318,5 +6318,175 @@
   "engine": "gemini",
   "voice": "Fenrir",
   "dev": -2.6
+ },
+ "ep_globo_papelitos_b1": {
+  "hash": "77ae9431fb85",
+  "dur": 3.4,
+  "text": "¿Y si frotamos el globo con esta bufanda de lana?",
+  "asr": 1.0,
+  "heard": "Y si frotamos el globo con esta bufanda de lana.",
+  "engine": "gemini",
+  "voice": "Zephyr",
+  "dev": -4.45
+ },
+ "ep_globo_papelitos_t3": {
+  "hash": "e96c77946adf",
+  "dur": 1.82,
+  "text": "¡Se quedan pegados al globo!",
+  "asr": 1.0,
+  "heard": "¡Se quedan pegados al globo!",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": -0.2
+ },
+ "ep_globo_papelitos_t4": {
+  "hash": "fc7b6a5fba62",
+  "dur": 2.65,
+  "text": "¡Globo frotado, papelitos pegados!",
+  "asr": 1.0,
+  "heard": "Globo frotado, papelitos pegados.",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": 2.55
+ },
+ "ep_luz_vaso_plato_l1": {
+  "hash": "0be9dad12925",
+  "dur": 4.83,
+  "text": "¡La tapa el plato! ¿Y si probamos con este vaso?",
+  "asr": 0.95,
+  "heard": "La tapa y el plato.  Y si probamos con este vaso?",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": -7.8
+ },
+ "ep_luz_vaso_plato_l2": {
+  "hash": "3bbb65cb9668",
+  "dur": 2.85,
+  "text": "¡Mira, la luz pasa por el vaso!",
+  "asr": 1.0,
+  "heard": "¡Mira! La luz pasa por el vaso.",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": -5.5
+ },
+ "ep_luz_vaso_plato_l3": {
+  "hash": "0367a2a79ef4",
+  "dur": 5.74,
+  "text": "La luz atraviesa el vaso transparente, pero el plato no la deja pasar.",
+  "asr": 1.0,
+  "heard": "La luz atraviesa el vaso transparente, pero el plato no la deja pasar.",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": -7.3
+ },
+ "ep_luz_vaso_plato_r1": {
+  "hash": "86f46e221f52",
+  "dur": 2.79,
+  "text": "¿Por qué no sale la luz de mi linterna?",
+  "asr": 0.78,
+  "heard": "¿Por qué no sale la luz de mil interna?",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 1.16
+ },
+ "ep_luz_vaso_plato_r2": {
+  "hash": "aa324d2f94b8",
+  "dur": 4.18,
+  "text": "¿Por dónde pasará la luz: por el vaso o por el plato?",
+  "asr": 1.0,
+  "heard": "¿Por dónde pasará la luz? Por el vaso o por el plato.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 2.76
+ },
+ "ep_luz_vaso_plato_r3": {
+  "hash": "480b31002271",
+  "dur": 1.89,
+  "text": "¡Y el plato hace sombra!",
+  "asr": 1.0,
+  "heard": "Y el plato hace sombra.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 8.06
+ },
+ "ep_luz_vaso_plato_r4": {
+  "hash": "941012a703f2",
+  "dur": 4.74,
+  "text": "¡Vaso, luz! ¡Plato, sombra!",
+  "asr": 1.0,
+  "heard": "vaso, luz  plato, sombra",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 2.76
+ },
+ "ep_barco_vela_b1": {
+  "hash": "03d0df88a220",
+  "dur": 4.57,
+  "text": "¿Y si le ponemos una vela?",
+  "asr": 1.0,
+  "heard": "y si le ponemos una vela.",
+  "engine": "gemini",
+  "voice": "Iapetus",
+  "dev": 0.35
+ },
+ "ep_barco_vela_b2": {
+  "hash": "6e61d007aa16",
+  "dur": 4.04,
+  "text": "¡Mira, el barco de vela avanza!",
+  "asr": 1.0,
+  "heard": "¡Mira! El barco de vela avanza.",
+  "engine": "gemini",
+  "voice": "Iapetus",
+  "dev": 0.8
+ },
+ "ep_barco_vela_b3": {
+  "hash": "1371b0d782c1",
+  "dur": 6.12,
+  "text": "La vela atrapa el viento y el viento empuja el barco.",
+  "asr": 1.0,
+  "heard": "La vela atrapa el viento y el viento empuja el barco.",
+  "engine": "gemini",
+  "voice": "Iapetus",
+  "dev": 1.5
+ },
+ "ep_barco_vela_m1": {
+  "hash": "b853c6df62e0",
+  "dur": 3.3,
+  "text": "¡Barquito, navega hasta la otra orilla!",
+  "asr": 1.0,
+  "heard": "Barquito, navega hasta la otra orilla.",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": -1.5
+ },
+ "ep_barco_vela_m2": {
+  "hash": "2f91c4b7ff86",
+  "dur": 5.16,
+  "text": "¿Qué barco llegará: el de vela o el que no tiene vela?",
+  "asr": 1.0,
+  "heard": "¿Qué barco llegará el de vela o el que no tiene vela?",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": 0.6
+ },
+ "ep_barco_vela_m3": {
+  "hash": "d0d57ea5acb6",
+  "dur": 2.41,
+  "text": "¡Ha llegado a la otra orilla!",
+  "asr": 1.0,
+  "heard": "Ha llegado a la otra orilla.",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": 4.45
+ },
+ "ep_barco_vela_m4": {
+  "hash": "40aabd87cba8",
+  "dur": 2.83,
+  "text": "¡Con vela, el viento te lleva!",
+  "asr": 1.0,
+  "heard": "Con vela el viento te lleva.",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": -3.65
  }
 }

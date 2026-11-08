@@ -6289,16 +6289,6 @@
   "voice": "Enceladus",
   "dev": -0.5
  },
- "ep_globo_papelitos_b1": {
-  "hash": "77ae9431fb85",
-  "dur": 2.62,
-  "text": "¿Y si frotamos el globo con esta bufanda de lana?",
-  "asr": 0.75,
-  "heard": "Y si frotamos el globo con esta bufandaguela...",
-  "engine": "gemini",
-  "voice": "Zephyr",
-  "dev": -1.35
- },
  "ep_globo_papelitos_b2": {
   "hash": "6eee6f20d6e2",
   "dur": 2.16,

@@ -6100,5 +6100,163 @@
    }
   ],
   "order": 76
+ },
+ "luz_vaso_plato": {
+  "env": "casa",
+  "family": "pastel",
+  "decor": [
+   {
+    "prop": "bunting",
+    "style": 0,
+    "seed": 468101,
+    "loc": [
+     -2.02,
+     3.85,
+     0.0
+    ],
+    "scale": 1.23,
+    "rot": -0.3
+   },
+   {
+    "prop": "play_mat",
+    "style": 2,
+    "seed": 494960,
+    "loc": [
+     -1.0,
+     3.52,
+     0.0
+    ],
+    "scale": 1.22,
+    "rot": 7.6
+   },
+   {
+    "prop": "led_lantern",
+    "style": 1,
+    "seed": 143480,
+    "loc": [
+     -4.46,
+     2.66,
+     0.0
+    ],
+    "scale": 0.91,
+    "rot": 21.3
+   },
+   {
+    "prop": "soft_token",
+    "style": 1,
+    "seed": 749657,
+    "loc": [
+     3.17,
+     0.26,
+     0.0
+    ],
+    "scale": 1.23,
+    "rot": -33.1
+   },
+   {
+    "prop": "pouf",
+    "style": 0,
+    "seed": 572375,
+    "loc": [
+     -3.6,
+     1.12,
+     0.0
+    ],
+    "scale": 1.24,
+    "rot": 5.9
+   },
+   {
+    "prop": "toy_blocks",
+    "style": 1,
+    "seed": 618288,
+    "loc": [
+     4.49,
+     1.7,
+     0.0
+    ],
+    "scale": 1.1,
+    "rot": -19.0
+   }
+  ],
+  "order": 77
+ },
+ "barco_vela": {
+  "env": "casa",
+  "family": "pastel",
+  "decor": [
+   {
+    "prop": "floor_lamp",
+    "style": 0,
+    "seed": 830427,
+    "loc": [
+     3.47,
+     0.94,
+     0.0
+    ],
+    "scale": 1.11,
+    "rot": 25.0
+   },
+   {
+    "prop": "bunting",
+    "style": 1,
+    "seed": 173110,
+    "loc": [
+     -4.76,
+     2.5,
+     0.0
+    ],
+    "scale": 0.98,
+    "rot": -27.7
+   },
+   {
+    "prop": "led_lantern",
+    "style": 0,
+    "seed": 670764,
+    "loc": [
+     -3.23,
+     3.24,
+     0.0
+    ],
+    "scale": 0.97,
+    "rot": 33.4
+   },
+   {
+    "prop": "toy_blocks",
+    "style": 2,
+    "seed": 436168,
+    "loc": [
+     -1.93,
+     2.01,
+     0.0
+    ],
+    "scale": 1.24,
+    "rot": -15.8
+   },
+   {
+    "prop": "pebbles",
+    "style": 2,
+    "seed": 531243,
+    "loc": [
+     -1.26,
+     4.41,
+     0.0
+    ],
+    "scale": 0.95,
+    "rot": 3.0
+   },
+   {
+    "prop": "planter_box",
+    "style": 1,
+    "seed": 278907,
+    "loc": [
+     0.98,
+     4.34,
+     0.0
+    ],
+    "scale": 0.9,
+    "rot": -28.3
+   }
+  ],
+  "order": 78
  }
 }

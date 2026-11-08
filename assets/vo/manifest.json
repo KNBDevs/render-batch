@@ -6488,15 +6488,5 @@
   "engine": "gemini",
   "voice": "Enceladus",
   "dev": -3.65
- },
- "ep_globo_papelitos_t5": {
-  "hash": "c37a0a5dc654",
-  "dur": 2.07,
-  "text": "¡Papelitos, venid hasta mi globo!",
-  "asr": 0.8,
-  "heard": "Papelitos, venida hasta mi globo.",
-  "engine": "gemini",
-  "voice": "Fenrir",
-  "dev": -6.8
  }
 }

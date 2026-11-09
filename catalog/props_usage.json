@@ -6258,5 +6258,84 @@
    }
   ],
   "order": 78
+ },
+ "lupa_mariquita": {
+  "env": "casa",
+  "family": "pastel",
+  "decor": [
+   {
+    "prop": "flower_pot",
+    "style": 1,
+    "seed": 254306,
+    "loc": [
+     -2.1,
+     4.36,
+     0.0
+    ],
+    "scale": 1.19,
+    "rot": -8.8
+   },
+   {
+    "prop": "planter_box",
+    "style": 0,
+    "seed": 558254,
+    "loc": [
+     3.53,
+     2.26,
+     0.0
+    ],
+    "scale": 1.11,
+    "rot": -27.4
+   },
+   {
+    "prop": "floor_lamp",
+    "style": 1,
+    "seed": 670860,
+    "loc": [
+     4.49,
+     2.51,
+     0.0
+    ],
+    "scale": 1.06,
+    "rot": -18.8
+   },
+   {
+    "prop": "ball_basket",
+    "style": 2,
+    "seed": 623875,
+    "loc": [
+     -4.81,
+     3.33,
+     0.0
+    ],
+    "scale": 1.15,
+    "rot": 5.2
+   },
+   {
+    "prop": "soft_token",
+    "style": 0,
+    "seed": 310628,
+    "loc": [
+     -3.23,
+     0.94,
+     0.0
+    ],
+    "scale": 0.88,
+    "rot": -23.3
+   },
+   {
+    "prop": "led_lantern",
+    "style": 2,
+    "seed": 437003,
+    "loc": [
+     1.3,
+     3.11,
+     0.0
+    ],
+    "scale": 1.14,
+    "rot": 9.2
+   }
+  ],
+  "order": 79
  }
 }

@@ -791,7 +791,7 @@
   {
     "id": "globo_papelitos",
     "template": "episode",
-    "status": "draft",
+    "status": "approved",
     "immediate": false
   },
   {
@@ -804,6 +804,12 @@
     "id": "barco_vela",
     "template": "episode",
     "status": "approved",
+    "immediate": false
+  },
+  {
+    "id": "lupa_mariquita",
+    "template": "episode",
+    "status": "draft",
     "immediate": false
   }
 ]

@@ -3208,6 +3208,45 @@ def paper_boat(r, s, fam, root):
     return root
 
 
+def magnifier(r, s, fam, root):
+    c, d = [_rich(x, 1.4, 0.95) for x in _cols(r, fam, 2)]
+    fm = M(c, rough=0.35, coat=0.8)
+    hm = M(d, rough=0.4, coat=0.6)
+    glass = MA((0.86, 0.95, 1.0), 0.16, rough=0.04)
+    shine = M((1.0, 1.0, 1.0), rough=0.2, emit=0.6)
+    face = C.empty("lens", root, (0, 0, 0.42))
+    R = 0.17
+    if s == 1:
+        pts = []
+        for k in range(65):
+            a = k * 6.2832 / 64
+            ca, sa = math.cos(a), math.sin(a)
+            pts.append((math.copysign(abs(ca) ** 0.6, ca) * R, 0, math.copysign(abs(sa) ** 0.6, sa) * R))
+        C.tube("rim", pts, 0.03, fm, face)
+        C.rounded_box("glass", (0, 0, 0), (R * 1.9, 0.014, R * 1.9), 0.5, glass, face)
+    else:
+        C.tube("rim", [(math.cos(k * 6.2832 / 64) * R, 0, math.sin(k * 6.2832 / 64) * R) for k in range(65)], 0.026, fm, face)
+        C.sphere("glass", (0, 0, 0), (R * 0.97, 0.012, R * 0.97), glass, face, 48)
+    C.sphere("shine", (-R * 0.42, -0.016, R * 0.42), (0.035, 0.004, 0.018), shine, face, 16, rot=(0, math.radians(40), 0))
+    if s == 0:
+        C.tube("neck", [(0, 0, -R - 0.01), (0, 0, -R - 0.06)], 0.03, fm, face)
+        C.tube("handle", [(0, 0, -R - 0.06), (0, 0, -R - 0.3)], 0.036, hm, face)
+        C.sphere("cap", (0, 0, -R - 0.31), (0.042, 0.042, 0.03), fm, face, 20)
+    elif s == 1:
+        C.tube("handle", [(0, 0, -R - 0.02), (0, 0, -R - 0.28)], 0.04, hm, face)
+        for z in (-R - 0.1, -R - 0.16, -R - 0.22):
+            C.sphere("grip", (0, 0, z), (0.048, 0.048, 0.016), fm, face, 24)
+        C.sphere("cap", (0, 0, -R - 0.29), (0.046, 0.046, 0.032), fm, face, 20)
+    else:
+        for k in range(8):
+            a = k * 6.2832 / 8 + 0.39
+            C.sphere("bead", (math.cos(a) * R, -0.02, math.sin(a) * R), (0.022, 0.014, 0.022), hm, face, 14)
+        pts = [(math.sin(t * 0.5) * 0.06, 0, -R - 0.02 - t * 0.27) for t in [i / 8 for i in range(9)]]
+        C.tube("handle", pts, 0.034, hm, face)
+        C.sphere("cap", (pts[-1][0], 0, pts[-1][2] - 0.01), (0.04, 0.04, 0.03), fm, face, 20)
+    return face
+
+
 GEN = {k: v for k, v in globals().items() if k in REGISTRY}
 
 

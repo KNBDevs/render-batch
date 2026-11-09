@@ -101,4 +101,5 @@ REGISTRY = {
     "toy_parasol": {"styles": 3, "envs": ["patio", "plaza", "casa"], "tags": ["sombra", "sol", "juguete"], "decor": False},
     "bubble_stand": {"styles": 3, "envs": ["casa", "aula", "plaza"], "tags": ["burbuja", "pompero", "juguete"], "decor": False},
     "paper_boat": {"styles": 3, "envs": ["casa", "aula", "patio"], "tags": ["barco", "papel", "agua"], "decor": False},
+    "magnifier": {"styles": 3, "envs": ["casa", "aula", "patio", "lab"], "tags": ["lupa", "luz", "mirar"], "decor": False},
 }

@@ -6498,5 +6498,75 @@
   "engine": "gemini",
   "voice": "Fenrir",
   "dev": -4.4
+ },
+ "ep_lupa_mariquita_l3": {
+  "hash": "58a9974f6f50",
+  "dur": 4.49,
+  "text": "La lupa tiene un cristal curvo que hace que las cosas se vean más grandes.",
+  "asr": 1.0,
+  "heard": "La lupa tiene un cristal curvo que hace que las cosas se vean más grandes.",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": -6.65
+ },
+ "ep_lupa_mariquita_l1": {
+  "hash": "1b02e2c0f726",
+  "dur": 1.96,
+  "text": "¿Y si miramos con esta lupa?",
+  "asr": 0.83,
+  "heard": "Y sí, miramos con esta luta.",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": -6.7
+ },
+ "ep_lupa_mariquita_l2": {
+  "hash": "36ade46aae9a",
+  "dur": 1.81,
+  "text": "¡Mira, se ve enorme!",
+  "asr": 0.75,
+  "heard": "¡Mira! ¡Se ve, Ebony!",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": -1.1
+ },
+ "ep_lupa_mariquita_m1": {
+  "hash": "2d7c36175af8",
+  "dur": 2.77,
+  "text": "¡Mariquita, casi no te veo!",
+  "asr": 1.0,
+  "heard": "¡Mariquita, casi no te veo!",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": 2.5
+ },
+ "ep_lupa_mariquita_m2": {
+  "hash": "69a41a2bea14",
+  "dur": 4.37,
+  "text": "¿Cómo se verá la mariquita: más grande o más pequeña?",
+  "asr": 1.0,
+  "heard": "¿Cómo se verá la mariquita más grande o más pequeña?",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": 0.85
+ },
+ "ep_lupa_mariquita_m3": {
+  "hash": "d7554514fccf",
+  "dur": 1.79,
+  "text": "¡Tiene siete puntitos!",
+  "asr": 1.0,
+  "heard": "¡Tiene siete puntitos!",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": 2.45
+ },
+ "ep_lupa_mariquita_m4": {
+  "hash": "c33c70639723",
+  "dur": 3.92,
+  "text": "¡Sin lupa, pequeña! ¡Con lupa, enorme!",
+  "asr": 1.0,
+  "heard": "Sin lupa pequeña, con lupa enorme.",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": -2.25
  }
 }

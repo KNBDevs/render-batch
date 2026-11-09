@@ -3247,6 +3247,46 @@ def magnifier(r, s, fam, root):
     return face
 
 
+
+def balloon_racer(r, s, fam, root):
+    c, d = [_rich(x, 1.4, 0.95) for x in _cols(r, fam, 2)]
+    bm_ = M(c, rough=0.35, coat=0.8)
+    tm = M(d, rough=0.4, coat=0.6)
+    tire = M((0.3, 0.3, 0.36), rough=0.6, coat=0.2)
+    hub = M((0.98, 0.96, 0.9), rough=0.3, coat=0.8)
+    straw = M((0.98, 0.97, 0.94), rough=0.35, coat=0.6)
+    L, W, R = 0.56, 0.34, 0.075
+    zb = R + 0.035
+    if s == 0:
+        C.rounded_box("tub", (0, 0, zb + 0.04), (W * 0.82, L, 0.12), 0.4, bm_, root)
+        C.tube("stripe", [(-W * 0.41 - 0.004, -L * 0.36, zb + 0.05), (-W * 0.41 - 0.004, L * 0.36, zb + 0.05)], 0.014, tm, root)
+        C.tube("stripe2", [(W * 0.41 + 0.004, -L * 0.36, zb + 0.05), (W * 0.41 + 0.004, L * 0.36, zb + 0.05)], 0.014, tm, root)
+        top = zb + 0.1
+    elif s == 1:
+        C.rounded_box("plank", (0, 0, zb + 0.015), (W * 0.78, L, 0.05), 0.25, bm_, root)
+        for y in (-1, 1):
+            C.rounded_box("bump", (0, y * (L / 2 + 0.01), zb + 0.02), (W * 0.84, 0.05, 0.07), 0.45, tm, root)
+        C.tube("flagpole", [(-W * 0.3, L * 0.32, zb + 0.04), (-W * 0.3, L * 0.32, zb + 0.24)], 0.008, straw, root)
+        C.rounded_box("flag", (-W * 0.3 - 0.04, L * 0.32, zb + 0.2), (0.07, 0.008, 0.05), 0.3, tm, root)
+        top = zb + 0.04
+    else:
+        C.sphere("pod", (0, 0, zb + 0.05), (W * 0.42, L * 0.52, 0.09), bm_, root, 40)
+        C.rounded_box("fin", (0, -L * 0.36, zb + 0.13), (0.02, 0.12, 0.1), 0.4, tm, root)
+        for y in (-0.08, 0.0, 0.08):
+            C.sphere("dot", (W * 0.4, y, zb + 0.06), (0.012, 0.022, 0.022), tm, root, 12)
+            C.sphere("dot", (-W * 0.4, y, zb + 0.06), (0.012, 0.022, 0.022), tm, root, 12)
+        top = zb + 0.12
+    C.tube("straw", [(0, 0.02, top + 0.02), (0, -L * 0.3, top + 0.02), (0, -L * 0.5 - 0.02, top + 0.0)], 0.014, straw, root)
+    for y in (-L * 0.32, L * 0.32):
+        ax = C.empty("axle", root, (0, y, R))
+        C.tube("rod", [(-W / 2 - 0.02, 0, 0), (W / 2 + 0.02, 0, 0)], 0.01, hub, ax)
+        for x in (-1, 1):
+            C.sphere("tire", (x * (W / 2 + 0.01), 0, 0), (0.03, R, R), tire, ax, 24)
+            C.sphere("hub", (x * (W / 2 + 0.035), 0, 0), (0.008, R * 0.45, R * 0.45), hub, ax, 16)
+            C.sphere("spot", (x * (W / 2 + 0.04), 0, R * 0.28), (0.005, 0.016, 0.016), tm, ax, 10)
+    root["mount"] = (0.0, 0.0, top + 0.02)
+    return root
+
 GEN = {k: v for k, v in globals().items() if k in REGISTRY}
 
 

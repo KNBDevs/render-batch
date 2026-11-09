@@ -811,5 +811,17 @@
     "template": "episode",
     "status": "approved",
     "immediate": false
+  },
+  {
+    "id": "coche_globo",
+    "template": "episode",
+    "status": "draft",
+    "immediate": false
+  },
+  {
+    "id": "colador_sol",
+    "template": "episode",
+    "status": "draft",
+    "immediate": false
   }
 ]

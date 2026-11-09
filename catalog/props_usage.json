@@ -6337,5 +6337,163 @@
    }
   ],
   "order": 79
+ },
+ "coche_globo": {
+  "env": "patio",
+  "family": "fresh",
+  "decor": [
+   {
+    "prop": "play_mat",
+    "style": 0,
+    "seed": 645859,
+    "loc": [
+     -2.35,
+     4.42,
+     0.0
+    ],
+    "scale": 1.11,
+    "rot": 18.1
+   },
+   {
+    "prop": "birdhouse",
+    "style": 2,
+    "seed": 316128,
+    "loc": [
+     -3.19,
+     2.95,
+     0.0
+    ],
+    "scale": 1.03,
+    "rot": -9.5
+   },
+   {
+    "prop": "bush",
+    "style": 0,
+    "seed": 229980,
+    "loc": [
+     3.46,
+     0.66,
+     0.0
+    ],
+    "scale": 0.97,
+    "rot": 13.3
+   },
+   {
+    "prop": "fence",
+    "style": 1,
+    "seed": 267409,
+    "loc": [
+     1.34,
+     2.17,
+     0.0
+    ],
+    "scale": 1.03,
+    "rot": 10.9
+   },
+   {
+    "prop": "mushroom_stool",
+    "style": 0,
+    "seed": 840426,
+    "loc": [
+     -1.38,
+     4.19,
+     0.0
+    ],
+    "scale": 0.88,
+    "rot": -11.4
+   },
+   {
+    "prop": "bench",
+    "style": 1,
+    "seed": 974949,
+    "loc": [
+     4.78,
+     1.88,
+     0.0
+    ],
+    "scale": 0.95,
+    "rot": 0.4
+   }
+  ],
+  "order": 80
+ },
+ "colador_sol": {
+  "env": "patio",
+  "family": "fresh",
+  "decor": [
+   {
+    "prop": "birdhouse",
+    "style": 1,
+    "seed": 843022,
+    "loc": [
+     -1.35,
+     2.22,
+     0.0
+    ],
+    "scale": 1.07,
+    "rot": 19.6
+   },
+   {
+    "prop": "bush",
+    "style": 2,
+    "seed": 975087,
+    "loc": [
+     -2.01,
+     3.65,
+     0.0
+    ],
+    "scale": 1.1,
+    "rot": -28.6
+   },
+   {
+    "prop": "play_mat",
+    "style": 1,
+    "seed": 400328,
+    "loc": [
+     1.28,
+     3.35,
+     0.0
+    ],
+    "scale": 1.12,
+    "rot": -22.7
+   },
+   {
+    "prop": "fence",
+    "style": 0,
+    "seed": 395904,
+    "loc": [
+     -3.47,
+     0.66,
+     0.0
+    ],
+    "scale": 0.91,
+    "rot": 15.9
+   },
+   {
+    "prop": "mushroom_stool",
+    "style": 1,
+    "seed": 259018,
+    "loc": [
+     3.67,
+     2.07,
+     0.0
+    ],
+    "scale": 1.05,
+    "rot": -34.0
+   },
+   {
+    "prop": "bench",
+    "style": 2,
+    "seed": 480792,
+    "loc": [
+     4.69,
+     1.84,
+     0.0
+    ],
+    "scale": 1.24,
+    "rot": -12.1
+   }
+  ],
+  "order": 81
  }
 }

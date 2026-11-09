@@ -71,15 +71,16 @@ for f, yaw in ((0, 0), (300, 0), (330, 20), (360, -10), (390, 0)):
 LS = 1.35
 LR = 0.17 * LS
 lupa = spawn('magnifier', 0, 6202, 'candy', (0, 0, 0), LS, 0)
+lupa.rotation_euler = (0, math.radians(-90), 0)
 for o in lupa.children_recursive:
     if o.type == 'MESH' and o.data.materials and o.data.materials[0].name.startswith('pa'):
         o.visible_shadow = False
-lens_c = Vector((0, 0, 0.42 * LS))
+lens_c = Vector((-0.42 * LS, 0, 0))
 L_ON = BUGW + Vector((0, -0.2, 0.0)) - lens_c
-L_OFF = Vector((0.52, TY - 0.3, TOP + 0.13))
+L_OFF = Vector((0.42, TY - 0.32, TOP + 0.5)) - lens_c
 L_HID = L_OFF
 
-view = C.empty('view', lupa, (0, 0.03, 0.42))
+view = C.empty('view', lupa, (0, 0.03, 0.42), (0, math.radians(90), 0))
 C.sphere('vleaf', (0, 0.012, 0), (0.16, 0.004, 0.16), LEAF, view, 40)
 C.tube('vrib', [(0.0, 0.006, -0.16), (0.0, 0.006, 0.16)], 0.006, RIB, view)
 big = ladybug('bigbug', view, (0, 0, 0), 0.09, (math.radians(90), 0, 0))
@@ -89,7 +90,6 @@ K(lupa, 'location', 0, tuple(L_OFF))
 K(lupa, 'scale', 0, (0, 0, 0))
 K(lupa, 'scale', 108, (0, 0, 0))
 K(lupa, 'scale', 116, (LS, LS, LS))
-K(lupa, 'rotation_euler', 0, (0, 0, 0))
 
 
 def move(f0, f1, a, b):
@@ -126,12 +126,12 @@ def label(txt, rgb, loc, w, f_in, f_out, h=0.27, sz=0.2):
 GC, RC, BC = (0.05, 0.42, 0.15), (0.75, 0.08, 0.15), (0.1, 0.3, 0.75)
 label('¿GRANDE?', GC, (-0.44, TY - 0.55, Z0 + 1.6), 0.94, 276, 396)
 label('¿PEQUEÑA?', RC, (0.46, TY - 0.55, Z0 + 1.6), 1.0, 282, 396)
-label('¡GRANDE!', GC, (-0.36, TY - 0.5, TOP + 0.85), 0.86, 566, 618, 0.24, 0.17)
-label('SIN LUPA', RC, (-0.34, TY - 0.5, TOP + 0.85), 0.9, 640, 744, 0.24, 0.17)
-label('¡CON LUPA!', BC, (-0.36, TY - 0.5, TOP + 0.85), 0.98, 760, 840, 0.24, 0.17)
+label('¡GRANDE!', GC, (-0.22, TY - 0.5, TOP + 0.85), 0.86, 566, 618, 0.24, 0.17)
+label('SIN LUPA', RC, (-0.2, TY - 0.5, TOP + 0.85), 0.9, 640, 744, 0.24, 0.17)
+label('¡CON LUPA!', BC, (-0.22, TY - 0.5, TOP + 0.85), 0.98, 760, 840, 0.24, 0.17)
 
-OP = ((-0.2, -2.55, 1.3), (-0.22, TY, 1.12), 26)
-OP2 = ((-0.22, -2.7, 1.34), (-0.22, TY, 1.12), 25)
+OP = ((-0.26, -2.95, 1.42), (-0.24, TY, 1.16), 22)
+OP2 = ((-0.26, -3.05, 1.45), (-0.24, TY, 1.16), 21.5)
 W = ((0.18, -4.0, 1.55), (0.18, -1.25, 1.0), 21)
 WQ = ((0.12, -4.2, 1.75), (0.12, -1.25, 1.05), 21)
 CB = ((LX + 0.02, -3.0, 1.22), (LX + 0.02, TY, 1.06), 21)
@@ -144,7 +144,7 @@ for a, b, pose in ((60, 240, W), (242, 396, WQ), (398, 552, CB), (554, 692, CL),
     camkey(a, pose)
     camkey(b, pose)
 
-moki = make('moki', 1.3)
+moki = make('moki', 1.5)
 luma = make('luma', 1.3)
 MK = Vector((-0.66, -0.82, Z0))
 LM = Vector((0.95, -1.1, Z0))

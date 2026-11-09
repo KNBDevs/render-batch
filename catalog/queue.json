@@ -809,7 +809,7 @@
   {
     "id": "lupa_mariquita",
     "template": "episode",
-    "status": "draft",
+    "status": "approved",
     "immediate": false
   }
 ]

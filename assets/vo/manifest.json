@@ -6568,5 +6568,125 @@
   "engine": "gemini",
   "voice": "Enceladus",
   "dev": -2.25
+ },
+ "ep_coche_globo_r1": {
+  "hash": "e66fe031fa0a",
+  "dur": 3.93,
+  "text": "¿Y si le ponemos un globo?",
+  "asr": 1.0,
+  "heard": "Y... si le ponemos un globo.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 2.91
+ },
+ "ep_coche_globo_r2": {
+  "hash": "d9d86fe46907",
+  "dur": 2.71,
+  "text": "¡Con poco aire, se para a mitad!",
+  "asr": 0.76,
+  "heard": "con poco aire separa a mitad.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 7.46
+ },
+ "ep_coche_globo_r3": {
+  "hash": "5a202b71cd38",
+  "dur": 4.66,
+  "text": "El aire sale hacia atrás y empuja el coche hacia delante.",
+  "asr": 0.91,
+  "heard": "El aire sale hacia atrás y empuja el coche hacia adelante.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 7.01
+ },
+ "ep_coche_globo_t3": {
+  "hash": "d41d7dd0d540",
+  "dur": 2.34,
+  "text": "¡Con mucho aire, llega a la meta!",
+  "asr": 1.0,
+  "heard": "Con mucho aire llega a la meta.",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": -5.95
+ },
+ "ep_coche_globo_t1": {
+  "hash": "f329d7fe20ad",
+  "dur": 3.14,
+  "text": "¡Soplo y soplo, y mi coche no se mueve!",
+  "asr": 1.0,
+  "heard": "Soplo y soplo y mi coche no se mueve.",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": -0.5
+ },
+ "ep_coche_globo_t2": {
+  "hash": "596760a76f28",
+  "dur": 4.26,
+  "text": "¿Llegará el coche a la meta: con poco aire o con mucho aire?",
+  "asr": 1.0,
+  "heard": "Llegará el coche a la meta con poco aire o con mucho aire.",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": -7.1
+ },
+ "ep_coche_globo_t4": {
+  "hash": "2a528f6b976c",
+  "dur": 3.07,
+  "text": "¡Más aire, más lejos! ¡Meta!",
+  "asr": 1.0,
+  "heard": "Más aire, más lejos. Meta.",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": 4.3
+ },
+ "ep_colador_sol_b1": {
+  "hash": "89fc83c72e9f",
+  "dur": 2.07,
+  "text": "¡Al caracol le da mucho el sol!",
+  "asr": 1.0,
+  "heard": "Al caracol le da mucho el sol.",
+  "engine": "gemini",
+  "voice": "Zephyr",
+  "dev": 0.25
+ },
+ "ep_colador_sol_b3": {
+  "hash": "5c94892e4bf9",
+  "dur": 2.05,
+  "text": "¡Y el paraguas tapa toda la luz!",
+  "asr": 1.0,
+  "heard": "Y el paraguas tapa toda la luz.",
+  "engine": "gemini",
+  "voice": "Zephyr",
+  "dev": 1.15
+ },
+ "ep_colador_sol_m1": {
+  "hash": "beae8e3cb4c1",
+  "dur": 4.34,
+  "text": "¿Y si le hacemos sombra con mi colador?",
+  "asr": 1.0,
+  "heard": "¿Y si le hacemos sombra con mi colador?",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": -0.55
+ },
+ "ep_colador_sol_m2": {
+  "hash": "46683bfb5178",
+  "dur": 3.14,
+  "text": "¡Por los agujeritos pasa la luz!",
+  "asr": 1.0,
+  "heard": "¿Por los agujeritos pasa la luz?",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": -1.55
+ },
+ "ep_colador_sol_m3": {
+  "hash": "4cc0ca00300f",
+  "dur": 5.76,
+  "text": "La luz pasa por los agujeros. Si no hay agujeros, hay sombra.",
+  "asr": 1.0,
+  "heard": "La luz pasa por los agujeros. Si no hay agujeros, hay sombra.",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": -3.3
  }
 }

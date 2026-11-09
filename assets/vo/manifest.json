@@ -6688,5 +6688,25 @@
   "engine": "gemini",
   "voice": "Enceladus",
   "dev": -3.3
+ },
+ "ep_colador_sol_b2": {
+  "hash": "7413115c129d",
+  "dur": 3.73,
+  "text": "¿Qué hará más sombra: el colador o el paraguas?",
+  "asr": 1.0,
+  "heard": "¿Qué hará más sombra? El colador o el paraguas?",
+  "engine": "gemini",
+  "voice": "Zephyr",
+  "dev": -5.2
+ },
+ "ep_colador_sol_b4": {
+  "hash": "afd9ea5958d2",
+  "dur": 3.4,
+  "text": "¡Sombra entera! ¡A dormir la siesta, caracol!",
+  "asr": 1.0,
+  "heard": "Sombra entera, a dormir la siesta caracol.",
+  "engine": "gemini",
+  "voice": "Zephyr",
+  "dev": -1.98
  }
 }

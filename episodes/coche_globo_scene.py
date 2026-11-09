@@ -91,7 +91,7 @@ def run(f0, y0, y1, n, r0, rest=0.03):
 
 tuki = make('tuki', 1.25)
 ruki = make('ruki', 1.15)
-TK, RK = Vector((-0.9, -1.45, Z0)), Vector((0.95, -1.45, Z0))
+TK, RK = Vector((-0.86, -1.45, Z0)), Vector((0.84, -1.8, Z0))
 
 carpos(0, YS)
 balloon(0, 0.0)
@@ -115,10 +115,11 @@ T.place(ruki, 86, (2.6, -1.0, Z0))
 T.place(ruki, 88, RK)
 T.turn(ruki, 0, -25)
 
-pump = C.empty('hand_pump', None, (RK.x - 0.3, RK.y - 0.36, Z0))
+pump = C.empty('hand_pump', None, (RK.x - 0.26, RK.y - 0.42, Z0))
 K(pump, 'location', 0, (3.5, -1.0, Z0))
 K(pump, 'location', 87, (3.5, -1.0, Z0))
-K(pump, 'location', 88, (RK.x - 0.3, RK.y - 0.36, Z0))
+K(pump, 'location', 88, (RK.x - 0.26, RK.y - 0.42, Z0))
+pump.scale = (0.72, 0.72, 0.72)
 PB = M((0.3, 0.75, 0.55), rough=0.35, coat=0.8)
 PH = M((1.0, 0.85, 0.3), rough=0.35, coat=0.8)
 C.rounded_box('foot', (0, 0, 0.02), (0.26, 0.12, 0.04), 0.4, PH, pump)
@@ -130,9 +131,11 @@ C.tube('rod', [(0, 0, 0.45), (0, 0, 0.66)], 0.014, WH, hdl)
 C.tube('grip', [(-0.13, 0, 0.66), (0.13, 0, 0.66)], 0.03, PH, hdl)
 for sx in (-1, 1):
     C.sphere('cap', (sx * 0.135, 0, 0.66), (0.034, 0.034, 0.034), PB, hdl, 16)
-HZ = ZT + MZ - Z0 - 0.04
-HY = YS - 0.54 - pump.location.y
-hose = C.tube('hose', [(0.0, -0.05, 0.05), (-0.1, -0.2, 0.03), (-0.4, HY + 0.1, 0.04), (-0.7, HY + 0.02, HZ - 0.03), (-pump.location.x, HY, HZ)], 0.018, M((0.35, 0.35, 0.45), rough=0.5, coat=0.3), pump)
+PS = 0.72
+HZ = (ZT + MZ - Z0 - 0.04) / PS
+HY = (YS - 0.54 - pump.location.y) / PS
+HX = -pump.location.x / PS
+hose = C.tube('hose', [(0.0, -0.05, 0.05), (-0.1, -0.22, 0.03), (HX * 0.5, HY * 0.6, 0.04), (HX * 0.92, HY * 0.96, HZ - 0.04), (HX, HY, HZ)], 0.022, M((0.35, 0.35, 0.45), rough=0.5, coat=0.3), pump)
 
 
 def hose_vis(f, on):
@@ -231,8 +234,8 @@ EX = [arrow((0.2, 0.55, 1.0), (0, YS - 0.55, ZT + MZ + 0.55), -1, 690, 776, 0, 0
 follow(EX, 722, 64, YS, YS + 1.0)
 
 OP = ((0.45, -0.95, 0.5), (0.0, -2.9, 0.58), 24)
-W = ((0.35, -5.0, 2.35), (0.0, -1.0, 0.55), 25)
-WQ = ((0.35, -4.9, 2.3), (0.0, -1.05, 0.52), 25)
+W = ((0.3, -5.0, 2.35), (0.03, -1.0, 0.6), 22)
+WQ = ((0.3, -4.9, 2.3), (0.03, -1.05, 0.58), 22)
 SIDE = ((-2.75, -2.05, 0.85), (0.0, -2.05, 0.72), 24)
 SIDE2 = ((-2.75, -1.2, 0.85), (0.0, -1.2, 0.72), 24)
 FIN = ((0.9, -1.7, 1.35), (0.0, 0.75, 0.5), 26)

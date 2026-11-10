@@ -815,7 +815,7 @@
   {
     "id": "coche_globo",
     "template": "episode",
-    "status": "draft",
+    "status": "approved",
     "immediate": false
   },
   {

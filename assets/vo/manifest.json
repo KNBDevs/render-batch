@@ -6708,5 +6708,75 @@
   "engine": "gemini",
   "voice": "Zephyr",
   "dev": -1.98
+ },
+ "ep_naranja_flota_b1": {
+  "hash": "53b49797aa65",
+  "dur": 3.44,
+  "text": "¡Esta naranja no quiere hundirse!",
+  "asr": 1.0,
+  "heard": "Esta naranja no quiere hundirse.",
+  "engine": "gemini",
+  "voice": "Iapetus",
+  "dev": 3.05
+ },
+ "ep_naranja_flota_b2": {
+  "hash": "93d804b25f28",
+  "dur": 4.44,
+  "text": "¿Flotará la naranja sin piel: sí o no?",
+  "asr": 1.0,
+  "heard": "Flotará la naranja sin piel, ¿sí o no?",
+  "engine": "gemini",
+  "voice": "Iapetus",
+  "dev": -3.25
+ },
+ "ep_naranja_flota_b4": {
+  "hash": "40235ba9b9e0",
+  "dur": 2.83,
+  "text": "¡Con piel, flota! ¡Sin piel, al fondo!",
+  "asr": 1.0,
+  "heard": "con piel flota, sin piel al fondo.",
+  "engine": "gemini",
+  "voice": "Iapetus",
+  "dev": -4.1
+ },
+ "ep_naranja_flota_b3": {
+  "hash": "f614bc340aee",
+  "dur": 3.32,
+  "text": "¡Y la piel sola flota!",
+  "asr": 1.0,
+  "heard": "y la piel sola flota.",
+  "engine": "gemini",
+  "voice": "Iapetus",
+  "dev": -0.9
+ },
+ "ep_naranja_flota_l1": {
+  "hash": "addaf70b742b",
+  "dur": 1.8,
+  "text": "¿Y si le quitamos la piel?",
+  "asr": 1.0,
+  "heard": "y si le quitamos la piel.",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": -7.35
+ },
+ "ep_naranja_flota_l2": {
+  "hash": "939fc615ae8a",
+  "dur": 1.87,
+  "text": "¡Se hunde hasta el fondo!",
+  "asr": 0.8,
+  "heard": "Se hunde hasta el fungo.",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": -3.0
+ },
+ "ep_naranja_flota_l3": {
+  "hash": "a066018a4898",
+  "dur": 4.09,
+  "text": "La piel tiene burbujitas de aire, como un flotador.",
+  "asr": 1.0,
+  "heard": "La piel tiene burbujitas de aire como un flotador.",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": -4.9
  }
 }

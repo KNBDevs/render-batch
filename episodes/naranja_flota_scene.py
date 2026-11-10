@@ -106,7 +106,7 @@ for f0 in (12, 50):
     at(orange, f0 + 30, FL)
 bob(orange, 82, 100, WT + 0.04)
 at(orange, 104, FL)
-LH = (0.36, -1.78, 0.74)
+LH = (0.36, -2.1, 0.23)
 at(orange, 118, LH)
 K(orange, 'scale', 136, (1, 1, 1))
 K(orange, 'scale', 142, (0, 0, 0))

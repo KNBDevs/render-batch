@@ -6495,5 +6495,84 @@
    }
   ],
   "order": 81
+ },
+ "naranja_flota": {
+  "env": "casa",
+  "family": "pastel",
+  "decor": [
+   {
+    "prop": "pouf",
+    "style": 1,
+    "seed": 188041,
+    "loc": [
+     3.3,
+     2.93,
+     0.0
+    ],
+    "scale": 1.24,
+    "rot": -17.3
+   },
+   {
+    "prop": "floor_lamp",
+    "style": 2,
+    "seed": 271106,
+    "loc": [
+     -3.67,
+     1.89,
+     0.0
+    ],
+    "scale": 1.22,
+    "rot": 14.7
+   },
+   {
+    "prop": "toy_blocks",
+    "style": 0,
+    "seed": 504417,
+    "loc": [
+     -4.58,
+     3.0,
+     0.0
+    ],
+    "scale": 0.87,
+    "rot": -9.0
+   },
+   {
+    "prop": "ball_basket",
+    "style": 0,
+    "seed": 248139,
+    "loc": [
+     2.22,
+     2.66,
+     0.0
+    ],
+    "scale": 1.19,
+    "rot": -23.2
+   },
+   {
+    "prop": "soft_token",
+    "style": 2,
+    "seed": 820387,
+    "loc": [
+     -2.37,
+     1.69,
+     0.0
+    ],
+    "scale": 0.9,
+    "rot": -32.4
+   },
+   {
+    "prop": "flower_pot",
+    "style": 2,
+    "seed": 589124,
+    "loc": [
+     -1.33,
+     3.27,
+     0.0
+    ],
+    "scale": 0.97,
+    "rot": 7.8
+   }
+  ],
+  "order": 82
  }
 }

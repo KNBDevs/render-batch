@@ -21,7 +21,7 @@ for f, c in ((0, (0.25, 0.42, 0.95, 1)), (80, (0.25, 0.42, 0.95, 1)), (94, b0)):
     bg[0].keyframe_insert('default_value', frame=f)
 
 JX, JY = 0.0, -1.55
-R, TH, H = 0.27, 0.012, 0.56
+R, TH, H = 0.32, 0.012, 0.56
 base = C.empty('jar_base', None, (JX, JY, Z0))
 C.lathe('coaster', [(0, 0.0), (0, R + 0.08), (0.02, R + 0.1), (0.05, R + 0.07), (0.055, 0.0)], M((0.55, 0.85, 0.7), rough=0.4, coat=0.6), base, segs=56)
 for k in range(10):
@@ -46,14 +46,14 @@ PORE = M((0.9, 0.4, 0.04), rough=0.6, coat=0.2)
 PITH = M((1.0, 0.93, 0.78), rough=0.6, coat=0.2)
 FLESH = M((1.0, 0.55, 0.12), rough=0.4, coat=0.4, emit=0.25)
 LEAF = M((0.3, 0.7, 0.3), rough=0.4, coat=0.5)
-RO, RP = 0.115, 0.098
+RO, RP = 0.15, 0.13
 rnd = random.Random(8101)
 orange = C.empty('orange', None, (JX, JY, WT + 0.03))
 C.sphere('o', (0, 0, 0), (RO, RO, RO * 0.95), PEEL, orange, 48)
 for k in range(46):
     u, v = rnd.uniform(-1, 1), rnd.uniform(0, 6.2832)
     s = math.sqrt(1 - u * u)
-    C.sphere('pore', (RO * 0.985 * s * math.cos(v), RO * 0.985 * s * math.sin(v), RO * 0.94 * u), (0.006, 0.006, 0.006), PORE, orange, 8)
+    C.sphere('pore', (RO * 0.985 * s * math.cos(v), RO * 0.985 * s * math.sin(v), RO * 0.94 * u), (0.008, 0.008, 0.008), PORE, orange, 8)
 C.tube('stem', [(0, 0, RO * 0.93), (0.005, 0, RO * 1.05)], 0.008, M((0.45, 0.35, 0.2), rough=0.5), orange)
 lf = C.leaf('leaf', 0.09, 0.045, 0.2, LEAF, orange)
 lf.location = (0.01, 0, RO * 1.02)
@@ -71,7 +71,7 @@ pts = []
 for k in range(80):
     t = k / 79
     a = t * 6.2832 * 2.4
-    rr = 0.1 * (1 - 0.25 * t)
+    rr = 0.13 * (1 - 0.25 * t)
     pts.append((math.cos(a) * rr, math.sin(a) * rr, 0.012 + 0.025 * math.sin(t * 9)))
 C.tube('strip', pts, 0.024, PEEL, peel, res=8)
 C.tube('strip_in', [(x * 0.97, y * 0.97, z - 0.012) for x, y, z in pts], 0.02, PITH, peel, res=8)
@@ -96,15 +96,15 @@ T.turn(bopi, 0, 25)
 T.place(luma, 0, LM)
 T.turn(luma, 0, -25)
 
-FL = (JX, JY, WT + 0.03)
+FL = (JX, JY, WT + 0.04)
 at(orange, 0, FL)
 for f0 in (12, 50):
     at(orange, f0, FL)
-    at(orange, f0 + 12, (JX, JY, WT - 0.14))
-    at(orange, f0 + 18, (JX, JY, WT - 0.14))
+    at(orange, f0 + 12, (JX, JY, WT - 0.16))
+    at(orange, f0 + 18, (JX, JY, WT - 0.16))
     at(orange, f0 + 24, (JX, JY, WT + 0.09))
     at(orange, f0 + 30, FL)
-bob(orange, 82, 100, WT + 0.03)
+bob(orange, 82, 100, WT + 0.04)
 at(orange, 104, FL)
 LH = (0.36, -1.78, 0.74)
 at(orange, 118, LH)
@@ -153,15 +153,15 @@ GC, BC, RC = (0.05, 0.42, 0.15), (0.1, 0.3, 0.8), (0.8, 0.35, 0.05)
 label('¿SÍ?', GC, (-0.5, -1.0, 1.75), 0.7, 216, 296, 0.32, 0.22)
 label('¿NO?', RC, (0.5, -0.8, 1.9), 0.7, 224, 296, 0.32, 0.22)
 
-exp = C.empty('peel_zoom', None, (0.0, -1.75, 1.5))
-C.rounded_box('slab_out', (0, 0, 0.07), (0.86, 0.06, 0.07), 0.4, PEEL, exp)
-C.rounded_box('slab_in', (0, 0, -0.04), (0.84, 0.055, 0.16), 0.3, PITH, exp)
-AIR = M((0.75, 0.9, 1.0), rough=0.15, coat=0.8, emit=0.3)
-for k, (x, z, s) in enumerate(((-0.32, -0.03, 0.035), (-0.2, -0.07, 0.028), (-0.08, -0.02, 0.04), (0.05, -0.08, 0.03), (0.17, -0.03, 0.036), (0.3, -0.07, 0.028), (-0.26, -0.09, 0.022), (0.24, -0.1, 0.022))):
-    C.sphere('air', (x, -0.032, z), (s, 0.012, s), AIR, exp, 16)
+exp = C.empty('peel_zoom', None, (0.0, -2.0, 1.56))
+C.rounded_box('slab_out', (0, 0, 0.1), (1.0, 0.06, 0.09), 0.4, PEEL, exp)
+C.rounded_box('slab_in', (0, 0, -0.06), (0.98, 0.055, 0.22), 0.3, PITH, exp)
+AIR = M((0.3, 0.62, 1.0), rough=0.15, coat=0.8, emit=0.3)
+for k, (x, z, s) in enumerate(((-0.38, -0.04, 0.045), (-0.24, -0.1, 0.036), (-0.1, -0.03, 0.05), (0.05, -0.11, 0.038), (0.2, -0.04, 0.046), (0.36, -0.1, 0.036), (-0.31, -0.13, 0.026), (0.28, -0.14, 0.026))):
+    C.sphere('air', (x, -0.034, z), (s, 0.012, s), AIR, exp, 16)
 T.pop_in(exp, 606, 1.0, 10)
 T.pop_out(exp, 764, 1.0, 6)
-label('AIRE', BC, (0.0, -1.75, 1.8), 0.62, 618, 764, 0.26, 0.19)
+label('AIRE', BC, (0.0, -2.0, 1.93), 0.62, 618, 764, 0.26, 0.19)
 ring = C.empty('swim_ring', None, (0.7, -1.9, 1.52))
 RING = M((1.0, 0.45, 0.55), rough=0.35, coat=0.8)
 RW = M((1.0, 0.97, 0.92), rough=0.35, coat=0.8)
@@ -170,11 +170,11 @@ for k in range(8):
     C.tube('ring_seg', [(0.12 * math.cos(a0 + (a1 - a0) * i / 6), 0, 0.12 * math.sin(a0 + (a1 - a0) * i / 6)) for i in range(7)], 0.05, RING if k % 2 == 0 else RW, ring, res=10)
 T.pop_in(ring, 680, 1.0, 10)
 T.pop_out(ring, 764, 1.0, 6)
-label('¡FLOTA!', GC, (0.0, -1.75, 1.0), 0.8, 790, TOTAL + 10, 0.28, 0.19)
+label('¡FLOTA!', GC, (0.1, -1.75, 1.12), 0.8, 790, TOTAL + 10, 0.28, 0.19)
 label('¡AL FONDO!', RC, (0.3, -2.1, 0.3), 1.05, 806, TOTAL + 10, 0.28, 0.19)
 confetti(846, (0, -1.6, 1.3), n=30, spread=1.6)
 
-OP = ((-0.33, -3.6, 0.9), (-0.33, -1.5, 0.66), 30)
+OP = ((-0.28, -3.3, 0.85), (-0.28, -1.5, 0.62), 34)
 W = ((0.0, -4.7, 1.9), (0.0, -1.55, 0.72), 28)
 CU = ((0.0, -4.3, 1.0), (0.0, -1.55, 0.55), 26)
 EXP = ((0.0, -5.0, 2.15), (0.0, -1.55, 0.88), 28)

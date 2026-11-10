@@ -4,11 +4,11 @@ MOOD = 'happy'
 ENV = 'casa'
 LINES = [
     ('b1', 'bopi', '¡Esta naranja no quiere hundirse!', 10, 2.4),
-    ('l1', 'luma', '¿Y si le quitamos la piel?', 92, 2.2),
+    ('l1', 'luma', '¿Y si le quitamos la piel?', 98, 2.2),
     ('b2', 'bopi', '¿Flotará la naranja sin piel: sí o no?', 190, 3.2),
     ('l2', 'luma', '¡Se hunde hasta el fondo!', 360, 2.2),
     ('b3', 'bopi', '¡Y la piel sola flota!', 520, 2.2),
-    ('l3', 'luma', 'La piel tiene burbujitas de aire, como un flotador.', 598, 4.6),
+    ('l3', 'luma', 'La piel tiene burbujitas de aire, como un flotador.', 604, 4.6),
     ('b4', 'bopi', '¡Con piel, flota! ¡Sin piel, al fondo!', 772, 3.2),
 ]
 SFX = [(2, 'sparkle', 0.12), (120, 'pop', 0.1), (216, 'bip', 0.15), (224, 'bip', 0.15), (300, 'tock', 0.08),

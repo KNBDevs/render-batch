@@ -6778,5 +6778,135 @@
   "engine": "gemini",
   "voice": "Leda",
   "dev": -4.9
+ },
+ "ep_pasas_bailan_b1": {
+  "hash": "7ab348f5000c",
+  "dur": 2.24,
+  "text": "¿Y si probamos con agua sin gas?",
+  "asr": 1.0,
+  "heard": "Y sí probamos con Agua Sin Gas.",
+  "engine": "gemini",
+  "voice": "Zephyr",
+  "dev": -2.7
+ },
+ "ep_pasas_bailan_b2": {
+  "hash": "153e3a7a1470",
+  "dur": 2.12,
+  "text": "¡Se quedan abajo, quietas!",
+  "asr": 1.0,
+  "heard": "Se quedan abajo, quietas.",
+  "engine": "gemini",
+  "voice": "Zephyr",
+  "dev": -2.55
+ },
+ "ep_pasas_bailan_b3": {
+  "hash": "2f07abc8738f",
+  "dur": 4.15,
+  "text": "Las burbujitas se pegan a la pasa y la suben como globos.",
+  "asr": 0.92,
+  "heard": "Las burbujitas se pegan a la pasa y las suben como globos.",
+  "engine": "gemini",
+  "voice": "Zephyr",
+  "dev": -4.45
+ },
+ "ep_pasas_bailan_p1": {
+  "hash": "351092f7a033",
+  "dur": 2.27,
+  "text": "¡Mis pasas están bailando!",
+  "asr": 1.0,
+  "heard": "Mis pasas están bailando.",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": -6.0
+ },
+ "ep_pasas_bailan_p2": {
+  "hash": "56dc8267facb",
+  "dur": 3.44,
+  "text": "Sin gas, ¿las pasas suben o se quedan abajo?",
+  "asr": 1.0,
+  "heard": "Sin gas, las pasas suben o se quedan abajo.",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": -6.15
+ },
+ "ep_servilleta_seca_m1": {
+  "hash": "aaf97161020b",
+  "dur": 2.29,
+  "text": "¡Se te va a mojar entera!",
+  "asr": 1.0,
+  "heard": "¡Se te va a mojar entera!",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": -0.15
+ },
+ "ep_servilleta_seca_m2": {
+  "hash": "3e3a378323ce",
+  "dur": 2.81,
+  "text": "¡Sale seca! ¡Ni una gota!",
+  "asr": 1.0,
+  "heard": "Sale seca, ni una gota.",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": 1.5
+ },
+ "ep_servilleta_seca_m3": {
+  "hash": "a98c0ed3027d",
+  "dur": 5.52,
+  "text": "Dentro del vaso había aire, y el aire no dejaba entrar el agua.",
+  "asr": 1.0,
+  "heard": "Dentro del vaso había aire, y el aire no dejaba entrar el agua.",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": 0.85
+ },
+ "ep_servilleta_seca_t1": {
+  "hash": "ab785cdd50db",
+  "dur": 2.32,
+  "text": "¡Voy a meter la servilleta en el agua!",
+  "asr": 1.0,
+  "heard": "Voy a meter la servilleta en el agua.",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": -2.7
+ },
+ "ep_servilleta_seca_t2": {
+  "hash": "b926f87a1817",
+  "dur": 2.85,
+  "text": "Dentro del vaso, ¿se moja o sale seca?",
+  "asr": 1.0,
+  "heard": "Dentro del vaso, se moja o sale seca.",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": 1.75
+ },
+ "ep_servilleta_seca_t3": {
+  "hash": "ed8436c6d3c9",
+  "dur": 2.91,
+  "text": "¿Y si inclino el vaso? ¡Se escapa una burbuja!",
+  "asr": 0.78,
+  "heard": "Y sin clino el vaso, se escapa una burbuja.",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": -8.2
+ },
+ "ep_servilleta_seca_t4": {
+  "hash": "a40f25635509",
+  "dur": 3.6,
+  "text": "¡Vaso recto, seca! ¡Inclinado, mojada!",
+  "asr": 1.0,
+  "heard": "Vaso recto, seca.  Inclinado, mojada.",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": -2.6
+ },
+ "ep_pasas_bailan_p4": {
+  "hash": "4e6c5a34ee85",
+  "dur": 3.31,
+  "text": "¡Sin gas, quietas! ¡Con gas, a bailar!",
+  "asr": 1.0,
+  "heard": "¡Sin gas quietas! ¡Con gas a bailar!",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": 0.0
  }
 }

@@ -844,7 +844,7 @@
   {
     "id": "servilleta_seca",
     "template": "episode",
-    "status": "draft",
+    "status": "approved",
     "title": "La servilleta que salió seca",
     "cast": [
       "tuki",

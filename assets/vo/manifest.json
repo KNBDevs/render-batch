@@ -6908,5 +6908,65 @@
   "engine": "gemini",
   "voice": "Puck",
   "dev": 0.0
+ },
+ "ep_arena_castillo_l1": {
+  "hash": "7c377f1b9374",
+  "dur": 2.83,
+  "text": "¡Mi castillo de arena se ha desmoronado!",
+  "asr": 1.0,
+  "heard": "Mi castillo de arena se ha desmoronado.",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": -2.0
+ },
+ "ep_arena_castillo_l2": {
+  "hash": "3a1ed75f79bd",
+  "dur": 2.9,
+  "text": "Con agua, ¿el castillo aguanta o se cae?",
+  "asr": 1.0,
+  "heard": "Con agua, el castillo aguanta o se cae.",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": -1.5
+ },
+ "ep_arena_castillo_l3": {
+  "hash": "d13a4af5b015",
+  "dur": 2.53,
+  "text": "¡Y con arena seca se cae otra vez!",
+  "asr": 1.0,
+  "heard": "y con arena seca se cae otra vez.",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": -2.15
+ },
+ "ep_arena_castillo_l4": {
+  "hash": "ab824d541288",
+  "dur": 4.0,
+  "text": "¡Arena seca, se cae! ¡Mojada, aguanta!",
+  "asr": 1.0,
+  "heard": "arena seca se cae mojada aguanta",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": -4.5
+ },
+ "ep_arena_castillo_r1": {
+  "hash": "e8ff29df0bc7",
+  "dur": 2.46,
+  "text": "¿Y si mojamos un poco la arena?",
+  "asr": 1.0,
+  "heard": "y si mojamos un poco la arena.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 2.36
+ },
+ "ep_arena_castillo_r3": {
+  "hash": "9b7116c0fd53",
+  "dur": 4.0,
+  "text": "El agua junta los granitos de arena, y así no se caen.",
+  "asr": 1.0,
+  "heard": "El agua junta los granitos de arena y así no se caen.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 2.76
  }
 }

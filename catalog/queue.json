@@ -851,5 +851,16 @@
       "moki"
     ],
     "batch": "62_plus"
+  },
+  {
+    "id": "arena_castillo",
+    "template": "episode",
+    "status": "draft",
+    "title": "El castillo que no se caía",
+    "cast": [
+      "luma",
+      "ruki"
+    ],
+    "batch": "62_plus"
   }
 ]

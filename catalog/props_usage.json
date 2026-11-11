@@ -6732,5 +6732,84 @@
    }
   ],
   "order": 84
+ },
+ "arena_castillo": {
+  "env": "patio",
+  "family": "fresh",
+  "decor": [
+   {
+    "prop": "birdhouse",
+    "style": 0,
+    "seed": 439888,
+    "loc": [
+     -2.5,
+     1.76,
+     0.0
+    ],
+    "scale": 1.04,
+    "rot": 12.5
+   },
+   {
+    "prop": "bush",
+    "style": 1,
+    "seed": 829341,
+    "loc": [
+     -4.85,
+     2.31,
+     0.0
+    ],
+    "scale": 1.22,
+    "rot": 24.5
+   },
+   {
+    "prop": "pebbles",
+    "style": 2,
+    "seed": 602936,
+    "loc": [
+     2.1,
+     3.56,
+     0.0
+    ],
+    "scale": 0.95,
+    "rot": -22.6
+   },
+   {
+    "prop": "bench",
+    "style": 0,
+    "seed": 473540,
+    "loc": [
+     0.82,
+     3.7,
+     0.0
+    ],
+    "scale": 1.24,
+    "rot": -17.4
+   },
+   {
+    "prop": "hay_seat",
+    "style": 0,
+    "seed": 931726,
+    "loc": [
+     -3.18,
+     2.76,
+     0.0
+    ],
+    "scale": 0.98,
+    "rot": -3.3
+   },
+   {
+    "prop": "fence",
+    "style": 2,
+    "seed": 12309,
+    "loc": [
+     4.44,
+     2.89,
+     0.0
+    ],
+    "scale": 1.04,
+    "rot": 13.8
+   }
+  ],
+  "order": 85
  }
 }

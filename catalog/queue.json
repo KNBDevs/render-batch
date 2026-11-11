@@ -829,5 +829,27 @@
     "template": "episode",
     "status": "approved",
     "immediate": false
+  },
+  {
+    "id": "pasas_bailan",
+    "template": "episode",
+    "status": "draft",
+    "title": "Las pasas que bailaban",
+    "cast": [
+      "pimo",
+      "bolita"
+    ],
+    "batch": "62_plus"
+  },
+  {
+    "id": "servilleta_seca",
+    "template": "episode",
+    "status": "draft",
+    "title": "La servilleta que salió seca",
+    "cast": [
+      "tuki",
+      "moki"
+    ],
+    "batch": "62_plus"
   }
 ]

@@ -6574,5 +6574,163 @@
    }
   ],
   "order": 82
+ },
+ "pasas_bailan": {
+  "env": "casa",
+  "family": "pastel",
+  "decor": [
+   {
+    "prop": "planter_box",
+    "style": 2,
+    "seed": 875768,
+    "loc": [
+     -1.92,
+     4.34,
+     0.0
+    ],
+    "scale": 0.98,
+    "rot": 33.2
+   },
+   {
+    "prop": "bunting",
+    "style": 2,
+    "seed": 260531,
+    "loc": [
+     0.82,
+     1.64,
+     0.0
+    ],
+    "scale": 0.94,
+    "rot": -0.5
+   },
+   {
+    "prop": "pebbles",
+    "style": 1,
+    "seed": 554169,
+    "loc": [
+     2.11,
+     2.21,
+     0.0
+    ],
+    "scale": 1.01,
+    "rot": -0.1
+   },
+   {
+    "prop": "pouf",
+    "style": 2,
+    "seed": 711747,
+    "loc": [
+     4.32,
+     0.71,
+     0.0
+    ],
+    "scale": 0.96,
+    "rot": 27.9
+   },
+   {
+    "prop": "ball_basket",
+    "style": 1,
+    "seed": 783546,
+    "loc": [
+     -4.46,
+     2.28,
+     0.0
+    ],
+    "scale": 0.89,
+    "rot": -30.1
+   },
+   {
+    "prop": "flower_pot",
+    "style": 0,
+    "seed": 959948,
+    "loc": [
+     3.41,
+     0.25,
+     0.0
+    ],
+    "scale": 0.89,
+    "rot": 21.8
+   }
+  ],
+  "order": 83
+ },
+ "servilleta_seca": {
+  "env": "casa",
+  "family": "pastel",
+  "decor": [
+   {
+    "prop": "play_mat",
+    "style": 2,
+    "seed": 232395,
+    "loc": [
+     -3.56,
+     1.31,
+     0.0
+    ],
+    "scale": 0.9,
+    "rot": 21.7
+   },
+   {
+    "prop": "led_lantern",
+    "style": 1,
+    "seed": 716023,
+    "loc": [
+     -1.36,
+     3.29,
+     0.0
+    ],
+    "scale": 1.25,
+    "rot": 23.6
+   },
+   {
+    "prop": "pebbles",
+    "style": 0,
+    "seed": 701554,
+    "loc": [
+     -4.88,
+     2.32,
+     0.0
+    ],
+    "scale": 1.0,
+    "rot": -17.7
+   },
+   {
+    "prop": "soft_token",
+    "style": 1,
+    "seed": 862651,
+    "loc": [
+     1.25,
+     4.07,
+     0.0
+    ],
+    "scale": 1.22,
+    "rot": -32.3
+   },
+   {
+    "prop": "bunting",
+    "style": 0,
+    "seed": 387248,
+    "loc": [
+     2.05,
+     4.5,
+     0.0
+    ],
+    "scale": 0.9,
+    "rot": 13.5
+   },
+   {
+    "prop": "pouf",
+    "style": 0,
+    "seed": 275295,
+    "loc": [
+     4.52,
+     0.91,
+     0.0
+    ],
+    "scale": 0.9,
+    "rot": 32.0
+   }
+  ],
+  "order": 84
  }
 }

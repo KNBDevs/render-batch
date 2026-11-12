@@ -862,5 +862,27 @@
       "ruki"
     ],
     "batch": "62_plus"
+  },
+  {
+    "id": "colorante_templada",
+    "template": "episode",
+    "status": "draft",
+    "title": "La gota que iba despacito",
+    "cast": [
+      "moki",
+      "tuki"
+    ],
+    "batch": "65_plus"
+  },
+  {
+    "id": "mariposa_equilibrio",
+    "template": "episode",
+    "status": "draft",
+    "title": "La mariposa que se sostenía en un lápiz",
+    "cast": [
+      "bolita",
+      "bopi"
+    ],
+    "batch": "65_plus"
   }
 ]

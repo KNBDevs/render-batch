@@ -6811,5 +6811,151 @@
    }
   ],
   "order": 85
+ },
+ "colorante_templada": {
+  "env": "casa",
+  "family": "pastel",
+  "decor": [
+   {
+    "prop": "floor_lamp",
+    "style": 0,
+    "seed": 255832,
+    "loc": [
+     -3.54,
+     2.72,
+     0.0
+    ],
+    "scale": 0.99,
+    "rot": 3.3
+   },
+   {
+    "prop": "soft_token",
+    "style": 0,
+    "seed": 644910,
+    "loc": [
+     1.21,
+     3.08,
+     0.0
+    ],
+    "scale": 0.92,
+    "rot": -6.1
+   },
+   {
+    "prop": "ball_basket",
+    "style": 2,
+    "seed": 191331,
+    "loc": [
+     3.46,
+     1.27,
+     0.0
+    ],
+    "scale": 1.0,
+    "rot": 14.2
+   },
+   {
+    "prop": "toy_blocks",
+    "style": 2,
+    "seed": 12404,
+    "loc": [
+     4.84,
+     0.65,
+     0.0
+    ],
+    "scale": 1.11,
+    "rot": -27.2
+   },
+   {
+    "prop": "led_lantern",
+    "style": 0,
+    "seed": 441206,
+    "loc": [
+     -1.94,
+     4.38,
+     0.0
+    ],
+    "scale": 1.21,
+    "rot": -31.4
+   },
+   {
+    "prop": "bunting",
+    "style": 1,
+    "seed": 83169,
+    "loc": [
+     -4.78,
+     2.01,
+     0.0
+    ],
+    "scale": 1.09,
+    "rot": -21.4
+   }
+  ],
+  "order": 86
+ },
+ "mariposa_equilibrio": {
+  "env": "aula",
+  "family": "pastel",
+  "decor": [
+   {
+    "prop": "floor_lamp",
+    "style": 1,
+    "seed": 136924,
+    "loc": [
+     -4.51,
+     1.19,
+     0.0
+    ],
+    "scale": 0.95,
+    "rot": 18.9
+   },
+   {
+    "prop": "play_mat",
+    "style": 0,
+    "seed": 720739,
+    "loc": [
+     -2.25,
+     3.75,
+     0.0
+    ],
+    "scale": 1.08,
+    "rot": 22.3
+   },
+   {
+    "prop": "soft_token",
+    "style": 2,
+    "seed": 948704,
+    "loc": [
+     -1.28,
+     3.36,
+     0.0
+    ],
+    "scale": 1.07,
+    "rot": 9.2
+   },
+   {
+    "prop": "pebbles",
+    "style": 0,
+    "seed": 32924,
+    "loc": [
+     2.38,
+     1.95,
+     0.0
+    ],
+    "scale": 0.99,
+    "rot": 24.3
+   },
+   {
+    "prop": "pouf",
+    "style": 2,
+    "seed": 693067,
+    "loc": [
+     3.18,
+     0.85,
+     0.0
+    ],
+    "scale": 1.16,
+    "rot": 18.4
+   }
+  ],
+  "order": 87
  }
 }

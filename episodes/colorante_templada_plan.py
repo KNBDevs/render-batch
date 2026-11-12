@@ -4,7 +4,7 @@ MOOD = 'happy'
 ENV = 'casa'
 LINES = [
     ('m1', 'moki', '¡Mi gota azul va muy despacito!', 10, 2.4),
-    ('t1', 'tuki', '¿Y si probamos con agua templada?', 100, 2.4),
+    ('t1', 'tuki', '¿Y si probamos con agua templada?', 112, 2.4),
     ('m2', 'moki', 'Fría o templada, ¿dónde se esparce antes el color?', 190, 3.4),
     ('t2', 'tuki', '¡En la templada! ¡Mira qué rápido!', 380, 2.4),
     ('m3', 'moki', '¡Y en la fría sigue despacito!', 480, 2.4),

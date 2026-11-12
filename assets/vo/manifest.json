@@ -6968,5 +6968,25 @@
   "engine": "gemini",
   "voice": "Umbriel",
   "dev": 2.76
+ },
+ "ep_arena_castillo_r2": {
+  "hash": "03dee351594b",
+  "dur": 3.01,
+  "text": "¡Aguanta! ¡Mira qué torre!",
+  "asr": 1.0,
+  "heard": "¡Aguanta! ¡Mira que torre!",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 2.86
+ },
+ "ep_pasas_bailan_p3": {
+  "hash": "800fde6f6cd5",
+  "dur": 2.07,
+  "text": "¡Y con gas suben y bajan!",
+  "asr": 0.83,
+  "heard": "y con gas suben y ajan.",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": 0.0
  }
 }

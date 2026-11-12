@@ -855,7 +855,7 @@
   {
     "id": "arena_castillo",
     "template": "episode",
-    "status": "draft",
+    "status": "approved",
     "title": "El castillo que no se caía",
     "cast": [
       "luma",

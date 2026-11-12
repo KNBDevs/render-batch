@@ -7118,5 +7118,15 @@
   "engine": "gemini",
   "voice": "Iapetus",
   "dev": -1.6
+ },
+ "ep_mariposa_equilibrio_o4": {
+  "hash": "e6e65f6a8e05",
+  "dur": 4.82,
+  "text": "¡Sin pinzas, se cae! ¡Con pinzas, se queda!",
+  "asr": 0.75,
+  "heard": "Sin pincas, se cae.  Con pincas, se queda.",
+  "engine": "gemini",
+  "voice": "Zephyr",
+  "dev": 2.26
  }
 }

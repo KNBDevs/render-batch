@@ -6988,5 +6988,135 @@
   "engine": "gemini",
   "voice": "Puck",
   "dev": 0.0
+ },
+ "ep_colorante_templada_m1": {
+  "hash": "e73910d0e0c8",
+  "dur": 3.95,
+  "text": "¡Mi gota azul va muy despacito!",
+  "asr": 1.0,
+  "heard": "Mi gota azul va muy despacito.",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": 0.05
+ },
+ "ep_colorante_templada_m2": {
+  "hash": "8049b0e908d4",
+  "dur": 4.67,
+  "text": "Fría o templada, ¿dónde se esparce antes el color?",
+  "asr": 1.0,
+  "heard": "Fría o templada, donde se esparce antes el color.",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": 1.85
+ },
+ "ep_colorante_templada_m3": {
+  "hash": "50c6a9d1a371",
+  "dur": 2.9,
+  "text": "¡Y en la fría sigue despacito!",
+  "asr": 1.0,
+  "heard": "Y en la fría sigue despacito.",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": -0.15
+ },
+ "ep_colorante_templada_m4": {
+  "hash": "b46b85b19cf1",
+  "dur": 4.36,
+  "text": "¡Fría, despacito! ¡Templada, rapidísimo!",
+  "asr": 1.0,
+  "heard": "Fría despacito, templada rapidísimo.",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": -2.1
+ },
+ "ep_colorante_templada_t1": {
+  "hash": "1e4b29e2c1d3",
+  "dur": 2.23,
+  "text": "¿Y si probamos con agua templada?",
+  "asr": 1.0,
+  "heard": "y si probamos con agua templada.",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": 3.85
+ },
+ "ep_colorante_templada_t3": {
+  "hash": "cd426867a9dd",
+  "dur": 5.26,
+  "text": "En el agua templada, el agua se mueve más deprisa por dentro y reparte el color.",
+  "asr": 1.0,
+  "heard": "En el agua templada, el agua se mueve más deprisa por dentro y reparte el color.",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": -0.6
+ },
+ "ep_colorante_templada_t2": {
+  "hash": "ce8bd8711cb1",
+  "dur": 2.25,
+  "text": "¡En la templada! ¡Mira qué rápido!",
+  "asr": 1.0,
+  "heard": "¡En la templada! ¡Mira que rápido!",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": -5.75
+ },
+ "ep_mariposa_equilibrio_o1": {
+  "hash": "705243b93723",
+  "dur": 1.98,
+  "text": "¡Mi mariposa se cae del lápiz!",
+  "asr": 1.0,
+  "heard": "Mi mariposa se cae del lápiz.",
+  "engine": "gemini",
+  "voice": "Zephyr",
+  "dev": -0.95
+ },
+ "ep_mariposa_equilibrio_o2": {
+  "hash": "1f16c978eee0",
+  "dur": 3.15,
+  "text": "Con pinzas, ¿la mariposa se cae o se queda?",
+  "asr": 1.0,
+  "heard": "Con pinzas la mariposa se cae o se queda.",
+  "engine": "gemini",
+  "voice": "Zephyr",
+  "dev": -4.65
+ },
+ "ep_mariposa_equilibrio_o3": {
+  "hash": "cc9d6f01dd2f",
+  "dur": 2.53,
+  "text": "¡Y sin pinzas se cae otra vez!",
+  "asr": 1.0,
+  "heard": "Y sin pinzas, se cae otra vez.",
+  "engine": "gemini",
+  "voice": "Zephyr",
+  "dev": 1.65
+ },
+ "ep_mariposa_equilibrio_b1": {
+  "hash": "7c529b8ac9df",
+  "dur": 7.34,
+  "text": "¿Y si le ponemos dos pinzas en las alas?",
+  "asr": 1.0,
+  "heard": "y si le ponemos dos pinzas en las alas...",
+  "engine": "gemini",
+  "voice": "Iapetus",
+  "dev": -2.2
+ },
+ "ep_mariposa_equilibrio_b2": {
+  "hash": "5bfbf3c0937a",
+  "dur": 4.37,
+  "text": "¡Se queda! ¡Mira cómo se balancea!",
+  "asr": 0.83,
+  "heard": "se queda, mida, como se balancea.",
+  "engine": "gemini",
+  "voice": "Iapetus",
+  "dev": -0.85
+ },
+ "ep_mariposa_equilibrio_b3": {
+  "hash": "0f6500ec29a8",
+  "dur": 8.82,
+  "text": "Las pinzas bajan el peso por debajo de la punta, y así no se cae.",
+  "asr": 1.0,
+  "heard": "Las pinzas bajan el peso por debajo de la punta y así no se cae.",
+  "engine": "gemini",
+  "voice": "Iapetus",
+  "dev": -1.6
  }
 }

@@ -197,16 +197,16 @@ label('¡FLOTA!', GC, (0.25, -1.95, 1.05), 0.62, 440, 592, 0.24, 0.15)
 label('AL FONDO', RC, (-0.45, -1.95, 1.05), 0.72, 520, 592, 0.24, 0.14)
 
 exp = C.empty('diagram', None, (0.0, -2.45, 1.12))
-C.rounded_box('panel', (0, 0.04, 0.42), (1.24, 0.03, 0.9), 0.4, M((0.9, 0.94, 1.0), rough=0.5, coat=0.3), exp)
-WAT = M((0.45, 0.72, 1.0), rough=0.4, coat=0.4, emit=0.15)
+C.rounded_box('panel', (0, 0.04, 0.42), (1.24, 0.03, 0.9), 0.4, M((0.66, 0.8, 0.98), rough=0.6, coat=0.2), exp)
+WAT = M((0.15, 0.45, 0.95), rough=0.5, coat=0.3)
 GLS = M((0.98, 0.99, 1.0), rough=0.4, coat=0.4)
-UP = M((0.2, 0.75, 0.35), rough=0.3, coat=0.6, emit=0.4)
+UP = M((0.05, 0.55, 0.2), rough=0.4, coat=0.5)
 for x, salty in ((-0.3, False), (0.3, True)):
     C.rounded_box('cup', (x, 0.0, 0.32), (0.4, 0.02, 0.56), 0.3, GLS, exp)
     C.rounded_box('wat', (x, -0.012, 0.29), (0.34, 0.02, 0.44), 0.3, WAT, exp)
     ez = 0.43 if salty else 0.13
     ic = C.empty('iegg', exp, (x, -0.04, ez))
-    C.sphere('e', (0, 0, 0), (0.1, 0.012, 0.08), SHELL, ic, 24)
+    C.sphere('e', (0, 0, 0), (0.1, 0.012, 0.08), M((1.0, 0.45, 0.12), rough=0.5, coat=0.3), ic, 24)
     if salty:
         for k in range(10):
             C.sphere('dot', (x + rnd.uniform(-0.14, 0.14), -0.026, rnd.uniform(0.12, 0.34)), (0.012, 0.006, 0.012), GLS, exp, 8)
@@ -242,11 +242,15 @@ T.place(luma, 0, LM)
 T.turn(luma, 0, 25)
 T.place(tuki, 0, TK)
 T.turn(tuki, 0, -25)
-for ch, p0, dx in ((luma, LM, -0.4), (tuki, TK, 0.4)):
+for ch, p0, dx in ((luma, LM, -0.6), (tuki, TK, 0.6)):
     T.place(ch, 434, p0)
     T.place(ch, 436, p0 + Vector((dx, 0, 0)))
     T.place(ch, 508, p0 + Vector((dx, 0, 0)))
     T.place(ch, 510, p0)
+    T.place(ch, 596, p0)
+    T.place(ch, 598, p0 + Vector((dx, 0, 0)))
+    T.place(ch, 770, p0 + Vector((dx, 0, 0)))
+    T.place(ch, 772, p0)
 
 T.arm(luma, 'L', 4, 0, None)
 T.arm(luma, 'L', 12, fwd=-75, out=20)
@@ -263,7 +267,6 @@ for f0 in (184, 514):
     T.rest_arm(luma, 'L', f0 + 32)
 gesture(tuki, 'hops', 520)
 gesture(luma, 'hops', 40)
-gesture(tuki, 'breathe', 610)
 T.arm(luma, 'L', 780, 0, None)
 T.arm(luma, 'L', 788, fwd=-60, out=50)
 T.arm(luma, 'L', 830, fwd=-60, out=50)

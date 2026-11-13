@@ -3287,6 +3287,35 @@ def balloon_racer(r, s, fam, root):
     root["mount"] = (0.0, 0.0, top + 0.02)
     return root
 
+def mug(r, s, fam, root):
+    c, d = [_rich(x, 1.3, 0.95) for x in _cols(r, fam, 2)]
+    cm = M(c, rough=0.35, coat=0.8)
+    dm = M(d, rough=0.35, coat=0.7)
+    inm = M((0.98, 0.96, 0.92), rough=0.3, coat=0.8)
+    R, h = [(0.1, 0.2), (0.11, 0.18), (0.12, 0.15)][s]
+    th = 0.012
+    if s == 1:
+        out = [(0, 0.0), (0, R * 0.8), (0.02, R * 0.92), (h * 0.5, R * 1.05), (h, R * 0.92)]
+    elif s == 2:
+        out = [(0, 0.0), (0, R * 0.85), (0.015, R * 0.95), (h * 0.6, R), (h, R * 1.08)]
+    else:
+        out = [(0, 0.0), (0, R * 0.92), (0.015, R), (h, R)]
+    C.lathe("body", out + [(h + 0.006, out[-1][1] - th * 0.5)], cm, root, segs=56)
+    C.lathe("inner", [(0.03, 0.0), (0.03, out[-1][1] - th), (h + 0.002, out[-1][1] - th), (h + 0.002, 0.0)], inm, root, segs=48)
+    rr = max(rr for z, rr in out)
+    C.tube("handle", [(rr * 0.95, 0, h * 0.82), (rr + 0.07, 0, h * 0.78), (rr + 0.085, 0, h * 0.5), (rr + 0.07, 0, h * 0.24), (rr * 0.95, 0, h * 0.2)], 0.018, dm, root)
+    if s == 0:
+        for k in range(10):
+            a = k * 6.2832 / 10
+            z = h * (0.35 if k % 2 else 0.65)
+            C.sphere("dot", (math.cos(a) * R, math.sin(a) * R, z), (0.018, 0.018, 0.018), dm, root, 12)
+    elif s == 1:
+        C.tube("band", _ring(R * 1.05 + 0.004, h * 0.5, 56), 0.012, dm, root)
+    else:
+        C.tube("rim", _ring(R * 1.08 + 0.002, h - 0.004, 56), 0.01, dm, root)
+        C.tube("foot", _ring(R * 0.86, 0.008, 56), 0.01, dm, root)
+
+
 GEN = {k: v for k, v in globals().items() if k in REGISTRY}
 
 

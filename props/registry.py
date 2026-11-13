@@ -103,4 +103,5 @@ REGISTRY = {
     "paper_boat": {"styles": 3, "envs": ["casa", "aula", "patio"], "tags": ["barco", "papel", "agua"], "decor": False},
     "magnifier": {"styles": 3, "envs": ["casa", "aula", "patio", "lab"], "tags": ["lupa", "luz", "mirar"], "decor": False},
     "balloon_racer": {"styles": 3, "envs": ["patio", "casa", "plaza"], "tags": ["coche", "globo", "aire", "juguete"], "decor": False},
+    "mug": {"styles": 3, "envs": ["casa", "cocina", "aula"], "tags": ["taza", "cocina", "mesa"], "decor": False},
 }

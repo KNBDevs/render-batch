@@ -6957,5 +6957,84 @@
    }
   ],
   "order": 87
+ },
+ "sombra_color": {
+  "env": "casa",
+  "family": "pastel",
+  "decor": [
+   {
+    "prop": "play_mat",
+    "style": 1,
+    "seed": 483335,
+    "loc": [
+     3.54,
+     0.72,
+     0.0
+    ],
+    "scale": 1.24,
+    "rot": 6.3
+   },
+   {
+    "prop": "planter_box",
+    "style": 0,
+    "seed": 473737,
+    "loc": [
+     -4.31,
+     1.53,
+     0.0
+    ],
+    "scale": 1.15,
+    "rot": 24.5
+   },
+   {
+    "prop": "led_lantern",
+    "style": 2,
+    "seed": 778998,
+    "loc": [
+     4.6,
+     0.99,
+     0.0
+    ],
+    "scale": 0.98,
+    "rot": 8.4
+   },
+   {
+    "prop": "toy_blocks",
+    "style": 1,
+    "seed": 168939,
+    "loc": [
+     0.83,
+     2.38,
+     0.0
+    ],
+    "scale": 1.04,
+    "rot": 4.4
+   },
+   {
+    "prop": "flower_pot",
+    "style": 1,
+    "seed": 403560,
+    "loc": [
+     -3.56,
+     3.47,
+     0.0
+    ],
+    "scale": 0.98,
+    "rot": 31.1
+   },
+   {
+    "prop": "floor_lamp",
+    "style": 2,
+    "seed": 124797,
+    "loc": [
+     -2.44,
+     4.2,
+     0.0
+    ],
+    "scale": 0.95,
+    "rot": 30.2
+   }
+  ],
+  "order": 88
  }
 }

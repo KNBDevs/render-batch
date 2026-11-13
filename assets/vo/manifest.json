@@ -7128,5 +7128,75 @@
   "engine": "gemini",
   "voice": "Zephyr",
   "dev": 2.26
+ },
+ "ep_sombra_color_p1": {
+  "hash": "72b009ff025d",
+  "dur": 3.09,
+  "text": "¡Mi taza hace una sombra muy negra!",
+  "asr": 0.76,
+  "heard": "Mitaza hace una sombra muy negra.",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": -6.1
+ },
+ "ep_sombra_color_p3": {
+  "hash": "069136369497",
+  "dur": 2.8,
+  "text": "¡Y la taza sigue haciendo sombra negra!",
+  "asr": 1.0,
+  "heard": "Y la taza sigue haciendo sombra negra.",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": -4.7
+ },
+ "ep_sombra_color_p2": {
+  "hash": "d751aabacc2a",
+  "dur": 2.8,
+  "text": "Con el vaso rojo, ¿la sombra será negra o roja?",
+  "asr": 0.85,
+  "heard": "Con el vaso rojo, la sombra será negra.",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": -7.7
+ },
+ "ep_sombra_color_p4": {
+  "hash": "210989d2b009",
+  "dur": 6.72,
+  "text": "¡Taza, sombra negra! ¡Vaso rojo, sombra roja!",
+  "asr": 1.0,
+  "heard": "taza sombra negra  vaso rojo sombra roja",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": 2.45
+ },
+ "ep_sombra_color_t1": {
+  "hash": "74b8c637d993",
+  "dur": 2.1,
+  "text": "¿Y si probamos con este vaso rojo?",
+  "asr": 1.0,
+  "heard": "y si probamos con este vaso rojo.",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": -3.7
+ },
+ "ep_sombra_color_t2": {
+  "hash": "46c86675c6f9",
+  "dur": 2.48,
+  "text": "¡Roja! ¡Mira, la sombra tiene color!",
+  "asr": 1.0,
+  "heard": "Roja, mira, la sombra tiene color.",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": 2.9
+ },
+ "ep_sombra_color_t3": {
+  "hash": "fac4b870fdbf",
+  "dur": 4.69,
+  "text": "El vaso rojo deja pasar la luz roja, y por eso la sombra es roja.",
+  "asr": 1.0,
+  "heard": "El vaso rojo deja pasar la luz roja y por eso la sombra es roja.",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": -3.0
  }
 }

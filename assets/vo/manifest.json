@@ -7198,5 +7198,75 @@
   "engine": "gemini",
   "voice": "Fenrir",
   "dev": -3.0
+ },
+ "ep_huevo_sal_l1": {
+  "hash": "d8e24100bf16",
+  "dur": 2.62,
+  "text": "¡Mi huevo se ha ido al fondo del vaso!",
+  "asr": 1.0,
+  "heard": "Mi huevo se ha ido al fondo del vaso.",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": -3.9
+ },
+ "ep_huevo_sal_l2": {
+  "hash": "3445ced89602",
+  "dur": 3.02,
+  "text": "Con sal, ¿el huevo flota o se hunde?",
+  "asr": 1.0,
+  "heard": "Con sal, el huevo flota o se hunde.",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": -3.1
+ },
+ "ep_huevo_sal_l3": {
+  "hash": "2d0b903c39c4",
+  "dur": 2.6,
+  "text": "¡Y en el agua sin sal sigue en el fondo!",
+  "asr": 1.0,
+  "heard": "y en el agua sin sal sigue en el fondo.",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": -1.15
+ },
+ "ep_huevo_sal_l4": {
+  "hash": "45abdd58c1ab",
+  "dur": 3.34,
+  "text": "¡Sin sal, al fondo! ¡Con sal, flota!",
+  "asr": 1.0,
+  "heard": "Sin sal al fondo. Con sal flota.",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": -1.98
+ },
+ "ep_huevo_sal_t1": {
+  "hash": "b50acc6c9e6c",
+  "dur": 2.09,
+  "text": "¿Y si le echamos mucha sal al agua?",
+  "asr": 0.8,
+  "heard": "y si le echamos muchas al agua.",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": -2.1
+ },
+ "ep_huevo_sal_t2": {
+  "hash": "2e16003bcb45",
+  "dur": 2.16,
+  "text": "¡Flota! ¡Mira cómo sube!",
+  "asr": 1.0,
+  "heard": "¡Flota! ¡Mira cómo sube!",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": 0.3
+ },
+ "ep_huevo_sal_t3": {
+  "hash": "481875970ebb",
+  "dur": 4.57,
+  "text": "El agua con mucha sal empuja más fuerte hacia arriba, y el huevo flota.",
+  "asr": 1.0,
+  "heard": "El agua con mucha sal empuja más fuerte hacia arriba y el huevo flota.",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": -2.1
  }
 }

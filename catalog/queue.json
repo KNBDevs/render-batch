@@ -895,5 +895,16 @@
       "tuki"
     ],
     "batch": "65_plus"
+  },
+  {
+    "id": "huevo_sal",
+    "template": "episode",
+    "status": "draft",
+    "title": "El huevo en agua con sal",
+    "cast": [
+      "luma",
+      "tuki"
+    ],
+    "batch": "65_plus"
   }
 ]

@@ -40,7 +40,7 @@ def jar(name, x, ring, bead):
     inn = [(H + 0.012, R - TH + 0.02), (H - 0.03, R - TH), (0.03, R - TH), (0.03, 0.0)]
     C.lathe('glass', out + inn, MA((0.92, 0.97, 1.0), 0.035), j, segs=64)
     C.tube('rim', [(math.cos(k * 6.2832 / 64) * (R + 0.02), math.sin(k * 6.2832 / 64) * (R + 0.02), H + 0.012) for k in range(65)], 0.013, M(ring, rough=0.35, coat=0.7), j)
-    C.lathe('water', [(0, 0.0), (0.03, RI), (WL, RI), (WL, 0.0)], MA((0.3, 0.62, 1.0), 0.2, rough=0.05), j, segs=56)
+    C.lathe('water', [(0, 0.0), (0.03, RI), (WL, RI), (WL, 0.0)], MA((0.2, 0.55, 1.0), 0.42, rough=0.05, emit=0.08), j, segs=56)
     C.tube('surface', [(math.cos(k * 6.2832 / 64) * (RI - 0.004), math.sin(k * 6.2832 / 64) * (RI - 0.004), WL) for k in range(65)], 0.008, MA((0.3, 0.65, 1.0), 0.75, rough=0.05, emit=0.3), j)
     return j
 
@@ -78,7 +78,7 @@ def bob(o, f0, f1, z, x, amp=0.01, per=30):
 
 
 EB = BOT + 0.095
-EF = WT - 0.045
+EF = WT + 0.015
 at(ea, 0, (JA, JY, WT + 0.32))
 at(ea, 14, (JA, JY, WT + 0.32))
 at(ea, 24, (JA, JY, WT - 0.02))
@@ -193,8 +193,8 @@ def label(txt, rgb, loc, w, f_in, f_out, h=0.27, sz=0.2):
 GC, BC, RC = (0.05, 0.42, 0.15), (0.1, 0.3, 0.8), (0.8, 0.3, 0.1)
 label('¿FLOTA?', GC, (-0.5, -1.3, 1.62), 1.0, 190, 264, 0.34, 0.24)
 label('¿SE HUNDE?', RC, (0.55, -1.3, 1.62), 1.3, 198, 264, 0.34, 0.24)
-label('¡FLOTA!', GC, (JB, -1.95, 1.08), 0.8, 440, 592, 0.27, 0.19)
-label('AL FONDO', RC, (JA, -1.95, 1.08), 0.96, 520, 592, 0.27, 0.18)
+label('¡FLOTA!', GC, (0.25, -1.95, 1.05), 0.62, 440, 592, 0.24, 0.15)
+label('AL FONDO', RC, (-0.45, -1.95, 1.05), 0.72, 520, 592, 0.24, 0.14)
 
 exp = C.empty('diagram', None, (0.0, -2.45, 1.12))
 C.rounded_box('panel', (0, 0.04, 0.42), (1.24, 0.03, 0.9), 0.4, M((0.9, 0.94, 1.0), rough=0.5, coat=0.3), exp)
@@ -224,14 +224,14 @@ label('SIN SAL', BC, (JA, -1.95, 1.1), 0.8, 784, TOTAL + 10, 0.27, 0.18)
 label('CON SAL', RC, (JB, -1.95, 1.1), 0.86, 820, TOTAL + 10, 0.27, 0.18)
 confetti(850, (0, -1.6, 1.3), n=26, spread=1.5)
 
-OP = ((0.05, -2.4, 1.75), (-0.4, -1.55, 0.4), 42)
+OP = ((-0.75, -2.8, 1.9), (-0.75, -1.45, 0.55), 21.5)
 OM = ((-0.72, -3.45, 1.65), (-0.72, -1.45, 0.6), 27)
 W = ((0.0, -4.9, 1.85), (0.0, -1.45, 0.75), 23)
 POUR = ((0.42, -3.7, 1.35), (0.45, -1.5, 0.66), 25)
-CU = ((0.0, -4.0, 1.1), (0.0, -1.5, 0.58), 24)
+CU = ((0.0, -3.95, 1.4), (0.0, -1.55, 0.52), 28)
 EXP = ((0.0, -4.7, 1.62), (0.0, -2.45, 1.52), 30)
 FIN = ((0.0, -4.7, 1.6), (0.0, -1.45, 0.75), 23)
-for a, b, pose in ((0, 46, OP), (48, 92, OM), (94, 268, W), (270, 434, POUR), (436, 596, CU), (598, 770, EXP), (772, TOTAL - 1, FIN)):
+for a, b, pose in ((0, 46, OP), (48, 92, OM), (94, 268, W), (270, 434, POUR), (436, 508, CU), (510, 596, W), (598, 770, EXP), (772, TOTAL - 1, FIN)):
     camkey(a, pose)
     camkey(b, pose)
 
@@ -242,6 +242,11 @@ T.place(luma, 0, LM)
 T.turn(luma, 0, 25)
 T.place(tuki, 0, TK)
 T.turn(tuki, 0, -25)
+for ch, p0, dx in ((luma, LM, -0.4), (tuki, TK, 0.4)):
+    T.place(ch, 434, p0)
+    T.place(ch, 436, p0 + Vector((dx, 0, 0)))
+    T.place(ch, 508, p0 + Vector((dx, 0, 0)))
+    T.place(ch, 510, p0)
 
 T.arm(luma, 'L', 4, 0, None)
 T.arm(luma, 'L', 12, fwd=-75, out=20)
@@ -256,7 +261,7 @@ for f0 in (184, 514):
     T.arm(luma, 'L', f0 + 6, fwd=-85, out=30)
     T.arm(luma, 'L', f0 + 24, fwd=-85, out=30)
     T.rest_arm(luma, 'L', f0 + 32)
-gesture(tuki, 'hops', 438)
+gesture(tuki, 'hops', 520)
 gesture(luma, 'hops', 40)
 gesture(tuki, 'breathe', 610)
 T.arm(luma, 'L', 780, 0, None)

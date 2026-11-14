@@ -917,5 +917,27 @@
       "ruki"
     ],
     "batch": "65_plus"
+  },
+  {
+    "id": "dos_linternas",
+    "template": "episode",
+    "status": "draft",
+    "title": "¿Una sombra o dos?",
+    "cast": [
+      "bolita",
+      "moki"
+    ],
+    "batch": "68_plus"
+  },
+  {
+    "id": "bola_barquito",
+    "template": "episode",
+    "status": "draft",
+    "title": "¿Bola o barquito?",
+    "cast": [
+      "luma",
+      "ruki"
+    ],
+    "batch": "68_plus"
   }
 ]

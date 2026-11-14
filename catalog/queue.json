@@ -899,7 +899,7 @@
   {
     "id": "huevo_sal",
     "template": "episode",
-    "status": "draft",
+    "status": "approved",
     "title": "El huevo en agua con sal",
     "cast": [
       "luma",

@@ -7328,5 +7328,25 @@
   "engine": "gemini",
   "voice": "Umbriel",
   "dev": 3.96
+ },
+ "ep_botella_chorros_p2": {
+  "hash": "e38bb8f2366e",
+  "dur": 1.91,
+  "text": "¿Qué chorro llegará más lejos?",
+  "asr": 1.0,
+  "heard": "¿Qué chorro llegará más lejos?",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": -3.9
+ },
+ "ep_botella_chorros_p2b": {
+  "hash": "3301ad38b6e6",
+  "dur": 2.13,
+  "text": "¿El de arriba o el de abajo?",
+  "asr": 1.0,
+  "heard": "el de arriba o el de abajo.",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": -7.2
  }
 }

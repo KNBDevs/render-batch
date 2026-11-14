@@ -7115,5 +7115,84 @@
    }
   ],
   "order": 89
+ },
+ "botella_chorros": {
+  "env": "patio",
+  "family": "fresh",
+  "decor": [
+   {
+    "prop": "ball_basket",
+    "style": 1,
+    "seed": 732258,
+    "loc": [
+     0.83,
+     3.86,
+     0.0
+    ],
+    "scale": 1.2,
+    "rot": -20.3
+   },
+   {
+    "prop": "birdhouse",
+    "style": 1,
+    "seed": 208101,
+    "loc": [
+     -3.49,
+     1.9,
+     0.0
+    ],
+    "scale": 0.97,
+    "rot": 15.1
+   },
+   {
+    "prop": "hay_seat",
+    "style": 1,
+    "seed": 519048,
+    "loc": [
+     -4.88,
+     1.2,
+     0.0
+    ],
+    "scale": 1.19,
+    "rot": -25.7
+   },
+   {
+    "prop": "planter_box",
+    "style": 2,
+    "seed": 185131,
+    "loc": [
+     -0.86,
+     2.62,
+     0.0
+    ],
+    "scale": 1.17,
+    "rot": -11.7
+   },
+   {
+    "prop": "bush",
+    "style": 2,
+    "seed": 487244,
+    "loc": [
+     3.29,
+     0.22,
+     0.0
+    ],
+    "scale": 1.0,
+    "rot": 25.5
+   },
+   {
+    "prop": "mushroom_stool",
+    "style": 1,
+    "seed": 526415,
+    "loc": [
+     -1.93,
+     4.29,
+     0.0
+    ],
+    "scale": 0.91,
+    "rot": 2.8
+   }
+  ],
+  "order": 90
  }
 }

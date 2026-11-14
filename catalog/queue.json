@@ -906,5 +906,16 @@
       "tuki"
     ],
     "batch": "65_plus"
+  },
+  {
+    "id": "botella_chorros",
+    "template": "episode",
+    "status": "draft",
+    "title": "¿Qué chorro llega más lejos?",
+    "cast": [
+      "pimo",
+      "ruki"
+    ],
+    "batch": "65_plus"
   }
 ]

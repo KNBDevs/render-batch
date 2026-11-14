@@ -7348,5 +7348,35 @@
   "engine": "gemini",
   "voice": "Puck",
   "dev": -7.2
+ },
+ "ep_dos_linternas_b1": {
+  "hash": "d2b051bcade3",
+  "dur": 2.77,
+  "text": "¡Mi cohete hace una sombra en la pared!",
+  "asr": 1.0,
+  "heard": "Mi cohete hace una sombra en la pared",
+  "engine": "gemini",
+  "voice": "Zephyr",
+  "dev": 3.8
+ },
+ "ep_dos_linternas_b2": {
+  "hash": "595c243464a6",
+  "dur": 2.63,
+  "text": "Con dos linternas, ¿una sombra o dos?",
+  "asr": 0.91,
+  "heard": "Con dos linternas, una o dos.",
+  "engine": "gemini",
+  "voice": "Zephyr",
+  "dev": -0.3
+ },
+ "ep_dos_linternas_b4": {
+  "hash": "35a42de1345d",
+  "dur": 2.97,
+  "text": "¡Una luz, una sombra! ¡Dos luces, dos sombras!",
+  "asr": 0.8,
+  "heard": "¡Una sombra! ¡Dos luces, dos sombras!",
+  "engine": "gemini",
+  "voice": "Zephyr",
+  "dev": -3.85
  }
 }

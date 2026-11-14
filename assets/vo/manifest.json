@@ -7268,5 +7268,65 @@
   "engine": "gemini",
   "voice": "Fenrir",
   "dev": -2.1
+ },
+ "ep_botella_chorros_p1": {
+  "hash": "8007213131b5",
+  "dur": 2.56,
+  "text": "¡Este chorrito no llega a la bandeja!",
+  "asr": 1.0,
+  "heard": "Este chorrito no llega a la bandeja.",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": -5.7
+ },
+ "ep_botella_chorros_p4": {
+  "hash": "e1b326911cf3",
+  "dur": 2.67,
+  "text": "¡Arriba, cortito! ¡Abajo, lejos!",
+  "asr": 1.0,
+  "heard": "Arriba cortito, abajo lejos.",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": -3.8
+ },
+ "ep_botella_chorros_p3": {
+  "hash": "924b1e45e8b5",
+  "dur": 2.1,
+  "text": "¡Y el de arriba se queda cortito!",
+  "asr": 1.0,
+  "heard": "Y el de arriba se queda cortito.",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": 0.0
+ },
+ "ep_botella_chorros_r1": {
+  "hash": "3e00bd1b1609",
+  "dur": 2.37,
+  "text": "¿Y si quitamos la tirita de abajo?",
+  "asr": 1.0,
+  "heard": "y si quitamos la tirita de abajo.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 8.41
+ },
+ "ep_botella_chorros_r2": {
+  "hash": "5b77fea8e045",
+  "dur": 2.88,
+  "text": "¡El de abajo! ¡Llega hasta la bandeja!",
+  "asr": 1.0,
+  "heard": "El de abajo llega hasta la bandeja.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 1.46
+ },
+ "ep_botella_chorros_r3": {
+  "hash": "322b857c453d",
+  "dur": 5.92,
+  "text": "Abajo hay más agua encima, empuja más fuerte, y el chorro llega más lejos.",
+  "asr": 1.0,
+  "heard": "Abajo hay más agua encima, empuja más fuerte y el chorro llega más lejos.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 3.96
  }
 }

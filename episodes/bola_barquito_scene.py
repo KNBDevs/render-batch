@@ -205,7 +205,7 @@ label('¡FLOTA!', GC, (XB + 0.1, -1.95, 1.05), 0.8, 826, TOTAL + 10, 0.27, 0.17)
 confetti(856, (0, -1.6, 1.3), n=26, spread=1.5)
 
 OP = ((XA + 0.1, -2.75, 0.8), (XA + 0.1, JY, 0.42), 24)
-W = ((0.0, -4.9, 1.85), (0.0, -1.45, 0.75), 23)
+W = ((0.0, -4.65, 1.5), (0.0, -1.45, 0.7), 17)
 FOLD = ((SX0, -3.0, 1.0), (SX0, SY0, 0.55), 30)
 CU = ((-0.07, -3.55, 1.05), (-0.07, JY, 0.45), 22)
 EXP = ((0.0, -4.7, 1.62), (0.0, -2.45, 1.52), 30)
@@ -215,7 +215,7 @@ for a, b, pose in ((0, 52, OP), (54, 262, W), (264, 376, FOLD), (378, 424, CU), 
 
 luma = make('luma', 1.1)
 ruki = make('ruki', 1.1)
-LM, RK = Vector((-1.2, -1.3, Z0)), Vector((1.2, -1.15, Z0))
+LM, RK = Vector((-1.04, -1.3, Z0)), Vector((1.08, -1.15, Z0))
 T.turn(luma, 0, 25)
 T.turn(ruki, 0, -25)
 for ch, p0, dx in ((luma, LM, -0.6), (ruki, RK, 0.6)):
@@ -224,8 +224,8 @@ for ch, p0, dx in ((luma, LM, -0.6), (ruki, RK, 0.6)):
         T.place(ch, fb, p0 + Vector((dx, 0, 0)))
         T.place(ch, fb + 2, p0)
     T.place(ch, 584, p0)
-    T.place(ch, 586, p0 + Vector((dx, 0, 0)))
-    T.place(ch, 772, p0 + Vector((dx, 0, 0)))
+    T.place(ch, 586, p0 + Vector((dx * 1.6, 0, 0)))
+    T.place(ch, 772, p0 + Vector((dx * 1.6, 0, 0)))
     T.place(ch, 774, p0)
 
 T.arm(luma, 'L', 4, 0, None)
@@ -241,7 +241,7 @@ for ch, side, f0 in ((luma, 'L', 188), (ruki, 'R', 380), (luma, 'L', 506), (luma
     T.arm(ch, side, f0 + 6, fwd=-85, out=30)
     T.arm(ch, side, f0 + 20, fwd=-85, out=30)
     T.rest_arm(ch, side, f0 + 28)
-gesture(luma, 'hops', 44)
+gesture(luma, 'hops', 58)
 gesture(ruki, 'hops', 432)
 C.wave(luma, 'R', 860, cycles=2, period=10)
 C.wave(ruki, 'L', 856, cycles=2, period=10)

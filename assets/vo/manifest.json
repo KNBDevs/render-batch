@@ -7378,5 +7378,115 @@
   "engine": "gemini",
   "voice": "Zephyr",
   "dev": -3.85
+ },
+ "ep_dos_linternas_b3": {
+  "hash": "8d488e217f63",
+  "dur": 2.51,
+  "text": "¡Y si apago una, queda una sola!",
+  "asr": 0.86,
+  "heard": "Y si apago una, queda una sala.",
+  "engine": "gemini",
+  "voice": "Zephyr",
+  "dev": 1.9
+ },
+ "ep_dos_linternas_m1": {
+  "hash": "2a1bbfd38f83",
+  "dur": 2.91,
+  "text": "¿Y si encendemos otra linterna?",
+  "asr": 1.0,
+  "heard": "Y si encendemos otra linterna?",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": -2.35
+ },
+ "ep_dos_linternas_m2": {
+  "hash": "017ea9d938e6",
+  "dur": 4.1,
+  "text": "¡Dos! ¡Una sombra por cada linterna!",
+  "asr": 1.0,
+  "heard": "Dos. Una sombra por cada linterna.",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": -6.35
+ },
+ "ep_dos_linternas_m3": {
+  "hash": "058a00a1879a",
+  "dur": 7.68,
+  "text": "Cada linterna hace su propia sombra, por eso con dos luces hay dos sombras.",
+  "asr": 1.0,
+  "heard": "Cada linterna hace su propia sombra, por eso, con dos luces, hay dos sombras.",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": -7.6
+ },
+ "ep_bola_barquito_l1": {
+  "hash": "f00a07fa6871",
+  "dur": 2.6,
+  "text": "¡Mi bola de papel de plata se ha hundido!",
+  "asr": 1.0,
+  "heard": "Mi bola de papel de plata se ha hundido.",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": -0.8
+ },
+ "ep_bola_barquito_l2": {
+  "hash": "543d299b4a99",
+  "dur": 2.5,
+  "text": "El barquito, ¿flotará o se hundirá?",
+  "asr": 1.0,
+  "heard": "El barquito flotará o se hundirá.",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": -5.4
+ },
+ "ep_bola_barquito_l3": {
+  "hash": "70040aa0c0a7",
+  "dur": 1.93,
+  "text": "¡Y la bola sigue en el fondo!",
+  "asr": 1.0,
+  "heard": "Y la bola sigue en el fondo.",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": -5.9
+ },
+ "ep_bola_barquito_l4": {
+  "hash": "3ee0f5baf795",
+  "dur": 2.47,
+  "text": "¡Bola, al fondo! ¡Barquito, flota!",
+  "asr": 1.0,
+  "heard": "vola al fondo, barquito flota",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": 3.7
+ },
+ "ep_bola_barquito_r1": {
+  "hash": "c1d5dce7640b",
+  "dur": 3.43,
+  "text": "¿Y si con el mismo papel hacemos un barquito?",
+  "asr": 1.0,
+  "heard": "y si con el mismo papel hacemos un barquito.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 3.81
+ },
+ "ep_bola_barquito_r2": {
+  "hash": "d137fc441cab",
+  "dur": 3.29,
+  "text": "¡Flota! ¡El barquito no se hunde!",
+  "asr": 1.0,
+  "heard": "Flota, el barquito no se hunde.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 6.56
+ },
+ "ep_bola_barquito_r3": {
+  "hash": "37015f795f0a",
+  "dur": 6.15,
+  "text": "El barquito es ancho y aparta mucha agua, y el agua lo empuja hacia arriba.",
+  "asr": 1.0,
+  "heard": "El barquito es ancho y aparta mucha agua y el agua lo empuja hacia arriba.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 3.76
  }
 }

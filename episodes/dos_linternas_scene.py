@@ -196,8 +196,8 @@ for ch, p0, dx in ((bolita, BP, -0.6), (moki, MP, 0.6)):
     T.place(ch, 66, p0 + Vector((dx, 0, 0)))
     T.place(ch, 68, p0)
     T.place(ch, 586, p0)
-    T.place(ch, 588, p0 + Vector((dx, 0, 0)))
-    T.place(ch, 770, p0 + Vector((dx, 0, 0)))
+    T.place(ch, 588, p0 + Vector((dx * 1.8, 0, 0)))
+    T.place(ch, 770, p0 + Vector((dx * 1.8, 0, 0)))
     T.place(ch, 772, p0)
 
 T.arm(bolita, 'L', 4, 0, None)

@@ -939,5 +939,27 @@
       "ruki"
     ],
     "batch": "68_plus"
+  },
+  {
+    "id": "sombra_larga",
+    "template": "episode",
+    "status": "draft",
+    "title": "La sombra del arbolito",
+    "cast": [
+      "pimo",
+      "ruki"
+    ],
+    "batch": "73_plus"
+  },
+  {
+    "id": "balon_bota",
+    "template": "episode",
+    "status": "draft",
+    "title": "¿Bota o no bota?",
+    "cast": [
+      "tuki",
+      "moki"
+    ],
+    "batch": "73_plus"
   }
 ]

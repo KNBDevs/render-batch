@@ -7352,5 +7352,163 @@
    }
   ],
   "order": 92
+ },
+ "sombra_larga": {
+  "env": "patio",
+  "family": "fresh",
+  "decor": [
+   {
+    "prop": "fence",
+    "style": 2,
+    "seed": 286273,
+    "loc": [
+     -1.04,
+     4.03,
+     0.0
+    ],
+    "scale": 0.86,
+    "rot": 6.9
+   },
+   {
+    "prop": "birdhouse",
+    "style": 2,
+    "seed": 478197,
+    "loc": [
+     3.23,
+     1.04,
+     0.0
+    ],
+    "scale": 1.06,
+    "rot": 10.3
+   },
+   {
+    "prop": "bush",
+    "style": 1,
+    "seed": 40279,
+    "loc": [
+     4.8,
+     0.56,
+     0.0
+    ],
+    "scale": 1.06,
+    "rot": 4.7
+   },
+   {
+    "prop": "mushroom_stool",
+    "style": 2,
+    "seed": 238885,
+    "loc": [
+     1.38,
+     3.66,
+     0.0
+    ],
+    "scale": 1.06,
+    "rot": 33.0
+   },
+   {
+    "prop": "ball_basket",
+    "style": 2,
+    "seed": 671760,
+    "loc": [
+     -2.45,
+     2.21,
+     0.0
+    ],
+    "scale": 1.22,
+    "rot": -14.6
+   },
+   {
+    "prop": "bench",
+    "style": 1,
+    "seed": 450789,
+    "loc": [
+     -4.45,
+     0.53,
+     0.0
+    ],
+    "scale": 1.17,
+    "rot": -11.5
+   }
+  ],
+  "order": 93
+ },
+ "balon_bota": {
+  "env": "plaza",
+  "family": "pastel",
+  "decor": [
+   {
+    "prop": "birdhouse",
+    "style": 0,
+    "seed": 361672,
+    "loc": [
+     -1.93,
+     3.25,
+     0.0
+    ],
+    "scale": 1.11,
+    "rot": -21.4
+   },
+   {
+    "prop": "mushroom_stool",
+    "style": 0,
+    "seed": 635625,
+    "loc": [
+     4.83,
+     0.38,
+     0.0
+    ],
+    "scale": 1.12,
+    "rot": -19.8
+   },
+   {
+    "prop": "bench",
+    "style": 2,
+    "seed": 167056,
+    "loc": [
+     3.39,
+     2.92,
+     0.0
+    ],
+    "scale": 1.12,
+    "rot": -6.9
+   },
+   {
+    "prop": "led_lantern",
+    "style": 0,
+    "seed": 695400,
+    "loc": [
+     -1.29,
+     4.34,
+     0.0
+    ],
+    "scale": 0.97,
+    "rot": 25.8
+   },
+   {
+    "prop": "fence",
+    "style": 1,
+    "seed": 362627,
+    "loc": [
+     -4.61,
+     2.51,
+     0.0
+    ],
+    "scale": 1.23,
+    "rot": -9.8
+   },
+   {
+    "prop": "gourd_trio",
+    "style": 2,
+    "seed": 976939,
+    "loc": [
+     1.09,
+     3.49,
+     0.0
+    ],
+    "scale": 1.22,
+    "rot": 18.0
+   }
+  ],
+  "order": 94
  }
 }

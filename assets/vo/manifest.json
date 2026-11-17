@@ -7488,5 +7488,145 @@
   "engine": "gemini",
   "voice": "Umbriel",
   "dev": 3.76
+ },
+ "ep_sombra_larga_p1": {
+  "hash": "dfefaed2e6fb",
+  "dur": 2.92,
+  "text": "¡La sombra de mi arbolito es larguísima!",
+  "asr": 0.86,
+  "heard": "La sombra de mi arbolito es larquísima.",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": -4.2
+ },
+ "ep_sombra_larga_p2": {
+  "hash": "81739e9ab27d",
+  "dur": 3.97,
+  "text": "Con el sol arriba, ¿la sombra será larga o corta?",
+  "asr": 1.0,
+  "heard": "Con el sol arriba, la sombra será larga o corta.",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": 1.45
+ },
+ "ep_sombra_larga_p3": {
+  "hash": "f6808eaf15fc",
+  "dur": 2.65,
+  "text": "¡Y si el sol baja, se hace larga otra vez!",
+  "asr": 1.0,
+  "heard": "Y si el sol baja, se hace larga otra vez.",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": 0.0
+ },
+ "ep_sombra_larga_p4": {
+  "hash": "7e2819b5998a",
+  "dur": 4.21,
+  "text": "¡Sol bajito, sombra larga! ¡Sol arriba, sombra corta!",
+  "asr": 1.0,
+  "heard": "Sol bajito, sombra larga. Sol arriba, sombra corta.",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": -7.9
+ },
+ "ep_sombra_larga_r1": {
+  "hash": "c5e839d72068",
+  "dur": 2.88,
+  "text": "¿Y si subimos el sol hasta arriba?",
+  "asr": 1.0,
+  "heard": "¿Y si subimos el sol hasta arriba?",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 2.31
+ },
+ "ep_sombra_larga_r2": {
+  "hash": "5d114635ee09",
+  "dur": 2.99,
+  "text": "¡Corta! ¡Se ha quedado muy pequeña!",
+  "asr": 1.0,
+  "heard": "¡Corta! ¡Se ha quedado muy pequeña!",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 3.91
+ },
+ "ep_sombra_larga_r3": {
+  "hash": "67313cdccc86",
+  "dur": 6.57,
+  "text": "Cuando el sol está bajito, la sombra es larga; cuando está arriba, es corta.",
+  "asr": 1.0,
+  "heard": "Cuando el sol está bajito, la sombra es larga, cuando está arriba es corta.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 2.71
+ },
+ "ep_balon_bota_m1": {
+  "hash": "d14b86a092c0",
+  "dur": 2.69,
+  "text": "¿Y si le metemos aire con la bomba?",
+  "asr": 1.0,
+  "heard": "Y si le metemos aire con la bomba.",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": -2.15
+ },
+ "ep_balon_bota_m2": {
+  "hash": "3bec6bf6a9f1",
+  "dur": 2.47,
+  "text": "¡Bota! ¡Mira qué alto sube!",
+  "asr": 1.0,
+  "heard": "¡Vota! ¡Mira qué alto sube!",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": 4.95
+ },
+ "ep_balon_bota_m3": {
+  "hash": "ce21124be86c",
+  "dur": 4.89,
+  "text": "El aire de dentro empuja como un muelle, y por eso el balón bota.",
+  "asr": 1.0,
+  "heard": "El aire de dentro empuja como un muelle y por eso el balón bota.",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": -0.75
+ },
+ "ep_balon_bota_t1": {
+  "hash": "60c74fc6334d",
+  "dur": 2.6,
+  "text": "¡Mi balón no bota, hace plof!",
+  "asr": 0.83,
+  "heard": "Mi balón no bota. ¿Hace ploff?",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": -8.0
+ },
+ "ep_balon_bota_t2": {
+  "hash": "66caf7b40a09",
+  "dur": 2.87,
+  "text": "Con aire, ¿el balón bota o no bota?",
+  "asr": 1.0,
+  "heard": "Con aire, el balón vota o no vota.",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": -7.65
+ },
+ "ep_balon_bota_t3": {
+  "hash": "e41f2b968037",
+  "dur": 2.8,
+  "text": "¡Y si le quito el aire, vuelve a hacer plof!",
+  "asr": 1.0,
+  "heard": "Y si le quito el aire, vuelve a hacer plof.",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": -7.9
+ },
+ "ep_balon_bota_t4": {
+  "hash": "a2a9ddedb23d",
+  "dur": 2.65,
+  "text": "¡Sin aire, plof! ¡Con aire, bota!",
+  "asr": 1.0,
+  "heard": "Sin aire plof, con aire bota.",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": -2.75
  }
 }

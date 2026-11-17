@@ -77,8 +77,8 @@ def buffer_state():
     pending = [e for e in q if e.get("status") == "approved" and e["id"] not in pub and not e.get("publish_local")]
     slots = len(fut) + len(pending)
     last = max([t.date() for t in fut] + [now.date()])
-    air = last + timedelta(days=1 + len(pending) // 2)
-    return slots / 2.0, air
+    air = last + timedelta(days=1 + len(pending))
+    return float(slots), air
 
 
 def weights():
@@ -302,7 +302,7 @@ def write(eid, m, y, n, pair, hol, js, rnd, seed):
 def make(n_max, force=False):
     days, air = buffer_state()
     print("buffer days", days, "air", air, flush=True)
-    need = n_max if force else (n_max if days < 4 else 0)
+    need = n_max if force else (n_max if days < 2 else 0)
     if not need:
         return []
     used = load(USED, {})
@@ -316,7 +316,7 @@ def make(n_max, force=False):
         if not ch:
             break
         m, y, n, pair = ch
-        hol = holiday_for(air + timedelta(days=i // 2))
+        hol = holiday_for(air + timedelta(days=i))
         js = script(m, y, n, pair, hol, rnd)
         eid = f"exp_{m}_{y}_{n}"
         k = 2

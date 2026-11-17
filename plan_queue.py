@@ -22,7 +22,7 @@ def slots_after(t):
     d = t.astimezone(MAD).date()
     for i in range(60):
         day = d + timedelta(days=i)
-        hm = [(14, 0), (18, 30)] if day.weekday() < 5 else [(10, 0), (17, 30)]
+        hm = [(18, 30)] if day.weekday() < 5 else [(10, 0)]
         for h, m in hm:
             s = datetime(day.year, day.month, day.day, h, m, tzinfo=MAD)
             if s > t:

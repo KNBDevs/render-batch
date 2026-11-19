@@ -11,6 +11,14 @@ def token():
     return json.load(urllib.request.urlopen("https://oauth2.googleapis.com/token", data, timeout=60))["access_token"]
 
 
+def done(res):
+    vid = res["id"]
+    print("uploaded", vid, res.get("status", {}).get("publishAt", ""), flush=True)
+    out = os.environ.get("GITHUB_OUTPUT")
+    if out:
+        open(out, "a").write(f"video_id={vid}\n")
+
+
 def main(video, meta_p, spec_p):
     meta = json.load(open(meta_p))
     spec = json.load(open(spec_p))
@@ -31,30 +39,39 @@ def main(video, meta_p, spec_p):
     size = os.path.getsize(video)
     tok = token()
     last = None
-    for attempt in range(4):
+    loc = None
+    for attempt in range(5):
         try:
-            req = urllib.request.Request(
-                "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status",
-                data=json.dumps(body).encode(), method="POST",
-                headers={"Authorization": f"Bearer {tok}", "Content-Type": "application/json; charset=UTF-8",
-                         "X-Upload-Content-Type": "video/mp4", "X-Upload-Content-Length": str(size)})
-            loc = urllib.request.urlopen(req, timeout=60).headers["Location"]
-            up = urllib.request.Request(loc, data=open(video, "rb").read(), method="PUT",
-                                        headers={"Authorization": f"Bearer {tok}", "Content-Type": "video/mp4"})
-            res = json.load(urllib.request.urlopen(up, timeout=600))
-            vid = res["id"]
-            print("uploaded", vid, res.get("status", {}).get("publishAt", ""), flush=True)
-            out = os.environ.get("GITHUB_OUTPUT")
-            if out:
-                open(out, "a").write(f"video_id={vid}\n")
-            return
+            if loc is None:
+                req = urllib.request.Request(
+                    "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status",
+                    data=json.dumps(body).encode(), method="POST",
+                    headers={"Authorization": f"Bearer {tok}", "Content-Type": "application/json; charset=UTF-8",
+                             "X-Upload-Content-Type": "video/mp4", "X-Upload-Content-Length": str(size)})
+                loc = urllib.request.urlopen(req, timeout=60).headers["Location"]
+                start = 0
+            else:
+                st = urllib.request.Request(loc, data=b"", method="PUT",
+                                            headers={"Authorization": f"Bearer {tok}", "Content-Range": f"bytes */{size}"})
+                try:
+                    res = json.load(urllib.request.urlopen(st, timeout=60))
+                    return done(res)
+                except urllib.error.HTTPError as e:
+                    if e.code != 308:
+                        raise
+                    rng = e.headers.get("Range")
+                    start = int(rng.split("-")[1]) + 1 if rng else 0
+            data = open(video, "rb").read()[start:]
+            hdr = {"Authorization": f"Bearer {tok}", "Content-Type": "video/mp4"}
+            if start:
+                hdr["Content-Range"] = f"bytes {start}-{size - 1}/{size}"
+            up = urllib.request.Request(loc, data=data, method="PUT", headers=hdr)
+            return done(json.load(urllib.request.urlopen(up, timeout=600)))
         except urllib.error.HTTPError as e:
             msg = e.read().decode("utf-8", "ignore")
             print("http", e.code, msg[:800], flush=True)
             last = e
-            if e.code in (400, 401, 403) and "quota" not in msg.lower():
-                break
-            if "quota" in msg.lower():
+            if e.code < 500:
                 break
         except Exception as e:
             print("err", e, flush=True)

@@ -27,13 +27,13 @@ def titles():
 
 
 def fetch():
-    r = subprocess.run(["yt-dlp", "--flat-playlist", "-J", URL], capture_output=True, text=True, timeout=600)
+    r = subprocess.run(["yt-dlp", "--extractor-args", "youtube:lang=es", "--flat-playlist", "-J", URL], capture_output=True, text=True, timeout=600)
     data = json.loads(r.stdout)
     out = []
     for e in data.get("entries", []):
         vid = e["id"]
         if e.get("view_count") is None:
-            j = subprocess.run(["yt-dlp", "-j", "--skip-download", f"https://www.youtube.com/shorts/{vid}"],
+            j = subprocess.run(["yt-dlp", "--extractor-args", "youtube:lang=es", "-j", "--skip-download", f"https://www.youtube.com/shorts/{vid}"],
                                capture_output=True, text=True, timeout=120)
             try:
                 e = {**e, **json.loads(j.stdout)}
@@ -48,13 +48,18 @@ def main():
     now = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     db = json.load(open(OUT)) if os.path.exists(OUT) else {}
     tm = titles()
+    vp = os.path.join(ROOT, "state", "videos.json")
+    byid = {i: e for e, ids in (json.load(open(vp)) if os.path.exists(vp) else {}).items() for i in ids}
     for v in fetch():
         if not v["title"]:
             continue
         k = norm(v["title"].split("#")[0])[:40]
         eid, chars = tm.get(k, (None, []))
+        if v["id"] in byid:
+            eid = byid[v["id"]]
+            chars = next((c for e, c in tm.values() if e == eid), chars)
         rec = db.setdefault(v["id"], {"title": v["title"], "episode": eid, "chars": chars, "hist": {}})
-        rec.update({"title": v["title"], "episode": rec.get("episode") or eid, "chars": rec.get("chars") or chars})
+        rec.update({"title": v["title"], "episode": byid.get(v["id"]) or rec.get("episode") or eid, "chars": rec.get("chars") or chars})
         if v.get("date"):
             rec["date"] = str(v["date"])
         if v["views"] is not None:

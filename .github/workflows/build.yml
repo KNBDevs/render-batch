@@ -191,6 +191,7 @@ jobs:
             if grep -qx "$b" <<<"$A" || [ "$b" = "${N%-*}" ]; then gh api -X DELETE "repos/$R/releases/assets/$i" >/dev/null || true; fi
           done
       - name: Deliver
+        id: up
         if: ${{ github.event_name == 'schedule' || inputs.deliver }}
         env:
           HOOK: ${{ secrets.DELIVERY_HOOK }}
@@ -204,27 +205,33 @@ jobs:
             PA=$(date -u -d '+15 min' +%Y-%m-%dT%H:%M:%SZ)
             jq --arg a "$PA" --arg l "$(TZ=Europe/Madrid date -d "$PA" '+%d/%m/%Y %H:%M')" '.publishAt=$a | .publishLocal=$l' spec.json > s.tmp && mv s.tmp spec.json
           fi
-          if [ -n "$YT_REFRESH_TOKEN" ]; then python3 tools/yt_upload.py out.mp4 meta.json spec.json; exit $?; fi
-          curl -sS --fail --retry 3 -X POST "$HOOK" \
+          EP=$(jq -r '.episode // empty' spec.json)
+          git config user.name "bot"; git config user.email "bot@users.noreply.github.com"
+          if [ -n "$EP" ]; then
+            set +e; python3 tools/claim.py claim "$EP"; C=$?; set -e
+            if [ "$C" = 2 ]; then echo "$EP already delivered; skip"; echo "skip=1" >> "$GITHUB_OUTPUT"; exit 0; fi
+            [ "$C" = 0 ] || { echo "could not claim $EP"; exit 1; }
+          fi
+          if [ -n "$YT_REFRESH_TOKEN" ]; then
+            python3 tools/yt_upload.py out.mp4 meta.json spec.json || { [ -n "$EP" ] && python3 tools/claim.py release "$EP"; exit 1; }
+            exit 0
+          fi
+          curl -sS --fail -X POST "$HOOK" \
             -F "file=@out.mp4;type=video/mp4" \
-            -F "title=$(jq -r .title meta.json)" \
-            -F "description=$(jq -r .description meta.json)" \
-            -F "tags=$(jq -r '.tags | join(",")' meta.json)" \
-            -F "categoryId=$(jq -r .categoryId meta.json)" \
-            -F "madeForKids=true" \
-            -F "publishAt=$(jq -r '.publishAt // empty' spec.json)" \
-            -F "publishLocal=$(jq -r '.publishLocal // empty' spec.json)"
+            --form-string "title=$(jq -r .title meta.json)" \
+            --form-string "description=$(jq -r .description meta.json)" \
+            --form-string "tags=$(jq -r '.tags | join(",")' meta.json)" \
+            --form-string "categoryId=$(jq -r .categoryId meta.json)" \
+            --form-string "madeForKids=true" \
+            --form-string "publishAt=$(jq -r '.publishAt // empty' spec.json)" \
+            --form-string "publishLocal=$(jq -r '.publishLocal // empty' spec.json)" || { [ -n "$EP" ] && python3 tools/claim.py release "$EP"; exit 1; }
       - name: Mark published
-        if: ${{ github.event_name == 'schedule' || inputs.deliver }}
+        if: ${{ (github.event_name == 'schedule' || inputs.deliver) && steps.up.outputs.skip != '1' }}
         run: |
           EP=$(jq -r '.episode // empty' spec.json)
           [ -n "$EP" ] || exit 0
           git config user.name "bot"; git config user.email "bot@users.noreply.github.com"
-          git pull -q --rebase || true
-          jq --arg e "$EP" '. + [$e] | unique' state/published.json > p.tmp && mv p.tmp state/published.json
-          PA=$(jq -r '.publishAt // empty' spec.json)
-          if [ -n "$PA" ]; then jq --arg e "$EP" --arg t "$PA" '. + {($e): $t}' state/schedule.json > s.tmp && mv s.tmp state/schedule.json; fi
-          git add state/published.json state/schedule.json && git commit -qm "update state" && git push -q || true
+          python3 tools/claim.py record "$EP" "${{ steps.up.outputs.video_id }}" "$(jq -r '.publishAt // empty' spec.json)" || true
       - name: Chain
         if: ${{ (github.event_name == 'schedule' || inputs.deliver) && needs.plan.outputs.chain == 'true' }}
         env:

@@ -1,0 +1,33 @@
+name: dedupe
+on:
+  workflow_dispatch:
+    inputs:
+      apply:
+        type: boolean
+        default: false
+  schedule:
+    - cron: "41 5 * * 1"
+permissions:
+  contents: write
+concurrency:
+  group: publish
+  cancel-in-progress: false
+jobs:
+  dedupe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          APPLY: ${{ github.event_name == 'schedule' && 'true' || inputs.apply }}
+        run: python tools/yt_dedupe.py
+      - run: |
+          git config user.name Claude; git config user.email noreply@anthropic.com
+          git add state
+          git diff --cached --quiet || { git commit -qm "update state"; git pull -q --rebase origin main; git push -q origin HEAD:main; }

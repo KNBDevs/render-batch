@@ -26,7 +26,7 @@ jobs:
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
           APPLY: ${{ github.event_name == 'schedule' && 'true' || inputs.apply }}
-        run: python tools/yt_dedupe.py
+        run: '[ -n "$YT_REFRESH_TOKEN" ] || { echo "no YT_REFRESH_TOKEN; skip"; exit 0; }; python tools/yt_dedupe.py'
       - run: |
           git config user.name Claude; git config user.email noreply@anthropic.com
           git add state

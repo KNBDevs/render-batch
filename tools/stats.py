@@ -1,5 +1,5 @@
 import json, os, sys, subprocess, glob, importlib.util, unicodedata, re
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
 OUT = os.path.join(ROOT, "state", "stats.json")
@@ -44,6 +44,33 @@ def fetch():
     return out
 
 
+def audit(db, now):
+    seen = {i: r for i, r in db.items() if r["hist"] and max(r["hist"]) == now}
+    groups = {}
+    for i, r in seen.items():
+        groups.setdefault(r.get("episode") or norm(r["title"].split("#")[0]), []).append((i, list(r["hist"].values())[-1][0] or 0))
+    lines = []
+    for k, g in sorted(groups.items()):
+        if len(g) > 1:
+            g.sort(key=lambda x: -x[1])
+            lines.append(f"- Duplicado `{k}`: conservar **{g[0][0]}** ({g[0][1]} vis.); poner en privado o borrar: "
+                         + ", ".join(f"{i} ({v} vis.)" for i, v in g[1:]))
+    for i, r in seen.items():
+        if norm(r["title"]) == "unknown":
+            lines.append(f"- Vídeo `unknown` público: {i} — revisar")
+    sched = json.load(open(os.path.join(ROOT, "state", "schedule.json")))
+    have = {r.get("episode") for r in seen.values()}
+    for e, t in sorted(sched.items()):
+        try:
+            due = datetime.fromisoformat(t.replace("Z", "+00:00")) < datetime.now(timezone.utc) - timedelta(days=2)
+        except ValueError:
+            continue
+        if due and e not in have and not e.startswith(("hola_", "intro")):
+            lines.append(f"- Programado y no visible en el canal: `{e}` ({t[:10]})")
+    open(os.path.join(ROOT, "audit.md"), "w").write("\n".join(lines))
+    print("AUDIT", len(lines))
+
+
 def main():
     now = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     db = json.load(open(OUT)) if os.path.exists(OUT) else {}
@@ -65,6 +92,7 @@ def main():
         if v["views"] is not None:
             rec["hist"][now] = [v["views"], v.get("likes")]
     json.dump(db, open(OUT, "w"), ensure_ascii=False, indent=1)
+    audit(db, now)
     rows = sorted(db.values(), key=lambda r: -(list(r["hist"].values())[-1][0] if r["hist"] else 0))
     for r in rows[:50]:
         h = list(r["hist"].values())[-1] if r["hist"] else [None, None]

@@ -27,6 +27,14 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           R: ${{ github.repository }}
         run: |
+          N=$(gh issue list -R "$R" --state open --search "Audit in:title" --json number -q '.[0].number')
+          if [ -s audit.md ]; then
+            if [ -z "$N" ]; then gh issue create -R "$R" -t "Audit" -F audit.md; else gh issue edit "$N" -R "$R" -F audit.md; fi
+          elif [ -n "$N" ]; then gh issue close "$N" -R "$R"; fi
+      - env:
+          GH_TOKEN: ${{ github.token }}
+          R: ${{ github.repository }}
+        run: |
           D=$(python tools/buffer.py)
           N=$(gh issue list -R "$R" --state open --search "Queue low in:title" --json number -q '.[0].number')
           if [ "$D" -lt 3 ]; then

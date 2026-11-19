@@ -7510,5 +7510,151 @@
    }
   ],
   "order": 94
+ },
+ "espejos_tesoro": {
+  "env": "aula",
+  "family": "pastel",
+  "decor": [
+   {
+    "prop": "floor_lamp",
+    "style": 0,
+    "seed": 783749,
+    "loc": [
+     2.26,
+     2.19,
+     0.0
+    ],
+    "scale": 1.05,
+    "rot": 33.6
+   },
+   {
+    "prop": "pouf",
+    "style": 2,
+    "seed": 490618,
+    "loc": [
+     4.34,
+     1.17,
+     0.0
+    ],
+    "scale": 0.89,
+    "rot": 2.2
+   },
+   {
+    "prop": "soft_token",
+    "style": 2,
+    "seed": 750680,
+    "loc": [
+     3.43,
+     0.61,
+     0.0
+    ],
+    "scale": 1.05,
+    "rot": -17.1
+   },
+   {
+    "prop": "play_mat",
+    "style": 0,
+    "seed": 903305,
+    "loc": [
+     -2.08,
+     3.72,
+     0.0
+    ],
+    "scale": 0.98,
+    "rot": -10.6
+   },
+   {
+    "prop": "pebbles",
+    "style": 0,
+    "seed": 186569,
+    "loc": [
+     1.11,
+     3.01,
+     0.0
+    ],
+    "scale": 1.19,
+    "rot": 15.5
+   }
+  ],
+  "order": 95
+ },
+ "vasos_aguantan": {
+  "env": "casa",
+  "family": "pastel",
+  "decor": [
+   {
+    "prop": "planter_box",
+    "style": 1,
+    "seed": 56637,
+    "loc": [
+     3.14,
+     1.7,
+     0.0
+    ],
+    "scale": 1.2,
+    "rot": -6.0
+   },
+   {
+    "prop": "floor_lamp",
+    "style": 2,
+    "seed": 721826,
+    "loc": [
+     4.45,
+     1.43,
+     0.0
+    ],
+    "scale": 0.96,
+    "rot": 23.9
+   },
+   {
+    "prop": "bunting",
+    "style": 1,
+    "seed": 731513,
+    "loc": [
+     2.42,
+     1.88,
+     0.0
+    ],
+    "scale": 0.96,
+    "rot": 27.0
+   },
+   {
+    "prop": "led_lantern",
+    "style": 2,
+    "seed": 410898,
+    "loc": [
+     -4.47,
+     1.67,
+     0.0
+    ],
+    "scale": 0.94,
+    "rot": -15.3
+   },
+   {
+    "prop": "flower_pot",
+    "style": 1,
+    "seed": 809074,
+    "loc": [
+     1.29,
+     3.17,
+     0.0
+    ],
+    "scale": 0.86,
+    "rot": -9.0
+   },
+   {
+    "prop": "toy_blocks",
+    "style": 1,
+    "seed": 17256,
+    "loc": [
+     -1.32,
+     2.29,
+     0.0
+    ],
+    "scale": 0.93,
+    "rot": 15.2
+   }
+  ],
+  "order": 96
  }
 }

@@ -961,5 +961,27 @@
       "moki"
     ],
     "batch": "73_plus"
+  },
+  {
+    "id": "espejos_tesoro",
+    "template": "episode",
+    "status": "draft",
+    "title": "¿Llegará la luz al tesoro?",
+    "cast": [
+      "bolita",
+      "moki"
+    ],
+    "batch": "75_plus"
+  },
+  {
+    "id": "vasos_aguantan",
+    "template": "episode",
+    "status": "draft",
+    "title": "¿Aguantarán los vasos?",
+    "cast": [
+      "tuki",
+      "ruki"
+    ],
+    "batch": "75_plus"
   }
 ]

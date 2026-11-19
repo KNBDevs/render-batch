@@ -7628,5 +7628,145 @@
   "engine": "gemini",
   "voice": "Fenrir",
   "dev": -2.75
+ },
+ "ep_espejos_tesoro_b1": {
+  "hash": "2ff07e20e3a8",
+  "dur": 2.55,
+  "text": "¡Mi tesoro está detrás de la torre!",
+  "asr": 1.0,
+  "heard": "Mi tesoro está detrás de la torre.",
+  "engine": "gemini",
+  "voice": "Zephyr",
+  "dev": -2.85
+ },
+ "ep_espejos_tesoro_b2": {
+  "hash": "099dc78d2569",
+  "dur": 3.63,
+  "text": "Con dos espejos, ¿la luz llegará o no llegará?",
+  "asr": 1.0,
+  "heard": "Con dos espejos, la luz llegará o no llegará.",
+  "engine": "gemini",
+  "voice": "Zephyr",
+  "dev": -0.95
+ },
+ "ep_espejos_tesoro_b3": {
+  "hash": "e25ec2e61e2a",
+  "dur": 2.84,
+  "text": "¡Y si quito un espejo, la luz ya no llega!",
+  "asr": 1.0,
+  "heard": "Y si quito un espejo, la luz ya no llega.",
+  "engine": "gemini",
+  "voice": "Zephyr",
+  "dev": 0.1
+ },
+ "ep_espejos_tesoro_b4": {
+  "hash": "b261286093a5",
+  "dur": 3.09,
+  "text": "¡Sin espejos, choca! ¡Con espejos, llega!",
+  "asr": 0.83,
+  "heard": "Sin espejos llega. Con espejos llega.",
+  "engine": "gemini",
+  "voice": "Zephyr",
+  "dev": 1.35
+ },
+ "ep_espejos_tesoro_m1": {
+  "hash": "17e47480adf9",
+  "dur": 2.96,
+  "text": "¿Y si la luz de la linterna llega hasta él?",
+  "asr": 1.0,
+  "heard": "¿Y si la luz de la linterna llega hasta él?",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": -3.35
+ },
+ "ep_espejos_tesoro_m2": {
+  "hash": "5d1054708d3e",
+  "dur": 2.56,
+  "text": "¡Llega! ¡El tesoro brilla!",
+  "asr": 0.75,
+  "heard": "LLEGA EL DESORO BRILLA",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": -5.4
+ },
+ "ep_espejos_tesoro_m3": {
+  "hash": "5aa00b1f1f26",
+  "dur": 5.67,
+  "text": "La luz va recta, pero el espejo la hace rebotar, y así da la vuelta.",
+  "asr": 1.0,
+  "heard": "La luz va recta, pero el espejo la hace rebotar y así da la vuelta.",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": -6.25
+ },
+ "ep_vasos_aguantan_r1": {
+  "hash": "0570b4262a2a",
+  "dur": 4.61,
+  "text": "¿Y si ponemos muchos vasos y una tabla encima?",
+  "asr": 1.0,
+  "heard": "y si ponemos muchos vasos y una tabla encima.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 5.46
+ },
+ "ep_vasos_aguantan_r2": {
+  "hash": "2f65a3333026",
+  "dur": 3.05,
+  "text": "¡Aguantan! ¡Tuki está de pie encima!",
+  "asr": 0.83,
+  "heard": "¡Aguantan! Tuqui está de pie encima.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 6.56
+ },
+ "ep_vasos_aguantan_r3": {
+  "hash": "a7e2790c2921",
+  "dur": 5.38,
+  "text": "Muchos vasos juntos se reparten el peso, y por eso aguantan.",
+  "asr": 1.0,
+  "heard": "Muchos vasos juntos se reparten el peso y por eso aguantan.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 5.76
+ },
+ "ep_vasos_aguantan_t1": {
+  "hash": "957a1ffc7f0e",
+  "dur": 2.6,
+  "text": "¡Me subo al vaso y hace plaf!",
+  "asr": 0.86,
+  "heard": "Me subo al vaso y hace plaz.",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": -0.85
+ },
+ "ep_vasos_aguantan_t2": {
+  "hash": "235a61c0dceb",
+  "dur": 3.55,
+  "text": "Con doce vasos, ¿aguantarán o se aplastarán?",
+  "asr": 0.8,
+  "heard": "Con 12 vasos aguantarán o se aplastarán.",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": -2.1
+ },
+ "ep_vasos_aguantan_t4": {
+  "hash": "39a175cb2db4",
+  "dur": 3.96,
+  "text": "¡Un vaso, plaf! ¡Muchos vasos, aguantan!",
+  "asr": 1.0,
+  "heard": "Un vaso plaf. Muchos vasos aguantan.",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": 0.7
+ },
+ "ep_vasos_aguantan_t3": {
+  "hash": "daa1aaca03bd",
+  "dur": 2.34,
+  "text": "¡Y un vaso solito se aplasta otra vez!",
+  "asr": 1.0,
+  "heard": "y un vaso solito se aplasta otra vez.",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": 0.0
  }
 }

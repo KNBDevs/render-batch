@@ -1545,7 +1545,7 @@
     null
    ],
    "2026-11-19": [
-    412000,
+    413000,
     null
    ]
   }
@@ -7652,7 +7652,7 @@
     null
    ],
    "2026-11-19": [
-    270,
+    272,
     null
    ]
   }
@@ -7686,7 +7686,7 @@
     null
    ],
    "2026-11-19": [
-    343,
+    344,
     null
    ]
   }
@@ -7838,7 +7838,7 @@
     null
    ],
    "2026-11-19": [
-    295,
+    298,
     null
    ]
   }
@@ -7904,7 +7904,7 @@
     null
    ],
    "2026-11-19": [
-    16,
+    19,
     null
    ]
   }
@@ -7936,7 +7936,7 @@
     null
    ],
    "2026-11-19": [
-    3,
+    5,
     null
    ]
   }
@@ -7964,6 +7964,20 @@
   "episode": "barco_vela",
   "chars": [
    "bopi",
+   "moki"
+  ],
+  "hist": {
+   "2026-11-19": [
+    0,
+    null
+   ]
+  }
+ },
+ "tnjBrqy-1T0": {
+  "title": "¿Grande o pequeña? 🔍🐞 ¿Cómo se verá la mariquita con la lupa? #shorts",
+  "episode": "lupa_mariquita",
+  "chars": [
+   "luma",
    "moki"
   ],
   "hist": {

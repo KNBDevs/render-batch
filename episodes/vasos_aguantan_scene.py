@@ -98,8 +98,8 @@ def label(txt, rgb, loc, w, f_in, f_out, h=0.27, sz=0.2):
 
 KC, OC, GC = (0.08, 0.06, 0.16), (0.85, 0.35, 0.05), (0.05, 0.42, 0.15)
 LZ, LY = 2.05, TY - 0.55
-label('¿AGUANTAN?', GC, (-0.6, LY, LZ), 1.1, 190, 372, 0.3, 0.16)
-label('¿SE APLASTAN?', OC, (0.6, LY, LZ), 1.2, 198, 372, 0.3, 0.14)
+label('¿AGUANTAN?', GC, (-0.6, LY, LZ), 1.1, 212, 372, 0.3, 0.16)
+label('¿SE APLASTAN?', OC, (0.6, LY, LZ), 1.2, 220, 372, 0.3, 0.14)
 label('¡AGUANTAN!', GC, (0.0, LY, LZ), 1.1, 396, 482, 0.3, 0.2)
 label('¡PLAF!', OC, (0.0, LY, LZ), 0.9, 552, 584, 0.3, 0.22)
 
@@ -176,7 +176,7 @@ T.place(ruki, 588, RP + Vector((0.98, 0, 0)))
 T.place(ruki, 770, RP + Vector((0.98, 0, 0)))
 T.place(ruki, 772, RP)
 
-for ch, side, f0 in ((ruki, 'L', 104), (tuki, 'R', 182), (ruki, 'L', 236), (ruki, 'L', 290), (tuki, 'R', 492), (ruki, 'L', 506), (tuki, 'R', 782), (tuki, 'R', 822)):
+for ch, side, f0 in ((ruki, 'L', 90), (tuki, 'R', 212), (ruki, 'L', 236), (ruki, 'L', 290), (tuki, 'R', 492), (ruki, 'L', 506), (tuki, 'R', 782), (tuki, 'R', 822)):
     T.arm(ch, side, f0, 0, None)
     T.arm(ch, side, f0 + 6, fwd=-85, out=30)
     T.arm(ch, side, f0 + 20, fwd=-85, out=30)

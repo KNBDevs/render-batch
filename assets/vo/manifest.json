@@ -7660,14 +7660,14 @@
   "dev": 0.1
  },
  "ep_espejos_tesoro_b4": {
-  "hash": "b261286093a5",
-  "dur": 3.09,
-  "text": "¡Sin espejos, choca! ¡Con espejos, llega!",
-  "asr": 0.83,
-  "heard": "Sin espejos llega. Con espejos llega.",
+  "hash": "29b177cbfba1",
+  "dur": 7.37,
+  "text": "¡Sin espejos, choca con la torre! ¡Con espejos, llega!",
+  "asr": 1.0,
+  "heard": "Sin espejos, choca con la torre.  Con espejos, llega.",
   "engine": "gemini",
   "voice": "Zephyr",
-  "dev": 1.35
+  "dev": -6.05
  },
  "ep_espejos_tesoro_m1": {
   "hash": "17e47480adf9",

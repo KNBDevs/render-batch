@@ -7656,5 +7656,84 @@
    }
   ],
   "order": 96
+ },
+ "manguera_arcoiris": {
+  "env": "plaza",
+  "family": "pastel",
+  "decor": [
+   {
+    "prop": "mushroom_stool",
+    "style": 1,
+    "seed": 281913,
+    "loc": [
+     -1.23,
+     3.96,
+     0.0
+    ],
+    "scale": 1.06,
+    "rot": 5.4
+   },
+   {
+    "prop": "lamp_post",
+    "style": 0,
+    "seed": 16574,
+    "loc": [
+     4.77,
+     1.21,
+     0.0
+    ],
+    "scale": 0.88,
+    "rot": 19.6
+   },
+   {
+    "prop": "toy_blocks",
+    "style": 2,
+    "seed": 172727,
+    "loc": [
+     -3.11,
+     0.73,
+     0.0
+    ],
+    "scale": 0.94,
+    "rot": 4.1
+   },
+   {
+    "prop": "birdhouse",
+    "style": 1,
+    "seed": 831580,
+    "loc": [
+     1.39,
+     3.31,
+     0.0
+    ],
+    "scale": 1.09,
+    "rot": 11.9
+   },
+   {
+    "prop": "bench",
+    "style": 0,
+    "seed": 901304,
+    "loc": [
+     -2.41,
+     3.7,
+     0.0
+    ],
+    "scale": 0.88,
+    "rot": -6.6
+   },
+   {
+    "prop": "flower_pot",
+    "style": 2,
+    "seed": 145847,
+    "loc": [
+     -4.39,
+     2.27,
+     0.0
+    ],
+    "scale": 0.91,
+    "rot": 33.0
+   }
+  ],
+  "order": 97
  }
 }

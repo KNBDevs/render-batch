@@ -7660,14 +7660,14 @@
   "dev": 0.1
  },
  "ep_espejos_tesoro_b4": {
-  "hash": "29b177cbfba1",
-  "dur": 7.37,
-  "text": "¡Sin espejos, choca con la torre! ¡Con espejos, llega!",
+  "hash": "b261286093a5",
+  "dur": 5.42,
+  "text": "¡Sin espejos, choca! ¡Con espejos, llega!",
   "asr": 1.0,
-  "heard": "Sin espejos, choca con la torre.  Con espejos, llega.",
+  "heard": "Sin espejos, choca.  Con espejos, llega.",
   "engine": "gemini",
   "voice": "Zephyr",
-  "dev": -6.05
+  "dev": 0.65
  },
  "ep_espejos_tesoro_m1": {
   "hash": "17e47480adf9",
@@ -7680,14 +7680,14 @@
   "dev": -3.35
  },
  "ep_espejos_tesoro_m2": {
-  "hash": "5d1054708d3e",
-  "dur": 2.56,
-  "text": "¡Llega! ¡El tesoro brilla!",
-  "asr": 0.75,
-  "heard": "LLEGA EL DESORO BRILLA",
+  "hash": "2a41a7f98d61",
+  "dur": 6.98,
+  "text": "¡Sí llega! ¡El cofre brilla!",
+  "asr": 0.83,
+  "heard": "Si llega, el cofre brilla.  Si llega.",
   "engine": "gemini",
   "voice": "Enceladus",
-  "dev": -5.4
+  "dev": 0.45
  },
  "ep_espejos_tesoro_m3": {
   "hash": "5aa00b1f1f26",
@@ -7768,5 +7768,75 @@
   "engine": "gemini",
   "voice": "Fenrir",
   "dev": 0.0
+ },
+ "ep_manguera_arcoiris_p3": {
+  "hash": "f78782a96766",
+  "dur": 2.68,
+  "text": "¡Y si riego hacia el sol, ya no sale!",
+  "asr": 0.89,
+  "heard": "Y si riego hacia el son, ya no sale.",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": -6.45
+ },
+ "ep_manguera_arcoiris_p4": {
+  "hash": "e5053586bf6c",
+  "dur": 4.57,
+  "text": "¡Sol delante, nada! ¡Sol detrás, arcoíris!",
+  "asr": 0.77,
+  "heard": "Sol delante, nada. Sol detrás, arco iris.",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": -3.8
+ },
+ "ep_manguera_arcoiris_p1": {
+  "hash": "cd605372464f",
+  "dur": 2.27,
+  "text": "¡Arcoíris, sal de la manguera!",
+  "asr": 1.0,
+  "heard": "Arcoiris, Sal de la Manguera.",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": -4.75
+ },
+ "ep_manguera_arcoiris_p2": {
+  "hash": "20579985dd5a",
+  "dur": 3.49,
+  "text": "Con el sol detrás, ¿saldrá el arcoíris o no saldrá?",
+  "asr": 1.0,
+  "heard": "Con el sol detrás, saldrá el arcoíris o no saldrá.",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": -7.95
+ },
+ "ep_manguera_arcoiris_r1": {
+  "hash": "3d5fc099787d",
+  "dur": 4.85,
+  "text": "¿Y si regamos hacia el otro lado, con el sol detrás?",
+  "asr": 1.0,
+  "heard": "y si regamos hacia el otro lado, con el sol detrás.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 5.01
+ },
+ "ep_manguera_arcoiris_r2": {
+  "hash": "277a547859a5",
+  "dur": 3.17,
+  "text": "¡Sale! ¡Un arcoíris en el agua!",
+  "asr": 1.0,
+  "heard": "Sale un arcoíris en el agua",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 4.86
+ },
+ "ep_manguera_arcoiris_r3": {
+  "hash": "f3e824acf2dc",
+  "dur": 5.53,
+  "text": "La luz del sol entra en las gotitas de agua y se abre en colores.",
+  "asr": 1.0,
+  "heard": "La luz del sol entra en las gotitas de agua y se abre en colores.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 1.96
  }
 }

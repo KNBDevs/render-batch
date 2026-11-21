@@ -7661,7 +7661,7 @@
  },
  "ep_espejos_tesoro_b4": {
   "hash": "b261286093a5",
-  "dur": 5.42,
+  "dur": 3.32,
   "text": "¡Sin espejos, choca! ¡Con espejos, llega!",
   "asr": 1.0,
   "heard": "Sin espejos, choca.  Con espejos, llega.",
@@ -7681,10 +7681,10 @@
  },
  "ep_espejos_tesoro_m2": {
   "hash": "2a41a7f98d61",
-  "dur": 6.98,
+  "dur": 3.15,
   "text": "¡Sí llega! ¡El cofre brilla!",
   "asr": 0.83,
-  "heard": "Si llega, el cofre brilla.  Si llega.",
+  "heard": "Si llega, el cofre brilla.",
   "engine": "gemini",
   "voice": "Enceladus",
   "dev": 0.45

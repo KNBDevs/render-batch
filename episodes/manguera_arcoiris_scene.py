@@ -138,8 +138,8 @@ def label(txt, rgb, loc, w, f_in, f_out, h=0.27, sz=0.2):
 
 OC, GC = (0.85, 0.35, 0.05), (0.05, 0.42, 0.15)
 LZ, LY = 2.0, -2.0
-label('¿SALE?', GC, (-0.55, LY, LZ), 0.92, 190, 372, 0.3, 0.19)
-label('¿NO SALE?', OC, (0.55, LY, LZ), 1.08, 198, 372, 0.3, 0.17)
+label('¿SALE?', GC, (-0.55, LY, LZ), 0.92, 222, 372, 0.3, 0.19)
+label('¿NO SALE?', OC, (0.55, LY, LZ), 1.08, 230, 372, 0.3, 0.17)
 label('¡SALE!', GC, (0.0, LY, LZ), 0.9, 396, 482, 0.3, 0.22)
 label('¡NO SALE!', OC, (0.0, LY, LZ), 1.08, 552, 584, 0.3, 0.2)
 
@@ -192,7 +192,7 @@ T.arm(pim, 'R', 56, fwd=-80, out=20)
 T.arm(pim, 'L', 56, fwd=-80, out=20)
 T.rest_arm(pim, 'R', 66)
 T.rest_arm(pim, 'L', 66)
-for ch, side, f0 in ((ruk, 'L', 104), (pim, 'R', 236), (ruk, 'L', 410), (pim, 'R', 494), (pim, 'R', 818)):
+for ch, side, f0 in ((ruk, 'L', 104), (pim, 'R', 238), (ruk, 'L', 410), (pim, 'R', 494), (pim, 'R', 818)):
     T.arm(ch, side, f0, 0, None)
     T.arm(ch, side, f0 + 6, fwd=-85, out=30)
     T.arm(ch, side, f0 + 20, fwd=-85, out=30)

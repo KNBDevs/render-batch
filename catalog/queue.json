@@ -965,7 +965,7 @@
   {
     "id": "espejos_tesoro",
     "template": "episode",
-    "status": "draft",
+    "status": "approved",
     "title": "¿Llegará la luz al tesoro?",
     "cast": [
       "bolita",
@@ -987,7 +987,7 @@
   {
     "id": "manguera_arcoiris",
     "template": "episode",
-    "status": "draft",
+    "status": "approved",
     "title": "¿Saldrá un arcoíris de la manguera?",
     "cast": [
       "pimo",

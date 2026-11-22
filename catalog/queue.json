@@ -922,13 +922,14 @@
  {
   "id": "dos_linternas",
   "template": "episode",
-  "status": "dropped",
+  "status": "approved",
   "title": "¿Una sombra o dos?",
   "cast": [
    "bolita",
    "moki"
   ],
-  "batch": "68_plus"
+  "batch": "68_plus",
+  "publish_local": "2026-12-13T10:00"
  },
  {
   "id": "bola_barquito",

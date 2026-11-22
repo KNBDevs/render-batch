@@ -1,8 +1,5 @@
 name: auto
 on:
-  schedule:
-    - cron: "41 6 * * *"
-    - cron: "41 18 * * *"
   workflow_dispatch:
     inputs:
       n:

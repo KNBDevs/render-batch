@@ -1,5 +1,5 @@
 import json, os, sys, subprocess
-from datetime import datetime, timedelta, timezone
+from datetime import date, datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
 HERE = os.path.dirname(os.path.abspath(__file__))
 QUEUE = os.path.join(HERE, 'catalog', 'queue.json')
@@ -16,13 +16,14 @@ SCHED = os.path.join(HERE, "state", "schedule.json")
 MAD = ZoneInfo("Europe/Madrid")
 HORIZON_DAYS = 4
 FLOOR = datetime(2026, 10, 7, 0, 0, tzinfo=MAD)
+END = datetime(2026, 12, 31, 23, 59, tzinfo=MAD)
 
 
 def slots_after(t):
     d = t.astimezone(MAD).date()
     for i in range(60):
         day = d + timedelta(days=i)
-        hm = [(18, 30)] if day.weekday() < 5 else [(10, 0)]
+        hm = {1: [(18, 30)], 3: [(18, 30)], 5: [(10, 0)]}.get(day.weekday(), []) if day >= date(2026, 11, 26) else ([(18, 30)] if day.weekday() < 5 else [(10, 0)])
         for h, m in hm:
             s = datetime(day.year, day.month, day.day, h, m, tzinfo=MAD)
             if s > t:
@@ -90,6 +91,11 @@ def main():
             os.remove(p)
             return
         sched[nxt['id']] = when.isoformat()
+    if when > END:
+        sched.pop(nxt['id'], None)
+        out('skip', 'true')
+        os.remove(p)
+        return
     spec['publishAt'] = when.astimezone(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
     spec['publishLocal'] = when.astimezone(MAD).strftime('%d/%m/%Y %H:%M')
     json.dump(sched, open(SCHED, 'w'), indent=1)

@@ -6,9 +6,9 @@ COSTUME = 'winter'
 LINES = [
     ('p1', 'pimo', '¡Brrr! ¡Qué frío hace hoy!', 12, 3.6),
     ('t1', 'tuki', '¡Ponte la bufanda, Pimo!', 83, 3.4),
-    ('p2', 'pimo', 'Pero… ¿la bufanda da calor?', 150, 3.7),
+    ('p2', 'pimo', '¡Oye, Tuki! ¿La bufanda da calor?', 150, 3.7),
     ('t2', 'tuki', 'Vamos a probarlo con dos tazas de agua templada. Esta la tapamos con la bufanda. Esta, no.', 263, 8.5),
-    ('p3', 'pimo', '¡La taza tapada sigue calentita! Y la otra se ha enfriado.', 602, 6.1),
+    ('p3', 'pimo', '¡Mira! ¡La taza tapada sigue calentita! ¡Y la otra está fría!', 602, 6.1),
     ('t3', 'tuki', 'La bufanda no da calor: no deja que se escape el calor.', 752, 5.8),
     ('p4', 'pimo', '¡Por eso me abriga! Guarda el calor que ya tengo.', 907, 5.4),
 ]

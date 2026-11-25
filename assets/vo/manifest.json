@@ -7838,5 +7838,395 @@
   "engine": "gemini",
   "voice": "Umbriel",
   "dev": 1.96
+ },
+ "ep_edu_02_p4": {
+  "hash": "7e0af701da0c",
+  "dur": 1.9,
+  "text": "¡Pruébalo en casa con un adulto!",
+  "asr": 0.83,
+  "heard": "Pruíbalo en casa con un adulto.",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": -7.7
+ },
+ "ep_edu_02_p2": {
+  "hash": "0a9baa9755d6",
+  "dur": 2.43,
+  "text": "Si tiro ahora… ¡el hilo se escapa!",
+  "asr": 1.0,
+  "heard": "Si tiro ahora, el hilo se escapa.",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": 0.0
+ },
+ "ep_edu_02_p3": {
+  "hash": "a3cf80bdefa3",
+  "dur": 3.36,
+  "text": "Paso cuatro: tiro despacio… ¡Lo he pescado!",
+  "asr": 1.0,
+  "heard": "Paso 4. Tiro despacio. Lo he pescado.",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": 2.9
+ },
+ "ep_nav26_01_p4": {
+  "hash": "94b892bf693e",
+  "dur": 3.22,
+  "text": "¡Por eso me abriga! Guarda el calor que ya tengo.",
+  "asr": 1.0,
+  "heard": "Por eso me abriga, guarda el calor que ya tengo.",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": -4.75
+ },
+ "ep_nav26_01_p1": {
+  "hash": "47fd124cbe54",
+  "dur": 2.56,
+  "text": "¡Brrr! ¡Qué frío hace hoy!",
+  "asr": 0.8,
+  "heard": "¡Brúr! ¡Qué frío hace hoy!",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": -5.25
+ },
+ "ep_nav26_01_t1": {
+  "hash": "a60a31c94f40",
+  "dur": 1.57,
+  "text": "¡Ponte la bufanda, Pimo!",
+  "asr": 0.89,
+  "heard": "Ponte la bufanda a pimo.",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": -6.6
+ },
+ "ep_edu_01_t1": {
+  "hash": "83cf31d9888e",
+  "dur": 1.77,
+  "text": "¡Ruki, te sale humo de la boca!",
+  "asr": 1.0,
+  "heard": "Ruki, ¿te sale humo de la boca?",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": 0.0
+ },
+ "ep_edu_01_t2": {
+  "hash": "b9d9e2b6b1f1",
+  "dur": 3.24,
+  "text": "Y fuera, con frío… ¡sale una nubecita!",
+  "asr": 1.0,
+  "heard": "y fuera con frío sale una nubecita",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": 0.0
+ },
+ "ep_edu_01_t3": {
+  "hash": "69b32823789e",
+  "dur": 2.15,
+  "text": "¡Se ha empañado! ¡Tiene gotitas!",
+  "asr": 1.0,
+  "heard": "¡Se ha empañado! ¡Tiene gotitas!",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": 0.0
+ },
+ "ep_edu_01_t4": {
+  "hash": "72f429a7c678",
+  "dur": 2.22,
+  "text": "¡Es vaho! ¡Le dibujo un corazón!",
+  "asr": 0.83,
+  "heard": "Es vao. Le dibujo un corazón.",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": -7.1
+ },
+ "ep_nav26_01_t2": {
+  "hash": "d26baf982d17",
+  "dur": 5.87,
+  "text": "Vamos a probarlo con dos tazas de agua templada. Esta la tapamos con la bufanda. Esta, no.",
+  "asr": 1.0,
+  "heard": "Vamos a probarlo con dos tazas de agua templada.  Esta la tapamos con la bufanda.  ¿Esta no?",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": 1.4
+ },
+ "ep_nav26_01_t3": {
+  "hash": "d11dc8ae6d6a",
+  "dur": 3.37,
+  "text": "La bufanda no da calor: no deja que se escape el calor.",
+  "asr": 1.0,
+  "heard": "La bufanda no da calor, no deja que se escape el calor.",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": -0.9
+ },
+ "ep_edu_02_l1": {
+  "hash": "7c8b50810951",
+  "dur": 4.13,
+  "text": "¡Vamos a probar! Paso uno: ponemos el hilo encima.",
+  "asr": 1.0,
+  "heard": "Vamos a probar. Paso 1. Ponemos el hilo encima.",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": -2.6
+ },
+ "ep_edu_02_l2": {
+  "hash": "938416d97d42",
+  "dur": 5.33,
+  "text": "Paso dos: una pizca de sal. Paso tres: esperamos un ratito.",
+  "asr": 1.0,
+  "heard": "Paso 2. Una pizca de sal. Paso 3. Esperamos un ratito.",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": 0.2
+ },
+ "ep_edu_02_l3": {
+  "hash": "6963521e9c29",
+  "dur": 5.72,
+  "text": "La sal derrite un poquito el hielo. El agua se vuelve a helar y atrapa el hilo.",
+  "asr": 1.0,
+  "heard": "La sal derrite un poquito el hielo, el agua se vuelve a helar y atrapa el hilo.",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": -4.0
+ },
+ "ep_nav26_02_l1": {
+  "hash": "9bebd2a0d1e8",
+  "dur": 2.53,
+  "text": "¿Cómo será un copo de nieve de cerca?",
+  "asr": 1.0,
+  "heard": "¿Cómo será un copo de nieve de cerca?",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": -0.9
+ },
+ "ep_nav26_02_l2": {
+  "hash": "844cf19229d9",
+  "dur": 2.25,
+  "text": "¡Es como una estrella de hielo!",
+  "asr": 1.0,
+  "heard": "Es como una estrella de hielo.",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": 2.6
+ },
+ "ep_nav26_02_l3": {
+  "hash": "ed828e9bc972",
+  "dur": 3.85,
+  "text": "¡Oh! Con el calor se ha convertido en una gotita de agua.",
+  "asr": 1.0,
+  "heard": "Oh, con el calor se ha convertido en una gotita de agua.",
+  "engine": "gemini",
+  "voice": "Leda",
+  "dev": 3.15
+ },
+ "ep_nav26_02_m2": {
+  "hash": "e9e62cad0816",
+  "dur": 1.95,
+  "text": "Vamos a mirarlo con la lupa.",
+  "asr": 1.0,
+  "heard": "Vamos a mirarlo con la lupa.",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": 2.31
+ },
+ "ep_nav26_02_m3": {
+  "hash": "59d9e5155678",
+  "dur": 7.36,
+  "text": "Uno, dos, tres, cuatro, cinco… ¡seis puntas!",
+  "asr": 1.0,
+  "heard": "1, 2, 3, 4, 5, 6 puntas.",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": -5.75
+ },
+ "ep_nav26_04_m2": {
+  "hash": "d83a42586cf2",
+  "dur": 3.61,
+  "text": "En verano, el sol hace un camino largo y alto.",
+  "asr": 1.0,
+  "heard": "En verano, el sol hace un camino largo y alto.",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": 6.55
+ },
+ "ep_nav26_04_m4": {
+  "hash": "3662bad3da6d",
+  "dur": 3.68,
+  "text": "Y desde ese día, cada día tiene un poquito más de luz.",
+  "asr": 1.0,
+  "heard": "Y desde ese día, cada día tiene un poquito más de luz.",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": 6.15
+ },
+ "ep_nav26_02_m4": {
+  "hash": "8355c2b204d5",
+  "dur": 4.6,
+  "text": "Los copos de nieve son hielo. ¡Y tienen seis puntas!",
+  "asr": 1.0,
+  "heard": "Los copos de nieve son hielo y tienen seis puntas.",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": 1.15
+ },
+ "ep_nav26_04_m1": {
+  "hash": "7f87b3bac3a6",
+  "dur": 2.8,
+  "text": "¡Ya es de noche! ¡Y es muy pronto!",
+  "asr": 1.0,
+  "heard": "Ya es de noche, y es muy pronto.",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": -0.55
+ },
+ "ep_nav26_04_m3": {
+  "hash": "04d7c95e9ec6",
+  "dur": 3.65,
+  "text": "Por eso encendemos pronto las luces del abeto.",
+  "asr": 1.0,
+  "heard": "Por eso, encendemos pronto las luces del abeto.",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": -0.65
+ },
+ "ep_nav26_02_m1": {
+  "hash": "3849a87e2a1d",
+  "dur": 2.83,
+  "text": "¡Mira, Luma! ¡Está nevando!",
+  "asr": 1.0,
+  "heard": "¡Mira luma! ¡Está nevando!",
+  "engine": "gemini",
+  "voice": "Enceladus",
+  "dev": 6.15
+ },
+ "ep_edu_01_r1": {
+  "hash": "6f84068a8ab7",
+  "dur": 4.99,
+  "text": "No es humo. Mira: dentro de casa no sale nada.",
+  "asr": 1.0,
+  "heard": "¡No es humo! ¡Mira! Dentro de casa no sale nada.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 3.11
+ },
+ "ep_edu_01_r2": {
+  "hash": "365dc1258983",
+  "dur": 3.41,
+  "text": "Ahora echa el aliento en el cristal frío.",
+  "asr": 1.0,
+  "heard": "Ahora, echa el aliento en el cristal frío.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 5.16
+ },
+ "ep_edu_01_r3": {
+  "hash": "242b11c7fe06",
+  "dur": 7.03,
+  "text": "Nuestro aliento lleva agua que no se ve. Con el frío se convierte en gotitas y se ve.",
+  "asr": 1.0,
+  "heard": "Nuestro aliento lleva agua que no se ve, con el frío se convierte en gotitas y se ve.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": -0.54
+ },
+ "ep_nav26_03_r1": {
+  "hash": "2ad51685a7ef",
+  "dur": 2.76,
+  "text": "¡Qué animal tan grande! ¿Quién es?",
+  "asr": 1.0,
+  "heard": "¿Qué animal tan grande? ¿Quién es?",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 0.21
+ },
+ "ep_nav26_03_r2": {
+  "hash": "655ff28130dd",
+  "dur": 1.65,
+  "text": "¿Y no tiene frío?",
+  "asr": 1.0,
+  "heard": "¿Y no tiene frío?",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": -0.69
+ },
+ "ep_nav26_03_r3": {
+  "hash": "97d1137a88f9",
+  "dur": 2.8,
+  "text": "¡Mira sus huellas! Son muy anchas.",
+  "asr": 1.0,
+  "heard": "¡Mira sus huellas! ¡Son muy anchas!",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": 1.86
+ },
+ "ep_nav26_03_r4": {
+  "hash": "f6595e672aff",
+  "dur": 4.88,
+  "text": "Los renos viven en el frío: pelo espeso y pezuñas anchas.",
+  "asr": 1.0,
+  "heard": "Los renos viven en el frío, pelo espeso y pezuñas anchas.",
+  "engine": "gemini",
+  "voice": "Umbriel",
+  "dev": -2.44
+ },
+ "ep_nav26_03_b1": {
+  "hash": "c214979ae62a",
+  "dur": 5.99,
+  "text": "Es un reno. Vive en lugares donde hace mucho frío.",
+  "asr": 1.0,
+  "heard": "es un reno. Vive en lugares donde hace mucho frío.",
+  "engine": "gemini",
+  "voice": "Iapetus",
+  "dev": 1.0
+ },
+ "ep_nav26_03_b2": {
+  "hash": "78361e75297c",
+  "dur": 4.44,
+  "text": "Su pelo es muy espeso. ¡Es su abrigo!",
+  "asr": 1.0,
+  "heard": "Su pelo es muy espeso, es su abrigo.",
+  "engine": "gemini",
+  "voice": "Iapetus",
+  "dev": -2.4
+ },
+ "ep_nav26_03_b3": {
+  "hash": "a1e09f5fbce1",
+  "dur": 6.95,
+  "text": "Sus pezuñas anchas son como raquetas: así no se hunden en la nieve.",
+  "asr": 1.0,
+  "heard": "Sus pezuñas anchas son como raquetas, así no se hunden en la nieve.",
+  "engine": "gemini",
+  "voice": "Iapetus",
+  "dev": 1.2
+ },
+ "ep_nav26_04_b1": {
+  "hash": "f74ae609b8fd",
+  "dur": 5.37,
+  "text": "Es invierno. El sol sale tarde y se esconde pronto.",
+  "asr": 1.0,
+  "heard": "Es invierno. El sol sale tarde y se esconde pronto.",
+  "engine": "gemini",
+  "voice": "Iapetus",
+  "dev": -4.6
+ },
+ "ep_nav26_04_b2": {
+  "hash": "1619d2879b04",
+  "dur": 3.69,
+  "text": "Y en invierno, un camino corto y bajo.",
+  "asr": 1.0,
+  "heard": "Y en invierno un camino corto y bajo.",
+  "engine": "gemini",
+  "voice": "Iapetus",
+  "dev": 1.4
+ },
+ "ep_nav26_04_b3": {
+  "hash": "0f287d59530e",
+  "dur": 5.1,
+  "text": "El veintiuno de diciembre es el día más corto del año.",
+  "asr": 0.87,
+  "heard": "El 21 de diciembre es el día más corto del año.",
+  "engine": "gemini",
+  "voice": "Iapetus",
+  "dev": -4.1
  }
 }

@@ -8238,5 +8238,25 @@
   "engine": "gemini",
   "voice": "Puck",
   "dev": -6.7
+ },
+ "ep_nav26_01_t2b": {
+  "hash": "e7eda69dd2c6",
+  "dur": 1.88,
+  "text": "¡Y la otra se ha quedado fría!",
+  "asr": 1.0,
+  "heard": "y la otra se ha quedado fría.",
+  "engine": "gemini",
+  "voice": "Fenrir",
+  "dev": 1.7
+ },
+ "ep_nav26_01_p3": {
+  "hash": "4902e15d7154",
+  "dur": 3.05,
+  "text": "¡Mira! ¡La taza tapada sigue calentita!",
+  "asr": 1.0,
+  "heard": "Mira, la taza tapada sigue calentita.",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": -1.95
  }
 }

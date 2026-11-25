@@ -8228,5 +8228,15 @@
   "engine": "gemini",
   "voice": "Iapetus",
   "dev": -4.1
+ },
+ "ep_nav26_01_p2": {
+  "hash": "7d660893ed07",
+  "dur": 2.5,
+  "text": "¡Oye, Tuki! ¿La bufanda da calor?",
+  "asr": 0.83,
+  "heard": "¡Oye, Tuqui! ¿La bufanda da calor?",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": -6.7
  }
 }

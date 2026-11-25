@@ -10,7 +10,9 @@ def m(name):
     if name not in _M:
         spec = {'plum': ((0.2, 0.12, 0.25), 0.55, 0.0), 'plum_d': ((0.13, 0.07, 0.17), 0.6, 0.0), 'sage': ((0.25, 0.36, 0.27), 0.6, 0.0),
                 'amber': ((0.95, 0.6, 0.18), 0.35, 0.25), 'pumpkin': ((0.75, 0.28, 0.07), 0.45, 0.0), 'stem': ((0.2, 0.32, 0.12), 0.6, 0.0),
-                'moon': ((1.0, 0.8, 0.25), 0.3, 0.4), 'silver': ((0.75, 0.77, 0.8), 0.3, 0.0)}[name]
+                'moon': ((1.0, 0.8, 0.25), 0.3, 0.4), 'silver': ((0.75, 0.77, 0.8), 0.3, 0.0),
+                'berry': ((0.78, 0.12, 0.16), 0.75, 0.0), 'wool': ((0.97, 0.95, 0.9), 0.85, 0.0), 'pine': ((0.1, 0.42, 0.26), 0.75, 0.0),
+                'gold': ((1.0, 0.74, 0.22), 0.3, 0.15)}[name]
         mm = C.mat('cos_' + name, spec[0], rough=spec[1], coat=0.3, emit=spec[2])
         _M[name] = mm
     return _M[name]
@@ -90,7 +92,50 @@ def _hat(name, parent, loc, rot, brim, h, base, mat, band=None, tip=0.0):
     return g
 
 
+WINTER = {
+    'pimo': ('scarf', 0.1 + 0.25, 0.42, 0.42, -0.43, None),
+    'ruki': ('hat', (0.03, 0.02, 0.08 + 0.9), 0.2, -8, ('scarf', 0.08 + 0.22, 0.5, 0.46, -0.47)),
+    'luma': ('scarf', 0.08 + 0.02, 0.235, 0.205, -0.21, None),
+    'tuki': ('scarf', 0.8, 0.27, 0.255, -0.26, None),
+    'moki': ('hat', (0.18, 0.05, 0.07 + 0.9), 0.22, 22, None),
+    'bopi': ('scarf', 0.62, 0.25, 0.25, -0.25, None),
+    'bolita': ('scarf', 0.08 + 0.2, 0.36, 0.36, -0.37, None),
+    'gruno': ('scarf', 0.1 + 0.5, 0.5, 0.48, -0.49, None),
+}
+
+
+def _scarf(g, cid, z, rx, ry, fy, col, tip):
+    _ring(f'cos_{cid}.scarf', g, z * H, rx * H, ry * H, 0.045 * H, m(col))
+    for k, dz in enumerate((-0.025, 0.025)):
+        _ring(f'cos_{cid}.stripe{k}', g, z * H + dz * H, rx * H * 1.03, ry * H * 1.03, 0.012 * H, m(tip))
+    for k, (dx, dz) in enumerate(((0.05, 0.0), (0.09, -0.12))):
+        C.sphere(f'cos_{cid}.tail{k}', (dx * H, fy * H - 0.01 * H, z * H + dz * H), (0.045 * H, 0.03 * H, 0.07 * H), m(col), g, 16)
+    C.sphere(f'cos_{cid}.knot', (0.03 * H, fy * H - 0.02 * H, z * H), (0.05 * H, 0.03 * H, 0.045 * H), m(tip), g, 16)
+
+
+def _beanie(g, cid, loc, r, tilt, col, tip):
+    hg = C.empty(f'cos_{cid}.beanie', g, tuple(v * H for v in loc), (0, math.radians(tilt), 0))
+    C.sphere(f'cos_{cid}.dome', (0, 0, 0), (r * H, r * H, r * H * 0.8), m(col), hg, 32)
+    _ring(f'cos_{cid}.cuff', hg, 0.0, r * H * 1.02, r * H * 1.02, 0.045 * H, m(tip))
+    C.sphere(f'cos_{cid}.pom', (0, 0, r * H * 0.85), (0.06 * H,) * 3, m(tip), hg, 20)
+
+
+def winter(ch, cid, style=0):
+    g = C.empty(f'cos_{cid}', ch['rig'])
+    col, tip = (('berry', 'wool'), ('pine', 'wool'), ('wool', 'berry'))[style % 3]
+    spec = WINTER[cid]
+    if spec[0] == 'hat':
+        _beanie(g, cid, spec[1], spec[2], spec[3], col, tip)
+        if spec[4]:
+            _scarf(g, cid, *spec[4][1:], col, tip)
+    else:
+        _scarf(g, cid, *spec[1:5], col, tip)
+    return g
+
+
 def dress(ch, cid, mode='halloween', style=0):
+    if mode == 'winter':
+        return winter(ch, cid, style)
     if mode != 'halloween':
         return None
     rig = ch['rig']

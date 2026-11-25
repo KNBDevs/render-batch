@@ -1001,5 +1001,77 @@
   ],
   "batch": "75_plus",
   "publish_local": "2026-12-03T18:30"
+ },
+ {
+  "id": "nav26_01",
+  "template": "episode",
+  "status": "draft",
+  "title": "¿Por qué abriga la bufanda? 🧣☕ Dos tazas en el frío",
+  "cast": [
+   "pimo",
+   "tuki"
+  ],
+  "batch": "navidad_2026",
+  "publish_local": "2026-12-01T18:30"
+ },
+ {
+  "id": "nav26_02",
+  "template": "episode",
+  "status": "draft",
+  "title": "¿Cómo es un copo de nieve de cerca? ❄️🔍 ¡Cuenta sus puntas!",
+  "cast": [
+   "luma",
+   "moki"
+  ],
+  "batch": "navidad_2026",
+  "publish_local": "2026-12-08T18:30"
+ },
+ {
+  "id": "edu_01",
+  "template": "episode",
+  "status": "draft",
+  "title": "¿Por qué sale «humo» al respirar cuando hace frío? 🌬️❄️",
+  "cast": [
+   "ruki",
+   "tuki"
+  ],
+  "batch": "navidad_2026",
+  "publish_local": "2026-12-10T18:30"
+ },
+ {
+  "id": "nav26_03",
+  "template": "episode",
+  "status": "draft",
+  "title": "¿Cómo aguantan los renos tanto frío? 🦌❄️",
+  "cast": [
+   "bopi",
+   "ruki"
+  ],
+  "batch": "navidad_2026",
+  "publish_local": "2026-12-15T18:30"
+ },
+ {
+  "id": "edu_02",
+  "template": "episode",
+  "status": "draft",
+  "title": "Cómo pescar un cubito de hielo con un hilo 🧊🧵 Experimento",
+  "cast": [
+   "luma",
+   "pimo"
+  ],
+  "batch": "navidad_2026",
+  "publish_local": "2026-12-17T18:30"
+ },
+ {
+  "id": "nav26_04",
+  "template": "episode",
+  "status": "draft",
+  "title": "¿Por qué anochece tan pronto en invierno? 🌅🎄 El día más corto",
+  "cast": [
+   "bopi",
+   "moki"
+  ],
+  "batch": "navidad_2026",
+  "publish_local": "2026-12-22T18:30"
  }
 ]

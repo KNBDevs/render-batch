@@ -4,7 +4,7 @@ MOOD = 'happy'
 ENV = 'casa'
 COSTUME = 'winter'
 LINES = [
-    ('p1', 'pimo', '¡Luma! ¿Pescamos un cubito de hielo con un hilo?', 12, 5.3),
+    ('p1', 'pimo', '¡Luma, mira! ¡Quiero pescar este cubito con un hilo!', 12, 5.3),
     ('l1', 'luma', '¡Vamos a probar! Paso uno: ponemos el hilo encima.', 144, 5.4),
     ('p2', 'pimo', 'Si tiro ahora… ¡el hilo se escapa!', 289, 4.2),
     ('l2', 'luma', 'Paso dos: una pizca de sal. Paso tres: esperamos un ratito.', 405, 6.1),

@@ -178,7 +178,7 @@ K(glow, 'scale', 0, (0, 0, 0))
 K(glow, 'scale', F['p4'] + 10, (0, 0, 0))
 for k, f in enumerate(range(F['p4'] + 18, TOTAL, 18)):
     K(glow, 'scale', f, (1.05, 1.05, 1.05) if k % 2 else (0.92, 0.92, 0.92))
-label('GUARDA EL CALOR', OR, (0.0, -1.95, 1.62), 1.2, F['p4'] + 20, TOTAL + 10, 0.25, 0.15)
+label('GUARDA EL CALOR', OR, (-0.35, -1.95, 1.62), 1.1, F['p4'] + 20, TOTAL + 10, 0.25, 0.15)
 
 T.arm(tuki, 'R', F['t1'], 0, None)
 T.arm(tuki, 'R', F['t1'] + 8, fwd=-80, out=25)

@@ -8258,5 +8258,15 @@
   "engine": "gemini",
   "voice": "Puck",
   "dev": -1.95
+ },
+ "ep_edu_02_p1": {
+  "hash": "6226feb9b8e6",
+  "dur": 4.16,
+  "text": "¡Luma, mira! ¡Quiero pescar este cubito con un hilo!",
+  "asr": 1.0,
+  "heard": "¡Luma! ¡Mira! ¡Quiero pescar este cubito con un hilo!",
+  "engine": "gemini",
+  "voice": "Puck",
+  "dev": -5.5
  }
 }
